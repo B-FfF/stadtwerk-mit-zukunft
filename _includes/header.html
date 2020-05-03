@@ -4,18 +4,18 @@
     <!-- Inner -->
     <div class="inner">
         <header>
-            <h1><a href="index.html" id="logo">{{ page.title | site.title | default: "Helios" }}</a></h1>
+            <h1><a href="index.html" id="logo">{{ page.header | page.title | site.title | default: "Helios" }}</a></h1>
           {%- if page.layout == "home" -%}
             <hr />
-            <p>Another fine freebie by HTML5 UP</p>
+            <!-- <p>Another fine freebie by HTML5 UP</p> -->
           {%- endif %}
         </header>
-      {%- if page.layout == "home" -%}
-        <footer>
-            <a href="#banner" class="button circled scrolly">Start</a>
-        </footer>
-      {%- endif %}
     </div>
+  {%- if page.layout == "home" -%}
+    <footer>
+        <a href="#features" class="icon solid fa-angle-double-down button scrolly"></a>
+    </footer>
+  {%- endif %}
 
     <!-- Nav -->
     <nav id="nav">

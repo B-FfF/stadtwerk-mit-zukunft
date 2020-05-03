@@ -727,21 +727,21 @@
 
 	#header {
 		position: relative;
-		background-image: url('../../images/header.jpg');
+		background-image: url('../images/fl_hafen.jpg');
 		background-size: cover;
 		background-position: center center;
-		background-attachment: fixed;
+		background-attachment: scroll;
 		color: #fff;
 		text-align: center;
 		padding: 7.5em 0 2em 0;
 		cursor: default;
 
-		&:before {
-			content: '';
-			display: inline-block;
-			vertical-align: middle;
-			height: 100%;
-		}
+		// &:before {
+		// 	content: '';
+		// 	display: inline-block;
+		// 	vertical-align: middle;
+		// 	height: 100%;
+		// }
 
 		.inner {
 			position: relative;
@@ -773,12 +773,19 @@
 		.button {
 			display: inline-block;
 			border-radius: 100%;
-			width: 4.5em;
-			height: 4.5em;
-			line-height: 4.5em;
+			width: 3em;
+			height: 3em;
+			line-height: 3em;
 			text-align: center;
 			font-size: 1.25em;
 			padding: 0;
+			margin-top: 8em;
+			background-color: rgba(64, 64, 64, 0.5);
+
+			&:hover {
+        text-shadow: 0 0 4px black;
+				background-color: transparent;
+			}
 		}
 
 		hr {
@@ -798,10 +805,32 @@
 	}
 
 	body.homepage {
+
 		#header {
 			height: 100vh;
-			min-height: 40em;
+			// min-height: 40em;
+			background-image: url('../images/swfl/home.jpg');
+      background-attachment: fixed;
 
+      header {
+        position: relative;
+        max-width: 40%;
+        left: 19%;
+        text-shadow: -1px 1px 4px rgba(255, 255, 255, 0.5)
+      }
+
+      .inner {
+        height: 100%;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 2vh;
+        left: 50%;
+        margin-left: -3em;
+        z-index: 1;
+      }
+  
 			h1 {
 				font-size: 4em;
 			}
@@ -1170,6 +1199,13 @@
 
 	@include breakpoint('<=wide') {
 
+    .homepage {
+      #header header {
+        top: 20vh;
+        margin-top: -20%;
+      }
+    }
+
 		/* Basic */
 
 			body, input, textarea, select {
@@ -1204,6 +1240,13 @@
 				font-size: 12pt;
 				line-height: 1.5em;
 			}
+
+      .homepage {
+        #header header {
+          top: auto;
+          margin-top: initial;
+        }
+      }
 
 		/* Wrapper */
 
@@ -1251,7 +1294,7 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 13pt;
+				// font-size: 13pt;
 				line-height: 1.65em;
 			}
 
@@ -1595,12 +1638,18 @@
 			}
 
 			body.homepage {
+
 				#header {
-					min-height: 0;
+					min-height: 36em;
 					padding: 5.5em 0 5em 0;
 					height: auto;
+					background-attachment: scroll;
 
-					&:before {
+          header {
+            max-width: 50%;
+          }
+  
+          &:before {
 						display: none;
 					}
 
