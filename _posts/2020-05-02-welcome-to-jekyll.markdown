@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Welcome to Jekyll!"
 date:   2020-05-02 19:02:49 +0200
 categories: jekyll update

@@ -1,0 +1,48 @@
+<!-- Header -->
+<div id="header">
+
+    <!-- Inner -->
+    <div class="inner">
+        <header>
+            <h1><a href="index.html" id="logo">{{ page.title | site.title | default: "Helios" }}</a></h1>
+          {%- if page.layout == "home" -%}
+            <hr />
+            <p>Another fine freebie by HTML5 UP</p>
+          {%- endif %}
+        </header>
+      {%- if page.layout == "home" -%}
+        <footer>
+            <a href="#banner" class="button circled scrolly">Start</a>
+        </footer>
+      {%- endif %}
+    </div>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="{{ "index.html" | relative_url }}">Home</a></li>
+            <li>
+                <a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor</a></li>
+                    <li><a href="#">Magna phasellus</a></li>
+                    <li><a href="#">Etiam dolore nisl</a></li>
+                    <li>
+                        <a href="#">And a submenu &hellip;</a>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor</a></li>
+                            <li><a href="#">Phasellus consequat</a></li>
+                            <li><a href="#">Magna phasellus</a></li>
+                            <li><a href="#">Etiam dolore nisl</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Veroeros feugiat</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ "left-sidebar.html" | relative_url }}">Left Sidebar</a></li>
+            <li><a href="{{ "right-sidebar.html" | relative_url }}">Right Sidebar</a></li>
+            <li><a href="{{ "no-sidebar.html" | relative_url }}">No Sidebar</a></li>
+        </ul>
+    </nav>
+
+</div>
