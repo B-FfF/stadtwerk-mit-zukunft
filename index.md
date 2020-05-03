@@ -1,4 +1,5 @@
 ---
+title: Willkommen!
 layout: home
 title: Willkommen
 features:
