@@ -1,32 +1,18 @@
+{%- assign header_ipsum = "Gravida aliquam penatibus, Sed quis rhoncus placerat, Magna laoreet et aliquam" | split: ", " -%}
+{%- capture lorem_ipsum -%}
+    Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
+    porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+{%- endcapture %}
+
 <div class="row">
+{%- for featureName in page.features -%}
+{% assign feature = site.pages | where:"name",featureName | first %}
     <article class="col-4 col-12-mobile special">
-        <a href="#" class="image featured"><img src="{{ "images/pic07.jpg" | relative_url }}" alt="" /></a>
+        <a href="{{ feature.url | relative_url }}" class="image featured"><img src="{{ feature.preview_image | relative_url | default: "images/pic07.jpg" }}" alt="" /></a>
         <header>
-            <h3><a href="#">Gravida aliquam penatibus</a></h3>
+            <h3><a href="{{ feature.url | relative_url }}">{{ feature.title | default: | default: header_ipsum[forloop.index0] }}</a></h3>
         </header>
-        <p>
-            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-        </p>
+        <p>{{ feature.caption | default: feature.description | default: lorem_ipsum -}}</p>
     </article>
-    <article class="col-4 col-12-mobile special">
-        <a href="#" class="image featured"><img src="{{ "images/pic08.jpg" | relative_url }}" alt="" /></a>
-        <header>
-            <h3><a href="#">Sed quis rhoncus placerat</a></h3>
-        </header>
-        <p>
-            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-        </p>
-    </article>
-    <article class="col-4 col-12-mobile special">
-        <a href="#" class="image featured"><img src="{{ "images/pic09.jpg" | relative_url }}" alt="" /></a>
-        <header>
-            <h3><a href="#">Magna laoreet et aliquam</a></h3>
-        </header>
-        <p>
-            Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-            porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-        </p>
-    </article>
+{% endfor %}
 </div>
