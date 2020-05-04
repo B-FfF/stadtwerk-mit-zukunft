@@ -32,9 +32,15 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+sass:
+  style: compressed
+
 exclude:
   - _config_production.yml
   - vendor
+  - README.md
+  - LICENSE
+  - Gemfile*
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
