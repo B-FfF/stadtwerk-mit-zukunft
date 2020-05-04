@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Die Stadtwerke Flensburg suchen nach einer neuen Leitung der Geschäftsführung.
   Sind Sie der richtige Mensch, um die umfassende Transformation eines mittelgroßen
   kommunalen Konzerns zu einem führenden Dienstleister der erneuerbaren Energien einzuleiten?
-baseurl: "/stadtwerk-mit-zukunft" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/stadtwerk-mit-zukunft" # the subpath of your site, e.g. /blog
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -31,6 +31,10 @@ theme: null   # workaround for jekyll issue #7478 (caused by github-pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+exclude:
+  - _config_production.yml
+  - vendor
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

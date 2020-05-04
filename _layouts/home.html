@@ -13,26 +13,25 @@
 
       {%- include header.html -%}
       {%- include banner.html -%}
-      {%- include carousel.html -%}
-
+  
       <div class="wrapper style2">
-
         <article id="main" class="container special">
             {{ content }}
         </article>
       </div>
       <div class="wrapper style1">
-
+  
         <section id="features" class="container special">
-          <header>
-            <h2>Morbi ullamcorper et varius leo lacus</h2>
-            <p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
-          </header>
+          <!-- <header>
+            <h2>{{site.title}}</h2>
+            <p>{{site.description}}</p>
+          </header> -->
           {%- include features.html -%}
         </section>
       </div>
+      {%- include carousel.html -%}
       {%- include footer.html -%}
-    </div>
+     </div>
     {%- include scripts.html -%}
   </body>
 </html>
