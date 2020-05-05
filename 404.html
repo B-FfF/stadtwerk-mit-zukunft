@@ -1,24 +1,38 @@
 ---
 layout: default
+features:
+  - profil.md
+  - swfl.md
+  - herausforderung.md
 ---
 
 <style type="text/css" media="screen">
-  .container-404 {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
+  h2 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
+  } */
+  code {
+    padding: .2em .4em;
+    margin: 0;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    font-size: 85%;
+    line-height: 1.45;
   }
 </style>
 
 <div class="container-404">
-  <h1>404</h1>
+  <h2>404</h2>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Seite nicht gefunden 😓</strong></p>
+  <p>Zu der von Ihnen gesuchten Adresse <code id="location"></code> existiert leider keine Seite.</p>
+  <p>Dabei gibt es hier soviel zu entdecken: Schauen Sie doch einmal 
+    nach unten oder ganz oben ins Hauptmenü!
+  </p>
 </div>
+<script>
+  document.getElementById("location").textContent = location.href;
+</script>
