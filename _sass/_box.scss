@@ -1,0 +1,22 @@
+
+@mixin flexBox($align: center) {
+  /* Internet Explorer 10 */
+  display:-ms-flexbox;
+  -ms-flex-pack:$align;
+  -ms-flex-align:$align;
+
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack:$align;
+  -moz-box-align:$align;
+
+  /* Safari, Opera, and Chrome */
+  display:-webkit-box;
+  -webkit-box-pack:$align;
+  -webkit-box-align:$align;
+
+  /* W3C */
+  display:flex;
+  align-items:$align;
+  justify-content:$align;
+}
