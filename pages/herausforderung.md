@@ -28,10 +28,10 @@ Wie aus der Grafik ersichtlich wird, liegt der Anteil erneuerbarer Energien in d
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesteckt, bis 2050 CO₂-neutral zu sein. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden (sprich: einem Zielpfad folgen) müssen (Ziel 2). Es wird sich also an einem CO₂-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
-Seitdem ist die Menge der jährlichen Emissionen bereits um etwa 100.000 Tonnen reduziert worden. Sie liegen leider trotzdem in den meisten Jahren deutlich über dem Zielpfad:
+Seitdem ist die Menge der jährlichen Emissionen bereits um etwa 100.000 Tonnen reduziert worden. Sie liegen dennoch in den meisten Jahren deutlich über dem Zielpfad:
 
-<figure>
-    <div id="emissions"></div>
+<figure class=chart>
+    <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
 <script>
