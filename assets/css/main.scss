@@ -253,7 +253,7 @@
 	.container {
 		margin: 0 auto;
 		max-width: 100%;
-		width: 1400px;
+		padding: 0 2em;
 
 		@include breakpoint('<=wide') {
 			width: 1200px;
@@ -788,7 +788,6 @@
 
 	.wrapper {
 		background: #fff;
-		margin: 0 0 2em 0;
 		padding: 4em 0;
 
 		&.style2 {
@@ -808,13 +807,6 @@
 		text-align: center;
 		padding: 7.5em 0 2em 0;
 		cursor: default;
-
-		// &:before {
-		// 	content: '';
-		// 	display: inline-block;
-		// 	vertical-align: middle;
-		// 	height: 100%;
-		// }
 
 		.inner {
 			position: relative;
@@ -877,15 +869,10 @@
 		}
 	}
 
-<<<<<<< HEAD
-=======
 	#features {
-		p { 
-			padding: 0 2em;
-		}
+		p { padding: 0 2em}
 	}
 
->>>>>>> 339a041... fixup! Apply several CSS adjustments
 	body.homepage {
 
 		#header {
@@ -909,7 +896,7 @@
         position: absolute;
         bottom: 2vh;
         left: 50%;
-        margin-left: -3em;
+        margin-left: -1.5em;
         z-index: 1;
       }
   
@@ -1247,11 +1234,13 @@
 			white-space: nowrap;
 			position: relative;
 			-webkit-overflow-scrolling: touch;
-			padding: 0 2em 0 2em;
+			padding: 0 4em 0 4em;
+			justify-content: space-between;
 		}
 
 		article {
 			display: inline-block;
+			width: 20em;
 			min-width: 20em;
 			background: #fff;
 			text-align: center;
@@ -1292,14 +1281,9 @@
 				text-align: left;
 			}
 
-			&:after {
-				content: "";
-				display: block;
-				position: absolute;
-				right: -2rem;
-				width: 2rem;
-				height: 1px;
-			}			
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 

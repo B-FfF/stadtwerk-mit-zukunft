@@ -5,10 +5,7 @@ header: |
   Ohne Sie 
   sehen wir schwarz.
 features:
-  - profil.md
   - swfl.md
   - herausforderung.md
+  - profil.md
 ---
-
-
-Noch ein bischen Fliesstext...
