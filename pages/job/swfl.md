@@ -4,6 +4,13 @@ permalink: bewerben/stadtwerke-flensburg/status-quo/
 preview_image: assets/images/swfl/swfl_logo_2014.svg
 title: Die Stadtwerke Flensburg
 description: Ein Überblick über die Geschichte der Stadtwerke Flensburg, ihrer Erzeugungsstuktur und wirtschaftlichen Daten der einzelnen Geschäftsbereiche.
+sidebar:
+  box:
+    header: Work in progress
+    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich an uns direkt.
+    button:
+      text: Schreiben Sie uns
+      link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
 ---
 
 <div class="row">

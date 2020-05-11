@@ -1,17 +1,16 @@
+{% if page.sidebar.box %}
 <hr class="first" />
 <section>
     <header>
-        <h3><a href="#">Accumsan sed penatibus</a></h3>
+        <h3>{{ page.sidebar.box.header }}</h3>
     </header>
-    <p>
-        Dolor sed fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-        porttitor phasellus tempus cubilia ultrices tempor sagittis  tellus ante diam nec penatibus dolor cras
-        magna tempus feugiat veroeros.
-    </p>
+    <p>{{ page.sidebar.box.content }}</p>
     <footer>
-        <a href="#" class="button">Learn More</a>
+        <a href="{{ page.sidebar.box.button.link }}" class="button">{{ page.sidebar.box.button.text }}</a>
     </footer>
 </section>
+{% endif %}
+{% if page.sidebar.figures %}
 <hr />
 <section>
     <header>
@@ -71,3 +70,4 @@
         <a href="#" class="button">Magna Adipiscing</a>
     </footer>
 </section>
+{% endif %}

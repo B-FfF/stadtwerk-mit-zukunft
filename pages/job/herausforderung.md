@@ -8,6 +8,13 @@ caption: >-
   in der Erzeugungsstruktur der Stadtwerke Flensburg, um auch in kommenden Jahrzehnten solide aufgestellt zu sein.
 description: |
   Sowohl Fernwärmenetz als auch Strommix der Stadtwerke Flensburg haben nur einen sehr geringen Anteil an erneuerbaren Energien. Gleichzeitig ist sind die Treibhausgasemissionen besorgniserregend hoch. Dies hat auch wirtschaftliche Implikationen.
+sidebar:
+  box:
+    header: Work in progress
+    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich an uns direkt.
+    button:
+      text: Schreiben Sie uns
+      link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
 ---
 
 > „Wir befinden uns im Jahre 2020 n. Chr.  
