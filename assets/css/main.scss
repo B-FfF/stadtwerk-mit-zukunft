@@ -844,7 +844,6 @@
 			text-align: center;
 			font-size: 1.25em;
 			padding: 0;
-			margin-top: 8em;
 			background-color: rgba(64, 64, 64, 0.5);
 
 			&:hover {
@@ -877,15 +876,16 @@
 
 		#header {
 			height: 100vh;
-			// min-height: 40em;
 			background-image: url('../images/swfl/home.jpg');
       background-attachment: fixed;
 
       header {
         position: relative;
-        max-width: 40%;
+				width: 20em;
         left: 19%;
-        text-shadow: -1px 1px 4px rgba(255, 255, 255, 0.5)
+        text-shadow: -1px 1px 4px rgba(255, 255, 255, 0.5);
+				@include vendor('transition', 'all 1.5s cubic-bezier(.43,.41,.09,.89)');
+				@include vendor('transition-delay', '.2s');
       }
 
       .inner {
@@ -894,19 +894,20 @@
 
       footer {
         position: absolute;
-        bottom: 2vh;
+        bottom: 10vh;
         left: 50%;
         margin-left: -1.5em;
-        z-index: 1;
+				z-index: 1;
+				opacity: 0;
       }
   
 			h1 {
 				font-size: 4em;
 			}
 
-			&:after {
+			&:before, &:after {
 				content: '';
-				background: #1C0920;
+				background: #090909;
 				display: block;
 				position: absolute;
 				left: 0;
@@ -917,13 +918,55 @@
 				@include vendor('transition', 'opacity 2.5s ease-in-out');
 				@include vendor('transition-delay', '0.5s');
 			}
+
+			&:after {
+				background-color: #090909;
+				background-image: url('../images/home-zukunft.jpg');
+				background-size: cover;
+				background-position: 40% bottom;
+				background-attachment: fixed;
+			}
 		}
 
 		&.is-preload {
+
 			#header {
-				&:after {
+
+				header {
+					left: 0;
+					width: 24em;
+				}
+	
+				&:before {
 					opacity: 1;
 				}
+			}
+		}
+
+		&.is-black #header, &.is-postload {
+
+			&:before {
+				opacity: 1;
+				@include vendor('transition-delay', 'none');
+			}
+		}
+
+		&.is-postload #header {
+			
+			header {
+				width: 28em;
+				left: 0;
+				@include vendor('transition', 'all 2s ease-in-out');
+			}
+
+			&:after {
+				opacity: 1;
+			}
+
+			footer {
+				opacity: 1;
+				@include vendor('transition', 'opacity 1s ease-in-out');
+				@include vendor('transition-delay', '2s');
 			}
 		}
 	}
@@ -1291,10 +1334,9 @@
 
 	@include breakpoint('<=wide') {
 
-    .homepage {
+    body.homepage {
       #header header {
-        top: 20vh;
-        margin-top: -20%;
+				left: 30%;
       }
     }
 
@@ -1748,23 +1790,22 @@
 			body.homepage {
 
 				#header {
-					min-height: 36em;
 					padding: 5.5em 0 5em 0;
-					height: auto;
 					background-attachment: scroll;
 
           header {
-            max-width: 50%;
+						width: 12em;
           }
   
-          &:before {
-						display: none;
-					}
-
 					h1 {
 						font-size: 2.5em;
 					}
 				}
+
+				&.is-postload #header header {
+					width: 16em;
+				}
+
 			}
 
 		/* Nav */

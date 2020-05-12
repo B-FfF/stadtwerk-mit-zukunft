@@ -3,8 +3,8 @@
 
     <!-- Inner -->
     <div class="inner">
-        <header>
-            <h1 id="logo">{{ page.header | default: page.title | default: site.title | default: "Helios" }}</h1>
+        <header id="logo">
+            <h1>{{ page.header | default: page.title | default: site.title | default: "Helios" }}</h1>
           {%- if page.layout == "home" -%}
             <hr />
             <!-- <p>Another fine freebie by HTML5 UP</p> -->
