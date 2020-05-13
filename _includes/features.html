@@ -10,7 +10,7 @@
     <article class="col-4 col-12-mobile special">
         <a href="{{ feature.url | relative_url }}" class="image featured"><img src="{{ feature.preview_image | relative_url | default: "images/pic07.jpg" }}" alt="" /></a>
         <header>
-            <h3><a href="{{ feature.url | relative_url }}">{{ feature.title | default: | default: header_ipsum[forloop.index0] }}</a></h3>
+            <h3><a href="{{ feature.url | relative_url }}">{{ feature.title | default: | default: header_ipsum[forloop.index0] }} →</a></h3>
         </header>
         <p>{{ feature.caption | default: feature.description | default: lorem_ipsum -}}</p>
     </article>
