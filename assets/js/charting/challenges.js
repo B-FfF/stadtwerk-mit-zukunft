@@ -85,27 +85,15 @@
       shared: true,
       split: true,
     },
-    plotOptions: {
-      arearange: {
-        fillColor: {
-          pattern: {
-            path: {
-              d: 'M 0 0 L 10 10 M 9 -1 L 11 1 M -1 9 L 1 11',
-              strokeWidth: 3
-            },
-            width: 10,
-            height: 10,
-            opacity: 0.6
-          }
-        }
-      }
-    },
     xAxis: {
       categories: smz.fn.getYearSeries(startYear, 2020),
       tickWidth: 1,
       tickmarkPlacement: 'on'
     },
     yAxis: {
+      labels: {
+        format: '{value} t',
+      },        
       title: {
         text: 'CO₂-Emissionen in Tonnen'
       }
@@ -178,10 +166,110 @@
     return hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2025', template);
   }
 
+  function drawCertificatePriceChart() {
+
+    var requiredCertificatesSeries = [],
+        freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_certificates", 2012),
+        emissionsSeries = getSeries(2012);
+    
+    for (var i in freeOfChargeAllocationsSeries) {
+      requiredCertificatesSeries.push(emissionSeries[i] - freeOfChargeAllocationsSeries[i]);
+    }
+
+    return hc.chart("entwicklung-co2-zertifikatspreise", {
+      plotOptions: {
+        column: {
+          stacking: "normal",
+          tooltip: {
+            headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
+            pointFormat: '<tr><td>{series.name}: </td>' +
+            '<td style="color: {series.color}; text-align: right; font-weight: bold">&nbsp;{point.y} t</b></td></tr>',
+            footerFormat: '</table>',
+            xDateFormat: "%Y",
+          },
+          yAxis: 1,
+          pointWidth: 50,
+          pointPlacement: "between",
+          pointRange: 365 * 24 * 3600 * 1000,
+          pointIntervalUnit: "year",
+          pointStart: new Date("Jan 2 2012").getTime(),
+          zIndex: 0
+        }
+      },
+      tooltip: {
+        shared: true,
+        useHTML: true
+      },
+      xAxis: {
+        type: 'datetime',
+      },
+      yAxis: [{
+        labels: {
+          format: '<b>{value} €</b>',
+          style: {
+            color: Highcharts.defaultOptions.colors[7]
+          }
+        },
+        title: {
+          text: "Preis in € pro Tonne CO₂-Emissionsrechte"
+        },
+        opposite: true
+      },{
+        labels: {
+          style: {
+            color: Highcharts.defaultOptions.colors[8]
+          }
+        },
+        title: {
+          text: "Zertifkate-Bedarf der Stadtwerke Flensburg"
+        },
+        max: 800000,
+        min: 0,
+      }],
+      series: [{
+        gapSize: 7,
+        name: "EU ETS",
+        color: Highcharts.defaultOptions.colors[7],
+        data: window.SWFL.EUA,
+        tooltip: {
+          valueSuffix: ' €'
+        },
+        zIndex: 1
+      },{
+        name: "Prognose Fraunhofer ISE",
+        type: "arearange",
+        data: SWFL.EUE_ISE_forecast,
+        marker: {
+          enabled: false
+        },
+        color: Highcharts.defaultOptions.colors[7],
+        fillColor: {
+          pattern: {
+              color: Highcharts.defaultOptions.colors[7]
+          }
+        },
+        visible: false
+      },{
+        type: "column",
+        stack: 0,
+        name: "Benötigte Zertifikate",
+        data: requiredCertificatesSeries,
+        color: Highcharts.defaultOptions.colors[8],
+      },{
+        type: "column",
+        name: "Gratis-Zertifikate",
+        data: freeOfChargeAllocationsSeries,
+        stack: 0,
+        color: Highcharts.defaultOptions.colors[2],
+      }]
+    })
+  }
+
   // https://jsfiddle.net/gz6053p2/
 
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.Emissions = drawEmissionsChart();
   window.smz.chart.Emissions2025 = drawEmissionsChart2025();
+  window.smz.chart.CertificatePrices = drawCertificatePriceChart();
 
 })(window.Highcharts, window.SWFL.Emissions, window.smz)
