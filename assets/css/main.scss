@@ -405,12 +405,12 @@
 
 		&.featured {
 			width: 100%;
-			margin: 0 0 1em 0;
+			margin: 0 0 2em 0;
 			text-align: center;
 
 			#features & {
 				@include flexBox();
-				height: 10em;
+				height: 18vw;
 
 				img {
 					width: auto;
@@ -1340,6 +1340,15 @@
       }
     }
 
+		#features {
+			.image.featured {
+				height: 13em;
+			}
+			p {
+				padding: 0 1em;
+			}
+		} 
+
 		/* Basic */
 
 			body, input, textarea, select {
@@ -1382,13 +1391,7 @@
 		}
 
 		#features {
-			p { 
-				padding: 0;
-			}
-
 			article p {
-				hyphens: auto;
-				padding: 0 1em;
 				hyphens: auto;
 			}
 		}
@@ -1534,7 +1537,11 @@
 
 			.image {
 				&.featured {
-					margin: 0 0 2em 0;
+					margin: 2em 0;
+
+					#features & {
+						height: auto;
+					}
 				}
 
 				&.left {
