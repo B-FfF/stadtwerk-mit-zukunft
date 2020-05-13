@@ -55,7 +55,7 @@
   function getGreenconceptPath(startYear, stopYear) {
     stopYear = stopYear || GC_END_YEAR;
     if (startYear < swflDataStartYear) {
-      throw RangeError(`Cannot generate Path starting ${startYear}, as earliest available year in data series is ${swflDataStartYear}.`);
+      throw RangeError("Cannot generate Path starting " + startYear + ", as earliest available year in data series is " + swflDataStartYear);
     }
     let startValue = parseInt(swflData[startYear - swflDataStartYear].co2);
     let returnArray = [startValue];
@@ -131,10 +131,10 @@
       tooltip: {
         pointFormatter: function() {
 
-          return `<tr>
-              <td>${this.series.name}:</td><td style="text-align: right"><strong>${Highcharts.numberFormat(shouldIs.overshoot[this.x], 0)} t</strong></td><br>
-              <td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>${Highcharts.numberFormat(shouldIs.accumulated[this.x], 0)} t</strong></td>
-            </tr>`;
+          return "<tr>"
+              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ Highcharts.numberFormat(shouldIs.overshoot[this.x], 0) + " t</strong></td><br>"
+              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + Highcharts.numberFormat(shouldIs.accumulated[this.x], 0) + " t</strong></td>"
+              + "</tr>";
         }
       },
       showInLegend: true
