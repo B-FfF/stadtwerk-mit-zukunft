@@ -11,10 +11,7 @@
     }
   }
 
-  function getCarbonCausedByGas(year) {
-    return swflData
-  }
-
+  var startYear = 2007;
   /**
    * @type {Number} greenco₂ncept end year
    */
@@ -26,15 +23,19 @@
   var K13_START_YEAR = 2023;
   var swflDataStartYear = swflData[0].year;
 
-  function getOvershootRangeSeries(startYear, stopYear) {
-    var should = getGreenconceptPath(startYear, stopYear);
-    var is = getSeries(startYear);
+  function getCarbonCausedByGas(year) {
+    return swflData
+  }
+
+  function getOvershootRangeSeries(startYear, stopYear, shouldSeries, isSeries) {
+    var should = shouldSeries || getGreenconceptPath(startYear, stopYear);
+    var is = isSeries || getSeries(startYear);
 
     var range = [], overshoot = [], accumulatedOvershoot = [];
     var accumulated = 0;
     for (var i in should) {
-      range.push([should[i], is[i]]);
       var difference = is[i] - should[i];
+      range.push([should[i], is[i]]);
       overshoot.push(difference);
       accumulated += difference;
       accumulatedOvershoot.push(accumulated);
@@ -71,11 +72,10 @@
     return smz.fn.extractColumn(swflData, "co2", startYear);
   }
 
-  // https://jsfiddle.net/gz6053p2/
-  let startYear = 2007;
-  var shouldIs = getOvershootRangeSeries(startYear, 2019);
-  let etcSource = "https://ec.europa.eu/clima/policies/ets/registry_en#tab-0-1";
-  var emissionsChart = hc.chart('co2-emissionen-der-stadtwerke-flensburg', {
+  var greenconceptPath = getGreenconceptPath(startYear);
+  var emissionSeries = getSeries(startYear);
+  var shouldIs = getOvershootRangeSeries(startYear, 2019, greenconceptPath, emissionSeries);
+  var emissionsChartTemplate = {
     chart: {
       height: '50%'
     },
@@ -111,22 +111,20 @@
       }
     },
     series: [{
-      type: 'line',
       name: 'CO₂-Emissionen',
       color: 'red',
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
-        data: getSeries(startYear),
+        data: emissionSeries,
       zIndex: 1      
     },{
-      type: 'line',
       name: 'greenco₂ncept Pfad',
       color: 'green',
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
-        data: getGreenconceptPath(startYear, 2019)
+        data: greenconceptPath
     },{
       type: 'arearange',
       name: 'Mehrausstoß',
@@ -153,9 +151,37 @@
       },
       showInLegend: true
     }]
-  });
+  };
+
+  function drawEmissionsChart() {
+    var template = Object.assign({}, emissionsChartTemplate);
+    template.xAxis.max = 2019 - startYear;
+    template.credits = {
+      enabled: true,
+      text: "Quelle: EU ETS",
+      href: "https://ec.europa.eu/clima/policies/ets/registry_en#tab-0-1",
+      position: {
+        y: -24
+      }
+    }
+    return hc.chart('co2-emissionen-der-stadtwerke-flensburg', template);
+  }
+
+  function drawEmissionsChart2025() {
+    var template = Object.assign({}, emissionsChartTemplate);
+    template.xAxis.categories = template.xAxis.categories.concat(smz.fn.getYearSeries(2021, 2030));
+    template.xAxis.max = 2030 - startYear;
+    template.series[0].data = template.series[0].data.concat([560000, 560000, 560000, 420000, 420000, 420000, 420000, 420000, 420000, 420000, 420000]);
+    shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[0].data);
+    template.series[2].data = shouldIs.range;
+
+    return hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2025', template);
+  }
+
+  // https://jsfiddle.net/gz6053p2/
 
   window.smz.chart = window.smz.chart || {};
-  window.smz.chart.Emissions = emissionsChart;
+  window.smz.chart.Emissions = drawEmissionsChart();
+  window.smz.chart.Emissions2025 = drawEmissionsChart2025();
 
 })(window.Highcharts, window.SWFL.Emissions, window.smz)

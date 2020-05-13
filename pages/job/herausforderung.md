@@ -1,6 +1,6 @@
 ---
 layout: right-sidebar
-permalink: bewerben/stadtwerke-flensburg/die-herausforderung/
+permalink: stadtwerke-flensburg/die-herausforderung/
 preview_image: assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png
 title: Die Herausforderung
 caption: >-
@@ -35,11 +35,26 @@ Wie aus der Grafik ersichtlich wird, liegt der Anteil erneuerbarer Energien in d
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesteckt, bis 2050 CO₂-neutral zu sein. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden (sprich: einem Zielpfad folgen) müssen (Ziel 2). Es wird sich also an einem CO₂-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
-Seitdem ist die Menge der jährlichen Emissionen bereits um etwa 100.000 Tonnen reduziert worden. Sie liegen dennoch in den meisten Jahren deutlich über dem Zielpfad:
+Seitdem ist die Menge der jährlichen Emissionen im Schnitt um 100.000 Tonnen reduziert worden. Sie liegen dennoch in den meisten Jahren deutlich über dem Zielpfad, wodurch bis heute rund 800.000 Tonnen mehr CO₂ emittiert wurde:
 
 <figure class=chart>
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
+
+Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Seitdem sind die CO₂-Emissionen um etwa **70.000 Tonnen** gesunken.
+
+Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [55 MWₑₗ](ndr-kessel-13) + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [64 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden - unter dieser optimistischen Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
+
+<figure class=chart>
+    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2025"></div>
+</figure>
+
+  [ndr-kessel-13]: https://web.archive.org/web/20190423101117/https://www.ndr.de/nachrichten/schleswig-holstein/Flensburger-Meilenstein-auf-dem-Weg-zum-Kohleausstieg,gaskraftwerk140.html
+  [swfl-kessel-12-web]: https://web.archive.org/web/20191230235758/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-12/zusaetzliche-informationen/
+  [ebc-kessel78-mwel]: https://d3ihh3ce7usp68.cloudfront.net/wp-content/uploads/2020/04/2020-04-21_Europe_Beyond_Coal-European_Coal_Database_hc.xlsx
+  [swfl-kessel12-poster]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/kessel12/faltplakat-kessel-12.pdf
+  [uba-kkw]: https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/171207_uba_hg_braunsteinkohle_bf.pdf "Umweltbundesamt: Daten und Fakten zu Braun- und  Steinkohlen, Seite 48"
+  [swfl-kessel-13-web]: https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-13/
 
 <script>
   window.SWFL = {

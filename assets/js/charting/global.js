@@ -8,7 +8,11 @@
        * @returns {Array}
        */
       getYearSeries: function (from, to) {
-        return Array.apply(null, { length: to }).map(function (value, index) {
+        if (to <= from) {
+          throw RangeError(`Start value needs to be greater than or at least equal to end value.`);
+        }
+        var numToDo = 1 + to - from;
+        return Array.apply(null, { length: numToDo }).map(function (value, index) {
           return index + from;
         });
       },
@@ -33,7 +37,6 @@
         fontFamily: 'Source Sans Pro',
       },
       spacingLeft: 0,
-      spacingBottom: 0,
       spacingRight: 0
     },
     credits: {
