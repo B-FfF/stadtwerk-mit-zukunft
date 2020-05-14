@@ -1,5 +1,11 @@
-{% if page.sidebar.box %}
+
 <hr class="first" />
+<nav>
+    <h4>Auf dieser Seite:</h4>
+    {%- include toc.html html=content -%}
+</nav>
+<hr>    
+{% if page.sidebar.box %}
 <section>
     <header>
         <h3>{{ page.sidebar.box.header }}</h3>
