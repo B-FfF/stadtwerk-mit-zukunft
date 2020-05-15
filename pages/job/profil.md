@@ -14,7 +14,7 @@ Die Stadtwerke Flensburg GmbH sind das zentrale Unternehmen, das alle Flensburge
 
 Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahren und bleibt *spätestens* bis zum 31.12. - das ist Ihre und unsere Chance! 
 
-### Ihre Aufgaben:
+### Ihre Aufgaben
 
 * **Transformation** des Unternehmens weg von der Abhängigkeit von extern zugelieferten, fossilen Energieträgern
 * Entwicklung und Erschließung von Kooperationen 
@@ -23,7 +23,7 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
 * Mitarbeiter\*innenführung und -motivation 
 * Berichterstattung an den Aufsichtsrat bzw. die Gesellschafterversammlung
 
-### Das wünschen wir uns von Ihnen:
+### Das wünschen wir uns von Ihnen
 
 * Eine **Vision** und die Bereitschaft, dafür zu kämpfen
 * Hohe Expertise im Bereich der erneuerbaren Energien
@@ -35,7 +35,7 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
     * Ausgeprägte Zahlensicherheit, Exaktheit und Organisationstalent
     * Bereitschaft zu einem dauerhaften Engagement
 
-### Ihre Vorteile:
+### Ihre Vorteile
 
 * Die Möglichkeit, **Geschichte zu schreiben** und die Energiewende im Norden voranzubringen
 * Eine vielfältige und herausfordernde Aufgabe, bei der Sie alle Ihre Talente, Fähigkeiten und Kenntnisse entfalten können
@@ -54,5 +54,5 @@ Tel. 0461-850
 Gerne können Sie uns auch [direkt kontaktieren]({% link pages/about/imprint.md %}#presse), sollten Sie vorab Fragen oder Rückmeldungen haben - oder uns einfach nur darüber in Kenntnis setzen wollen, dass Sie sich beworben haben. Wir freuen uns über jede Nachricht.
 
 
-  [prinz]: # "Wolfgang Prinz war technischer Direktor der Stadtwerke und setzte seine Vision trotz politischen Widerstandes und negativer Einschätzungen aller Expert*innen mit großem Erfolg um."
+  [prinz]: {% link pages/job/swfl.md %}#die-erste-krise "Wolfgang Prinz war technischer Direktor der Stadtwerke und setzte seine Vision trotz politischen Widerstandes und negativer Einschätzungen aller Expert*innen mit großem Erfolg um."
   [schoenste-foerde]: https://www.youtube.com/watch?v=kURCht9BRfY
