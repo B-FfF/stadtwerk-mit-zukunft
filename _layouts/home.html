@@ -12,25 +12,23 @@
     <div id="page-wrapper">
 
       {%- include header.html -%}
-      {% comment %}
-             {%- include banner.html -%} 
-      {% endcomment %}
+      {%- include banner.html -%} 
           
-      {% comment %}
-          <div class="wrapper style2">
-            <article id="main" class="container special">
-                {{ content }}
-            </article>
-          </div>
-      {% endcomment %}
-      {{content}}
+      <div class="wrapper style2">
+        <article id="main" class="container special">
+            {{ content }}
+        </article>
+      </div>
+
       <div class="wrapper style1">
   
         <section id="features" class="container special">
+        {%- comment -%}
           <header>
             <h2>{{site.title}}</h2>
             <p>{{site.description}}</p>
           </header>
+        {%- endcomment -%}
           {%- include features.html -%}
         </section>
       </div>

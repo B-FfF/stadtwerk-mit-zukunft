@@ -789,7 +789,7 @@
 		padding: 4em 0;
 
 		&.style2 {
-			padding-top: 0;
+			padding: 0;
 		}
 	}
 
@@ -874,6 +874,10 @@
 	}
 
 	body.homepage {
+
+		.wrapper.style1 {
+			padding-top: 0;
+		}
 
 		#header {
 			height: 100vh;
