@@ -96,7 +96,8 @@
       },        
       title: {
         text: 'CO₂-Emissionen in Tonnen'
-      }
+      },
+      tickInterval: 100000
     },
     series: [{
       name: 'CO₂-Emissionen',
@@ -104,15 +105,15 @@
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
-        data: emissionSeries,
-      zIndex: 1      
+      data: emissionSeries,
+      zIndex: 1
     },{
       name: 'greenco₂ncept Pfad',
       color: 'green',
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
-        data: greenconceptPath
+      data: greenconceptPath
     },{
       type: 'arearange',
       name: 'Mehrausstoß',
@@ -170,12 +171,15 @@
 
     var requiredCertificatesSeries = [],
         freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_certificates", 2012),
-        emissionsSeries = getSeries(2012);
+        emissionsSeries = getSeries(2012),
+        responsiveRule = Highcharts.defaultOptions.responsive.rules[0];
     
     for (var i in freeOfChargeAllocationsSeries) {
       requiredCertificatesSeries.push(emissionSeries[i] - freeOfChargeAllocationsSeries[i]);
     }
 
+    responsiveRule.chartOptions.xAxis.minPadding = 0.06;
+    responsiveRule.chartOptions.yAxis[1].offset = 0;
     return hc.chart("entwicklung-co2-zertifikatspreise", {
       plotOptions: {
         column: {
@@ -187,14 +191,18 @@
             footerFormat: '</table>',
             xDateFormat: "%Y",
           },
-          yAxis: 1,
-          pointWidth: 50,
+          groupPadding: 0,
           pointPlacement: "between",
           pointRange: 365 * 24 * 3600 * 1000,
           pointIntervalUnit: "year",
+          pointPadding: 0.1,
           pointStart: new Date("Jan 2 2012").getTime(),
+          yAxis: 0,
           zIndex: 0
         }
+      },
+      responsive: {
+        rules: [ responsiveRule ]
       },
       tooltip: {
         shared: true,
@@ -202,19 +210,9 @@
       },
       xAxis: {
         type: 'datetime',
+        tickInterval: "year"
       },
       yAxis: [{
-        labels: {
-          format: '<b>{value} €</b>',
-          style: {
-            color: Highcharts.defaultOptions.colors[7]
-          }
-        },
-        title: {
-          text: "Preis in € pro Tonne CO₂-Emissionsrechte"
-        },
-        opposite: true
-      },{
         labels: {
           style: {
             color: Highcharts.defaultOptions.colors[8]
@@ -223,10 +221,43 @@
         title: {
           text: "Zertifkate-Bedarf der Stadtwerke Flensburg"
         },
-        max: 800000,
         min: 0,
+        ceiling: 800000,  // not working with 2 axis' unless using endOnTick
+        max: 800000       // not working with 2 axis'
+      },
+      {
+        labels: {
+          format: '<b>{value} €</b>',
+          style: {
+            color: Highcharts.defaultOptions.colors[7]
+          },
+          y: -2,
+          x: -10
+        },
+        title: {
+          text: "Preis in € pro Tonne CO₂-Emissionsrechte"
+        },
+        offset: -10,
+        opposite: true,
+        min: 0,
+        softMax: 32,
       }],
       series: [{
+        type: "column",
+        stack: 0,
+        name: "Benötigte Zertifikate",
+        data: requiredCertificatesSeries,
+        color: Highcharts.defaultOptions.colors[8],
+        yAxis: 0
+      },{
+        type: "column",
+        name: "Gratis-Zertifikate",
+        data: freeOfChargeAllocationsSeries,
+        stack: 0,
+        color: Highcharts.defaultOptions.colors[2],
+        yAxis: 0
+
+      },{
         gapSize: 7,
         name: "EU ETS",
         color: Highcharts.defaultOptions.colors[7],
@@ -234,7 +265,8 @@
         tooltip: {
           valueSuffix: ' €'
         },
-        zIndex: 1
+        zIndex: 1,
+        yAxis: 1
       },{
         name: "Prognose Fraunhofer ISE",
         type: "arearange",
@@ -245,22 +277,11 @@
         color: Highcharts.defaultOptions.colors[7],
         fillColor: {
           pattern: {
-              color: Highcharts.defaultOptions.colors[7]
+            color: Highcharts.defaultOptions.colors[3],
           }
         },
-        visible: false
-      },{
-        type: "column",
-        stack: 0,
-        name: "Benötigte Zertifikate",
-        data: requiredCertificatesSeries,
-        color: Highcharts.defaultOptions.colors[8],
-      },{
-        type: "column",
-        name: "Gratis-Zertifikate",
-        data: freeOfChargeAllocationsSeries,
-        stack: 0,
-        color: Highcharts.defaultOptions.colors[2],
+        visible: false,
+        yAxis: 1
       }]
     })
   }

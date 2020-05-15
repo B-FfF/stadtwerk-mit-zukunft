@@ -79,23 +79,42 @@
         chartOptions: {
           chart: {
             marginTop: 14,
-            height: '80%'
+            height: '90%'
           },
           legend: {
             align: 'center',
             verticalAlign: 'bottom',
             layout: 'horizontal'
           },
-          yAxis: {
+          xAxis: {
             labels: {
+              rotation: 90,
+              style: {
+                textOverflow: 'none'
+              }
+            },
+            minPadding: 0.02
+          },
+          yAxis: [{
+            labels: {
+              format: null,
               align: 'left',
               x: 0,
               y: -5
             },
             title: {
               text: null
+            },
+          },{
+            labels: {
+              align: 'right',
+              x: 0,
+              y: -5
+            },
+            title: {
+              text: null
             }
-          },
+          }],
           subtitle: {
             text: null
           }
