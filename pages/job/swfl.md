@@ -93,6 +93,6 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
     }
   }
 </script>
-<script src="{{ "assets/js/lib/highcharts/highcharts.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-8.1.0/highcharts.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>
