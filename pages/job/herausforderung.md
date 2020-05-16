@@ -17,9 +17,13 @@ sidebar:
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
 ---
 
-## Erneuerbare Energien
+## Erneuerbare Energien in Flensburg
 
-### Strom
+<figure class="chart">
+  <div id="erneuerbare-energien-in-flensburg-chart"></div>
+</figure>
+
+### Stromerzeugung und -verbrauch
 
 <figure class="image left">
   <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
@@ -98,3 +102,4 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
 <script src="{{ "assets/js/lib/highcharts-8.1.0/broken-axis.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/comparison.js" | relative_url }}"></script>
