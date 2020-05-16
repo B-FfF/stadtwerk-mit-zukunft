@@ -55,7 +55,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 ### Geschäftsberichte
 
 |------|------|------|------|------|------|------|------|------|------|
-|            |            |[2002]&nbsp;|[2003]&nbsp;|[2004]&nbsp;|[2005]&nbsp;|[2006]&nbsp;|[2007]&nbsp;|[2008]&nbsp;|[2009]|
+|            |[2001]&nbsp;|[2002]&nbsp;|[2003]&nbsp;|[2004]&nbsp;|[2005]&nbsp;|[2006]&nbsp;|[2007]&nbsp;|[2008]&nbsp;|[2009]|
 |[2010]&nbsp;|[2011]&nbsp;|[2012]&nbsp;|[2013]&nbsp;|[2014]&nbsp;|[2015]&nbsp;|[2016]&nbsp;|[2017]&nbsp;|[2018]&nbsp;|      |
 
 
@@ -83,6 +83,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
   [2004]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2004_11.pdf
   [2003]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2003_10.pdf
   [2002]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2002_03.pdf
+  [2001]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2001_11.pdf
 
 <script>
   window.SWFL = {
