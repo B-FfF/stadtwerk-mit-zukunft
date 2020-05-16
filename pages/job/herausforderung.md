@@ -17,33 +17,39 @@ sidebar:
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
 ---
 
-> „Wir befinden uns im Jahre 2020 n. Chr.  
- Ganz Schleswig-Flensburg ist von den erneuerbaren Energien besetzt... Ganz Schleswig-Flensburg? Nein! Eine von unbeugsamen Anhängern der fossilen Energie bevölkerte Stadt hört nicht auf, dem Eindringling Widerstand zu leisten...“
+## Erneuerbare Energien
 
-<figure>
-  <img class="image featured" src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
+### Strom
+
+<figure class="image left">
+  <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
   <figcaption>
     Quelle: EKSH – <a href="https://www.eksh.org/fileadmin/downloads/publikationen/Broschuere_Energieforschung_Final_Download_0205.pdf">„Energieforschung in Schleswig-Holstein“</a> S.23
   </figcaption>
 </figure>
 
-In Anlehnung an den bekanntesten Comic-Prolog der Welt könnte sich diese Formulierung bei der Betrachtung der Situation südlich der Grenze zu Dänemark geradezu aufdrängen.  
+Wie aus der Grafik ersichtlich wird, liegt der Anteil fossiler Energien in der Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
 
-Wie aus der Grafik ersichtlich wird, liegt der Anteil erneuerbarer Energien in der Stromerzeugung in Flensburg unter 15 Prozent, während diese im Umland sogar den Bedarf übersteigen. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
+{%- comment -%}
+
+### Stromverkauf
+
+{%- endcomment %}
+
 
 ## Das greenco<sub>2</sub>ncept-Ziel
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesteckt, bis 2050 CO₂-neutral zu sein. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden (sprich: einem Zielpfad folgen) müssen (Ziel 2). Es wird sich also an einem CO₂-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
-Seitdem ist die Menge der jährlichen Emissionen im Schnitt um 100.000 Tonnen reduziert worden. Sie liegen dennoch in den meisten Jahren deutlich über dem Zielpfad, wodurch bis heute rund 800.000 Tonnen mehr CO₂ emittiert wurde:
-
-<figure class=chart>
+<figure class="image left">
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-### Emissionssenkungen durch Kessel 13 unzureichend {#unzureichende-emissionsreduktion-kessel-13}
+Seit 2007 ist die Menge der jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO₂ emittiert wurden.
 
-Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Seitdem sind die CO₂-Emissionen um etwa **100.000 Tonnen** gesunken.
+### Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
+
+Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Die CO₂-Emissionen sanken zwischen 2015 und 2017 um etwa **70.000 Tonnen**.
 
 Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ][wiki-fossil-kwk] + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden - unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
