@@ -10,18 +10,19 @@ description: Neue Geschäftsleitung für die Stadtwerke Flensburg gesucht!
 
 ## Hallo, sind Sie unser neuer Prinz?[\*][prinz]
 
-Die Stadtwerke Flensburg GmbH sind das zentrale Unternehmen, das alle Flensburger*innen mit der nötigen Infrastruktur zum Leben versorgt. Das Firmengelände liegt direkt am Wasser der „schönsten Förde der Welt“. Sie blicken auf eine über 150-jährige Firmengeschichte zurück und beschäftigen zurzeit rund 700 Mitarbeiter\*innen. Eine Beschreibung des Unternehmens ist [auf dieser Seite]({% link pages/job/swfl.md %}) und auf der [Seite der Stadtwerke Flensburg]() einsehbar.
+Die Stadtwerke Flensburg GmbH sind das zentrale Unternehmen, das alle Flensburger*innen mit der nötigen Infrastruktur zum Leben versorgt. Das Firmengelände liegt direkt am Wasser der „schönsten Förde der Welt“. Sie blicken auf eine über 150-jährige Unternehmensgeschichte zurück und beschäftigen nahezu 700 Mitarbeiter\*innen. Weitere Informationen sind unter anderem [auf dieser Seite]({% link pages/job/swfl.md %}) und auf der [Unternehmensseite der Stadtwerke Flensburg](https://www.stadtwerke-flensburg.de/unternehmen/ueber-uns/) verfügbar.
 
-Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahren und bleibt *spätestens* bis zum 31.12. - das ist Ihre und unsere Chance! 
+Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahren und bleibt *spätestens* bis zum 31.12.2020.
 
 ### Ihre Aufgaben
 
-* **Transformation** des Unternehmens weg von der Abhängigkeit von extern zugelieferten, fossilen Energieträgern
+* **Transformation** des Unternehmens zur Unabhängigkeit von fossilen Import-Brennstoffen
 * Entwicklung und Erschließung von Kooperationen 
 * Ausbau von Dienstleistungen der Stadtwerke, insbesondere auf dem Gebiet der dezentralen Energieversorgung auf Basis erneuerbarer Energien 
 * Strategische und operative Führung des Unternehmens und seiner Geschäftsbereiche
 * Mitarbeiter\*innenführung und -motivation 
-* Berichterstattung an den Aufsichtsrat bzw. die Gesellschafterversammlung
+* Berichterstattung an Aufsichtsrat und Gesellschafterinversammlung
+* öffentliches, transparentes Monitoring aller klimaschutzrelevanten Daten
 
 ### Das wünschen wir uns von Ihnen
 
@@ -29,9 +30,8 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
 * Hohe Expertise im Bereich der erneuerbaren Energien
 * Politisches Geschick sowie hohe Führungs- und Sozialkompetenz
 * das „Übliche“:
-    * Technische Vorbildung (Anlagentechnik, Ingenieurswissenschaften)
+    * Technische Vorbildung (Anlagentechnik, Ingenieurswissenschaften) & fundierte betriebswirtschaftliche Kenntnisse
     * Berufserfahrung in leitender Position eines Betriebes der Energie- und Umweltwirtschaft oder im kommunalen Umfeld  
-    * Fundierte betriebswirtschaftliche Kenntnisse (Steuerrecht, Bilanzrecht, Kenntnisse der Kostenrechnung)
     * Ausgeprägte Zahlensicherheit, Exaktheit und Organisationstalent
     * Bereitschaft zu einem dauerhaften Engagement
 
@@ -42,7 +42,7 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
 * Tätigkeit in einer der attraktivsten Städte Deutschlands (*["wohnen, wo andere Leute Urlaub machen"][schoenste-foerde]*)
 * Eine außertarifliche Vergütung mit Erfolgsbeteiligung und den üblichen Nebenleistungen
 
-Haben wir Ihr Interesse geweckt, dann möchten wir Sie unbedingt zu einer Initiativbewerbung ermutigen!  
+Haben wir Ihr Interesse geweckt? Dann möchten wir Sie unbedingt zu einer Initiativbewerbung ermutigen!  
 Senden Sie diese an:
 
 > Stadt Flensburg  
