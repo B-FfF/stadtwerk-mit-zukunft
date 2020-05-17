@@ -8,7 +8,7 @@
 {%- for featureName in page.features -%}
 {% assign feature = site.pages | where:"name",featureName | first %}
     <article class="col-4 col-12-mobile special">
-        <a href="{{ feature.url | relative_url }}" class="image featured"><img src="{{ feature.preview_image | relative_url | default: "images/pic07.jpg" }}" alt="" /></a>
+        <a href="{{ feature.url | relative_url }}" class="image featured"><img data-src="{{ feature.preview_image | relative_url | default: "images/pic07.jpg" }}"  src="//:0" class="lazyload" alt="" /></a>
         <header>
             <h3><a href="{{ feature.url | relative_url }}">{{ feature.title | default: | default: header_ipsum[forloop.index0] }} →</a></h3>
         </header>
