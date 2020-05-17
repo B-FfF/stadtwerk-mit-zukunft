@@ -795,6 +795,10 @@
 
 /* Header */
 
+	#blinking-cursor {
+		display: none;
+	}
+
 	#header {
 		position: relative;
 		background-image: url('../images/fl_hafen.jpg');
@@ -931,6 +935,11 @@
 				background-position: 40% bottom;
 				background-attachment: fixed;
 			}
+		}
+
+		#blinking-cursor {
+			display: inline;
+			opacity: 0;
 		}
 
 		&.is-preload {

@@ -28,12 +28,14 @@
 			mobile:    [ null,      '736px'  ]
 		});
 
+// Doing this in home-animation now and as soon as title pic is loaded
+
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+		// $window.on('load', function() {
+		// 	window.setTimeout(function() {
+		// 		$body.removeClass('is-preload');
+		// 	}, 100);
+		// });
 
 	// Dropdowns.
 		$('#nav > ul').dropotron({

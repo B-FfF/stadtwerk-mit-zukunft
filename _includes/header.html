@@ -4,7 +4,7 @@
     <!-- Inner -->
     <div class="inner">
         <header id="logo">
-            <h1>{{ page.header | default: page.title | default: site.title | default: "Helios" }}</h1>
+            <h1><span id="logo-text">{{ page.header | default: page.title | default: site.title | default: "Helios" }}</span><span id="blinking-cursor">|</span></span></h1>
           {%- if page.layout == "home" -%}
             <hr />
             <!-- <p>Another fine freebie by HTML5 UP</p> -->
