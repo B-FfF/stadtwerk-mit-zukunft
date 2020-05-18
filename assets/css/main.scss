@@ -342,7 +342,7 @@
 
 		p {
 			min-width: 16em;
-			overflow: hidden;			
+			overflow: hidden;
 		}
 
 		figure {
@@ -877,6 +877,14 @@
 		}
 	}
 
+	.hide-mobile {
+		display: initial;
+	}
+
+	.show-mobile {
+		display: none;
+	}
+
 	body.homepage {
 
 		.wrapper.style1 {
@@ -934,6 +942,24 @@
 				background-size: cover;
 				background-position: 40% bottom;
 				background-attachment: fixed;
+			}
+		}
+
+		#content, #main {
+			p {
+				padding: 0 2em;
+				margin-top: -2em;
+				padding-bottom: 2em;
+				text-align: center;
+				font-weight: 300;
+
+				a {
+					border-bottom: none;
+				}
+
+				img {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -1796,6 +1822,14 @@
 					top: 1em;
 					margin-bottom: 2.5em;
 				}
+			}
+
+			.hide-mobile {
+				display: none;
+			}
+	
+			.show-mobile {
+				display: initial;
 			}
 
 			body.homepage {
