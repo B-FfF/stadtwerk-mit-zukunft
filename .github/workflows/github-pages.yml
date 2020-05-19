@@ -3,7 +3,7 @@ name: Jekyll to GitHub Pages CI
 on:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
   github-pages:
@@ -20,6 +20,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
 
       - name: 🔨 Build for Github-Pages
-        uses: helaili/jekyll-action@master
+        uses: helaili/jekyll-action@2.0.2
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
