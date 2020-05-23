@@ -49,17 +49,19 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesteckt, bis 2050 CO�
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-Seit 2007 ist die Menge der jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO₂ emittiert wurden.
+Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden - was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
 
-### Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
+### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
 Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Die CO₂-Emissionen sanken zwischen 2015 und 2017 um etwa **70.000 Tonnen**.
 
 Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ][wiki-fossil-kwk] + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden - unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
 <figure class=chart>
-    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2025"></div>
+    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
 </figure>
+
+Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Mitte 2036 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
 
 ### Wirtschaftliche Bedeutung von CO₂-Emissionen
 

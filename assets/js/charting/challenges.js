@@ -33,12 +33,21 @@
 
     var range = [], overshoot = [], accumulatedOvershoot = [];
     var accumulated = 0;
+    var valuesToGenerate = stopYear - startYear + 1;
     for (var i in should) {
-      var difference = is[i] - should[i];
-      range.push([should[i], is[i]]);
+
+      if (i == valuesToGenerate) {
+        break;
+      }
+
+      if (is[i] !== undefined) {
+        range.push([should[i], is[i]]);
+      }
+      var difference = (is[i] - should[i]) || 0;
       overshoot.push(difference);
       accumulated += difference;
       accumulatedOvershoot.push(accumulated);
+
     }
     return {
       range: range,
@@ -61,6 +70,12 @@
     let returnArray = [startValue];
     let divisor = GC_END_YEAR - startYear;
     for (startYear++; startYear <= stopYear; startYear++) {
+
+      if (startYear === stopYear) {
+        returnArray.push(0);
+        break;
+      }
+
       returnArray.push(
         returnArray[returnArray.length-1] - startValue/divisor
       );
@@ -70,6 +85,32 @@
 
   function getSeries(startYear) {
     return smz.fn.extractColumn(swflData, "co2", startYear);
+  }
+
+  function getConsumedBudgetSeries(greenconceptPath, consumedBudget) {
+    var sinkRate = greenconceptPath[0] - greenconceptPath[1];
+    var consumedBudgetSeries = [], accumulatedBudgetSeries = [];
+
+    var remainingAccumulatedBudget = 0;
+    for (var i = 0; ; i++) {
+      var currentYearBudget = i * sinkRate
+      remainingAccumulatedBudget += currentYearBudget;
+      if (remainingAccumulatedBudget > consumedBudget || i > 50) {
+        var budgetPercentageConsumedCurrentYear = (remainingAccumulatedBudget - consumedBudget) / currentYearBudget;
+        var budgetEndYear = GC_END_YEAR - i + budgetPercentageConsumedCurrentYear;
+
+        consumedBudgetSeries.unshift([budgetEndYear, 0, greenconceptPath[greenconceptPath.length - 1 - i] - sinkRate * (budgetPercentageConsumedCurrentYear)]);
+        accumulatedBudgetSeries.unshift([budgetEndYear, consumedBudget]);
+        break;
+      }
+      consumedBudgetSeries.unshift([GC_END_YEAR - i, 0, greenconceptPath[greenconceptPath.length - 1 - i]]);
+      accumulatedBudgetSeries.unshift([GC_END_YEAR - i, remainingAccumulatedBudget]);
+    }
+
+    return {
+      area: consumedBudgetSeries,
+      accumulated: accumulatedBudgetSeries
+    };
   }
 
   var greenconceptPath = getGreenconceptPath(startYear);
@@ -84,10 +125,26 @@
       valueDecimals: 0,
       shared: true,
       split: true,
+      formatter: function(tooltip) {
+        if (this.x === undefined) {
+          // for some reason function is called multiple times
+          return;
+        }
+        
+        var tooltipArray = tooltip.defaultFormatter.call(this, tooltip);
+        tooltipArray[0] = "<strong>Ende " + this.x + "</strong>"
+        if (this.x % 1 !== 0) {
+          var remainder = this.x % 1;
+          var monthSplit = 1 / 12;
+          var monthEnd = Math.ceil(remainder / monthSplit);
+          var monthString = new Date(monthEnd + "/01/2000").toLocaleDateString("de", {month: "short"});
+          tooltipArray[0] = "<strong>" + monthString + " " + Math.ceil(this.x) + "</strong>"
+        }
+        return tooltipArray;
+      },
     },
     xAxis: {
-      categories: smz.fn.getYearSeries(startYear, 2020),
-      tickWidth: 1,
+      tickInterval: 1,
       tickmarkPlacement: 'on'
     },
     yAxis: {
@@ -99,6 +156,15 @@
       },
       tickInterval: 100000
     },
+    plotOptions: {
+      arearange: {
+        fillColor: {
+          pattern: {
+              color: '#d11'
+          }
+        }
+      }
+    },
     series: [{
       name: 'CO₂-Emissionen',
       color: 'red',
@@ -106,25 +172,31 @@
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
       data: emissionSeries,
-      zIndex: 1
+      pointStart: startYear,
+      zIndex: 1,
+      zoneAxis: 'x',
+      zones: [{
+        value: 2019
+      },{
+        dashStyle: "Dot",
+        fillColor: "#ffffff"
+      }]
     },{
+      id: "gc",
       name: 'greenco₂ncept Pfad',
       color: 'green',
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
-      data: greenconceptPath
+      data: greenconceptPath,
+      pointStart: startYear
     },{
       type: 'arearange',
       name: 'Mehrausstoß',
       color: '#e88',
-      fillColor: {
-        pattern: {
-            color: '#d11'
-        }
-      },
       data: shouldIs.range,
-      linkedTo: ':previous',
+      pointStart: startYear,
+      linkedTo: 'gc',
       zIndex: -1,
       marker: {
         enabled: false
@@ -133,8 +205,8 @@
         pointFormatter: function() {
 
           return "<tr>"
-              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ Highcharts.numberFormat(shouldIs.overshoot[this.x], 0) + " t</strong></td><br>"
-              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + Highcharts.numberFormat(shouldIs.accumulated[this.x], 0) + " t</strong></td>"
+              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ Highcharts.numberFormat(shouldIs.overshoot[this.index], 0) + " t</strong></td><br>"
+              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + Highcharts.numberFormat(shouldIs.accumulated[this.index], 0) + " t</strong></td>"
               + "</tr>";
         }
       },
@@ -144,7 +216,7 @@
 
   function drawEmissionsChart() {
     var template = Object.assign({}, emissionsChartTemplate);
-    template.xAxis.max = 2019 - startYear;
+    template.xAxis.max = 2019.5;
     template.credits = {
       enabled: true,
       text: "Quelle: EU ETS",
@@ -156,15 +228,32 @@
     return hc.chart('co2-emissionen-der-stadtwerke-flensburg', template);
   }
 
-  function drawEmissionsChart2025() {
+  function drawEmissionsChart2030() {
     var template = Object.assign({}, emissionsChartTemplate);
-    template.xAxis.categories = template.xAxis.categories.concat(smz.fn.getYearSeries(2021, 2030));
-    template.xAxis.max = 2030 - startYear;
+    template.xAxis.max = null;
+    template.yAxis.min = 0;
     template.series[0].data = template.series[0].data.concat([560000, 560000, 560000, 420000, 420000, 420000, 420000, 420000, 420000, 420000, 420000]);
     shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[0].data);
+    var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[shouldIs.accumulated.length - 1]);
+    
     template.series[2].data = shouldIs.range;
+    template.series[3] = {
+      type: "arearange",
+      name: "Fehlendes Budget",
+      linkedTo: "gc",
+      color: '#e88',
+      marker: {enabled: false, symbol: "diamond"},
+      zIndex: -1,
+      data: consumedBudgetSeries.area,
+      tooltip: {
+        pointFormatter: function() {
+          return "Verbleibendes Budget: <strong>" + Highcharts.numberFormat(consumedBudgetSeries.accumulated[this.index][1], 0) + " t</strong>"
+        }
+      },
+      showInLegend: false
+    };
 
-    return hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2025', template);
+    return hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2030', template);
   }
 
   function drawCertificatePriceChart() {
@@ -290,7 +379,7 @@
 
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.Emissions = drawEmissionsChart();
-  window.smz.chart.Emissions2025 = drawEmissionsChart2025();
+  window.smz.chart.Emissions2030 = drawEmissionsChart2030();
   window.smz.chart.CertificatePrices = drawCertificatePriceChart();
 
 })(window.Highcharts, window.SWFL.Emissions, window.smz)
