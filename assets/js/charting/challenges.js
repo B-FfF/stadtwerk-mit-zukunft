@@ -264,7 +264,7 @@
         responsiveRule = Highcharts.defaultOptions.responsive.rules[0];
     
     for (var i in freeOfChargeAllocationsSeries) {
-      requiredCertificatesSeries.push(emissionSeries[i] - freeOfChargeAllocationsSeries[i]);
+      requiredCertificatesSeries.push(emissionsSeries[i] - freeOfChargeAllocationsSeries[i]);
     }
 
     responsiveRule.chartOptions.xAxis.minPadding = 0.06;
