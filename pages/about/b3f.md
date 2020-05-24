@@ -105,11 +105,11 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
   .greenpeace img {
     width: 200px;
     height: 120px;
-    margin-top: -18px;
+    margin-top: -10px;
   }
 
   .greenpeace	span {
-    top: 48px;
+    top: 56px;
   }
 
   .sff .trim {
@@ -135,12 +135,11 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
   }
   
   .attac img {
-    height: 70px;
+      height: 70px;
   }
     
   .attac span {
     bottom: 30px;
-    right: 34px;
   }
 
   .ees img {

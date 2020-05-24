@@ -244,19 +244,19 @@
       }],
       series: [{
         type: "column",
-        stack: 0,
-        name: "Benötigte Zertifikate",
-        data: requiredCertificatesSeries,
-        color: Highcharts.defaultOptions.colors[8],
-        yAxis: 0
-      },{
-        type: "column",
         name: "Gratis-Zertifikate",
         data: freeOfChargeAllocationsSeries,
         stack: 0,
         color: Highcharts.defaultOptions.colors[2],
         yAxis: 0
 
+      },{
+        type: "column",
+        stack: 0,
+        name: "Benötigte Zertifikate",
+        data: requiredCertificatesSeries,
+        color: Highcharts.defaultOptions.colors[8],
+        yAxis: 0
       },{
         gapSize: 7,
         name: "EU ETS",
