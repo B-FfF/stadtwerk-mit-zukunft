@@ -7,7 +7,7 @@ description: Ein Überblick über die Geschichte der Stadtwerke Flensburg, ihrer
 sidebar:
   box:
     header: Work in progress
-    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich an uns direkt.
+    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich direkt an uns.
     button:
       text: Schreiben Sie uns
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
@@ -15,9 +15,9 @@ sidebar:
 
 ## Vorgeschichte
 
-Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte, inbesondere die letzten 50 Jahre - in welchen die Grundlagen für die heutige Situation geschaffen wurden.
+Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre,in welchen die Grundlagen für die heutige Situation geschaffen wurden.
 
-### Die 1. Krise (60er Jahre) {#die-erste-krise}
+### 60er Jahre: Die 1. Krise {#die-erste-krise}
 
 Die Bewältigung dieser ersten großen Krise der Nachkriegsgeschichte hatte sowohl eine *technologische*, als auch eine *politische* Dimension. Sie begann mit einem Investitionsstau und einem scheinbar unlösbaren Dilemma:
 
@@ -27,21 +27,21 @@ Das war das Dilemma! « [(Wolfgang Prinz)][prinz-interview]
 
 Aber Prinz hatte eine Vision, Durchhaltevermögen sowie technisches und politisches Geschick. Er sicherte sich mit Stimmen der Partei SSW den Rückhalt, um an der Lösung des Problems arbeiten zu können. Mit Hilfe skandinavischer Planungsbüros löste er die zuvor unter Expert*innen als unlösbar geltenden geografischen Herausforderungen Flensburgs und begann 1970 mit dem Bau den Fernwärmenetzes. Durch die gemeinsame Produktion von Strom und Fernwärme in Kraft-Wärme-Kopplung konnte schließlich die Genehmigungsschwelle von 300 MW überschritten und die neuen Anlagen gebaut werden. 
 
-Bis 1985 wurden 98 % der Flensburger Haushalte an das Netz angeschlossen. Dieser Wert ist bis heute konstant. So gingen Flensburg und seine Stadtwerke gestärkt aus der Krise hervor: in den folgenden Jahren wurde dieses „Flensburger Modell“ bundesweit bekannt, eine [Bonner Konferenz im Jahre 1981 trug sogar den Namen „Flensburger Tage“](prinz-spiegel) - eine Zeit, in der Flensburg in der Republik mit etwas deutlich Positiverem als den beim KBA geführten berüchtigten „Punkten“ assoziiert wurde.
+Bis 1985 wurden 98 % der Flensburger Haushalte an das Netz angeschlossen. Dieser Anteil ist bis heute konstant. So gingen Flensburg und seine Stadtwerke gestärkt aus der Krise hervor: In den folgenden Jahren wurde dieses „Flensburger Modell“ bundesweit bekannt, eine [Bonner Konferenz im Jahre 1981 trug sogar den Namen „Flensburger Tage“](prinz-spiegel) -- eine Zeit, in der Flensburg in der Republik mit etwas deutlich Positiverem als den beim KBA geführten berüchtigten „Punkten“ assoziiert wurde.
 
-### Die 2. Krise (00er Jahre) {#die-zweite-krise}
+### 00er Jahre: Die 2. Krise {#die-zweite-krise}
 
-Die Stadtwerke wurden am 1. Januar 1983 aus [»steuerlichen und finanziellen Gründen«][umwandlung-gmbh] in eine GmbH umgewandelt - und hauptsächlich *finanzieller* Art war dann auch die Krise, in die sie zwei Jahrzehnte später gerieten.
+Die Stadtwerke wurden am 1. Januar 1983 aus [»steuerlichen und finanziellen Gründen«][umwandlung-gmbh] in eine GmbH umgewandelt -- und hauptsächlich *finanzieller* Art war dann auch die Krise, in die sie zwei Jahrzehnte später gerieten.
 
-Von Expansions- und Wachstumsgedanken beseelt - und nicht ohne gewissen Ansporn der politisch Verantwortlichen - stieg die Anzahl der verbundenen Unternehmen und Beteiligungen bis zum Jahr 2007 auf insgesamt 28. Darunter waren zukunftsweisende Projekte wie kommunale Windparks und regionale Biomethan-Erzeuger, aber auch Beteiligungen an geplanten Kohlekraftwerken in Ventspils (Lettland), sowie Krefeld und Lünen. Wohl auch durch die Finanzkrise begünstigt, wurden viele dieser Beteiligungen defizitär und belasteten das Bilanzergebnis der Stadtwerke schwer, was insgesamt zu [Verlusten von etwa 15 Millionen Euro][wolfskeil-nicht-entlastet] führte. Infolgedessen musste der kommunale Haushalt der Stadt für die Jahre 2009, 2011 und 2013 auf die damals übliche Gewinnausschüttung von jeweils 3 Mio. € verzichten.
+Von Expansions- und Wachstumsgedanken beseelt -- und nicht ohne gewissen Ansporn der politisch Verantwortlichen -- stieg die Anzahl der verbundenen Unternehmen und Beteiligungen bis zum Jahr 2007 auf insgesamt 28. Darunter waren zukunftsweisende Projekte wie kommunale Windparks und regionale Biomethan-Erzeuger, aber auch Beteiligungen an geplanten Kohlekraftwerken in Ventspils (Lettland), sowie Krefeld und Lünen. Wohl auch durch die Finanzkrise verschärft, wurden viele dieser Beteiligungen defizitär und belasteten das Bilanzergebnis der Stadtwerke schwer, was insgesamt zu [Verlusten von etwa 15 Millionen Euro][wolfskeil-nicht-entlastet] führte. Infolgedessen musste der kommunale Haushalt der Stadt für die Jahre 2009, 2011 und 2013 auf die damals übliche Gewinnausschüttung von jeweils 3 Mio. € verzichten.
 
-Im April 2010 wurde Maik Render als zweiter Geschäftsführer [vorgestellt][introducing-render], um bald darauf die Führung des Unternehmens zu übernehmen, dieses zu konsolidieren und wieder in die Gewinnzone zu bringen.
+Im April 2010 wurde Maik Render als zweiter Geschäftsführer [vorgestellt][introducing-render], um bald darauf die Führung des Unternehmens zu übernehmen, es zu konsolidieren und wieder in die Gewinnzone zu bringen.
 
 ## Die Stadtwerke Flensburg heute
 
 ### Erzeugungsstruktur
 
-Das Flensburger Kraftwerk ist ein wärmegesteuertes Kraftwerk, das heißt die Energie wird in erster Linie produziert um die Haushalte in Flensburg und Umgebung mit Heizwärme und Warmwasser zu versorgen. Der Strom wird ebenfalls genutzt, die Nachfrage nach Elektrizität bestimmt aber nicht die Produktion. Deswegen wird im Sommer, wenn wenig Wärme benötigt wird, Strom für die Kund*innen in Flensburg hinzugekauft. 
+Das Flensburger Kraftwerk ist ein wärmegesteuertes Kraftwerk, das heißt es dreht sich bei uns in erster Linie alles um Versorgung der Haushalte in Flensburg und Umgebung mit Heizwärme und Warmwasser. Der Strom wird ebenfalls genutzt, die Nachfrage nach Elektrizität bestimmt aber nicht die Produktion. Deswegen wird im Sommer, wenn wenig Wärme benötigt wird, Strom für die Kund*innen in Flensburg hinzugekauft. 
 
 An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen. Auch Glücksburg, Harrislee, Tastrup, Wees und Padborg werden mit Flensburger Fernwärme versorgt.
 

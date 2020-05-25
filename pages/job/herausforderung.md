@@ -11,7 +11,7 @@ description: |
 sidebar:
   box:
     header: Work in progress
-    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich an uns direkt.
+    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich direkt an uns.
     button:
       text: Schreiben Sie uns
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
@@ -32,7 +32,7 @@ sidebar:
   </figcaption>
 </figure>
 
-Wie aus der Grafik ersichtlich wird, liegt der Anteil fossiler Energien in der Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
+Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
 
 {%- comment -%}
 
@@ -43,19 +43,19 @@ Wie aus der Grafik ersichtlich wird, liegt der Anteil fossiler Energien in der S
 
 ## Das greenco<sub>2</sub>ncept-Ziel
 
-Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesteckt, bis 2050 CO₂-neutral zu sein. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden (sprich: einem Zielpfad folgen) müssen (Ziel 2). Es wird sich also an einem CO₂-Budget orientiert, wie es die Klimawissenschaft auch tut.
+Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO₂-neutral zu werden. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden müssen (sprich: einem Zielpfad folgen; Ziel 2). Es wird sich also an einem CO₂-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
 <figure class="image left">
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden - was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
 
 ### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
 Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Die CO₂-Emissionen sanken zwischen 2015 und 2017 um etwa **70.000 Tonnen**.
 
-Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ][wiki-fossil-kwk] + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden - unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
+Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ][wiki-fossil-kwk] + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
 <figure class=chart>
     <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
@@ -75,13 +75,13 @@ So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Kli
 
 ## Wirtschaftliche Belastung durch CO₂-Emissionen
 
-Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO₂-Emissionen pro Tonne ein Zertifikat besitzen müssen (manchmal auch „European Union Allowance“, kurz: EUA genannt). Eine bestimmte, seit 2013 jährlich sinkende Menge dieser Emissionsrechte wird „Free of Charge“ – also gratis – vergeben (in der folgenden Grafik grün dargestellt). Der Rest (rot) muss erworben werden, *bevor* die Emissionen entstehen. Der Preis für EUAs hat sich seit Anfang 2018 **mehr als verdreifacht**:
+Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO₂-Emissionen pro Tonne ein Zertifikat besitzen müssen (manchmal auch „European Union Allowance“, kurz: EUA genannt). Eine bestimmte, seit 2013 jährlich sinkende Menge dieser Emissionsrechte wird gratis vergeben (in der folgenden Grafik *grün*{:style="color: green"} dargestellt). Der Rest (*rot*{:style="color: #f45b5b"}) muss erworben werden, *bevor* die Emissionen entstehen. Der Preis für EUAs hat sich seit Anfang 2018 **mehr als verdreifacht**:
 
 <figure class=chart>
     <div id="entwicklung-co2-zertifikatspreise"></div>
 </figure>
 
-Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO₂-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € – den fast alle Marktbeobachter*innen früher oder später erwarten – würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25€). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet, wenn nicht sogar unwahrscheinlich. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
+Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO₂-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € -- den fast alle Marktbeobachter*innen früher oder später erwarten -- würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25 €). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet, wenn nicht sogar unwahrscheinlich. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
 
 [^1]: 
     **Annahmen Methanberechnung**
