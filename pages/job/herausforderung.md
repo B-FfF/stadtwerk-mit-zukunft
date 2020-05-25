@@ -63,7 +63,17 @@ Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ
 
 Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Mitte 2036 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
 
-### Wirtschaftliche Bedeutung von CO₂-Emissionen
+### Klimaschädlichkeit von Erdgas
+
+Methan ist der Hauptbestandteil von Erdgas und -- über den Zeitraum von 100 Jahren betrachtet -- ein [28 bis 33 mal stärkeres Treibhausgas][gas-gwp] als CO<sub>2</sub>. Über einen Zeitraum von 20 Jahren betrachtet ist es laut IPCC sogar **84 mal potenter als CO<sub>2</sub>**.  
+Bei Abbau, Transport und Lagerung entweichen [laut Aussage der IEA][iea-slip] 1,7 % der weltweit geförderten Erdgasmenge in die Atmosphäre -- der so genannte **„Methanschlupf“**. [Diverse Studien][slip-comparison] kommen auf deutlich höhere Werte -- besonders wenn das Erdgas per Fracking gewonnen wurde: dabei wird von einem Methanschlupf bis zu 5,8 % ausgegangen.  
+So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Klimawandel, wie in der folgenden Grafik in CO<sub>2</sub>-Äquivalenten umgerechnet dargestellt[^1]:
+
+<figure class=chart>
+    <div id="diagramm-klimaschaedlichkeit-methan"></div>
+</figure>
+
+## Wirtschaftliche Belastung durch CO₂-Emissionen
 
 Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO₂-Emissionen pro Tonne ein Zertifikat besitzen müssen (manchmal auch „European Union Allowance“, kurz: EUA genannt). Eine bestimmte, seit 2013 jährlich sinkende Menge dieser Emissionsrechte wird „Free of Charge“ – also gratis – vergeben (in der folgenden Grafik grün dargestellt). Der Rest (rot) muss erworben werden, *bevor* die Emissionen entstehen. Der Preis für EUAs hat sich seit Anfang 2018 **mehr als verdreifacht**:
 
@@ -73,6 +83,14 @@ Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO
 
 Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO₂-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € – den fast alle Marktbeobachter*innen früher oder später erwarten – würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25€). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet, wenn nicht sogar unwahrscheinlich. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
 
+[^1]: 
+    **Annahmen Methanberechnung**
+
+    Erdgasanteil SWFL: | 80 % ab 2023, davor 30 %, für 2016 20% 
+    Methangehalt: | 90%
+    Emissionsfaktoren Erdgas: | 0,202 CO<sub>2</sub>/kWh \| 2 kg CO<sub>2</sub>/m³ \| 0,671 kg = 1 m³ 
+    CO<sub>2</sub>-Äquivalente: | Bezugszeitraum 100 Jahre: Faktor 30<br> Bezugszeitraum 20 Jahre: Faktor 84
+
   [ndr-kessel-13]: https://web.archive.org/web/20190423101117/https://www.ndr.de/nachrichten/schleswig-holstein/Flensburger-Meilenstein-auf-dem-Weg-zum-Kohleausstieg,gaskraftwerk140.html
   [swfl-kessel-12-web]: https://web.archive.org/web/20191230235758/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-12/zusaetzliche-informationen/
   [ebc-kessel78-mwel]: https://d3ihh3ce7usp68.cloudfront.net/wp-content/uploads/2020/04/2020-04-21_Europe_Beyond_Coal-European_Coal_Database_hc.xlsx
@@ -81,6 +99,11 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
   [wiki-fossil-kwk]: https://de.wikipedia.org/wiki/Liste_fossil-thermischer_Kraftwerke_in_Deutschland
   [swfl-kessel-13-web]: https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-13/
   [ise-2018-sgk-ee]: https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/DE2018_ISE_Studie_Stromgestehungskosten_Erneuerbare_Energien.pdf
+
+  [gas-gwp]: https://de.wikipedia.org/wiki/Methan#Treibhausgas
+  [gas-gwp-84-ipcc]: http://www.climatechange2013.org/images/report/WG1AR5_Chapter08_FINAL.pdf
+  [iea-slip]: https://www.deutschlandfunk.de/methanverluste-lecks-in-der-oel-und-gasindustrie.676.de.html?dram:article_id=402450
+  [slip-comparison]: https://www.psehealthyenergy.org/wp-content/uploads/2017/05/Howarth_Ingraffea_-_4th_Anniversary_lecture_at_Cornell_University_-_April_14_2015-1.pdf
 
 <script>
   window.SWFL = {

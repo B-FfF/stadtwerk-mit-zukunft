@@ -1,16 +1,5 @@
 (function(hc, swflData, smz) {
 
-  var carbonFactor = {
-    beforeK13: {
-      coal: .79464588275161,
-      gas:  .20535411724839,
-    },
-    afterK13: {
-      coal: .293088363954506,
-      gas: .706911636045494
-    }
-  }
-
   var startYear = 2007;
   /**
    * @type {Number} greenco₂ncept end year
@@ -149,7 +138,9 @@
     },
     yAxis: {
       labels: {
-        format: '{value} t',
+        formatter: function() {
+          return Highcharts.numberFormat(this.value, 0) + " t";
+        }
       },        
       title: {
         text: 'CO₂-Emissionen in Tonnen'
@@ -157,7 +148,11 @@
       tickInterval: 100000
     },
     plotOptions: {
+      line: {
+        pointStart: startYear
+      },
       arearange: {
+        pointStart: startYear,
         fillColor: {
           pattern: {
               color: '#d11'
@@ -172,14 +167,12 @@
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
       data: emissionSeries,
-      pointStart: startYear,
       zIndex: 1,
       zoneAxis: 'x',
       zones: [{
         value: 2019
       },{
-        dashStyle: "Dot",
-        fillColor: "#ffffff"
+        dashStyle: "Dot"
       }]
     },{
       id: "gc",
@@ -189,13 +182,11 @@
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
       data: greenconceptPath,
-      pointStart: startYear
     },{
       type: 'arearange',
       name: 'Mehrausstoß',
       color: '#e88',
       data: shouldIs.range,
-      pointStart: startYear,
       linkedTo: 'gc',
       zIndex: -1,
       marker: {
@@ -375,11 +366,151 @@
     })
   }
 
+  function drawMethaneChart() {
+    var emissionsSeries = emissionsChartTemplate.series[0].data,
+      methaneSeriesStartYear = 2016,
+      template = emissionsChartTemplate;
+
+    var carbonByGasPerNormCubic = 2,
+        gasKilogramPerNormCubic = 0.671,
+        carbonEquivalentOfGas100Years = 30,
+        carbonEquivalentOfGas20Years = 84,
+        assumedLeakageFactor = 0.02,
+        assumedMethaneConcentrationInGas = 0.9;
+
+    var carbonFactor = {
+      startK12: {
+        coal: .869001297016861,
+        gas:  .130998702983139
+      },
+      beforeK13: {
+        coal: .79464588275161,
+        gas:  .20535411724839,
+      },
+      afterK13: {
+        coal: .293088363954506,
+        gas:  .706911636045494
+      }
+    };
+
+    function calculateGasSeries() {
+
+      var emissionsShareForGasSeries = [],
+          gasUsedSeries = [],
+          greenhouseEffectGas100YearsSeries = [],
+          greenhouseEffectGas20YearsSeries = [];
+
+      for (var currentYear = 2016; currentYear <= 2030; currentYear++) {
+
+        var emissionsFactorGas = currentYear === 2016 ? carbonFactor.startK12.gas : currentYear < 2023 ? carbonFactor.beforeK13.gas : carbonFactor.afterK13.gas;
+        var emissionsByGasInTons = emissionsSeries[currentYear - startYear] * emissionsFactorGas;
+        emissionsShareForGasSeries.push(emissionsByGasInTons);
+        
+        var gasUsedTonnes = emissionsByGasInTons / carbonByGasPerNormCubic * gasKilogramPerNormCubic;
+        gasUsedSeries.push(gasUsedTonnes);
+        greenhouseEffectGas100YearsSeries.push(gasUsedTonnes * assumedLeakageFactor * carbonEquivalentOfGas100Years * assumedMethaneConcentrationInGas);
+        greenhouseEffectGas20YearsSeries.push(gasUsedTonnes * assumedLeakageFactor * carbonEquivalentOfGas20Years * assumedMethaneConcentrationInGas);
+      }
+
+      return {
+        used: gasUsedSeries,
+        emissionsShare: emissionsShareForGasSeries,
+        greenhouseEffect100Years: greenhouseEffectGas100YearsSeries,
+        greenhouseEffect20Years: greenhouseEffectGas20YearsSeries
+      }
+    }
+
+    var gasSeries = calculateGasSeries();
+    var chartConfig = {
+      chart: {
+        height: "50%"
+      },
+      yAxis: Object.assign({
+        reversedStacks: false
+      }, template.yAxis),
+      plotOptions: template.plotOptions,
+      xAxis: {
+        min: 2014.5,
+        max: 2030.5
+      },
+      series: [
+      Object.assign({}, template.series[0]),  // [0]
+      {  // [1]
+        name: "Anteil Erdgas-Verbrennung an CO₂-Emissionen",
+        data: gasSeries.emissionsShare,
+        pointStart: methaneSeriesStartYear,
+        visible: false,
+        color: "rgba(0,0,0,0.3)"
+      },
+      {  // [2]
+        name: "Verbrauch Erdgas",
+        data: gasSeries.used,
+        pointStart: methaneSeriesStartYear
+      },        
+      {  // [3]
+        name: "CO₂-Äquivalent Methan (100 Jahre)",
+        data: gasSeries.greenhouseEffect100Years,
+        stack: 0,
+        stacking: "normal",
+        pointStart: methaneSeriesStartYear,
+        type: "area",
+        color: Highcharts.defaultOptions.colors[6],
+        zIndex: 2
+      },
+      Object.assign({}, template.series[0]),  // duplicating series to allow separate stacks for 20 / 100 year perspective
+      {  // [5]
+        name: "CO₂-Äquivalent Methan (20 Jahre)",
+        data: gasSeries.greenhouseEffect20Years,
+        stack: 1,
+        stacking: "normal",
+        pointStart: methaneSeriesStartYear,
+        type: "area",
+        color: Highcharts.defaultOptions.colors[3]
+      },
+      template.series[1],   // [6]
+      ],
+      tooltip: template.tooltip
+    };
+
+    Object.assign(chartConfig.series[0], {
+      color: 'rgba(255, 0, 0, 0.2)',
+      enableMouseTracking: false,
+      stack: 0,
+      stacking: "normal",
+      type: "area",
+      fillColor: "transparent",
+      events: {legendItemClick: function (e){ e.preventDefault();}}
+    });
+
+    Object.assign(chartConfig.series[4], {
+      color: 'rgba(255, 0, 0, 0.2)',
+      stack: 1,
+      stacking: "normal",
+      type: "area",
+      fillColor: "transparent",
+      showInLegend: false
+    });
+
+    Object.assign(chartConfig.series[6], {
+      color: 'rgba(0, 128, 0, 0.2)',
+      visible: false
+    });
+
+    chartConfig.yAxis.title.enabled = false;
+    chartConfig.plotOptions.area = chartConfig.plotOptions.line;
+    chartConfig.plotOptions.area.marker = {symbol: "circle"};
+    chartConfig.plotOptions.line.zones = chartConfig.series[0].zones;
+    chartConfig.plotOptions.line.zoneAxis = "x";
+
+    return hc.chart('diagramm-klimaschaedlichkeit-methan', chartConfig);
+  }
+
   // https://jsfiddle.net/gz6053p2/
 
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.Emissions = drawEmissionsChart();
   window.smz.chart.Emissions2030 = drawEmissionsChart2030();
   window.smz.chart.CertificatePrices = drawCertificatePriceChart();
+  window.smz.chart.Methane = drawMethaneChart();
 
 })(window.Highcharts, window.SWFL.Emissions, window.smz)

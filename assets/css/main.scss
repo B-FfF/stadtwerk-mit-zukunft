@@ -320,6 +320,21 @@
 		}
 	}
 
+	.footnotes {
+		&:before {
+			content: 'Fußnoten';
+			font-size: 1.25em;
+			margin-bottom: .5em;
+			padding-top: 2em;
+			clear: both;
+			display: block;
+		}
+
+		table, p {
+			margin-bottom: 0;
+		}
+	}
+
 	#content, #main {
 
 		h1, h2, h3, h4 {
@@ -352,6 +367,13 @@
 		.chart {
 			width: 100%;
 			float: none;
+
+			figcaption {
+				position: relative;
+				margin-top: -1em;
+				padding-right: 0em;
+				line-height: 1.2em;
+			}
 		}
 
 		figcaption {
