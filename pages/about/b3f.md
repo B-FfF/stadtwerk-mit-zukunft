@@ -45,6 +45,15 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     </a>
 </div>
 
+Wir werden unter anderem unterstützt von:
+
+<a class="uim grid-item" href="https://www.umweltinstitut.org">
+  <img alt="Umweltinstitut München e.V." src="//:0" data-src="{{ "assets/images/supporter/uim.png" | relative_url }}" class="lazyload">
+</a>
+<a class="bbk grid-item" href="https://buerger-begehren-klimaschutz.de/">
+  <img alt="BürgerBegehren Klimaschutz e.V." src="//:0" data-src="{{ "assets/images/supporter/bbk.png" | relative_url }}" class="lazyload">
+</a>
+
 
 ### Was wir wollen
 
@@ -71,7 +80,7 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
 
 <style>
 	#members {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 
   #main .grid-item, #main .grid-item:hover {
@@ -86,58 +95,6 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     line-height: inherit;
     display: inline-block;
     margin: 0 auto 10px auto;
-  }
-
-  @media screen and (max-width: 736px) {
-
-    #members .grid-item, #members .grid-item:hover {
-      width: 50%;
-      outline: 10px solid transparent;
-      min-height: auto;
-      min-width: auto;
-      max-width: 50%;
-    }
-
-    #members .grid-item:nth-child(odd) {
-      padding-right: 4px;
-    }
-
-    #members .grid-item:nth-child(even) {
-      padding-left: 4px;
-    }
-
-    #members .grid-item img {
-      max-width: 100%;
-      width: auto;
-    }
-
-    #members .grid-item.attac img {
-      height: auto;
-    }
-
-    #members .attac span {
-      left: 60%;
-      bottom: 5px;
-    }
-
-    #members .greenpeace	span {
-      top: 56%;
-      right: 0;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    #members .attac span {
-      top: 0;
-      margin-top: 18vw;
-      left: auto;
-      right: 0;
-    }
-
-    #members .greenpeace	span {
-      top: 50%;
-      right: 0;
-    }
   }
 
   .grid-item .lazyloaded + span {
@@ -209,7 +166,92 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
   
   .menleb img {
     border-radius: 50%;
-  }  
+  }
+
+  #main .grid-item.bbk img {
+    padding: 6px 0;
+    margin-top: -4px;
+  }
+
+  #main .grid-item.bbk {
+    padding-left: 60px;
+  }
+
+  #main .grid-item.uim img, #main .grid-item.bbk img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 736px) {
+
+    #main .grid-item, #main .grid-item:hover {
+      width: 50%;
+      outline: 10px solid transparent;
+      min-height: auto;
+      min-width: auto;
+      max-width: 50%;
+    }
+
+    #main .grid-item:nth-child(odd) img {
+      padding-right: 4px;
+    }
+
+    #main .grid-item:nth-child(even) img {
+      padding-left: 4px;
+    }
+
+    #members .grid-item img {
+      max-width: 100%;
+      width: auto;
+    }
+
+    #members .grid-item.attac img {
+      height: auto;
+    }
+
+    #members .attac span {
+      left: 60%;
+      bottom: 5px;
+    }
+
+    #members .greenpeace	span {
+      top: 56%;
+      right: 0;
+    }
+
+    #main .grid-item.bbk, #main .grid-item.uim {
+      max-height: 100%;
+    }
+
+    #main .grid-item.uim img, #main .grid-item.bbk img {
+      max-height: 100%;
+    }
+
+    #main .grid-item.uim {
+      width: 58%;
+      max-width: 58%;
+    }
+
+    #main .grid-item.bbk {
+      width: 42%;
+      padding-top: 2px;
+      padding-left: 12px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #members .attac span {
+      top: 0;
+      margin-top: 18vw;
+      left: auto;
+      right: 0;
+    }
+
+    #members .greenpeace	span {
+      top: 50%;
+      right: 0;
+    }
+  }
 </style>
 <script src="{{ "assets/js/lib/masonry-layout-4.2.2.min.js" | relative_url }}"></script>
 <script>
