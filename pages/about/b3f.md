@@ -16,32 +16,32 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
 
 <div id="members" class="grid">
     <a href="https://www.facebook.com/Fridays-for-Future-Flensburg-2423163701300656/" class="grid-item fff">
-      <img src="{{ "assets/images/members/fff-flensburg.png" | relative_url }}" alt="Fridays for Future Flensburg">
+      <img src="//:0" data-src="{{ "assets/images/members/fff-flensburg.png" | relative_url }}" alt="Fridays for Future Flensburg" class="lazyload">
     </a>
     <a href="https://www.flensburg.greenpeace.de/" class="grid-item greenpeace">
-      <img src="{{ "assets/images/members/greenpeace_logo.svg" | relative_url }}" alt="Greenpeace">
+      <img src="//:0" data-src="{{ "assets/images/members/greenpeace_logo.svg" | relative_url }}" alt="Greenpeace" class="lazyload">
       <span>Flensburg</span>
     </a>
     <a class="sff grid-item" href="https://klimaschutz.campus-flensburg.de/?page_id=4533">
       <div class="trim">
-        <img alt="Students for Future Flensburg" src="{{ "assets/images/members/sff-flensburg.jpg" | relative_url }}">
+        <img src="//:0" alt="Students for Future Flensburg" data-src="{{ "assets/images/members/sff-flensburg.jpg" | relative_url }}" class="lazyload">
       </div>
     </a>
     <a class="ag-klima grid-item">
-      <img alt="Aktionsgruppe KLIMA Flensburg" src="{{ "assets/images/members/akf.jpg" | relative_url }}">
+      <img alt="Aktionsgruppe KLIMA Flensburg" src="//:0" data-src="{{ "assets/images/members/akf.jpg" | relative_url }}" class="lazyload">
     </a>
     <a class="attac grid-item" href="https://www.attac-netzwerk.de/flensburg/startseite/">
-      <img alt="attac" src="{{ "assets/images/members/attac.png" | relative_url }}">
+      <img alt="attac" src="//:0" data-src="{{ "assets/images/members/attac.png" | relative_url }}" class="lazyload">
       <span>Flensburg</span>
     </a>
     <a class="xr grid-item" href="https://twitter.com/XR_Flensburg">
-      <img src="{{ "assets/images/members/xr-flensburg.png" | relative_url }}" alt="Extinction Rebellion Flensburg">
+      <img src="//:0" data-src="{{ "assets/images/members/xr-flensburg.png" | relative_url }}" alt="Extinction Rebellion Flensburg" class="lazyload">
     </a>
     <a class="ees grid-item" href="https://ees-ev.de/"  title="Erneuerbare Energie und Speicher e.V.">
-      <img alt="Erneuerbare Energie und Speicher e.V." src="{{ "assets/images/members/ees.png" | relative_url }}">
+      <img alt="Erneuerbare Energie und Speicher e.V." src="//:0" data-src="{{ "assets/images/members/ees.png" | relative_url }}" class="lazyload">
     </a>
     <a class="menleb grid-item" href="https://menschlichkeit-leben.de/" title="Menschlichkeit Leben e.V.">
-      <img alt="Menschlichkeit Leben e.V." src="{{ "assets/images/members/menleb.jpg" | relative_url }}">
+      <img alt="Menschlichkeit Leben e.V." src="//:0" data-src="{{ "assets/images/members/menleb.jpg" | relative_url }}" class="lazyload">
     </a>
 </div>
 
@@ -71,10 +71,10 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
 
 <style>
 	#members {
-		margin-bottom: 1em;
+    margin-bottom: 1em;
   }
 
-  .grid-item {
+  #main .grid-item, #main .grid-item:hover {
     float: left;
     border-bottom: none;
     min-width: 200px;
@@ -82,14 +82,66 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     max-height: 150px;
     position: relative;
     text-align: center;
-    margin-bottom: 10px;
-    vertical-align: middle;
     user-select: none;
+    line-height: inherit;
+    display: inline-block;
+    margin: 0 auto 10px auto;
   }
 
-  .grid-item span {
+  @media screen and (max-width: 736px) {
+
+    #members .grid-item, #members .grid-item:hover {
+      width: 50%;
+      outline: 10px solid transparent;
+      min-height: auto;
+      min-width: auto;
+      max-width: 50%;
+    }
+
+    #members .grid-item:nth-child(odd) {
+      padding-right: 4px;
+    }
+
+    #members .grid-item:nth-child(even) {
+      padding-left: 4px;
+    }
+
+    #members .grid-item img {
+      max-width: 100%;
+      width: auto;
+    }
+
+    #members .grid-item.attac img {
+      height: auto;
+    }
+
+    #members .attac span {
+      left: 60%;
+      bottom: 5px;
+    }
+
+    #members .greenpeace	span {
+      top: 56%;
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #members .attac span {
+      top: 0;
+      margin-top: 18vw;
+      left: auto;
+      right: 0;
+    }
+
+    #members .greenpeace	span {
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  .grid-item .lazyloaded + span {
     position: absolute;
-    right: 0;
   }
 
   .grid-item img {
@@ -98,7 +150,7 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     vertical-align: middle;
   }
 
-  .greenpeace, .greenpeace:hover {
+  #members .greenpeace, #members .greenpeace:hover {
     color: #73c82c;
   }
   
@@ -106,10 +158,12 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     width: 200px;
     height: 120px;
     margin-top: -10px;
+    vertical-align: baseline;
   }
 
   .greenpeace	span {
-    top: 56px;
+    top: 46%;
+    right: 0;
   }
 
   .sff .trim {
@@ -124,7 +178,7 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     max-height: 144px;    
   }
 
-  .attac, .attac:hover {
+  #members .attac, #members .attac:hover {
     color: #eb6721;
     font-style: italic;
     font-weight: 600;
@@ -134,16 +188,18 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     padding: 1em 0;
   }
   
-  .attac img {
-      height: 70px;
+  .grid-item.attac img {
+    height: 70px;
+    vertical-align: baseline;
   }
     
   .attac span {
-    bottom: 30px;
+    bottom: 32px;
+    right: 24px;
   }
 
   .ees img {
-    max-height: 140px;
+    max-height: 120px;
     border-radius: 10px;
   }
 
@@ -160,8 +216,11 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
   var elem = document.querySelector('.grid');
   var msnry = new Masonry(elem, {
     itemSelector: '.grid-item',
-    gutter: 10,
-    fitWidth: true
-//    columnWidth: 140
+    horizontalOrder: true
   });
+
+  document.addEventListener("lazyloaded", function(e) {
+    msnry.layout();
+  });
+
 </script>
