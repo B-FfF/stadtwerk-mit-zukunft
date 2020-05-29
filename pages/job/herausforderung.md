@@ -1,6 +1,7 @@
 ---
 layout: right-sidebar
 permalink: stadtwerke-flensburg/herausforderungen/
+image: assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png
 preview_image: assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png
 title: Die Herausforderung
 caption: >-
