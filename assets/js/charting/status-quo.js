@@ -1,15 +1,7 @@
 (function(hc, swflData){
 
-  function getDatarowByYear(data, year) {
-    for (var i in data) {
-      if (data[i]["year"] == year) {
-        return data[i];
-      }
-    }
-  }
-
-  var pieData = getDatarowByYear(swflData.ProductSplit, 2018);
-  var resultsData = getDatarowByYear(swflData.Results, 2018);
+  var pieData = smz.fn.getDatarowByYear(swflData.ProductSplit, 2018);
+  var resultsData = smz.fn.getDatarowByYear(swflData.Results, 2018);
   Highcharts.setOptions({
     colors: Highcharts.map([ "#f45b5b", "#f7a35c", "#7cb5ec", "#90ed7d", "#f15c80", "#434348", "#e4d354"], function (color) {
         return {

@@ -13,9 +13,29 @@ sidebar:
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
 ---
 
+## Zahlen, Daten, Fakten
+
+### Geschäftsdaten
+
+<div class="row">
+  <figure id="umsatz-entwicklung" class="col-6 col-12-wide">
+  </figure>
+  <figure id="gewinn-entwicklung" class="col-6 col-12-wide">
+  </figure>
+</div>
+
+### Stromverkauf & Infrastruktur
+
+<div class="row">
+  <figure id="strom" class="col-6 col-12-wide">
+  </figure>
+  <figure id="stromnetz" class="col-6 col-12-wide">
+  </figure>
+</div>
+
 ## Vorgeschichte
 
-Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre,in welchen die Grundlagen für die heutige Situation geschaffen wurden.
+Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre, in welchen die Grundlagen für die heutige Situation geschaffen wurden.
 
 ### 60er Jahre: Die 1. Krise {#die-erste-krise}
 
@@ -33,7 +53,7 @@ Bis 1985 wurden 98 % der Flensburger Haushalte an das Netz angeschlossen. Dieser
 
 Die Stadtwerke wurden am 1. Januar 1983 aus [»steuerlichen und finanziellen Gründen«][umwandlung-gmbh] in eine GmbH umgewandelt -- und hauptsächlich *finanzieller* Art war dann auch die Krise, in die sie zwei Jahrzehnte später gerieten.
 
-Von Expansions- und Wachstumsgedanken beseelt -- und nicht ohne gewissen Ansporn der politisch Verantwortlichen -- stieg die Anzahl der verbundenen Unternehmen und Beteiligungen bis zum Jahr 2007 auf insgesamt 28. Darunter waren zukunftsweisende Projekte wie kommunale Windparks und regionale Biomethan-Erzeuger, aber auch Beteiligungen an geplanten Kohlekraftwerken in Ventspils (Lettland), sowie Krefeld und Lünen. Wohl auch durch die Finanzkrise verschärft, wurden viele dieser Beteiligungen defizitär und belasteten das Bilanzergebnis der Stadtwerke schwer, was insgesamt zu [Verlusten von etwa 15 Millionen Euro][wolfskeil-nicht-entlastet] führte. Infolgedessen musste der kommunale Haushalt der Stadt für die Jahre 2009, 2011 und 2013 auf die damals übliche Gewinnausschüttung von jeweils 3 Mio. € verzichten.
+Von Expansions- und Wachstumsgedanken beseelt -- und nicht ohne gewissen Ansporn der politisch Verantwortlichen -- stieg die Anzahl der verbundenen Unternehmen und Beteiligungen bis zum Jahr 2007 auf insgesamt 28. Darunter waren zukunftsweisende Projekte wie kommunale Windparks und regionale Biomethan-Erzeuger, aber auch Beteiligungen an geplanten Kohlekraftwerken in Ventspils (Lettland), sowie Krefeld und Lünen. Wohl auch durch die Finanzkrise verschärft, wurden viele dieser Beteiligungen defizitär und belasteten das Bilanzergebnis der Stadtwerke schwer, was insgesamt zu [Verlusten von etwa 15 Millionen Euro][wolfskeil-nicht-entlastet] führte. Infolgedessen konnte in den Jahren 2009, 2011 und 2013 die damals übliche Gewinnausschüttung von jeweils 3 Mio. € an die Stadt Flensburg nur durch eine Entnahme aus den Gewinnrücklagen -- dem Eigenkapital -- des Unternehmens realisiert werden.
 
 Im April 2010 wurde Maik Render als zweiter Geschäftsführer [vorgestellt][introducing-render], um bald darauf die Führung des Unternehmens zu übernehmen, es zu konsolidieren und wieder in die Gewinnzone zu bringen.
 
@@ -89,10 +109,14 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
   window.SWFL = {
     Business: {
       ProductSplit: {{ site.data.swfl_business_by_product | jsonify }},
-      Results: {{ site.data.swfl_business | jsonify }}
+      Results: {{ site.data.swfl_business | jsonify }},
+      Electricity: {{ site.data.swfl_overview_electricity | jsonify }}
     }
   }
 </script>
 <script src="{{ "assets/js/lib/highcharts-8.1.0/highcharts.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-8.1.0/pattern-fill.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/business-data.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/infrastructure.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>

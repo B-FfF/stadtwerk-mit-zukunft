@@ -31,6 +31,13 @@
             }
             return parseFloat(x[field]);
           }).slice(startYear - dataStartYear);
+      },
+      getDatarowByYear: function (data, year) {
+        for (var i in data) {
+          if (data[i]["year"] == year) {
+            return data[i];
+          }
+        }
       }
     }
   }
@@ -72,8 +79,13 @@
       text: undefined,
       useHtml: true
     },
+    yAxis: {
+      title: {
+        margin: 6
+      }
+    },
     tooltip: {
-      useHtml: true
+      useHTML: true
     },
     responsive: {
       rules: [{
