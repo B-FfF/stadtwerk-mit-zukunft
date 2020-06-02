@@ -56,7 +56,7 @@ Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken.
 
 Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Die CO₂-Emissionen sanken zwischen 2015 und 2017 um etwa **70.000 Tonnen**.
 
-Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [70 MWₑₗ][wiki-fossil-kwk] + [70 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
+Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ + 97 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO₂][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
 <figure class=chart>
     <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
@@ -97,7 +97,6 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
   [ebc-kessel78-mwel]: https://d3ihh3ce7usp68.cloudfront.net/wp-content/uploads/2020/04/2020-04-21_Europe_Beyond_Coal-European_Coal_Database_hc.xlsx
   [swfl-kessel12-poster]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/kessel12/faltplakat-kessel-12.pdf
   [uba-kkw]: https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/171207_uba_hg_braunsteinkohle_bf.pdf "Umweltbundesamt: Daten und Fakten zu Braun- und  Steinkohlen, Seite 48"
-  [wiki-fossil-kwk]: https://de.wikipedia.org/wiki/Liste_fossil-thermischer_Kraftwerke_in_Deutschland
   [swfl-kessel-13-web]: https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-13/
   [ise-2018-sgk-ee]: https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/DE2018_ISE_Studie_Stromgestehungskosten_Erneuerbare_Energien.pdf
 
