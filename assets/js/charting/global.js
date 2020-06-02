@@ -25,8 +25,12 @@
         }
 
         return data
-          .map(function(x) { return parseInt(x[field]); })
-          .slice(startYear - dataStartYear);
+          .map(function(x) { 
+            if (x[field] === null) {
+              return null;
+            }
+            return parseFloat(x[field]);
+          }).slice(startYear - dataStartYear);
       }
     }
   }
