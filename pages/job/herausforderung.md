@@ -86,13 +86,13 @@ Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ
 <figure class=chart>
     <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
     <div id="play-controls" class="row">
-      <div class="col-7"><input id="play-range" type="range" value="23" min="0" max="23"></div>
-      <div class="col-4"><button id="play-pause-button" class="fa fa-play" title="play"></button></div>
-      <div class="col-1"><output id="play-output" for="play-range" name="year" class="col-2">2007</output></div>
+      <div class="col-2"><button id="play-pause-button" class="fa fa-play" title="play"></button></div>
+      <div class="col-8"><input id="play-range" type="range" value="23" min="0" max="23"></div>
+      <div class="col-2"><output id="play-output" for="play-range" name="year" class="col-2">2007</output></div>
     </div>
 </figure>
 
-Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2037 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
+Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2035 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
 
 ### Klimaschädlichkeit von Erdgas
 
@@ -199,6 +199,8 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
 <script src="{{ "assets/js/lib/highcharts-9.3.2/highcharts-more.js" | relative_url }}"></script>
 <script src="{{ "assets/js/lib/highcharts-9.3.2/pattern-fill.js" | relative_url }}"></script>
 <script src="{{ "assets/js/lib/highcharts-9.3.2/broken-axis.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.3.2/exporting.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.3.2/full-screen.js" | relative_url }}"></script>
 
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
