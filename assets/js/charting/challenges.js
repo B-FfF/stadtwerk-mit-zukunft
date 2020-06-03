@@ -594,10 +594,21 @@
 
   // https://jsfiddle.net/gz6053p2/
 
+
+
   window.smz.chart = window.smz.chart || {};
-  window.smz.chart.Emissions = drawEmissionsChart();
-  window.smz.chart.Emissions2030 = drawEmissionsChart2030();
-  window.smz.chart.CertificatePrices = drawCertificatePriceChart();
-  window.smz.chart.Methane = drawMethaneChart();
+  var charts = {
+    Emissions: drawEmissionsChart,
+    Emissions2030: drawEmissionsChart2030,
+    CertificatePrices: drawCertificatePriceChart,
+    Methane: drawMethaneChart
+  };
+  for (var key in charts) {
+    try {
+      window.smz.chart[key] = smz.chart.enableFullscreen(charts[key]());
+    } catch (error) {
+            
+    }
+  }
 
 })(window.Highcharts, window.SWFL.Emissions, window.smz)
