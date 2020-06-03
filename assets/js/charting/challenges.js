@@ -424,7 +424,7 @@
         color: Highcharts.defaultOptions.colors[8],
         yAxis: 0
       },{
-        gapSize: 7,
+        gapSize: 14,
         name: "EU ETS",
         color: Highcharts.defaultOptions.colors[7],
         data: window.SWFL.EUA,
