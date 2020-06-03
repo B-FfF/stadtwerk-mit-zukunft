@@ -1,6 +1,17 @@
 (function (hc) {
 
   window.smz = {
+    chart: {
+      enableFullscreen: function(chart) {
+
+        chart.renderTo.addEventListener('dblclick', function() {
+          this.parentElement.classList.toggle('modal');
+          chart.reflow();
+        });
+        
+        return chart;
+      }
+    },
     fn: {
       /**
        * @param {Number} from 

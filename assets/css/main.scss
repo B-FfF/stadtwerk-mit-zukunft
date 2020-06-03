@@ -431,6 +431,39 @@
 			}
 		}
 
+  	#play-range {
+			padding-left: 70px;
+		}
+		
+		.modal {
+				position: fixed;
+				width: 100vw;
+				height: 100vh !important;
+				top: 0px;
+				left: 0;
+				background: rgba(255, 255, 255, 1);
+				z-index: 1;
+				padding: 20px;
+		}
+		
+		.modal #play-controls {
+			position: absolute;
+			bottom: 0;
+			padding: 0 20px;
+			width: 100%;
+			margin: auto;
+			line-height: 0.5em;  
+		}
+		
+		.modal #play-range {
+			padding-left: 1vw;
+			padding-right: 3vw;
+		}
+		
+		.modal  #moodcontainer{
+				height: 485px;
+		}
+		
 		figcaption {
 			text-align: right;
 			font-size: 0.75em;
