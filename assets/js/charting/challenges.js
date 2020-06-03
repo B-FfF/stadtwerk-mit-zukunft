@@ -161,6 +161,14 @@
       }
     },
     series: [{
+      id: "gc",
+      name: 'greenco₂ncept Pfad',
+      color: 'green',
+      tooltip: {
+        pointFormat: "{series.name}: <b>{point.y}</b>"
+      },
+      data: greenconceptPath,
+    },{
       name: 'CO₂-Emissionen',
       color: 'red',
       tooltip: {
@@ -174,14 +182,6 @@
       },{
         dashStyle: "Dot"
       }]
-    },{
-      id: "gc",
-      name: 'greenco₂ncept Pfad',
-      color: 'green',
-      tooltip: {
-        pointFormat: "{series.name}: <b>{point.y}</b>"
-      },
-      data: greenconceptPath,
     },{
       type: 'arearange',
       name: 'Mehrausstoß',
@@ -219,15 +219,27 @@
     return hc.chart('co2-emissionen-der-stadtwerke-flensburg', template);
   }
 
+  var animation = {
+    duration: 2000,
+    easing: 'linear'    
+  };
+
   function drawEmissionsChart2030() {
     var template = Object.assign({}, emissionsChartTemplate);
+
     template.xAxis.max = null;
     template.yAxis.min = 0;
-    template.series[0].data = template.series[0].data.concat([560000, 560000, 560000, 420000, 420000, 420000, 420000, 420000, 420000, 420000, 420000]);
-    shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[0].data);
-    var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[shouldIs.accumulated.length - 1]);
-    
-    template.series[2].data = shouldIs.range;
+    template.yAxis.max = 700000;
+    template.series[1].animation = animation;
+    template.series[1].data = template.series[1].data.concat([560000, 560000, 560000, 440000, 440000, 440000, 440000, 440000, 440000, 440000, 440000]);
+    shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[1].data);
+    var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[ shouldIs.accumulated.length - 1]);
+    var motionData = [
+      template.series[1].data,
+      shouldIs.range,
+      shouldIs.accumulated
+    ];
+
     template.series[3] = {
       type: "arearange",
       name: "Fehlendes Budget",
@@ -235,7 +247,7 @@
       color: '#e88',
       marker: {enabled: false, symbol: "diamond"},
       zIndex: -1,
-      data: consumedBudgetSeries.area,
+      data: consumedBudgetSeries.area[0],
       tooltip: {
         pointFormatter: function() {
           return "Verbleibendes Budget: <strong>" + Highcharts.numberFormat(consumedBudgetSeries.accumulated[this.index][1], 0) + " t</strong>"
@@ -244,7 +256,81 @@
       showInLegend: false
     };
 
-    return hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2030', template);
+    var chart = hc.chart('co2-emissionen-der-stadtwerke-flensburg-bis-2030', template);
+    prepareMotion(chart, motionData);
+    return chart;
+  }
+
+  function prepareMotion(chart, data) {
+
+    var input = document.getElementById('play-range'),
+      output = document.getElementById('play-output'),
+      $playPauseButton = document.getElementById('play-pause-button')
+
+    /**
+    * Update the chart. This happens either on updating (moving) the range input,
+    * or from a timer when the timeline is playing.
+    */
+    function update(increment) {
+
+      var currentIndex = parseInt(input.value); 
+      if (increment) {
+        currentIndex++;
+        input.value = currentIndex;
+      }
+
+      chart.series[1].setData(data[0].slice(0, currentIndex + 1), false, animation); // Increment emissions
+      chart.series[2].setData(data[1].slice(0, currentIndex + 1), false, animation); // Increment overshoot area
+
+      var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, data[2][currentIndex]);
+      chart.series[3].setData(consumedBudgetSeries.area); // Increment consumed budget
+
+      output.innerHTML = startYear + currentIndex // Output value
+      
+      if (currentIndex >= parseInt(input.max)) { // Auto-pause
+          pause($playPauseButton);
+      }
+    }
+
+    /**
+    * Play the timeline.
+    */
+    function play(button) {
+      if (parseInt(input.value) >= parseInt(input.max)) {
+        return;
+      }
+
+      button.title = 'pause';
+      button.className = 'fa fa-pause';
+      chart.sequenceTimer = setInterval(function () {
+          update(1);
+      }, 800);
+    }
+
+    /**
+    * Pause the timeline, either when the range is ended, or when clicking the pause button.
+    * Pausing stops the timer and resets the button to play mode.
+    */
+    function pause(button) {
+      button.title = 'play';
+      button.className = 'fa fa-play';
+      clearTimeout(chart.sequenceTimer);
+      chart.sequenceTimer = undefined;
+    }
+
+    $playPauseButton.addEventListener('click', function () {
+      if (chart.sequenceTimer === undefined) {
+          play(this);
+      } else {
+          pause(this);
+      }
+    });
+
+    /**
+    * Update the chart when the input is changed
+    */
+   document.getElementById('play-range').addEventListener('input', function() {update();});
+   update();
   }
 
   function drawCertificatePriceChart() {
@@ -367,7 +453,7 @@
   }
 
   function drawMethaneChart() {
-    var emissionsSeries = emissionsChartTemplate.series[0].data,
+    var emissionsSeries = emissionsChartTemplate.series[1].data,
       methaneSeriesStartYear = 2016,
       template = emissionsChartTemplate;
 
@@ -434,7 +520,7 @@
         max: 2030.5
       },
       series: [
-      Object.assign({}, template.series[0]),  // [0]
+      Object.assign({}, template.series[1]),  // [0]
       {  // [1]
         name: "Anteil Erdgas-Verbrennung an CO₂-Emissionen",
         data: gasSeries.emissionsShare,
@@ -457,7 +543,7 @@
         color: Highcharts.defaultOptions.colors[6],
         zIndex: 2
       },
-      Object.assign({}, template.series[0]),  // duplicating series to allow separate stacks for 20 / 100 year perspective
+      Object.assign({}, template.series[1]),  // duplicating series to allow separate stacks for 20 / 100 year perspective
       {  // [5]
         name: "CO₂-Äquivalent Methan (20 Jahre)",
         data: gasSeries.greenhouseEffect20Years,
@@ -467,7 +553,7 @@
         type: "area",
         color: Highcharts.defaultOptions.colors[3]
       },
-      template.series[1],   // [6]
+      template.series[0],   // [6]
       ],
       tooltip: template.tooltip
     };
@@ -493,7 +579,8 @@
 
     Object.assign(chartConfig.series[6], {
       color: 'rgba(0, 128, 0, 0.2)',
-      visible: false
+      visible: false,
+      zones: []
     });
 
     chartConfig.yAxis.title.enabled = false;
