@@ -2,8 +2,7 @@
 
 var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
   chart: {
-    type: 'bar',
-    height: 200
+    type: 'bar'
   },
   legend: {
     enabled: false
@@ -11,11 +10,11 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
   series: [{
     name: "Flensburg",
     data: [4.2, 14.7],
-    color: Highcharts.defaultOptions.colors[8]
+    color: Highcharts.Color("#90ed7d").brighten(-.8).get('rgb'),
   },{
     name: "ø Deutschland",
     data: [14.5, 42.1],
-    color: Highcharts.defaultOptions.colors[1]
+    color: Highcharts.Color("#90ed7d").brighten(-0.4).get('rgb'),
   },{
     name: "Kreis Schleswig-Flensburg",
     data: [null, 110],
@@ -33,19 +32,19 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
         enabled: true,
         inside: false,
         style: {
-          fontSize: "12px"
+          fontSize: "1em"
         },
         formatter: function() {
 
           var output = "";
-          if (this.series.name !== "Flensburg") {
+          if (this.series.name === "Flensburg") {
             output = '<span style="font-weight: normal">';
           }
           if (this.key === "Strom") {
 
             switch(this.series.name) {
               case "Flensburg":
-                return this.series.name + ": < 15 %";
+                return output + this.series.name + ": < 15 %";
               case "Kreis Schleswig-Flensburg":
                   return output + this.series.name + ": > 100 %";
             }
@@ -90,6 +89,22 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
         }
       }
     }]
+  },
+  title: {
+    text: "Anteil erneuerbarer Energien im Vergleich",
+    floating: true,
+    align: "right",
+    style: {
+      wordWrap: "wrap",
+      textDecoration: "underline",
+      fontWeight: "bolder",
+      textShadow: "-1px 1px 2px rgba(200,200,200,1)",
+      color: "black",
+      fontSize: "1em"
+    },
+    x: -20,
+    y: 30,
+    widthAdjust: -300
   },
   tooltip: {
     enabled: false
