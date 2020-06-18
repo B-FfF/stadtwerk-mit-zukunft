@@ -12,7 +12,7 @@ description: |
 sidebar:
   box:
     header: Work in progress
-    content: Dieser Bereich wird zurzeit fast täglich um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich direkt an uns.
+    content: Dieser Bereich wird regelmäßig um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich direkt an uns.
     button:
       text: Schreiben Sie uns
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
