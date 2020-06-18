@@ -6,15 +6,7 @@
    */
   var GC_END_YEAR = 2050;
 
-  /**
-   * @type {Number} assumed year of Kessel 13 going into full production
-   */
-  var K13_START_YEAR = 2023;
   var swflDataStartYear = swflData[0].year;
-
-  function getCarbonCausedByGas(year) {
-    return swflData
-  }
 
   function getOvershootRangeSeries(startYear, stopYear, shouldSeries, isSeries) {
     var should = shouldSeries || getGreenconceptPath(startYear, stopYear);
@@ -102,6 +94,14 @@
     };
   }
 
+  function getEndDate(value) {
+    var remainder = value % 1;
+    var monthSplit = 1 / 12;
+    var monthEnd = Math.ceil(remainder / monthSplit);
+    var monthString = new Date(monthEnd + "/01/2000").toLocaleDateString("de", {month: "short"});
+    return monthString + " " + Math.ceil(value);
+  }
+
   var greenconceptPath = getGreenconceptPath(startYear);
   var emissionSeries = getSeries(startYear);
   var shouldIs = getOvershootRangeSeries(startYear, 2019, greenconceptPath, emissionSeries);
@@ -123,11 +123,7 @@
         var tooltipArray = tooltip.defaultFormatter.call(this, tooltip);
         tooltipArray[0] = "<strong>Ende " + this.x + "</strong>"
         if (this.x % 1 !== 0) {
-          var remainder = this.x % 1;
-          var monthSplit = 1 / 12;
-          var monthEnd = Math.ceil(remainder / monthSplit);
-          var monthString = new Date(monthEnd + "/01/2000").toLocaleDateString("de", {month: "short"});
-          tooltipArray[0] = "<strong>" + monthString + " " + Math.ceil(this.x) + "</strong>"
+          tooltipArray[0] = "<strong>" + getEndDate(this.x) + "</strong>"
         }
         return tooltipArray;
       },
@@ -160,7 +156,7 @@
         }
       }
     },
-    series: [{
+    series: [{  // 0
       id: "gc",
       name: 'greenco₂ncept Pfad',
       color: 'green',
@@ -168,7 +164,7 @@
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
       data: greenconceptPath,
-    },{
+    },{         // 1
       name: 'CO₂-Emissionen',
       color: 'red',
       tooltip: {
@@ -182,11 +178,12 @@
       },{
         dashStyle: "Dot"
       }]
-    },{
+    },{         // 2
       type: 'arearange',
       name: 'Mehrausstoß',
       color: '#e88',
       data: shouldIs.range,
+      id: 'overshoot',
       linkedTo: 'gc',
       zIndex: -1,
       marker: {
@@ -227,6 +224,15 @@
   function drawEmissionsChart2030() {
     var template = Object.assign({}, emissionsChartTemplate);
 
+    template.title = {
+      align: 'right',
+      verticalAlign: 'middle',
+      floating: true,
+      style: {
+        color: 'rgba(250,0,0,1)',
+        fontSize: '1.5em'
+      }
+    };
     template.xAxis.max = null;
     template.yAxis.min = 0;
     template.yAxis.max = 700000;
@@ -240,10 +246,32 @@
       shouldIs.accumulated
     ];
 
+    template.series[1].visible = true;
+    template.series[2].visible = true;
+    template.xAxis.plotLines = [{
+      label: {
+        text: 'Kessel 12',
+        style: {
+          color: '#999'
+        },
+        verticalAlign: 'middle'
+      },
+      value: 2015.3
+    },{
+      label: {
+        text: 'Kessel 13',
+        style: {
+          color: '#999'
+        },
+        verticalAlign: 'middle'
+      },
+      value: 2022
+    }];
+
     template.series[3] = {
       type: "arearange",
       name: "Fehlendes Budget",
-      linkedTo: "gc",
+      linkedTo: "overshoot",
       color: '#e88',
       marker: {enabled: false, symbol: "diamond"},
       zIndex: -1,
@@ -284,6 +312,11 @@
 
       var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, data[2][currentIndex]);
       chart.series[3].setData(consumedBudgetSeries.area); // Increment consumed budget
+      if (consumedBudgetSeries.area[0][0] !== 2050) {
+        chart.setTitle({text: "greenco₂ncept-<br>Budget endet<br/>" + getEndDate(consumedBudgetSeries.area[0][0]) });
+      } else {
+        chart.setTitle({text: undefined });
+      }
 
       output.innerHTML = startYear + currentIndex // Output value
       
@@ -408,15 +441,14 @@
         min: 0,
         softMax: 32,
       }],
-      series: [{
+      series: [{  // 0
         type: "column",
         name: "Gratis-Zertifikate",
         data: freeOfChargeAllocationsSeries,
         stack: 0,
         color: Highcharts.defaultOptions.colors[2],
         yAxis: 0
-
-      },{
+      },{   // 1
         type: "column",
         stack: 0,
         name: "Benötigte Zertifikate",
