@@ -1,0 +1,65 @@
+--- 
+--- 
+<html>
+  <head>
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body id="main">
+    <figure class="modal">
+      <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
+      <div id="play-controls" class="row">
+        <div class="col-7"><input id="play-range" type="range" value="0" min="0" max="23"></div>
+        <div class="col-4"><button id="play-pause-button" class="fa fa-play" title="play"></button></div>
+        <div class="col-1"><output id="play-output" for="play-range" name="year" class="col-2">2007</output></div>
+      </div>
+    </figure>
+
+    <link rel="stylesheet" href="../assets/css/html5-controls.css" />
+    <style>
+      .row > * {
+          padding: 10px 0 0 60px;
+      }
+    </style>
+
+    <script>
+      window.SWFL = {
+        Emissions: {{ site.data.swfl_emissions | jsonify }},
+        EUA: [
+          {%- for row in site.data.eua_price -%}
+            [{{row.time}}000, {{row.eua_price}}] {%- if forloop.last -%}{%else%}, {% endif %}
+          {%- endfor -%}
+        ],
+        EUE_ISE_forecast: [
+          [1577833200000, 5, 15],
+          [1735686000000, 12.5, 32.5],
+          [1893452400000, 20, 50],
+          [2051218800000, 30, 70]
+        ]
+      }
+    </script>
+    
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts-more.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/pattern-fill.js"></script>
+    <script src="../assets//js/lib/highcharts-8.1.0/broken-axis.js"></script>
+    
+    <script src="../assets/js/charting/global.js"></script>
+    <script>
+      (function(){
+        
+        config.series[1].visible = false;
+        config.series[2].visible = false;
+        window.smz.chart.customOptions = {
+          yAxis: {
+            style: {
+              fontSize: "1.2em",
+              color: '#000'
+            }
+          }
+        };
+      })();
+    </script>
+    <script src="../assets/js/charting/challenges.js"></script>
+    <script src="../assets/js/charting/comparison.js"></script>
+      </body>
+</html>

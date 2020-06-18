@@ -1,0 +1,54 @@
+--- 
+--- 
+<html>
+  <head>
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body id="main">
+    <figure class="modal">
+      <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
+    </figure>
+
+    <link rel="stylesheet" href="../assets/css/html5-controls.css" />
+
+    <script>
+      window.SWFL = {
+        Emissions: {{ site.data.swfl_emissions | jsonify }},
+        EUE_ISE_forecast: [
+          [1577833200000, 5, 15],
+          [1735686000000, 12.5, 32.5],
+          [1893452400000, 20, 50],
+          [2051218800000, 30, 70]
+        ]
+      }
+    </script>
+    
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts-more.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/pattern-fill.js"></script>
+    <script src="../assets//js/lib/highcharts-8.1.0/broken-axis.js"></script>
+    
+    <script src="../assets/js/charting/global.js"></script>
+    <script>
+        window.smz.chart = window.smz.chart || {};
+        config.series[1].visible = false;
+        config.series[2].visible = false;
+        window.smz.chart.customOptions = {
+          text: 'CO₂-Emissionen in Tonnen',
+          style: {
+            fontSize: "1.5em",
+            color: '#000'
+          },
+          yAxis: {
+            style: {
+              fontSize: "1.2em",
+              color: '#000'
+            }
+          }
+        };
+    </script>
+
+    <script src="../assets/js/charting/challenges.js"></script>
+    <script src="../assets/js/charting/comparison.js"></script>
+      </body>
+</html>
