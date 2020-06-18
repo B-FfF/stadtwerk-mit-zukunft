@@ -57,6 +57,7 @@
     chart: {
       style: {
         fontFamily: 'Source Sans Pro',
+        fontSize: "1em"
       },
       spacingLeft: 0,
       spacingRight: 0
@@ -97,6 +98,13 @@
     },
     tooltip: {
       useHTML: true
+    },
+    yAxis: {
+      title: {
+        style: {
+          fontSize: "0.75em"
+        }
+      }
     },
     responsive: {
       rules: [{
