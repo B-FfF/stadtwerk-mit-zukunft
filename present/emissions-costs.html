@@ -1,0 +1,42 @@
+--- 
+--- 
+<html>
+  <head>
+    <link href="../assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body id="main">
+    <figure class="modal">
+      <div id="entwicklung-co2-zertifikatspreise" style="height: 90vh; padding: 1em"></div>
+    </figure>
+
+    <link rel="stylesheet" href="../assets/css/html5-controls.css" />
+    <script>
+      window.SWFL = {
+        Emissions: {{ site.data.swfl_emissions | jsonify }},
+        EUA: [
+          {%- for row in site.data.eua_price -%}
+            [{{row.time}}000, {{row.eua_price}}] {%- if forloop.last -%}{%else%}, {% endif %}
+          {%- endfor -%}
+        ],
+        EUE_ISE_forecast: [
+          [1577833200000, 5, 15],
+          [1735686000000, 12.5, 32.5],
+          [1893452400000, 20, 50],
+          [2051218800000, 30, 70]
+        ]
+      }
+    </script>    
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/highcharts-more.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/pattern-fill.js"></script>
+    <script src="../assets/js/lib/highcharts-8.1.0/broken-axis.js"></script>
+    <script>
+      (function(){
+        config.series[0].visible = false;
+        config.series[1].visible = false;
+      })();
+    </script>
+    <script src="../assets/js/charting/global.js"></script>
+    <script src="../assets/js/charting/challenges.js"></script>
+      </body>
+</html>
