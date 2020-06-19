@@ -37,9 +37,6 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
     <a class="xr grid-item" href="https://twitter.com/XR_Flensburg">
       <img src="//:0" data-src="{{ "assets/images/members/xr-flensburg.png" | relative_url }}" alt="Extinction Rebellion Flensburg" class="lazyload">
     </a>
-    <a class="ees grid-item" href="https://ees-ev.de/"  title="Erneuerbare Energie und Speicher e.V.">
-      <img alt="Erneuerbare Energie und Speicher e.V." src="//:0" data-src="{{ "assets/images/members/ees.png" | relative_url }}" class="lazyload">
-    </a>
     <a class="menleb grid-item" href="https://menschlichkeit-leben.de/" title="Menschlichkeit Leben e.V.">
       <img alt="Menschlichkeit Leben e.V." src="//:0" data-src="{{ "assets/images/members/menleb.jpg" | relative_url }}" class="lazyload">
     </a>
