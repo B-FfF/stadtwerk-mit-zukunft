@@ -8,7 +8,7 @@ caption: >-
 description: Neue Geschäftsleitung für die Stadtwerke Flensburg gesucht!
 ---
 
-## Hallo, sind Sie unser neuer Prinz?[\*][prinz]
+## Hallo, sind Sie unser neuer [Prinz\*][prinz]?
 
 Die Stadtwerke Flensburg GmbH ist das zentrale Unternehmen, das alle Flensburger*innen mit der nötigen Infrastruktur zum Leben versorgt. Das Firmengelände liegt direkt am Wasser der „schönsten Förde der Welt“. Die Stadtwerke blicken auf eine über 150-jährige Unternehmensgeschichte zurück und beschäftigen nahezu 700 Arbeitnehmer\*innen. Weitere Informationen sind unter anderem [auf dieser Seite]({% link pages/job/swfl.md %}) und auf der [Unternehmensseite der Stadtwerke Flensburg](https://www.stadtwerke-flensburg.de/unternehmen/ueber-uns/) verfügbar.
 
