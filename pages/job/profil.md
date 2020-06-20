@@ -42,16 +42,9 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
 * Tätigkeit in einer der attraktivsten Städte Deutschlands (*[„Wohnen, wo andere Leute Urlaub machen“][schoenste-foerde]*)
 * Eine außertarifliche Vergütung mit Erfolgsbeteiligung und den üblichen Nebenleistungen
 
-Haben wir Ihr Interesse geweckt? Dann möchten wir Sie unbedingt zu einer Initiativbewerbung ermutigen!  
-Senden Sie diese an:
+Haben wir Ihr Interesse geweckt? Dann möchten wir Sie unbedingt zu einer [Initiativbewerbung](https://www.stadtwerke-flensburg.de/unternehmen/jobs-karriere/richtig-bewerben/) ermutigen!  
 
-> Stadt Flensburg  
-z. Hd. der\*die Vorsitzende der Gesellschafterinversammlung der Stadtwerke  
-Rathausplatz 1  
-24937 Flensburg<br>    
-Tel. 0461-850
-
-Gerne können Sie uns auch [direkt kontaktieren]({% link pages/about/imprint.md %}#presse), sollten Sie vorab Fragen oder Rückmeldungen haben - oder uns einfach nur darüber in Kenntnis setzen wollen, dass Sie sich beworben haben. Wir freuen uns über jede Nachricht.
+Gerne können Sie uns auch [direkt kontaktieren](mailto:bewerben@stadtwerk-mit-zukunft.de?subject=Geschäftsführung Stadtwerke Flensburg), sollten Sie vorab Fragen oder Rückmeldungen haben - oder uns einfach nur darüber in Kenntnis setzen wollen, dass Sie sich beworben haben. Wir freuen uns über jede Nachricht.
 
 
   [prinz]: {% link pages/job/swfl.md %}#die-erste-krise "Wolfgang Prinz war technischer Direktor der Stadtwerke und setzte seine Vision trotz politischen Widerstandes und negativer Einschätzungen aller Expert*innen mit großem Erfolg um."
