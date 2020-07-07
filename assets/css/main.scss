@@ -8,7 +8,7 @@
 @import 'breakpoints';
 @import 'html-grid';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600&display=swap');
-@import url('fontawesome-all.min.css');
+@import url('./fontawesome-all.min.css');
 
 /*
 	Helios by HTML5 UP
@@ -1389,7 +1389,7 @@
 				position: absolute;
 				top: 50%;
 				margin: -1.5em 0 0 0;
-				background: url('images/arrow.svg') no-repeat center center;
+				background: url('./images/arrow.svg') no-repeat center center;
 			}
 
 			&:hover {

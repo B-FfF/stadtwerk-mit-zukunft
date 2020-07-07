@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   kommunalen Konzerns zu einem führenden Dienstleister der erneuerbaren Energien einleiten wird
   - oder kennen eine Person, der Sie dies zutrauen? Dann lesen Sie weiter...
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/stadtwerk-mit-zukunft" # the subpath of your site, e.g. /blog
+# baseurl: "/stadtwerk-mit-zukunft" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
