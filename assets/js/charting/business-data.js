@@ -177,6 +177,9 @@
         id: 'energy_taxes',
         data: data.energyTaxes,
       }],
+      tooltip: {
+        valueSuffix: ' €'
+      },
       yAxis: [{
         title: {
           text: "Umsätze in Mio. €"
