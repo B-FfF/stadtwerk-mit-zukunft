@@ -10,6 +10,13 @@
 | sales_corp        | Umsätze Konzern (inkl. Strom und Erdgassteuer) |
 | earnings_corp     | Jahresüberschuss / Fehlbetrag Konzern          |
 | EBIT_corp         | Earnings Before Interest and Taxes Konzern     |
+| equity            | Eigenkapital                                   |
+| provision         | Rückstellungen                                 |
+| credit_liabilities        | ges. Verbindlichkeiten ggü. Kreditinst. (lt. Passiva) |
+| credit_liabilities_short  | Verbindlichkeiten ggü. Kreditinst. \< 1 Jahr   |
+| credit_liabilities_medium | Verbindlichkeiten ggü. Kreditinst. 1 - 5 Jahre |
+| credit_liabilities_long   | Verbindlichkeiten ggü. Kreditinst. > 5 Jahre   |
+| other_liabilities | Andere Verbindlichkeiten                       |
 
 ## `swfl_overview_electricity.csv`
 
