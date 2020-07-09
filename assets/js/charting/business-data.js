@@ -1,6 +1,31 @@
+/**
+ * Plugin to allow plot band Z indexes in between series
+ */
+Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed) {
+	var chart = this.axis.chart;
+    
+    proceed.call(this);
+
+	if (!chart.seriesGroup) {
+		chart.seriesGroup = chart.renderer.g('series-group')
+			.attr({ zIndex: 3 })
+			.add();
+	}
+
+    if (this.svgElem.parentGroup !== chart.seriesGroup) {
+    	this.svgElem
+        	.attr({ zIndex: this.options.zIndex })
+        	.add(chart.seriesGroup);
+    }
+    return this;
+});
+
 (function(hc, swflData){
 
   hc.setOptions({
+    xAxis: {
+      tickInterval: 1
+    },
     tooltip: {
       useHTML: true,
       shared: true,
@@ -8,10 +33,10 @@
       footerFormat: '</table>',
       pointFormatter: function () {
         var seriesName = this.series.userOptions.id === "energy_taxes" ? 'davon Strom & Erdgassteuern' : this.series.name;
-        return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' + seriesName + '</td>'
+        return '<tr><td><span style="color:'+this.color+'; padding-top: 20px">●</span>&nbsp;' + seriesName + '</td>'
         + '<td style="text-align: right"><b>' + Highcharts.numberFormat(this.y, 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
       }
-    },
+   },
   });
 
   var colorDarkGreen = '#177d35',
@@ -33,8 +58,20 @@
     divident: smz.fn.extractColumn(swflData.Results, "divident"),
     sales: smz.fn.extractColumn(swflData.Results, "sales"),
     energyTaxes: smz.fn.extractColumn(swflData.Results, "energy_taxes"),
-    salesCorporation: smz.fn.extractColumn(swflData.Results, "sales_corp")
+    salesCorporation: smz.fn.extractColumn(swflData.Results, "sales_corp"),
+    equity: smz.fn.extractColumn(swflData.Results, "equity"),
+    provision: smz.fn.extractColumn(swflData.Results, "provision"),
+    creditLiabilities: smz.fn.extractColumn(swflData.Results, "credit_liabilities"),
+    creditLiabilitiesShort: smz.fn.extractColumn(swflData.Results, "credit_liabilities_short"),
+    creditLiabilitiesMedium: smz.fn.extractColumn(swflData.Results, "credit_liabilities_medium"),
+    creditLiabilitiesLong: smz.fn.extractColumn(swflData.Results, "credit_liabilities_long"),
+    otherLiabilities: smz.fn.extractColumn(swflData.Results, "other_liabilities")
   };
+
+    
+  function mirror(series) {
+    return series.map(function(value) {return -value})
+  }
 
   function drawEarningsChart() {
 
@@ -188,8 +225,149 @@
     });
   }
 
+  function drawCapitalChart() {
+
+    var config = {
+      chart: {
+        type: 'area'
+      },
+      legend: {
+        padding: 0
+      },
+      plotOptions: {
+        area: {
+          pointStart: 2000,
+          stacking: "normal",
+          marker: {
+            enabled: false
+          },
+          tooltip: {
+            valueSuffix: ' €',
+            pointFormatter: function () {
+              if (this.y == 0) return false;
+              return '<tr><td><span style="color:'+this.color+'; padding-top: 20px">●</span>&nbsp;' + this.series.name + '</td>'
+              + '<td style="text-align: right"><b>' + Highcharts.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
+            }
+          }
+        },
+        line: {
+          tooltip: {
+            valueSuffix: ' %'
+          }
+        }
+      },
+      title: {
+        text: 'Eigen- vs. Fremdkapital GmbH'
+      },
+      series: [{
+        name: "Eigenkapital",
+        data: data.equity,
+        color: colorDarkGreen,
+      },{
+        name: "Andere Verbindlichkeiten",
+        color: '#333',
+        data: mirror(data.otherLiabilities),
+        stack: "debt",
+      },{
+        name: "Rückstellungen",
+        color: '#666',
+        data: mirror(data.provision),
+        stack: "debt"
+      },{ // to fill up missing split data for year 2000
+        name: "Kredite gesamt",
+        color: Highcharts.defaultOptions.colors[5],
+        data: mirror([data.creditLiabilities[0]]),
+        showInLegend: false,
+        stack: "debt"
+      },{
+        name: "Kredite < 1 Jahr",
+        color: Highcharts.defaultOptions.colors[6],
+        description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit < 1 Jahr",
+        data: mirror(data.creditLiabilitiesShort),
+        stack: "debt"
+      },{
+        name: "Kredite 1 - 5 Jahre",
+        color: Highcharts.defaultOptions.colors[3],
+        description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit 1 bis 5 Jahre",
+        data: mirror(data.creditLiabilitiesMedium),
+        stack: "debt"
+      },{
+        name: "Kredite > 5 Jahre",
+        color: Highcharts.defaultOptions.colors[5],
+        description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit > 5 Jahre",
+        data: mirror(data.creditLiabilitiesLong),
+        stack: "debt"
+      },{
+        type: 'line',
+        name: "Verschuldungsquote",
+        data: data.equity.map(function(equityCapital, i) { 
+          var creditLiabilities = (i === 0) 
+          ? data.creditLiabilities[0] 
+          : data.creditLiabilitiesShort[i] 
+          + data.creditLiabilitiesMedium[i] 
+          + data.creditLiabilitiesLong[i];
+
+          return (
+            data.provision[i] 
+            + data.otherLiabilities[i]
+            + creditLiabilities
+            ) / equityCapital * 100;
+        }),
+        color: Highcharts.defaultOptions.colors[4],
+        pointStart: 2000,
+        yAxis: 1,
+        shadow: whiteLineShadow,
+        marker: {
+          radius: 2
+        },
+        zIndex: 2
+      }],
+      yAxis: [{
+        title: {
+          text: "Kapital in Mio. €"
+        },
+        labels: {
+          formatter: function () {
+              return Math.abs(Math.round(this.value / 1000000)) + 'M';
+          }
+        },
+        max: 150000000,
+        min: -250000000,
+        tickInterval: 50000000,
+        endOnTick: false,
+        reversedStacks: false,
+        plotLines: [{
+          value: 0,
+          color: '#fff',
+          width: 2,
+          zIndex: 1
+        }]
+      },{
+        labels: {
+          format: '{value} %',
+          style: {
+            color: Highcharts.defaultOptions.colors[4],
+          }
+        },
+        opposite: true,
+        title: {
+          text: "Verschuldungsquote"
+        },
+        tickInterval: 50,
+        startOnTick: false,
+        endOnTick: false,
+        max: 225,
+        min: 25,
+        reversed: true
+      }]
+    }
+    
+    return hc.chart('kapitalstruktur', config);
+  }
+
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.Sales = drawSalesChart();
   window.smz.chart.Earnings = drawEarningsChart();
+  window.smz.chart.Capital = drawCapitalChart();
 
 })(window.Highcharts, window.SWFL.Business)

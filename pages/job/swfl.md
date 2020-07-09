@@ -24,6 +24,13 @@ sidebar:
   </figure>
 </div>
 
+<div class="row">
+  <figure id="kapitalstruktur" class="col-6 col-12-wide">
+  </figure>
+  <figure id="gewinnabfuehrung-stadt" class="col-6 col-12-wide">
+  </figure>
+</div>
+
 ### Stromverkauf & Infrastruktur
 
 <div class="row">
