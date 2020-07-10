@@ -24,6 +24,8 @@ sidebar:
   </figure>
 </div>
 
+<br>
+
 <div class="row">
   <figure id="kapitalstruktur" class="col-6 col-12-wide">
   </figure>

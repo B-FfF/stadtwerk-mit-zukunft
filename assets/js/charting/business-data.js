@@ -55,7 +55,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     ebitCorporation: smz.fn.extractColumn(swflData.Results, "EBIT_corp"),
     earnings: smz.fn.extractColumn(swflData.Results, "earnings"),
     earningsCorporation: smz.fn.extractColumn(swflData.Results, "earnings_corp"),
-    divident: smz.fn.extractColumn(swflData.Results, "divident"),
+    dividend: smz.fn.extractColumn(swflData.Results, "dividend"),
     sales: smz.fn.extractColumn(swflData.Results, "sales"),
     energyTaxes: smz.fn.extractColumn(swflData.Results, "energy_taxes"),
     salesCorporation: smz.fn.extractColumn(swflData.Results, "sales_corp"),
@@ -365,9 +365,44 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     return hc.chart('kapitalstruktur', config);
   }
 
+  dividendChart = {
+    chart: {
+      type: 'column'
+    },
+    plotOptions: {
+      column: {
+        pointStart: 2000,
+        tooltip: {
+          pointFormatter: undefined,
+          pointFormat: '<tr><td>{series.name}:&nbsp;<td><td><b>{point.y} €</b></td></tr>'
+        }
+      }
+    },
+    title: {
+      text: 'Gewinnabführungen an die Stadt Flensburg'
+    },
+    series: [{
+      groupPadding: 0.1,
+      pointPadding: 0.1,
+      color: colorLightGreen,
+      data: data.dividend,
+      name: 'Ausschüttung'
+    }],
+    xAxis: {
+      tickPositions: smz.fn.getYearSeries(2001, 2019),
+    },
+    yAxis: {
+      title: {
+        text: 'Abführung Mio. €'
+      },
+      endOnTick: false
+    }
+  }
+
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.Sales = drawSalesChart();
   window.smz.chart.Earnings = drawEarningsChart();
   window.smz.chart.Capital = drawCapitalChart();
+  window.smz.chart.Dividend = hc.chart('gewinnabfuehrung-stadt', dividendChart);
 
 })(window.Highcharts, window.SWFL.Business)
