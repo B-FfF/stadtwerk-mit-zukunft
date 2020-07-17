@@ -10,9 +10,6 @@
     },
   });
 
-  var colorDarkGreen = '#177d35',
-    colorLightGreen = '#73c82c';
-
   function drawPowerChart() {
 
     var startYear = 2003;
@@ -21,7 +18,9 @@
       production: smz.fn.extractColumn(swflData.Electricity, "production", startYear),
       sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear),
       salesFL: smz.fn.extractColumn(swflData.Electricity, "sales_flensburg", startYear),
-      years: smz.fn.extractColumn(swflData.Electricity, "year", startYear)
+      years: smz.fn.extractColumn(swflData.Electricity, "year", startYear),
+      meters: smz.fn.extractColumn(swflData.Electricity, "meters", startYear),
+      households: smz.fn.extractColumn(swflData.Electricity, "households", startYear),
     };
 
     hc.chart('strom', {
@@ -55,7 +54,7 @@
         zIndex: 1
       },{
         name: "Stromverkauf Flensburg",
-        color: colorDarkGreen,
+        color: smz.color.swfl.darkGreen,
         type: 'column',
         data: data.sales.map(function(entry, i) { return entry * data.salesFL[i]; }),
         tooltip: {
@@ -73,7 +72,7 @@
       },{
         name: "Stromverkauf außerhalb",
         data: data.sales.map(function(total, i) { return total - (total * data.salesFL[i]); }),
-        color: colorLightGreen,
+        color: smz.color.swfl.lightGreen,
         opacity: 0.9,
         type: 'column'
       },{
@@ -84,6 +83,37 @@
         pointPadding: 0,
         stack: 1,
         zIndex: -1
+      },{
+        name: "Zähler im Netz",
+        color: smz.color.swfl.darkGreen,
+        data: data.meters,
+        yAxis: 1,
+        visible: false,
+        connectNulls: true,
+        zoneAxis: "x",
+        zones: [{
+          dashStyle: "Solid",
+          value: 2005
+        },{
+          dashStyle: "Dot",
+          value: 2007
+        }]
+      },{
+        name: "Hausanschlüsse",
+        data: data.households,
+        color: Highcharts.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
+        shadow: {color: '#fff'},
+        yAxis: 1,
+        visible: false,
+        connectNulls: true,
+        zoneAxis: "x",
+        zones: [{
+          dashStyle: "Solid",
+          value: 2005
+        },{
+          dashStyle: "Dot",
+          value: 2007
+        }]
       }],
       xAxis: {
         categories: data.years,
@@ -96,7 +126,7 @@
         },
         labels: {
           style: {
-            color: colorDarkGreen
+            color: smz.color.swfl.darkGreen,
           }
         },
         reversedStacks: false
@@ -124,8 +154,6 @@
       gridHigh: smz.fn.extractColumn(swflData.Electricity, "grid_high", 2004),
       gridMedium: smz.fn.extractColumn(swflData.Electricity, "grid_medium", 2004),
       gridLow: smz.fn.extractColumn(swflData.Electricity, "grid_low", 2004),
-      meters: smz.fn.extractColumn(swflData.Electricity, "meters", 2004),
-      households: smz.fn.extractColumn(swflData.Electricity, "households", 2004),
       capacity: smz.fn.extractColumn(swflData.Electricity, "capacity", 2004),
       peak: smz.fn.extractColumn(swflData.Electricity, "peak", 2004),
     };
@@ -202,18 +230,19 @@
           }, zone2)
         ]
       },{
-        name: "Zähler im Netz",
-        color: colorLightGreen,
-        data: data.meters,
+        data: data.peak,
+        color: smz.color.swfl.darkGreen,
+        name: "Höchstleistung im Netz",
         yAxis: 1
-      },{
-        name: "Hausanschlüsse",
-        data: data.households,
-        color: colorDarkGreen,
+      }, {
+        data: data.capacity,
+        color: Highcharts.defaultOptions.colors[8],
+        name: "Erzeugungskapazität",
         yAxis: 1
       }],
       xAxis: {
-        max: 2017
+        min: 2003,
+        max: 2019
       },
       yAxis: [{
         title: {
@@ -230,8 +259,9 @@
           enabled: false
         },
         labels: {
+          format: '{value} MW',
           style: {
-            color: colorDarkGreen
+            color: smz.color.swfl.darkGreen,
           }
         },
         opposite: true
