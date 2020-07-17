@@ -53,7 +53,7 @@
         data: data.customers,
         color: '#333',
         yAxis: 1,
-        shadow: true,
+        shadow: smz.chart.getBoldLineShadow(),
         zIndex: 1
       },{
         name: "Stromverkauf Flensburg",
@@ -90,13 +90,14 @@
         name: "Zähler im Netz",
         color: smz.color.swfl.darkGreen,
         data: data.meters,
+        shadow: smz.chart.getBoldLineShadow(),
         visible: false,
         zones: smz.chart.getDottedZone(2005, 2007)
       },{
         name: "Hausanschlüsse",
         data: data.households,
         color: Highcharts.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
-        shadow: {color: '#fff'},
+        shadow: smz.chart.getBoldLineShadow(),
         visible: false,
         zones: smz.chart.getDottedZone(2005, 2007)
       }],
@@ -192,10 +193,13 @@
         data: data.peak,
         color: smz.color.swfl.darkGreen,
         name: "Höchstleistung im Netz",
+        shadow: smz.chart.getBoldLineShadow(),
       }, {
         data: data.capacity,
         color: Highcharts.defaultOptions.colors[8],
         name: "Erzeugungskapazität",
+        shadow: smz.chart.getBoldLineShadow(),
+        visible: false
       }],
       xAxis: {
         min: 2003,
