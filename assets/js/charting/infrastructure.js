@@ -26,7 +26,10 @@
     return hc.chart('strom', {
       plotOptions: {
         line: {
+          connectNulls: true,
           pointStart: startYear,
+          yAxis: 1,
+          zoneAxis: "x"
         },
         column: {
           grouping: false,
@@ -87,33 +90,15 @@
         name: "Zähler im Netz",
         color: smz.color.swfl.darkGreen,
         data: data.meters,
-        yAxis: 1,
         visible: false,
-        connectNulls: true,
-        zoneAxis: "x",
-        zones: [{
-          dashStyle: "Solid",
-          value: 2005
-        },{
-          dashStyle: "Dot",
-          value: 2007
-        }]
+        zones: smz.chart.getDottedZone(2005, 2007)
       },{
         name: "Hausanschlüsse",
         data: data.households,
         color: Highcharts.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
         shadow: {color: '#fff'},
-        yAxis: 1,
         visible: false,
-        connectNulls: true,
-        zoneAxis: "x",
-        zones: [{
-          dashStyle: "Solid",
-          value: 2005
-        },{
-          dashStyle: "Dot",
-          value: 2007
-        }]
+        zones: smz.chart.getDottedZone(2005, 2007)
       }],
       xAxis: {
         categories: data.years,
@@ -158,15 +143,6 @@
       peak: smz.fn.extractColumn(swflData.Electricity, "peak", 2004),
     };
 
-    var zone1 = {
-      dashStyle: "Solid",
-      value: 2005
-    };
-    var zone2 = {
-      dashStyle: "Dot",
-      value: 2007
-    };
-
     return hc.chart('stromnetz', {
       plotOptions: {
         area: {
@@ -179,13 +155,14 @@
             valueSuffix: 'km'
           },
           zoneAxis: "x",
-          zones: [zone1, zone2]
+          zones: smz.chart.getDottedZone(2005, 2007)
         },
         line: {
-          pointStart: 2004,
           connectNulls: true,
+          pointStart: 2004,
+          yAxis: 1,
           zoneAxis: "x",
-          zones: [zone1, zone2]
+          zones: smz.chart.getDottedZone(2005, 2007)
         }
       },
       title: {
@@ -196,49 +173,29 @@
         name: "Hochspannungsnetz 60/150 kV",
         data: data.gridHigh,
         color: Highcharts.defaultOptions.colors[5],
-        zones: [
-          zone1, Object.assign({
-            fillColor: {
-              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[5]})
-            }
-          }, zone2)
-        ]
+        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[5])
       },{
         type: 'area',
         name: "Mittelspannungsnetz 15 (20) kV",
         color: Highcharts.defaultOptions.colors[3],
         data: data.gridMedium,
         zIndex: -1,
-        zones: [
-          zone1, Object.assign({
-            fillColor: {
-              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[3]})
-            }
-          }, zone2)
-        ]
+        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[3])
       },{
         name: "Niederspannungsnetz 220V",
         data: data.gridLow,
         color: Highcharts.defaultOptions.colors[6],
         type: 'area',
         zIndex: -2,
-        zones: [
-          zone1, Object.assign({
-            fillColor: {
-              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[6], opacity: 0.5})
-            }
-          }, zone2)
-        ]
+        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[6], .5)
       },{
         data: data.peak,
         color: smz.color.swfl.darkGreen,
         name: "Höchstleistung im Netz",
-        yAxis: 1
       }, {
         data: data.capacity,
         color: Highcharts.defaultOptions.colors[8],
         name: "Erzeugungskapazität",
-        yAxis: 1
       }],
       xAxis: {
         min: 2003,

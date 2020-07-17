@@ -23,6 +23,39 @@
           + (showValueSuffix ? " " + (this.series.tooltipOptions.valueSuffix || "") : '')
           + '</b></td></tr>';
         }
+      },
+      getDottedZone: function(from, to) {
+        return [{
+          dashStyle: "Solid",
+          value: from
+        },{
+          dashStyle: "Dot",
+          value: to
+        }]
+      },
+      getStripedZone: function(from, to, stripeColor, opacity) {
+        if (!stripeColor)
+          throw TypeError("No value supplied for striped zone");
+        
+        opacity = opacity || 1;
+        zone = smz.chart.getDottedZone(from, to);
+        return [
+          zone[0],
+          Object.assign(zone[1], {
+            fillColor: {
+              pattern: Object.assign({}, Highcharts.patterns[2], { color: stripeColor, opacity: opacity })
+            }
+          })
+        ]
+      },
+      getBoldLineShadow: function() {
+        return {
+          color: '#fff',
+          opacity: .8,
+          width: 5,
+          offsetX: 0,
+          offsetY: 0
+        }
       }
     },
     color: {

@@ -39,17 +39,6 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
    },
   });
 
-  var colorDarkGreen = '#177d35',
-    colorLightGreen = '#73c82c';
-
-  var whiteLineShadow = {
-    color: '#fff',
-    opacity: .8,
-    width: 5,
-    offsetX: 0,
-    offsetY: 0
-  };
-
   var data = {
     ebit: smz.fn.extractColumn(swflData.Results, "EBIT"),
     ebitCorporation: smz.fn.extractColumn(swflData.Results, "EBIT_corp"),
@@ -116,7 +105,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         pointPlacement: 0.2,
       },{
         name: "Gewinn Konzern",
-        color: colorLightGreen,
+        color: smz.color.swfl.lightGreen,
         data: data.earningsCorporation,
         pointPadding: 0.25,
         pointPlacement: -0.22,
@@ -127,7 +116,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         }]
       },{
         name: "Gewinn GmbH",
-        color: colorDarkGreen,
+        color: smz.color.swfl.darkGreen,
         data: data.earnings,
         pointPadding: 0.25,
         pointPlacement: 0.2,
@@ -140,10 +129,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         type: 'line',
         name: "Umsatzrentabilität (EBIT) Konzern",
         data: data.ebitCorporation.map(function(ebitCorporation, i) { return ebitCorporation * 100 / data.salesCorporation[i]; }),
-        color: colorLightGreen,
+        color: smz.color.swfl.lightGreen,
         pointStart: 2000,
         yAxis: 1,
-        shadow: whiteLineShadow,
+        shadow: smz.chart.getBoldLineShadow(),
         marker: {
           radius: 2
         },
@@ -152,9 +141,9 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         type: 'line',
         name: "Umsatzrentabilität (EBIT) GmbH",
         data: data.ebit.map(function(ebit, i) { return ebit * 100/ data.sales[i]; }),
-        color: colorDarkGreen,
+        color: smz.color.swfl.darkGreen,
         pointStart: 2000,
-        shadow: whiteLineShadow,
+        shadow: smz.chart.getBoldLineShadow(),
         marker: {
           radius: 2
         },
@@ -199,14 +188,14 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },
       series: [{
         name: 'Umsätze Konzern',
-        color: colorLightGreen,
+        color: smz.color.swfl.lightGreen,
         data: data.salesCorporation,
         stack: "konzern",
         pointPadding: 0
       }, {
         name: 'Umsätze GmbH',
         pointPadding: 0.1,
-        color: colorDarkGreen,
+        color: smz.color.swfl.darkGreen,
         data: data.sales,
       },{
         name: 'Strom und Erdgassteuer',
@@ -245,7 +234,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             valueSuffix: ' €',
             pointFormatter: function () {
               if (this.y == 0) return false;
-              return '<tr><td><span style="color:'+this.color+'; padding-top: 20px">●</span>&nbsp;' + this.series.name + '</td>'
+              return '<tr><td><span style="color:' + this.color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + '</td>'
               + '<td style="text-align: right"><b>' + Highcharts.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
             }
           }
@@ -262,7 +251,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       series: [{
         name: "Eigenkapital",
         data: data.equity,
-        color: colorDarkGreen,
+        color: smz.color.swfl.darkGreen,
       },{
         name: "Andere Verbindlichkeiten",
         color: '#333',
@@ -316,7 +305,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         color: Highcharts.defaultOptions.colors[4],
         pointStart: 2000,
         yAxis: 1,
-        shadow: whiteLineShadow,
+        shadow: smz.chart.getBoldLineShadow(),
         marker: {
           radius: 2
         },
@@ -384,7 +373,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     series: [{
       groupPadding: 0.1,
       pointPadding: 0.1,
-      color: colorLightGreen,
+      color: smz.color.swfl.lightGreen,
       data: data.dividend,
       name: 'Ausschüttung'
     }],
