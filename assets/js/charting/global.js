@@ -10,6 +10,25 @@
         });
         
         return chart;
+      },
+      getPointFormatterTableRow: function(decimals, showColorLegend, showValueSuffix) {
+        decimals = decimals || 0;
+        showColorLegend = showColorLegend || true;
+        showValueSuffix = showValueSuffix || true;
+        return function() {
+          return '<tr><td>'
+          + (showColorLegend ? '<span style="color:'+this.color+'">●</span>&nbsp;' : '')
+          + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' 
+          + Highcharts.numberFormat(this.y, decimals) 
+          + (showValueSuffix ? " " + (this.series.tooltipOptions.valueSuffix || "") : '')
+          + '</b></td></tr>';
+        }
+      }
+    },
+    color: {
+      swfl: {
+        lightGreen: '#73c82c',
+        darkGreen: '#177d35'
       }
     },
     fn: {

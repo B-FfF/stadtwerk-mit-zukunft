@@ -5,11 +5,8 @@
       backgroundColor: '#ffffff',
       useHTML: true,
       shared: true,
-      headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
       footerFormat: '</table>',
-      pointFormatter: function () {
-        return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' + Highcharts.numberFormat(this.y, 0) + '</b></td></tr>';
-      }
+      pointFormatter: smz.chart.getPointFormatterTableRow()
     },
   });
 
@@ -24,7 +21,8 @@
       production: smz.fn.extractColumn(swflData.Electricity, "production", startYear),
       sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear),
       salesFL: smz.fn.extractColumn(swflData.Electricity, "sales_flensburg", startYear),
-    };    
+      years: smz.fn.extractColumn(swflData.Electricity, "year", startYear)
+    };
 
     hc.chart('strom', {
       plotOptions: {
@@ -32,15 +30,16 @@
           pointStart: startYear,
         },
         column: {
-          pointStart: startYear,
           grouping: false,
           shadow: false,
-          borderWidth: 0,
-          groupPadding: 0.1,
+          borderWidth: 1,
+          groupPadding: 0.0,
+          pointPadding: 0.2,
+          pointStart: startYear,
+          stacking: "normal",
           tooltip: {
-            pointFormatter: function () {
-              return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' + Highcharts.numberFormat(this.y, 0) + ' MWh</b></td></tr>';
-            }
+            pointFormatter: smz.chart.getPointFormatterTableRow(1),
+            valueSuffix: 'MWh'
           }
         }
       },
@@ -48,29 +47,48 @@
         text: 'Stromabgabe und Kundschaft'
       },
       series: [{
-        name: "Stromabgabe gesamt",
-        data: data.sales,
-        color: colorLightGreen,
-        type: 'column',
-      },{
-        name: "Stromabgabe Flensburg",
-        data: data.production,
-        color: colorDarkGreen,
-        type: 'column',
-        data: data.sales.map(function(entry, i) { return entry * data.salesFL[i]; }),
-        tooltip: {
-          nullFormatter: function () {
-            return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' + this.series.name + ':&nbsp;</td><td style="text-align: right">keine Angabe</td></tr>';
-          },
-        }        
-      },{
         name: "Kund*innen",
         data: data.customers,
         color: '#333',
         yAxis: 1,
         shadow: true,
         zIndex: 1
+      },{
+        name: "Stromverkauf Flensburg",
+        color: colorDarkGreen,
+        type: 'column',
+        data: data.sales.map(function(entry, i) { return entry * data.salesFL[i]; }),
+        tooltip: {
+          pointFormatter: function () {
+            return '<tr><td><b>Stromabgabe gesamt:</b></td><td style="text-align: right"><b>'
+            + Highcharts.numberFormat(this.stackTotal, 1) + ' GWh'
+            + '</td></tr><tr><td><span style="color:' + this.color + '">●</span>&nbsp;' 
+            + this.series.name + ':&nbsp;&nbsp;&nbsp;<b>' 
+            + Highcharts.numberFormat(data.salesFL[this.index] * 100, 1) 
+            + ' % →&nbsp;</b></td><td style="text-align: right"><b>' 
+            + Highcharts.numberFormat(this.y, 1) + ' GWh</b></td></tr>';
+          }
+        },
+        borderWidth: 0
+      },{
+        name: "Stromverkauf außerhalb",
+        data: data.sales.map(function(total, i) { return total - (total * data.salesFL[i]); }),
+        color: colorLightGreen,
+        opacity: 0.9,
+        type: 'column'
+      },{
+        type: "column",
+        name: "Eigene Stromproduktion (Kohle + Gas)",
+        data: data.production,
+        color: Highcharts.defaultOptions.colors[8],
+        pointPadding: 0,
+        stack: 1,
+        zIndex: -1
       }],
+      xAxis: {
+        categories: data.years,
+        tickmarkPlacement: "between"
+      },
       yAxis: [{
         title: {
           margin: 6,
@@ -80,10 +98,11 @@
           style: {
             color: colorDarkGreen
           }
-        }
+        },
+        reversedStacks: false
       },{
         title: {
-          text: "Kund*innen",
+          text: "Kund*innen bundesweit",
           style: {
             color: '#333'
           }
@@ -129,9 +148,7 @@
           },
           pointStart: 2004,
           tooltip: {
-            pointFormatter: function () {
-              return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' + this.y + ' km</b></td></tr>';
-            }
+            valueSuffix: 'km'
           },
           zoneAxis: "x",
           zones: [zone1, zone2]
