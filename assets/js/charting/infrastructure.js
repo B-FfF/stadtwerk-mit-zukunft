@@ -23,7 +23,7 @@
       households: smz.fn.extractColumn(swflData.Electricity, "households", startYear),
     };
 
-    hc.chart('strom', {
+    return hc.chart('strom', {
       plotOptions: {
         line: {
           pointStart: startYear,
@@ -167,7 +167,7 @@
       value: 2007
     };
 
-    hc.chart('stromnetz', {
+    return hc.chart('stromnetz', {
       plotOptions: {
         area: {
           connectNulls: true,
@@ -199,7 +199,7 @@
         zones: [
           zone1, Object.assign({
             fillColor: {
-              pattern: Object.assign(Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[5]})
+              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[5]})
             }
           }, zone2)
         ]
@@ -212,7 +212,7 @@
         zones: [
           zone1, Object.assign({
             fillColor: {
-              pattern: Object.assign(Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[3]})
+              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[3]})
             }
           }, zone2)
         ]
@@ -225,7 +225,7 @@
         zones: [
           zone1, Object.assign({
             fillColor: {
-              pattern: Object.assign(Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[6], opacity: 0.5})
+              pattern: Object.assign({}, Highcharts.patterns[2], {color: Highcharts.defaultOptions.colors[6], opacity: 0.5})
             }
           }, zone2)
         ]
