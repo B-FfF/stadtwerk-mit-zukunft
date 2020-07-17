@@ -39,7 +39,7 @@
           stacking: "normal",
           tooltip: {
             pointFormatter: smz.chart.getPointFormatterTableRow(1),
-            valueSuffix: 'MWh'
+            valueSuffix: 'GWh'
           }
         }
       },
