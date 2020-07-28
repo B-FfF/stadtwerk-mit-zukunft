@@ -43,10 +43,42 @@
             pointFormatter: smz.chart.getPointFormatterTableRow(1),
             valueSuffix: 'GWh'
           }
+        },
+        series: {
+          events: {
+            legendItemClick: function(e) {
+              if (['households', 'meters'].indexOf(e.target.options.id) === -1)
+                return;
+
+              needsAnnotation = !e.target.options.visible;
+              if (!needsAnnotation) {
+                // check if annotation may be needed for other series
+                for (i in this.chart.series) {
+                  if (this.chart.series[i].options.id === e.target.options.id) {
+                    // current item, already checked above - will show old visibility state anyway
+                    continue;
+                  }
+
+                  if (['households', 'meters'].indexOf(this.chart.series[i].options.id) !== -1 &&
+                    this.chart.series[i].visible === true) {
+                    needsAnnotation = true;
+                    break
+                  }
+                }
+              }
+
+              isAnnotated = this.chart.yAxis[1].axisTitle.textStr.indexOf("Potential FL") !== -1
+              if (needsAnnotation && !isAnnotated) {
+                this.chart.yAxis[1].update({title: {text: "Kund*innen gesamt / Potential FL"}});
+              } else if (!needsAnnotation && isAnnotated) {
+                this.chart.yAxis[1].update({title: {text: "Kund*innen gesamt"}});
+              }
+            }
+          }
         }
       },
       title: {
-        text: 'Stromabgabe und Kundschaft'
+        text: 'Stromerzeugung, -abgabe und Kundschaft'
       },
       series: [{
         name: "Kund*innen",
@@ -87,16 +119,18 @@
         stack: 1,
         zIndex: -1
       },{
-        name: "Zähler im Netz",
         color: smz.color.swfl.darkGreen,
         data: data.meters,
+        id: "meters",
+        name: "Zähler im Netz",
         shadow: smz.chart.getBoldLineShadow(),
         visible: false,
         zones: smz.chart.getDottedZone(2005, 2007)
       },{
-        name: "Hausanschlüsse",
-        data: data.households,
         color: Highcharts.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
+        data: data.households,
+        id: "households",
+        name: "Hausanschlüsse",
         shadow: smz.chart.getBoldLineShadow(),
         visible: false,
         zones: smz.chart.getDottedZone(2005, 2007)
@@ -118,7 +152,7 @@
         reversedStacks: false
       },{
         title: {
-          text: "Kund*innen bundesweit",
+          text: "Kund*innen",
           style: {
             color: '#333'
           }
@@ -167,7 +201,7 @@
         }
       },
       title: {
-        text: 'Stromnetze'
+        text: 'Stromnetze Flensburg'
       },
       series: [{
         type: 'area',
