@@ -25,10 +25,21 @@
 | grid_medium     | Mittelspannungsnetz                        | km      | 
 | grid_low        | Niederspannungsnetz                        | km      |
 | households      | Hausanschlüsse                             |         |
+| meters          | Zähler im Netz                             |         |
 | production      | Netto-Stromerzeugung Mio. kWh              | GWh     |
 | sales           | "Nutzbare Abgabe" / Stromabsatz in Mio kWh | GWh     |
 | sales_flensburg | Stromabsatz Flensburg (Prozent von Gesamt) | %       |
 | capacity        | Brutto-Kraftwerksleistung bei voller Heizwärmeabgabe | MW    |
+| peak            | Höchstbelastung im Netz                    | MW      |
+
+## `swfl_overview_electricity.csv`
+
+| grid            | Leitungsnetz                               | km      |
+| sales           | "Nutzbare Abgabe" / Wärmeabsatz in Mio kWh | GWh     |
+| households      | Hausanschlüsse                             |         |
+| meters          | Zähler im Netz                             |         |
+| production      | Wärmeerzeugung in Mio. kWh                 | GWh     |
+| capacity        | Erzeugungskapazität                        | MW      |
 | peak            | Höchstbelastung im Netz                    | MW      |
 
 ## `swfl_emissions.csv`

@@ -42,6 +42,16 @@ sidebar:
   </figure>
 </div>
 
+### Fernwärme
+
+<div class="row">
+  <figure id="waermeabsatz" class="col-6 col-12-wide">
+  </figure>
+  <figure id="waermenetz" class="col-6 col-12-wide">
+  </figure>
+</div>
+
+
 ## Vorgeschichte
 
 Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre, in welchen die Grundlagen für die heutige Situation geschaffen wurden.
@@ -120,7 +130,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
     Business: {
       ProductSplit: {{ site.data.swfl_business_by_product | jsonify }},
       Results: {{ site.data.swfl_business | jsonify }},
-      Electricity: {{ site.data.swfl_overview_electricity | jsonify }}
+      Electricity: {{ site.data.swfl_overview_electricity | jsonify }},
+      Heat: {{ site.data.swfl_overview_heat | jsonify }}
     }
   }
 </script>
@@ -129,4 +140,5 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/business-data.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/infrastructure.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/heat.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>
