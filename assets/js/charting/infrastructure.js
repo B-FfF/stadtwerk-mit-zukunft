@@ -228,6 +228,9 @@
         color: smz.color.swfl.darkGreen,
         name: "Höchstleistung im Netz",
         shadow: smz.chart.getBoldLineShadow(),
+        tooltip: {
+          valueSuffix: ' MW'
+        }
       }, {
         data: data.capacity,
         color: Highcharts.defaultOptions.colors[8],
