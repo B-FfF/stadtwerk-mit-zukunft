@@ -50,7 +50,7 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<s
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bis zum heutigen Tag bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
 
 ### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
@@ -72,7 +72,7 @@ Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Ja
 ### Klimaschädlichkeit von Erdgas
 
 Methan ist der Hauptbestandteil von Erdgas und -- über den Zeitraum von 100 Jahren betrachtet -- ein [28 bis 33 mal stärkeres Treibhausgas][gas-gwp] als CO<sub>2</sub>. Über einen Zeitraum von 20 Jahren betrachtet ist es laut IPCC sogar **84 mal potenter als CO<sub>2</sub>**.  
-Bei Abbau, Transport und Lagerung entweichen [laut Aussage der IEA][iea-slip] 1,7 % der weltweit geförderten Erdgasmenge in die Atmosphäre -- der so genannte **„Methanschlupf“**. [Diverse Studien][slip-comparison] kommen auf deutlich höhere Werte -- besonders wenn das Erdgas per Fracking gewonnen wurde: dabei wird von einem Methanschlupf bis zu 5,8 % ausgegangen.  
+Bei Abbau, Transport und Lagerung entweichen [laut Aussage der IEA][iea-slip] 1,7 % der weltweit geförderten Erdgasmenge in die Atmosphäre -- der so genannte **„Methanschlupf“**. [Diverse Studien][slip-comparison] kommen auf höhere Werte -- besonders wenn das Erdgas per Fracking gewonnen wurde: dabei wird von einem Methanschlupf bis zu 5,8 % ausgegangen.  
 So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Klimawandel, wie in der folgenden Grafik in CO<sub>2</sub>-Äquivalenten umgerechnet dargestellt[^1]:
 
 <figure class=chart>
@@ -87,7 +87,7 @@ Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO
     <div id="entwicklung-co2-zertifikatspreise"></div>
 </figure>
 
-Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO<sub>2</sub>-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € -- den fast alle Marktbeobachter*innen früher oder später erwarten -- würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25 €). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet, wenn nicht sogar unwahrscheinlich. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
+Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO<sub>2</sub>-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € -- den fast alle Marktbeobachter*innen früher oder später erwarten -- würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25 €). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
 
 [^1]: 
     **Annahmen Methanberechnung**
