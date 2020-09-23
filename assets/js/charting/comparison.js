@@ -37,7 +37,7 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
         formatter: function() {
 
           var output = "";
-          if (this.series.name === "Flensburg") {
+          if (this.series.name !== "Flensburg") {
             output = '<span style="font-weight: normal">';
           }
           if (this.key === "Strom") {
