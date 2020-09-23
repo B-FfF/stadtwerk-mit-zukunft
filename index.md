@@ -1,11 +1,11 @@
 ---
 layout: home
 title: Willkommen
-header: Ohne Sie<br>sehen wir<br>schwarz.
+header: Ohne sie<br>sehen wir<br>schwarz.
 features:
   - herausforderung.md
   - swfl.md
-  - profil.md
+  - talk-dialog-2.md
 ---
 
 {%- comment -%}

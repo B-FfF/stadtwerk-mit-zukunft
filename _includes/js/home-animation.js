@@ -72,11 +72,11 @@
     var currentDelay = startDelay;
     window.setTimeout(addClass.bind(this, 'is-black'), currentDelay);
     currentDelay += fadeDuration;
-    window.setTimeout(addNextText.bind(this, logoText, "... aber mit Ihnen ...", typeDuration), currentDelay);
+    window.setTimeout(addNextText.bind(this, logoText, "... aber mit ihnen ...", typeDuration), currentDelay);
     currentDelay += typeDuration + 1500;
     window.setTimeout(addClass.bind(this, 'is-postload'), currentDelay)
     currentDelay += fadeDuration - 2000;
-    window.setTimeout(addNextText.bind(this, logoText, "Mit Ihnen blicken wir in die Zukunft!", typeDuration * 1.5), currentDelay);
+    window.setTimeout(addNextText.bind(this, logoText, "Mit ihnen blicken wir in die Zukunft!", typeDuration * 1.5), currentDelay);
     window.setTimeout(function(){ stopBlinking = true}, currentDelay + (typeDuration * 1.5));
   }
 

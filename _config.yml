@@ -17,10 +17,7 @@ lang: de
 title: Zukunft@Stadtwerke Flensburg
 email: flensburg.fossilfrei@posteo.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Die Stadtwerke Flensburg suchen nach einer neuen Leitung der Geschäftsführung.<br>
-  Sind Sie der Mensch, der die umfassende Transformation eines mittelgroßen
-  kommunalen Konzerns zu einem führenden Dienstleister der erneuerbaren Energien einleiten wird
-  - oder kennen eine Person, der Sie dies zutrauen? Dann lesen Sie weiter...
+  Zukunftsfähige Stadtwerke sind schadstofffrei und klimaneutral.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/stadtwerk-mit-zukunft" # the subpath of your site, e.g. /blog
 

@@ -1,5 +1,5 @@
 ---
-layout: right-sidebar
+layout: default
 permalink: bewerben/
 preview_image: assets/images/maritime/captain.svg
 title: Geschäftsführer*in (m/w/d)
@@ -13,6 +13,9 @@ description: Neue Geschäftsleitung für die Stadtwerke Flensburg gesucht!
 Die Stadtwerke Flensburg GmbH ist das zentrale Unternehmen, das alle Flensburger*innen mit der nötigen Infrastruktur zum Leben versorgt. Das Firmengelände liegt direkt am Wasser der „schönsten Förde der Welt“. Die Stadtwerke blicken auf eine über 150-jährige Unternehmensgeschichte zurück und beschäftigen nahezu 700 Arbeitnehmer\*innen. Weitere Informationen sind unter anderem [auf dieser Seite]({% link pages/job/swfl.md %}) und auf der [Unternehmensseite der Stadtwerke Flensburg](https://www.stadtwerke-flensburg.de/unternehmen/ueber-uns/) verfügbar.
 
 Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahren und bleibt **spätestens bis zum 31.12.2020**.
+
+{%- include carousel.html -%}
+
 
 ### Ihre Aufgaben
 
@@ -45,6 +48,163 @@ Der bisherige Geschäftsführer verlässt die Stadtwerke nach nunmehr zehn Jahre
 Haben wir Ihr Interesse geweckt? Dann möchten wir Sie unbedingt zu einer [Initiativbewerbung](https://www.stadtwerke-flensburg.de/unternehmen/jobs-karriere/richtig-bewerben/) ermutigen!  
 
 Gerne können Sie uns auch [direkt kontaktieren](mailto:bewerben@stadtwerk-mit-zukunft.de?subject=Geschäftsführung Stadtwerke Flensburg), sollten Sie vorab Fragen oder Rückmeldungen haben - oder uns einfach nur darüber in Kenntnis setzen wollen, dass Sie sich beworben haben. Wir freuen uns über jede Nachricht.
+
+<script>
+
+var checkReadyState = setInterval(function() {
+
+  if ((document.readyState === "interactive" || document.readyState === "complete") && $) {
+    clearInterval(checkReadyState)
+    startCarousel();
+  }
+}, 100)
+
+  function startCarousel() {
+
+    $.getScript("{{ "assets/js/lib/jquery.scrollex-0.2.1.min.js" | relative_url }}")
+    var	$window = $(window),
+      settings = {
+
+			// Carousels
+				carousels: {
+					speed: 4,
+					fadeIn: true,
+					fadeDelay: 250
+				}
+		};    
+		$('.carousel').each(function() {
+			var	$t = $(this),
+				$forward = $('<span class="forward"></span>'),
+				$backward = $('<span class="backward"></span>'),
+				$reel = $t.children('.reel'),
+				$items = $reel.children('article');
+
+			var	pos = 0,
+				leftLimit,
+				rightLimit,
+				itemWidth,
+				reelWidth,
+				timerId;
+
+			// Items.
+				if (settings.carousels.fadeIn) {
+
+//					$items.addClass('loading');
+
+					$t.scrollex({
+						mode: 'middle',
+						top: '-20vh',
+						bottom: '-20vh',
+						enter: function() {
+
+							var	timerId,
+								limit = $items.length - Math.ceil($window.width() / itemWidth);
+
+							timerId = window.setInterval(function() {
+								var x = $items.filter('.loading'), xf = x.first();
+
+								if (x.length <= limit) {
+
+									window.clearInterval(timerId);
+									$items.removeClass('loading');
+									return;
+
+								}
+
+								xf.removeClass('loading');
+
+							}, settings.carousels.fadeDelay);
+
+						}
+					});
+
+				}
+
+			// Main.
+				$t._update = function() {
+					pos = 0;
+					rightLimit = (-1 * reelWidth) + $window.width();
+					leftLimit = 0;
+          $t._updatePos();
+				};
+
+				$t._updatePos = function() { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
+
+			// Forward.
+				$forward
+					.appendTo($t)
+					// .hide()
+					.mouseenter(function(e) {
+						timerId = window.setInterval(function() {
+							pos -= settings.carousels.speed;
+
+							if (pos <= rightLimit)
+							{
+								window.clearInterval(timerId);
+								pos = rightLimit;
+							}
+
+							$t._updatePos();
+						}, 10);
+					})
+					.mouseleave(function(e) {
+						window.clearInterval(timerId);
+					});
+
+			// Backward.
+				$backward
+					.appendTo($t)
+					// .hide()
+					.mouseenter(function(e) {
+						timerId = window.setInterval(function() {
+							pos += settings.carousels.speed;
+
+							if (pos >= leftLimit) {
+								window.clearInterval(timerId);
+								pos = leftLimit;
+
+							}
+
+							$t._updatePos();
+						}, 10);
+					})
+					.mouseleave(function(e) {
+						window.clearInterval(timerId);
+					});
+
+			// Init.
+      reelWidth = $reel[0].scrollWidth;
+
+      if (browser.mobile) {
+
+        $reel
+          .css('overflow-y', 'hidden')
+          .css('overflow-x', 'scroll')
+          .scrollLeft(0);
+        $forward.hide();
+        $backward.hide();
+
+      }
+      else {
+
+        $reel
+          .css('overflow', 'visible')
+          .scrollLeft(0);
+        $forward.show();
+        $backward.show();
+
+      }
+
+      $t._update();
+
+      $window.on('resize', function() {
+        reelWidth = $reel[0].scrollWidth;
+        $t._update();
+      }).trigger('resize');
+
+    });
+  }
+</script>
 
 
   [prinz]: {% link pages/job/swfl.md %}#die-erste-krise "Wolfgang Prinz war technischer Direktor der Stadtwerke und setzte seine Vision trotz politischen Widerstandes und negativer Einschätzungen aller Expert*innen mit großem Erfolg um."

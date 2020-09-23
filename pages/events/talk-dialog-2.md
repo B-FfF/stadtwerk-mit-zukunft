@@ -3,6 +3,7 @@ title: Energiesystem Stadt - Die Zukunft der Energiewende
 layout: default
 description: Flensburger KLIMA - Talks & Dialoge mit Zivilgesellschaft, Politik, Verwaltung, Wirtschaft und Wissenschaft
 permalink: /flensburg-klima-dialoge/
+preview_image: assets/images/talks/flensburg-klima-talks.png
 ---
 
 <figure class="image">
