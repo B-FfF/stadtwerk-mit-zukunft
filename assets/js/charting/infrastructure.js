@@ -10,6 +10,14 @@
     },
   });
 
+  function markMissing(label) {
+    if ([2003, 2006, 2018, 2019].indexOf(label.value) !== -1) {
+      return label.value + "<strong style='color: #000'>*</strong>";
+    }
+
+    return label.value;
+  }
+
   function drawPowerChart() {
 
     var startYear = 2003;
@@ -137,7 +145,10 @@
       }],
       xAxis: {
         categories: data.years,
-        tickmarkPlacement: "between"
+        tickmarkPlacement: "between",
+        labels: {
+          formatter: markMissing
+        }
       },
       yAxis: [{
         title: {
@@ -240,7 +251,10 @@
       }],
       xAxis: {
         min: 2003,
-        max: 2019
+        max: 2019,
+        labels: {
+          formatter: markMissing
+        }
       },
       yAxis: [{
         title: {

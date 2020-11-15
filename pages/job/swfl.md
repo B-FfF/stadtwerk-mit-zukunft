@@ -3,11 +3,11 @@ layout: right-sidebar
 permalink: stadtwerke-flensburg/zahlen-daten-fakten/
 preview_image: assets/images/swfl/day-grey-logo.jpg
 title: Die Stadtwerke Flensburg
-description: Ein Überblick über die Geschichte der Stadtwerke Flensburg, ihrer Erzeugungsstuktur und wirtschaftlichen Daten der einzelnen Geschäftsbereiche.
+description: Überblick über die Geschichte der Stadtwerke Flensburg, ihrer Erzeugungsstuktur und wirtschaftlicher Daten der einzelnen Geschäftsbereiche.
 sidebar:
   box:
     header: Work in progress
-    content: Dieser Bereich wird regelmäßig um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie morgen doch noch einmal vorbei oder wenden sich direkt an uns.
+    content: Dieser Bereich wird regelmäßig um weitere Informationen ergänzt. Falls Sie noch offene Fragen haben, schauen Sie doch demnächst noch einmal vorbei oder wenden sich direkt an uns.
     button:
       text: Schreiben Sie uns
       link: mailto:info@stadtwerk-mit-zukunft.de?subject=stadtwerk-mit-zukunft.de
@@ -24,6 +24,7 @@ sidebar:
   </figure>
 </div>
 
+> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider jegliche Angaben zum Konzern.
 <br>
 
 <div class="row">
@@ -42,6 +43,8 @@ sidebar:
   </figure>
 </div>
 
+> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006.
+
 ### Fernwärme
 
 <div class="row">
@@ -51,6 +54,7 @@ sidebar:
   </figure>
 </div>
 
+> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion sowie Zählern und Hausanschlüssen im Netz.
 
 ## Vorgeschichte
 

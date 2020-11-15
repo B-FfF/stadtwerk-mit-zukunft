@@ -62,6 +62,14 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     return series.map(function(value) {return -value})
   }
 
+  function markMissing(label) {
+    if (label.value >= 2017) {
+      return label.value + "<strong>*</strong>"
+    }
+
+    return label.value
+  }
+
   function drawEarningsChart() {
 
     hc.chart('gewinn-entwicklung', {
@@ -150,6 +158,11 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         yAxis: 1,
         visible: false
       }],
+      xAxis: {
+        labels: {
+          formatter: markMissing
+        }
+      },
       yAxis: [{
         title: {
           text: "Gewinn in Mio. €"
@@ -205,6 +218,11 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       }],
       tooltip: {
         valueSuffix: ' €'
+      },
+      xAxis: {
+        labels: {
+          formatter: markMissing
+        }
       },
       yAxis: [{
         title: {
