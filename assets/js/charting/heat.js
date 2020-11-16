@@ -110,10 +110,14 @@
       name: "Leitungsnetz",
       data: data.grid,
       color: smz.color.swfl.darkGreen,
+      tooltip: {
+        valueSuffix: ' km'
+      },
     },{
       name: "Zähler im Netz",
       data: data.meters,
       color: '#333',
+      visible: false,
       yAxis: 1
     },{
       name: "Hausanschlüsse",
@@ -122,7 +126,7 @@
       visible: false,
       yAxis: 1
     },{
-      name: "Fernwärmeverluste",
+      name: "Fernwärmeverluste (Absatz / Erzeugung)",
       color: Highcharts.defaultOptions.colors[8],
       data: data.production.map(function(produced, idx) { 
         return produced ? (1 - (data.sales[idx] / produced)) * 100 : produced
@@ -144,12 +148,16 @@
       opposite: true
     },{
       title: {text: undefined},
-      opposite: true
+      opposite: true,
+      labels: {
+        format: "{value} %"
+      },
+      max: 20
     }]
   }
 
   smz.chart = smz.chart || {};
   smz.chart.Heat = hc.chart("waermeabsatz", heatChartConfig)
-  smz.chart.Heat = hc.chart("waermenetz", heatGridConfig)
+  smz.chart.HeatGrid = hc.chart("waermenetz", heatGridConfig)
 
 })(window.Highcharts, window.smz, window.SWFL.Business.Heat);
