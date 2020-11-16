@@ -42,6 +42,16 @@
 | capacity        | Erzeugungskapazität                        | MW      |
 | peak            | Höchstbelastung im Netz                    | MW      |
 
+## `swfl_overview_water.csv`
+
+| grid             | Leitungsnetz                               | km       |
+| households       | Hausanschlüsse                             |          |
+| meters           | Zähler im Netz                             |          |
+| production       | Wasserförderung                            | Mio m³   |
+| sales            | "Nutzbare Abgabe" / Wasserabsatz in Mio m³ | Mio m³   |
+| production_daily | Tägliche Förderleistung                    | 1.000 m³ |
+| peak_day         | Höchste Tagesabgabe                        | 1.000 m³ |
+
 ## `swfl_emissions.csv`
 
 | year             | Geschäftsjahr             |

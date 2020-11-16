@@ -54,7 +54,18 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion sowie Zählern und Hausanschlüssen im Netz.
+> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
+
+### Wasser
+
+<div class="row">
+  <figure id="wasserabsatz" class="col-6 col-12-wide">
+  </figure>
+  <figure id="wassernetz" class="col-6 col-12-wide">
+  </figure>
+</div>
+
+> Zu den mit einem Sternchen (\*) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben zu eigener Wasserproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
 
 ## Vorgeschichte
 
@@ -135,7 +146,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
       ProductSplit: {{ site.data.swfl_business_by_product | jsonify }},
       Results: {{ site.data.swfl_business | jsonify }},
       Electricity: {{ site.data.swfl_overview_electricity | jsonify }},
-      Heat: {{ site.data.swfl_overview_heat | jsonify }}
+      Heat: {{ site.data.swfl_overview_heat | jsonify }},
+      Water: {{ site.data.swfl_overview_water | jsonify }}
     }
   }
 </script>
@@ -145,4 +157,5 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script src="{{ "assets/js/charting/business-data.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/infrastructure.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/heat.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/water.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>
