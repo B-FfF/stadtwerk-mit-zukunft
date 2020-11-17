@@ -24,7 +24,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider jegliche Angaben zum Konzern.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider jegliche Angaben zum Konzern.
 <br>
 
 <div class="row">
@@ -43,7 +43,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006.
 
 ### Fernwärme
 
@@ -54,7 +54,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (\*) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
 
 ### Wasser
 
@@ -65,7 +65,7 @@ sidebar:
   </figure>
 </div>
 
-> Zu den mit einem Sternchen (\*) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben zu eigener Wasserproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
+> Zu den mit einem Sternchen (**\***{: style="color: #000"}) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben zu eigener Wasserproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
 
 ### Glasfaser
 

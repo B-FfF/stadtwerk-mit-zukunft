@@ -11,7 +11,7 @@
       return label.value;
     }
 
-    return label.value + "<strong style='color: #000;font-size: 1.5em'>*</strong>";
+    return label.value + "<strong style='color: #000'>*</strong>";
   }
 
   var fibreChartConfig = {
@@ -44,7 +44,6 @@
     }],
     xAxis: {
       labels: {
-        useHTML: true,
         formatter: markMissing
       }
     },

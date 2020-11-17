@@ -141,15 +141,20 @@
     },
     title: {
       text: undefined,
-      useHtml: true
+      useHtml: true // !!
     },
-    yAxis: {
+    yAxis: {  // double / overwritten
       title: {
         margin: 6
       }
     },
     tooltip: {
       useHTML: true
+    },
+    xAxis: {
+      labels: {
+        useHTML: true
+      }
     },
     yAxis: {
       title: {

@@ -11,11 +11,11 @@
   }
 
   function markMissing(label) {
-    if ([2000, 2001, 2002, 2003, 2006, 2018, 2019].indexOf(label.value) !== -1) {
-      return label.value + "<strong style='color: #000'>*</strong>";
+    if ([2000, 2001, 2002, 2003, 2006, 2018, 2019].indexOf(label.value) === -1) {
+      return label.value;
     }
 
-    return label.value;
+    return "<strong style='color: #000'>*</strong>" + label.value;
   }
 
   var waterChartConfig = {

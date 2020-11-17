@@ -63,11 +63,11 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
   }
 
   function markMissing(label) {
-    if (label.value >= 2017) {
-      return label.value + "<strong>*</strong>"
+    if (label.value < 2017) {
+      return label.value
     }
 
-    return label.value
+    return "<strong style='color: #000;'>*</strong>" + label.value;
   }
 
   function drawEarningsChart() {
