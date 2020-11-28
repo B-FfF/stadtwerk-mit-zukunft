@@ -157,6 +157,7 @@
       }
     },
     yAxis: {
+      showEmpty: false,
       title: {
         style: {
           fontSize: "0.75em"
