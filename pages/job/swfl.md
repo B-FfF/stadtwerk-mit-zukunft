@@ -79,6 +79,18 @@ sidebar:
   </blockquote>
 </div>
 
+### Hafenbetrieb
+
+<div class="row">
+  <figure id="hafen" class="col-6 col-12-wide">
+  </figure>
+  <blockquote class="col-6 col-12-wide">
+    <p>
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben bzgl. der Zahl der eingelaufenen Schiffe bzw. des Güterumschlags
+    </p>
+  </blockquote>
+</div>
+
 ## Vorgeschichte
 
 Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre, in welchen die Grundlagen für die heutige Situation geschaffen wurden.
@@ -160,7 +172,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
       Electricity: {{ site.data.swfl_overview_electricity | jsonify }},
       Heat: {{ site.data.swfl_overview_heat | jsonify }},
       Water: {{ site.data.swfl_overview_water | jsonify }},
-      Fibre: {{ site.data.swfl_overview_fibre | jsonify }}
+      Fibre: {{ site.data.swfl_overview_fibre | jsonify }},
+      Harbour: {{ site.data.swfl_overview_harbour | jsonify }}
     }
   }
 </script>
@@ -172,4 +185,5 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script src="{{ "assets/js/charting/heat.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/water.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/fibre.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/harbour.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>

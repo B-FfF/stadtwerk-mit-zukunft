@@ -52,6 +52,11 @@
 | production_daily | Tägliche Förderleistung                    | 1.000 m³ |
 | peak_day         | Höchste Tagesabgabe                        | 1.000 m³ |
 
+## `swfl_overview_harbour.csv`
+
+| ships       | Eingelaufene Schiffe            |         |
+| cargo       | Güterumschlag                   | 1.000 t |
+
 ## `swfl_emissions.csv`
 
 | year             | Geschäftsjahr             |
