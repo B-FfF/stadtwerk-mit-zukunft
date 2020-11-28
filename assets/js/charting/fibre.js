@@ -35,7 +35,7 @@
       yAxis: 1
     },{
       name: "Kund*innen",
-      color: smz.color.swfl.DarkGreen,
+      color: smz.color.swfl.darkGreen,
       data: data.customers,
       yAxis: 1
     }],
@@ -43,7 +43,8 @@
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Leitungsnetz in km"}
+      title: {text: "Leitungsnetz in km"},
+      min: 0
     },{
       title: {text: "Anschlüsse"},
       opposite: true
