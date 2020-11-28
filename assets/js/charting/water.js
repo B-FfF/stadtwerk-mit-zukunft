@@ -10,13 +10,7 @@
     peak_day: smz.fn.extractColumn(waterData, "peak_day"),
   }
 
-  function markMissing(label) {
-    if ([2000, 2001, 2002, 2003, 2006, 2018, 2019].indexOf(label.value) === -1) {
-      return label.value;
-    }
-
-    return "<strong style='color: #000'>*</strong>" + label.value;
-  }
+  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019];
 
   var waterChartConfig = {
     chart: {
@@ -68,9 +62,7 @@
       }
     }],
     xAxis: {
-      labels: {
-        formatter: markMissing
-      }
+      missing: missingYears
     },
     yAxis: [{
       title: {
@@ -124,9 +116,7 @@
       yAxis: 2
     }],
     xAxis: {
-      labels: {
-        formatter: markMissing
-      }
+      missing: missingYears
     },
     yAxis: [{
       title: {text: "Leitungsnetz in km"}

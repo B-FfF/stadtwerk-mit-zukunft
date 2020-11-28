@@ -6,13 +6,7 @@
     customers: smz.fn.extractColumn(fibreData, "customers"),
   };
 
-  function markMissing(label) {
-    if ([2018, 2019].indexOf(label.value) === -1) {
-      return label.value;
-    }
-
-    return label.value + "<strong style='color: #000'>*</strong>";
-  }
+  var missingYears = [2018, 2019];
 
   var fibreChartConfig = {
     chart: {
@@ -21,6 +15,9 @@
     plotOptions: {
       line: {
         pointStart: 2015,
+        tooltip: {
+          valueDecimals: 0
+        }
       }
     },
     series: [{
@@ -43,9 +40,7 @@
       yAxis: 1
     }],
     xAxis: {
-      labels: {
-        formatter: markMissing
-      }
+      missing: missingYears
     },
     yAxis: [{
       title: {text: "Leitungsnetz in km"}

@@ -22,19 +22,46 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
 (function(hc, swflData){
 
+  var missingYears = [2017, 2018, 2019];
+
+  function getMissingAsterisk(missingYears, currentYear) {
+    if (!missingYears || missingYears.indexOf(currentYear) === -1) {
+      return "";
+    }
+
+    return "<strong style='color: #000;'>*</strong>";
+  }
+
+  function markMissing(label) {
+    return getMissingAsterisk(this.axis.userOptions.missing, label.value) + label.value;
+  }
+
   hc.setOptions({
     xAxis: {
-      tickInterval: 1
+      tickInterval: 1,
+      labels: {
+        formatter: markMissing
+      }
     },
     tooltip: {
       useHTML: true,
       shared: true,
-      headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
-      footerFormat: '</table>',
-      pointFormatter: function () {
-        var seriesName = this.series.userOptions.id === "energy_taxes" ? 'davon Strom & Erdgassteuern' : this.series.name;
-        return '<tr><td><span style="color:'+this.color+'; padding-top: 20px">●</span>&nbsp;' + seriesName + '</td>'
-        + '<td style="text-align: right"><b>' + Highcharts.numberFormat(this.y, 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
+      formatter: function (e) {
+        var missingYears = e.chart.userOptions.xAxis ? e.chart.userOptions.xAxis.missing : undefined;
+        return ['<span style="font-size: 1.5em; font-weight: bold">' + this.x
+        + getMissingAsterisk(missingYears, this.x) + '</span><table>']
+        .concat(this.points.map(function(point) {
+
+          if (point.series.tooltipOptions.pointFormatter) {
+            return point.series.tooltipOptions.pointFormatter.apply(point);
+          }
+
+          var seriesName = point.series.userOptions.id === "energy_taxes" ? 'davon Strom & Erdgassteuern' : point.series.name;
+          return '<tr><td><span style="color:'+ point.color +'; padding-top: 20px">●</span>&nbsp;' + seriesName + ':&nbsp;</td>'
+          + '<td style="text-align: right"><b>' + Highcharts.numberFormat(point.y, point.series.tooltipOptions.valueDecimals) 
+          + (point.series.tooltipOptions.valueSuffix ? point.series.tooltipOptions.valueSuffix : '') + '</b></td></tr>';
+        }), ['</table>']);
+
       }
    },
   });
@@ -60,14 +87,6 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     
   function mirror(series) {
     return series.map(function(value) {return -value})
-  }
-
-  function markMissing(label) {
-    if (label.value < 2017) {
-      return label.value
-    }
-
-    return "<strong style='color: #000;'>*</strong>" + label.value;
   }
 
   function drawEarningsChart() {
@@ -159,9 +178,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         visible: false
       }],
       xAxis: {
-        labels: {
-          formatter: markMissing
-        }
+        missing: missingYears,
       },
       yAxis: [{
         title: {
@@ -220,9 +237,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         valueSuffix: ' €'
       },
       xAxis: {
-        labels: {
-          formatter: markMissing
-        }
+        missing: missingYears,
       },
       yAxis: [{
         title: {
@@ -252,7 +267,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             valueSuffix: ' €',
             pointFormatter: function () {
               if (this.y == 0) return false;
-              return '<tr><td><span style="color:' + this.color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + '</td>'
+              return '<tr><td><span style="color:' + this.color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + ':&nbsp;</td>'
               + '<td style="text-align: right"><b>' + Highcharts.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
             }
           }
@@ -380,8 +395,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       column: {
         pointStart: 2000,
         tooltip: {
-          pointFormatter: undefined,
-          pointFormat: '<tr><td>{series.name}:&nbsp;<td><td><b>{point.y} €</b></td></tr>'
+          valueDecimals: 0,
+          valueSuffix: ' €'
         }
       }
     },

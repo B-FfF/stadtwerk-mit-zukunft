@@ -5,14 +5,7 @@
       backgroundColor: '#ffffff',
       useHTML: true,
       shared: true,
-      headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
-      footerFormat: '</table>',
-      pointFormatter: function () {
-        return '<tr><td><span style="color:'+this.color+'">●</span>&nbsp;' 
-          + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' 
-          + Highcharts.numberFormat(this.y, this.series.tooltipOptions.valueDecimals || 1) 
-          + (this.series.tooltipOptions.valueSuffix || "") + '</b></td></tr>';
-      }
+      valueDecimals: 1
     },
   });
 
@@ -24,13 +17,7 @@
     grid: smz.fn.extractColumn(heatData, "grid"),
   }
 
-  function markMissing(label) {
-    if ([2000, 2001, 2002, 2003, 2006, 2018, 2019].indexOf(label.value) === -1) {
-      return label.value;
-    }
-
-    return "<strong style='color: #000'>*</strong>" + label.value;
-  }
+  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019];
 
   var heatChartConfig = {
     chart: {
@@ -78,13 +65,12 @@
       shadow: true,
       zIndex: 1,
       tooltip: {
-        valueSuffix: ' kWh'
+        valueSuffix: ' kWh',
+        valueDecimals: 0
       }
     }],
     xAxis: {
-      labels: {
-        formatter: markMissing
-      }
+      missing: missingYears
     },
     yAxis: [{
       title: {
@@ -137,9 +123,7 @@
       yAxis: 2
     }],
     xAxis: {
-      labels: {
-        formatter: markMissing
-      }
+      missing: missingYears
     },
     yAxis: [{
       title: {text: "Leitungsnetz in km"}

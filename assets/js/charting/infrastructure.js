@@ -4,19 +4,11 @@
     tooltip: {
       backgroundColor: '#ffffff',
       useHTML: true,
-      shared: true,
-      footerFormat: '</table>',
-      pointFormatter: smz.chart.getPointFormatterTableRow()
+      shared: true
     },
   });
 
-  function markMissing(label) {
-    if ([2003, 2006, 2018, 2019].indexOf(label.value) === -1) {
-      return label.value;
-    }
-
-    return "<strong style='color: #000'>*</strong>" + label.value;
-  }
+  var missingYears = [2003, 2006, 2018, 2019];
 
   function drawPowerChart() {
 
@@ -103,7 +95,7 @@
         tooltip: {
           pointFormatter: function () {
             return '<tr><td><b>Stromabgabe gesamt:</b></td><td style="text-align: right"><b>'
-            + Highcharts.numberFormat(this.stackTotal, 1) + ' GWh'
+            + Highcharts.numberFormat(this.total, 1) + ' GWh'
             + '</td></tr><tr><td><span style="color:' + this.color + '">●</span>&nbsp;' 
             + this.series.name + ':&nbsp;&nbsp;&nbsp;<b>' 
             + Highcharts.numberFormat(data.salesFL[this.index] * 100, 1) 
@@ -146,9 +138,7 @@
       xAxis: {
         categories: data.years,
         tickmarkPlacement: "between",
-        labels: {
-          formatter: markMissing
-        }
+        missing: missingYears
       },
       yAxis: [{
         title: {
@@ -198,7 +188,8 @@
           },
           pointStart: 2004,
           tooltip: {
-            valueSuffix: 'km'
+            valueSuffix: ' km',
+            valueDecimals: 0
           },
           zoneAxis: "x",
           zones: smz.chart.getDottedZone(2005, 2007)
@@ -240,7 +231,8 @@
         name: "Höchstleistung im Netz",
         shadow: smz.chart.getBoldLineShadow(),
         tooltip: {
-          valueSuffix: ' MW'
+          valueSuffix: ' MW',
+          valueDecimals: 1
         }
       }, {
         data: data.capacity,
@@ -252,9 +244,7 @@
       xAxis: {
         min: 2003,
         max: 2019,
-        labels: {
-          formatter: markMissing
-        }
+        missing: missingYears
       },
       yAxis: [{
         title: {
