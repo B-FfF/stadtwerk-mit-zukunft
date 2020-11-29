@@ -104,6 +104,18 @@ sidebar:
   </blockquote>
 </div>
 
+### Flughafen (FFB)
+
+<div class="row">
+  <figure id="flugbewegungen" class="col-6 col-12-wide">
+  </figure>
+  <blockquote class="col-6 col-12-wide">
+    <p>
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider Angaben zu Flugbewegungen.
+    </p>
+  </blockquote>
+</div>
+
 
 ## Vorgeschichte
 
@@ -188,7 +200,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
       Water: {{ site.data.swfl_overview_water | jsonify }},
       Fibre: {{ site.data.swfl_overview_fibre | jsonify }},
       Harbour: {{ site.data.swfl_overview_harbour | jsonify }},
-      Waste: {{ site.data.swfl_overview_waste | jsonify }}
+      Waste: {{ site.data.swfl_overview_waste | jsonify }},
+      Airport: {{ site.data.swfl_overview_airport | jsonify }}
     }
   }
 </script>
@@ -202,4 +215,5 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script src="{{ "assets/js/charting/fibre.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/harbour.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/waste.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/airport.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>

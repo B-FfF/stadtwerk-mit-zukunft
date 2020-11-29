@@ -65,6 +65,10 @@
 
 | handling    | Müll-Umschlag AWZ               | 1.000 t |
 
+## `swfl_overview_airport.csv`
+
+| flight_ops  | Flugbewegungen                  | 1.000   |
+
 ## `swfl_emissions.csv`
 
 | year             | Geschäftsjahr             |
