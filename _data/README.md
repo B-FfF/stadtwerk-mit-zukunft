@@ -16,7 +16,11 @@
 | credit_liabilities_short  | Verbindlichkeiten ggü. Kreditinst. \< 1 Jahr   |
 | credit_liabilities_medium | Verbindlichkeiten ggü. Kreditinst. 1 - 5 Jahre |
 | credit_liabilities_long   | Verbindlichkeiten ggü. Kreditinst. > 5 Jahre   |
-| other_liabilities | Andere Verbindlichkeiten                       |
+| other_liabilities | Andere Verbindlichkeiten                               |
+| employees         | Mitarbeitende GmbH (ohne Auszubildende) am 31.12.      |
+| trainees          | Auszubildende GmbH am 31.12.                           |
+| employees_corp    | Mitarbeitende Konzern (ohne Auszubildende) am 31.12.   |
+| trainees_corp     | Auszubildende Konzern am 31.12.                        |
 
 ## `swfl_overview_electricity.csv`
 
