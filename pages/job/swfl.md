@@ -91,6 +91,20 @@ sidebar:
   </blockquote>
 </div>
 
+### Abfallwirtschaftszentrum (AWZ)
+
+<div class="row">
+  <figure id="awz-umschlag" class="col-6 col-12-wide">
+  </figure>
+  <blockquote class="col-6 col-12-wide">
+    <p>
+      Geschäftsbericht 2009: „ Die AWZ soll zukünftig als Biomassezentrum einen logistischen Beitrag zum angestrebten CO<sub>2</sub>-neutralen Kraftwerksbetrieb in Flensburg leisten.<br>Die Bioabfallkompostierung wurde zum 1.8.2009 eingestellt, da sich in diesem Geschäft dringend erforderliche Standort-Investitionen über auskömmliche Absatzverträge des Biokomposts mit entsprechenden Laufzeiten nicht darstellen ließen.”<br><br>
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider Angaben zum Müllumschlag.
+    </p>
+  </blockquote>
+</div>
+
+
 ## Vorgeschichte
 
 Obwohl die Geschichte der Stadtwerke Flensburg über 150 Jahre zurückreicht, behandelt dieser Abschnitt nur die Nachkriegsgeschichte -- insbesondere die letzten 50 Jahre, in welchen die Grundlagen für die heutige Situation geschaffen wurden.
@@ -173,7 +187,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
       Heat: {{ site.data.swfl_overview_heat | jsonify }},
       Water: {{ site.data.swfl_overview_water | jsonify }},
       Fibre: {{ site.data.swfl_overview_fibre | jsonify }},
-      Harbour: {{ site.data.swfl_overview_harbour | jsonify }}
+      Harbour: {{ site.data.swfl_overview_harbour | jsonify }},
+      Waste: {{ site.data.swfl_overview_waste | jsonify }}
     }
   }
 </script>
@@ -186,4 +201,5 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script src="{{ "assets/js/charting/water.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/fibre.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/harbour.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/waste.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>

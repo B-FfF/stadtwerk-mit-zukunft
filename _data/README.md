@@ -61,6 +61,10 @@
 | ships       | Eingelaufene Schiffe            |         |
 | cargo       | Güterumschlag                   | 1.000 t |
 
+## `swfl_overview_waste.csv`
+
+| handling    | Müll-Umschlag AWZ               | 1.000 t |
+
 ## `swfl_emissions.csv`
 
 | year             | Geschäftsjahr             |
