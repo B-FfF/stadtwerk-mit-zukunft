@@ -1,7 +1,7 @@
 (function(hc, swflData){
 
-  var pieData = smz.fn.getDatarowByYear(swflData.ProductSplit, 2018);
-  var resultsData = smz.fn.getDatarowByYear(swflData.Results, 2018);
+  var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2019);
+
   Highcharts.setOptions({
     colors: Highcharts.map([ "#f45b5b", "#f7a35c", "#7cb5ec", "#90ed7d", "#f15c80", "#434348", "#e4d354"], function (color) {
         return {
@@ -18,7 +18,7 @@
     })
   });
 
-  hc.chart('umsatz-nach-produkten-2018', {
+  hc.chart('umsatz-nach-produkten', {
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
@@ -26,12 +26,15 @@
       type: 'pie'
     },
     title: {
-      text: 'Umsatz nach Produkten (2018)'
+      text: 'Umsatz nach Produkten (2019)'
     },
     tooltip: {
       headerFormat: null,
       pointFormat: '{series.name}: <b>{point.percentage:.1f} %</b>',
-      formatter: null
+      formatter: function(point) {
+        return "Umsatz: <strong>" + Highcharts.numberFormat(this.y * 1000000, 0) + " EUR </strong><br>"
+          + "Umsatzanteil: <strong>" + hc.numberFormat(this.percentage, 2) + ' %</strong>';
+      }
     },
     plotOptions: {
       pie: {
@@ -41,8 +44,8 @@
           enabled: true,
           useHtml: true,
           formatter: function() {
-            return `<b>${this.key}</b><br>` + 
-              Highcharts.numberFormat(resultsData["sales"] * this.y / 100, 0, ',', '.') + ' EUR ';
+            return "<b>" + this.key + "</b><br>" + 
+              Highcharts.numberFormat(this.y, 1, ',', '.') + ' Mio. EUR ';
           },
           style: {
             fontWeight: 'normal'

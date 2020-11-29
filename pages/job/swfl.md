@@ -145,12 +145,12 @@ Im April 2010 wurde Maik Render als zweiter Geschäftsführer [vorgestellt][intr
 
 ### Erzeugungsstruktur
 
-Das Flensburger Kraftwerk ist ein wärmegesteuertes Kraftwerk, das heißt es dreht sich bei uns in erster Linie alles um Versorgung der Haushalte in Flensburg und Umgebung mit Heizwärme und Warmwasser. Der Strom wird ebenfalls genutzt, die Nachfrage nach Elektrizität bestimmt aber nicht die Produktion. Deswegen wird im Sommer, wenn wenig Wärme benötigt wird, Strom für die Kund*innen in Flensburg hinzugekauft. 
+Das Flensburger Kraftwerk ist ein wärmegesteuertes Kraftwerk, das heißt es dreht sich in erster Linie alles um Versorgung der Haushalte in Flensburg und Umgebung mit Heizwärme und Warmwasser. Der Strom wird ebenfalls genutzt, die Nachfrage nach Elektrizität bestimmt aber nicht die Produktion. Deswegen wird im Sommer, wenn wenig Wärme benötigt wird, Strom für die Kund*innen in Flensburg hinzugekauft. 
 
 An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen. Auch Glücksburg, Harrislee, Tastrup, Wees und Padborg werden mit Flensburger Fernwärme versorgt.
 
 <div class="row">
-  <figure id="umsatz-nach-produkten-2018" class="col-8 col-12-normal col-12-mobile">
+  <figure id="umsatz-nach-produkten" class="col-8 col-12-normal col-12-mobile">
   </figure>
 </div>
 
@@ -193,7 +193,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 <script>
   window.SWFL = {
     Business: {
-      ProductSplit: {{ site.data.swfl_business_by_product | jsonify }},
+      ByProduct: {{ site.data.swfl_business_by_product | jsonify }},
       Results: {{ site.data.swfl_business | jsonify }},
       Electricity: {{ site.data.swfl_overview_electricity | jsonify }},
       Heat: {{ site.data.swfl_overview_heat | jsonify }},
