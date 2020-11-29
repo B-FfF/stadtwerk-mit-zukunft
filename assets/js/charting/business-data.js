@@ -37,6 +37,9 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
   }
 
   hc.setOptions({
+    chart: {
+      height: 400
+    },
     xAxis: {
       tickInterval: 1,
       labels: {
