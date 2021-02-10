@@ -28,7 +28,7 @@ jobs:
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
     - name: 🎩 Install Jekyll
       run: |
-        sudo gem install bundler
+        sudo gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
         bundle config path vendor/bundle
         bundle install
     - name: 🧹 Clean site
