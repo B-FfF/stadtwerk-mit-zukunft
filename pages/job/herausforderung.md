@@ -81,7 +81,7 @@ So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Kli
 
 ## Wirtschaftliche Belastung durch CO<sub>2</sub>-Emissionen
 
-Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO<sub>2</sub>-Emissionen pro Tonne ein Zertifikat besitzen müssen (manchmal auch „European Union Allowance“, kurz: EUA genannt). Eine bestimmte, seit 2013 jährlich sinkende Menge dieser Emissionsrechte wird gratis vergeben (in der folgenden Grafik *grün*{:style="color: green"} dargestellt). Der Rest (*rot*{:style="color: #f45b5b"}) muss erworben werden, *bevor* die Emissionen entstehen. Der Preis für EUAs hat sich seit Anfang 2018 **mehr als verdreifacht**:
+Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO<sub>2</sub>-Emissionen pro Tonne ein Zertifikat besitzen müssen (manchmal auch „European Union Allowance“, kurz: EUA genannt). Eine bestimmte, seit 2013 jährlich sinkende Menge dieser Emissionsrechte wird gratis vergeben (in der folgenden Grafik *grün*{:style="color: green"} dargestellt). Der Rest (*rot*{:style="color: #f45b5b"}) muss erworben werden, *bevor* die Emissionen entstehen. Der Preis für EUAs hat sich seit Anfang 2018 **mehr als vervierfacht**:
 
 <figure class=chart>
     <div id="entwicklung-co2-zertifikatspreise"></div>
