@@ -439,7 +439,7 @@
         offset: -10,
         opposite: true,
         min: 0,
-        softMax: 32,
+        softMax: 42,
       }],
       series: [{  // 0
         type: "column",
@@ -456,10 +456,15 @@
         color: Highcharts.defaultOptions.colors[8],
         yAxis: 0
       },{
-        gapSize: 14,
+        gapSize: 40,
         name: "EU ETS",
         color: Highcharts.defaultOptions.colors[7],
         data: window.SWFL.EUA,
+        shadow: {
+          color: "#FFF",
+          width: 4,
+          opacity: 1
+        },
         tooltip: {
           valueSuffix: ' €'
         },
