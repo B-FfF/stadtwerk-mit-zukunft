@@ -27,7 +27,7 @@ Das Bündnis besteht unter anderem aus Mitgliedern von:
         <img src="//:0" alt="Students for Future Flensburg" data-src="{{ "assets/images/members/sff-flensburg.jpg" | relative_url }}" class="lazyload">
       </div>
     </a>
-    <a class="ag-klima grid-item">
+    <a class="ag-klima grid-item" href="https://aktionsgruppeklimaflensburg.de/">
       <img alt="Aktionsgruppe KLIMA Flensburg" src="//:0" data-src="{{ "assets/images/members/akf.jpg" | relative_url }}" class="lazyload">
     </a>
     <a class="attac grid-item" href="https://www.attac-netzwerk.de/flensburg/startseite/">
