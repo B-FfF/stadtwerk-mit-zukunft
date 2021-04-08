@@ -104,7 +104,7 @@
 
   var greenconceptPath = getGreenconceptPath(startYear);
   var emissionSeries = getSeries(startYear);
-  var shouldIs = getOvershootRangeSeries(startYear, 2019, greenconceptPath, emissionSeries);
+  var shouldIs = getOvershootRangeSeries(startYear, 2020, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
     chart: {
       height: '50%'
@@ -174,7 +174,7 @@
       zIndex: 1,
       zoneAxis: 'x',
       zones: [{
-        value: 2019
+        value: 2020
       },{
         dashStyle: "Dot"
       }]
@@ -204,7 +204,7 @@
 
   function drawEmissionsChart() {
     var template = Object.assign({}, emissionsChartTemplate);
-    template.xAxis.max = 2019.5;
+    template.xAxis.max = 2020.5;
     template.credits = {
       enabled: true,
       text: "Quelle: EU ETS",
@@ -213,6 +213,7 @@
         y: -24
       }
     }
+
     return hc.chart('co2-emissionen-der-stadtwerke-flensburg', template);
   }
 
@@ -237,7 +238,7 @@
     template.yAxis.min = 0;
     template.yAxis.max = 700000;
     template.series[1].animation = animation;
-    template.series[1].data = template.series[1].data.concat([560000, 560000, 560000, 440000, 440000, 440000, 440000, 440000, 440000, 440000, 440000]);
+    template.series[1].data = template.series[1].data.concat([520000, 520000, 400000, 400000, 400000, 400000, 400000, 400000, 400000, 400000]);
     shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[1].data);
     var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[ shouldIs.accumulated.length - 1]);
     var motionData = [

@@ -50,7 +50,7 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<s
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 800.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was etwa dem Budget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 850.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was dem Gesamtbudget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
 
 ### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
@@ -67,7 +67,7 @@ Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ
     </div>
 </figure>
 
-Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2035 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
+Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2037 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
 
 ### Klimaschädlichkeit von Erdgas
 
