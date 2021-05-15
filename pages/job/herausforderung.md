@@ -50,7 +50,7 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<s
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
-Seit 2007 sind die jährlichen Emissionen im Schnitt um 100.000 Tonnen gesunken. Sie liegt dennoch in den meisten Jahren deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 850.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden -- was dem Gesamtbudget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+Die jährlichen Gesamtemissionen liegen heute im Schnitt 100.000 Tonnen unter denen von 2007. Leider liegen sie immer noch deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 850.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden – was dem Gesamtbudget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
 
 ### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
@@ -87,7 +87,7 @@ Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO
     <div id="entwicklung-co2-zertifikatspreise"></div>
 </figure>
 
-Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO<sub>2</sub>-Ausstoß auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € -- den fast alle Marktbeobachter*innen früher oder später erwarten -- würde das zu **Mehrkosten von 10 Mio € für die Stadtwerke Flensburg** führen (im Vergleich zu dem momentanen Durchschnittspreis von 25 €). Um das in Relation zu setzen: **Der gesamte Jahresüberschuss der GmbH lag 2018 bei weniger als 8 Mio €**. Eine weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung wäre ab diesem Zeitpunkt gefährdet. Zudem müsste das Unternehmen seine Preise erhöhen, um nicht in die roten Zahlen zu rutschen.
+Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO<sub>2</sub>-Ausstoß beim momentanen Plan auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € – der nun bereits erreicht ist – entstehen (im Vergleich zum Durchschnittspreis ~25 € der letzten Jahre) **Mehrkosten von über 10 Mio € für die Stadtwerke Flensburg**. Diese Summe entspricht dem gesamten zuletzt bekannten Jahresgewinn von 2019, und vor dieser Situation haben wir seit Jahren immer wieder gewarnt. Die weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung ist nun gefährdet, außer die Stadtwerke erhöhen ihre Preise deutlich.
 
 [^1]: 
     **Annahmen Methanberechnung**
