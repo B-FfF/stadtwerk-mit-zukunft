@@ -127,10 +127,10 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
   }
 </script>
 <link rel="stylesheet" href="{{ "/assets/css/html5-controls.css" | relative_url }}" />
-<script src="{{ "assets/js/lib/highcharts-8.1.0/highcharts.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-8.1.0/highcharts-more.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-8.1.0/pattern-fill.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-8.1.0/broken-axis.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.1.0/highcharts.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.1.0/highcharts-more.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.1.0/pattern-fill.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.1.0/broken-axis.js" | relative_url }}"></script>
 
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
