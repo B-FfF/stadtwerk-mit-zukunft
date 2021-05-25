@@ -119,7 +119,9 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         }
       },
       title: {
-        text: 'Gewinnentwicklung'
+        text: 'Gewinnentwicklung',
+        floating: true,
+        y: 16
       },
       series: [{
         name: "EBIT Konzern",
@@ -217,7 +219,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         }
       },
       title: {
-        text: 'Umsatzentwicklung'
+        text: 'Umsatzentwicklung',
+        floating: true
       },
       series: [{
         name: 'Umsätze Konzern',
@@ -282,7 +285,9 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         }
       },
       title: {
-        text: 'Eigen- vs. Fremdkapital GmbH'
+        text: 'Eigen- vs. Fremdkapital GmbH',
+        floating: true,
+        y: 20
       },
       series: [{
         name: "Eigenkapital",
@@ -356,7 +361,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
               return Math.abs(Math.round(this.value / 1000000)) + 'M';
           }
         },
-        max: 175000000,
+        max: 200000000,
         min: -250000000,
         tickInterval: 50000000,
         endOnTick: false,
@@ -382,7 +387,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         startOnTick: false,
         endOnTick: false,
         max: 225,
-        min: 12.5,
+        min: 0,
         reversed: true
       }]
     }

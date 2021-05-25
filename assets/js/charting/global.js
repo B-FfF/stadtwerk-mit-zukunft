@@ -170,6 +170,9 @@
           maxWidth: 500
         },
         chartOptions: {
+          title: {
+            y: 4
+          },
           chart: {
             marginTop: 14,
             height: '90%'

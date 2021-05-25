@@ -78,7 +78,9 @@
         }
       },
       title: {
-        text: 'Stromerzeugung, -abgabe und Kundschaft'
+        text: 'Stromerzeugung, -abgabe und Kundschaft',
+        floating: true,
+        y: 20
       },
       series: [{
         name: "Kund*innen",
