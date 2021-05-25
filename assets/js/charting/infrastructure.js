@@ -86,6 +86,9 @@
         color: '#333',
         yAxis: 1,
         shadow: smz.chart.getBoldLineShadow(),
+        tooltip: {
+          valueDecimals: 0
+        },
         zIndex: 1
       },{
         name: "Stromverkauf Flensburg",
@@ -94,11 +97,12 @@
         data: data.sales.map(function(entry, i) { return entry * data.salesFL[i]; }),
         tooltip: {
           pointFormatter: function () {
+            console.log(data.salesFL)
             return '<tr><td><b>Stromabgabe gesamt:</b></td><td style="text-align: right"><b>'
             + Highcharts.numberFormat(this.total, 1) + ' GWh'
             + '</td></tr><tr><td><span style="color:' + this.color + '">●</span>&nbsp;' 
             + this.series.name + ':&nbsp;&nbsp;&nbsp;<b>' 
-            + Highcharts.numberFormat(data.salesFL[this.index] * 100, 1) 
+            + Highcharts.numberFormat(this.percentage, 1) 
             + ' % →&nbsp;</b></td><td style="text-align: right"><b>' 
             + Highcharts.numberFormat(this.y, 1) + ' GWh</b></td></tr>';
           }
