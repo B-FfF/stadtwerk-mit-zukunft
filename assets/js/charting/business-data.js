@@ -22,7 +22,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
 (function(hc, swflData){
 
-  var missingYears = [2017, 2018, 2019];
+  var missingYears = [2017, 2018, 2019, 2020];
 
   function getMissingAsterisk(missingYears, currentYear) {
     if (!missingYears || missingYears.indexOf(currentYear) === -1) {
@@ -356,7 +356,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
               return Math.abs(Math.round(this.value / 1000000)) + 'M';
           }
         },
-        max: 150000000,
+        max: 175000000,
         min: -250000000,
         tickInterval: 50000000,
         endOnTick: false,
@@ -382,7 +382,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         startOnTick: false,
         endOnTick: false,
         max: 225,
-        min: 25,
+        min: 12.5,
         reversed: true
       }]
     }
@@ -414,7 +414,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       name: 'Ausschüttung'
     }],
     xAxis: {
-      tickPositions: smz.fn.getYearSeries(2001, 2019),
+      tickPositions: smz.fn.getYearSeries(2001, 2020),
     },
     yAxis: {
       title: {

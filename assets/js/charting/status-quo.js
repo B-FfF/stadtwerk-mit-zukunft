@@ -1,6 +1,6 @@
 (function(hc, swflData){
 
-  var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2019);
+  var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2020);
 
   Highcharts.setOptions({
     colors: Highcharts.map([ "#f45b5b", "#f7a35c", "#7cb5ec", "#90ed7d", "#f15c80", "#434348", "#e4d354"], function (color) {
@@ -26,7 +26,7 @@
       type: 'pie'
     },
     title: {
-      text: 'Umsatz nach Produkten (2019)'
+      text: 'Umsatz nach Produkten (2020)'
     },
     tooltip: {
       headerFormat: null,
