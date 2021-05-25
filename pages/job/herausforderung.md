@@ -46,7 +46,7 @@ Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<sub>2</sub>-neutral zu werden. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden müssen (sprich: einem Zielpfad folgen; Ziel 2). Es wird sich also an einem CO<sub>2</sub>-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
-<figure class="image left">
+<figure class="image left" style="min-height:auto">
     <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </figure>
 
@@ -58,7 +58,7 @@ Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][
 
 Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ + 97 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO<sub>2</sub>][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
-<figure class=chart>
+<figure class=chart style="min-height: auto">
     <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
     <div id="play-controls" class="row">
       <div class="col-7"><input id="play-range" type="range" value="23" min="0" max="23"></div>

@@ -417,6 +417,14 @@
 
 		figure {
 			height: auto;
+
+			.row > & {
+				min-height: 400px;
+			}
+		}
+
+		.row > figure {
+			min-height: 440px;
 		}
 
 		.chart {
@@ -1615,8 +1623,15 @@
 			#content figure {
 				float: none;
 				width: 100%;
+
+				.row > & {
+					min-height: 360px;
+				}
 			}
 
+			#content .row > figure {
+					min-height: 380px;
+			}
 	}
 
 /* Mobile */
