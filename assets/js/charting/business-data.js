@@ -220,7 +220,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },
       title: {
         text: 'Umsatzentwicklung',
-        floating: true
+        floating: true,
+        y: 16
       },
       series: [{
         name: 'Umsätze Konzern',
@@ -246,6 +247,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         missing: missingYears,
       },
       yAxis: [{
+        tickInterval: 100000000,
         title: {
           text: "Umsätze in Mio. €"
         }
