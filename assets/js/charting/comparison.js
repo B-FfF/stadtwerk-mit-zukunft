@@ -9,7 +9,7 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
   },
   series: [{
     name: "Flensburg",
-    data: [4.2, 14.7],
+    data: [4.21, 10.3],
     color: Highcharts.Color("#90ed7d").brighten(-.8).get('rgb'),
   },{
     name: "ø Deutschland",
@@ -40,14 +40,11 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
           if (this.series.name !== "Flensburg") {
             output = '<span style="font-weight: normal">';
           }
-          if (this.key === "Strom") {
-
-            switch(this.series.name) {
-              case "Flensburg":
-                return output + this.series.name + ": < 15 %";
-              case "Kreis Schleswig-Flensburg":
-                  return output + this.series.name + ": > 100 %";
-            }
+          if (this.key === "Wärme" && this.series.name === "Flensburg") {
+            return output + this.series.name + ": < 5 %";
+          }
+          if (this.key === "Strom" && this.series.name === "Kreis Schleswig-Flensburg") {
+            return output + this.series.name + ": > 100 %";
           }
 
           return output + this.series.name + ": " + Highcharts.numberFormat(this.y, 1) + " %";
