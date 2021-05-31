@@ -74,3 +74,15 @@
 | year             | Geschäftsjahr             |
 | co2              | CO₂-Emissionen laut EU ETS |
 | foc_certificates | Gratis-Zertifikate EU ETS |
+
+## `swfl_mix_electricity.csv`
+
+Auswertung Daten Stromkennzeichnung
+
+| carbon_per_kwh  | CO₂-Emissionen pro kWh                | gramm   |
+| nuclear_pc      | Anteil Kernenergie                    | %       |
+| coal_pc         | Anteil Stein- & Braunkohle            | %       |
+| gas_pc          | Anteil Erdgas                         | %       |
+| other_fossil_pc | Anteil sonstige fossile Energieträger | %       |
+| renewables_pc   | Anteil EE mit Herkunftsnachweisen     | %       |
+| eeg_pc          | Anteil EEG-Umlage                     | %       |

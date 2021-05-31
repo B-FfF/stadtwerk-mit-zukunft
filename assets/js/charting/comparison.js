@@ -1,6 +1,6 @@
-(function(hc, smz) {
+(function(hc, smz, swflData) {
 
-var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
+var comparisonConfig = {
   chart: {
     type: 'bar'
   },
@@ -122,8 +122,101 @@ var chart = hc.chart("erneuerbare-energien-in-flensburg-chart",{
     tickInterval: 10,
     title: null
   }
-});
+};
 
+  var startYearPowerData = 2014;
+  var powerData = {
+    nuclear: smz.fn.extractColumn(swflData.Electricity, "nuclear_pc", startYearPowerData),
+    coal: smz.fn.extractColumn(swflData.Electricity, "coal_pc", startYearPowerData),
+    gas: smz.fn.extractColumn(swflData.Electricity, "gas_pc", startYearPowerData),
+    other_fossil: smz.fn.extractColumn(swflData.Electricity, "other_fossil_pc", startYearPowerData),
+    renewables: smz.fn.extractColumn(swflData.Electricity, "renewables_pc", startYearPowerData),
+    renewables_eeg: smz.fn.extractColumn(swflData.Electricity, "eeg_pc", startYearPowerData),
+  };
+
+  var powermixConfig = {
+    chart: {
+      type: "area"
+    },
+    legend: {
+      align: "right",
+      maxHeight: 60,
+      navigation: {
+        enabled: false
+      },
+      itemHoverStyle: {
+        cursor: "default"
+      }
+    },
+    plotOptions: {
+      area: {
+        stacking: "percent",
+        pointStart: 2014,
+        events: {
+          legendItemClick: function(e) {
+            if (this.index !== 5) {
+              // nur EEG-Umlage darf zu Informationszwecken dazu eingeblendet werden
+              // (alles andere ergibt keinen Sinn)
+              return false;
+            }
+          }
+        }
+      }
+    },
+    series: [{
+      color: Highcharts.defaultOptions.colors[6],
+      data: powerData.nuclear,
+      legendIndex: 0,
+      name: "Kernenergie"
+    },{
+      color: Highcharts.defaultOptions.colors[5],
+      data: powerData.gas,
+      legendIndex: 2,
+      name: "Erdgas"
+    },{
+      color: Highcharts.defaultOptions.colors[1],
+      data: powerData.coal,
+      legendIndex: 4,
+      name: "Braun- & Steinkohle"
+    },{
+      color: "#222222",
+      data: powerData.other_fossil,
+      legendIndex: 1,
+      name: "Sonstige fossile Energieträger"
+    },{
+      color: smz.color.swfl.lightGreen,
+      data: powerData.renewables,
+      legendIndex: 3,
+      name: "Erneuerbare Energieträger mit Herkunftsnachweis"
+    },{
+      color: smz.color.swfl.darkGreen,
+      data: powerData.renewables_eeg,
+      legendIndex: 5,
+      name: "Erneuerbare Energien, über EEG-Umlage finanziert",
+      visible: false
+    }],
+    tooltip: {
+      split: true,
+      formatter: function(e) {
+        var tooltips = this.points.map(v => {
+          return v.series.name + ": <b>" + Highcharts.numberFormat(v.percentage, 1) + " %</b>"
+        });
+        tooltips.unshift(false) // hide x-axis tooltip (redundant)
+        return tooltips.concat('');
+      }
+    },
+    xAxis: {
+      tickInterval: 1
+    },
+    yAxis: {
+      title: undefined,
+      labels: {
+        format: "{value} %"
+      }
+    }
+  }
+  
   window.smz.chart = window.smz.chart || {};
-  window.smz.chart.comparison = chart
-})(window.Highcharts, window.smz);
+  window.smz.chart.comparison = hc.chart("erneuerbare-energien-in-flensburg-chart", comparisonConfig);
+  window.smz.chart.powerMix = hc.chart("strom-produktion-und-vertrieb-stadtwerke-flensburg", powermixConfig);
+})(window.Highcharts, window.smz, window.SWFL);

@@ -26,7 +26,7 @@ sidebar:
 
 Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20210531121551/https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2020-04-03_hgp-ee-in-zahlen_bf.pdf)
 
-### Stromerzeugung und -verbrauch
+### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
 <figure class="image left">
   <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
@@ -37,12 +37,13 @@ Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://we
 
 Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
 
-{%- comment -%}
+### Strommix (Produktion und -Vertrieb) {#strommix-stadtwerke-flensburg}
 
-### Stromverkauf
+<figure>
+  <div id="strom-produktion-und-vertrieb-stadtwerke-flensburg"></div>
+</figure>
 
-{%- endcomment %}
-
+Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden[^2]. So zeigt sich, dass der Anteil erneuerbarer Energien zuletzt nur knapp über 10 Prozent lag und damit einen historischen Tiefststand erreicht hat.
 
 ## Das greenco<sub>2</sub>ncept-Ziel
 
@@ -104,6 +105,8 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
 
     [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019]
 
+    Der EEG-Anteil wurde in der Darstellung des Strommixes ausgeblendet, er besitzt zur Ermittlung der tatsächlichen Nutzung erneuerbarer Energien keine Aussagekraft. Dieses begründet sich in der [Zusammensetzung des Strompreises](https://strom-report.de/medien/strompreiszusammensetzung-2019.png) – der Anteil der EEG-Umlage, der von der Kundschaft gezahlt und vom Energieversorger direkt an den Netzbetreiber weitergeleitet wird, wird in der Stromkennzeichnung entsprechend dargestellt. Deswegen betrug im Jahr 2019 (wie der Stromversorger [Lichtblick schreibt](https://web.archive.org/web/20210531224339/https://www.lichtblick.de/oekostrom/stromkennzeichnung)) »bei vielen Versorgern fast 60 %, auch wenn die Versorger diesen Strom gar nicht kaufen oder an den Kunden verkaufen.« – .
+
 [^3]:
     **Zusammensetzung Fernwärme**
 
@@ -158,7 +161,8 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
       [1735686000000, 12.5, 32.5],
       [1893452400000, 20, 50],
       [2051218800000, 30, 70]
-    ]
+    ],
+    Electricity: {{ site.data.swfl_mix_electricity | jsonify }},
   }
 </script>
 <link rel="stylesheet" href="{{ "/assets/css/html5-controls.css" | relative_url }}" />
