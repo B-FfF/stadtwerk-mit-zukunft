@@ -24,12 +24,14 @@ sidebar:
   <div id="erneuerbare-energien-in-flensburg-chart"></div>
 </figure>
 
+Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20210531121551/https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2020-04-03_hgp-ee-in-zahlen_bf.pdf)
+
 ### Stromerzeugung und -verbrauch
 
 <figure class="image left">
   <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
   <figcaption>
-    Quelle: EKSH – <a href="https://www.eksh.org/fileadmin/downloads/publikationen/Broschuere_Energieforschung_Final_Download_0205.pdf">„Energieforschung in Schleswig-Holstein“</a> S.23
+    Quelle: EKSH – <a href="https://web.archive.org/web/20210531123425/https://dokumente.stadtwerk-mit-zukunft.de/studien/2018-3%20Broschuere_Energieforschung_EKSH.pdf">„Energieforschung in Schleswig-Holstein“</a> S.23
   </figcaption>
 </figure>
 
@@ -97,6 +99,18 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
     Emissionsfaktoren Erdgas: | 0,202 CO<sub>2</sub>/kWh \| 2 kg CO<sub>2</sub>/m³ \| 0,671 kg = 1 m³ 
     CO<sub>2</sub>-Äquivalente: | Bezugszeitraum 100 Jahre: Faktor 30<br> Bezugszeitraum 20 Jahre: Faktor 84
 
+[^2]:
+    **Stromkennzeichnung Stadtwerke Flensburg**
+
+    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019]
+
+[^3]:
+    **Zusammensetzung Fernwärme**
+
+    Flensburg  | [2016][FW-FL-2016] | [2017][FW-FL-2017] | [2018][FW-FL-2018] | [2019][FW-FL-2019] 
+    Tarp       | [2016][FW-T-2016]  | [2017][FW-T-2017]  | [2018][FW-T-2018]  | [2019][FW-T-2019] 
+    Langballig | [2016][FW-LB-2016] | [2017][FW-LB-2017] | [2018][FW-LB-2018] | [2019][FW-LB-2019] 
+
   [ndr-kessel-13]: https://web.archive.org/web/20190423101117/https://www.ndr.de/nachrichten/schleswig-holstein/Flensburger-Meilenstein-auf-dem-Weg-zum-Kohleausstieg,gaskraftwerk140.html
   [swfl-kessel-12-web]: https://web.archive.org/web/20191230235758/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-12/zusaetzliche-informationen/
   [ebc-kessel78-mwel]: https://d3ihh3ce7usp68.cloudfront.net/wp-content/uploads/2020/04/2020-04-21_Europe_Beyond_Coal-European_Coal_Database_hc.xlsx
@@ -109,6 +123,27 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
   [gas-gwp-84-ipcc]: http://www.climatechange2013.org/images/report/WG1AR5_Chapter08_FINAL.pdf
   [iea-slip]: https://www.deutschlandfunk.de/methanverluste-lecks-in-der-oel-und-gasindustrie.676.de.html?dram:article_id=402450
   [slip-comparison]: https://www.psehealthyenergy.org/wp-content/uploads/2017/05/Howarth_Ingraffea_-_4th_Anniversary_lecture_at_Cornell_University_-_April_14_2015-1.pdf
+
+  [FW-FL-2016]: https://web.archive.org/web/20210531112141/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Flensburg-2016.pdf
+  [FW-FL-2017]: https://web.archive.org/web/20210531110926/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Flensburg/EWKG-Angaben-Flensburg-2017.pdf
+  [FW-FL-2018]: https://web.archive.org/web/20210531110800/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Flensburg/EWKG-Angaben-Flensburg-2018.pdf
+  [FW-FL-2019]: https://web.archive.org/web/20210531111033/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Flensburg/EWKG-Angaben-Flensburg-2019.pdf
+  [FW-LB-2016]: https://web.archive.org/web/20210531112345/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Langballig-2016.pdf
+  [FW-LB-2017]: https://web.archive.org/web/20210531111820/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2017.pdf
+  [FW-LB-2018]: https://web.archive.org/web/20210531111750/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2018.pdf
+  [FW-LB-2019]: https://web.archive.org/web/20210531111644/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2019.pdf
+  [FW-T-2016]: https://web.archive.org/web/20210531112453/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Tarp-2016.pdf
+  [FW-T-2017]: https://web.archive.org/web/20210531112749/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2017.pdf
+  [FW-T-2018]: https://web.archive.org/web/20210531112633/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2018.pdf
+  [FW-T-2019]: https://web.archive.org/web/20210531112603/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2019.pdf
+
+  [Mix-2014]: https://web.archive.org/web/20210531120644/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2014.pdf
+  [Mix-2015]: https://web.archive.org/web/20210531115037/https://www.swfl.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-Stadtwerke-Flensburg-2015.pdf
+  [Mix-2016]: https://web.archive.org/web/20210531113649/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-SWFL-2016.pdf
+  [Mix-2017]: https://web.archive.org/web/20210531113911/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-SWFL-2017.pdf
+  [Mix-2018]: https://web.archive.org/web/20210531121206/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2018.pdf
+  [Mix-2019]: https://web.archive.org/web/20210531114224/https://www.swfl.de/fileadmin/user_upload/Strommix-SWFL-2019.pdf
+
 
 <script>
   window.SWFL = {
