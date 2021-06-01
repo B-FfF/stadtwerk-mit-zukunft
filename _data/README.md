@@ -1,7 +1,8 @@
 # Stadtwerke Flensburg Gewinndaten
 
 ## `swfl_business.csv`
-
+|   |  |
+|:--|--|
 | sales             | Umsätze (inkl. Strom- und Erdgassteuer)        |
 | energy_taxes      | Strom und Erdgassteuer                         |
 | EBIT              | Earnings Before Interest and Taxes             |
@@ -24,6 +25,8 @@
 
 ## `swfl_overview_electricity.csv`
 
+|   |  |
+|:--|--|
 | customers       | Stromkund*innen bundesweit                 |         |
 | grid_high       | Hochspannungsnetz                          | km      |
 | grid_medium     | Mittelspannungsnetz                        | km      | 
@@ -38,6 +41,8 @@
 
 ## `swfl_overview_electricity.csv`
 
+|   |  |  |
+|:--|--|--|
 | grid            | Leitungsnetz                               | km      |
 | sales           | "Nutzbare Abgabe" / Wärmeabsatz in Mio kWh | GWh     |
 | households      | Hausanschlüsse                             |         |
@@ -48,6 +53,8 @@
 
 ## `swfl_overview_water.csv`
 
+|   |  |  |
+|:--|--|--|
 | grid             | Leitungsnetz                               | km       |
 | households       | Hausanschlüsse                             |          |
 | meters           | Zähler im Netz                             |          |
@@ -58,19 +65,27 @@
 
 ## `swfl_overview_harbour.csv`
 
+|   |  |  |
+|:--|--|--|
 | ships       | Eingelaufene Schiffe            |         |
 | cargo       | Güterumschlag                   | 1.000 t |
 
 ## `swfl_overview_waste.csv`
 
+|   |  |  |
+|:--|--|--|
 | handling    | Müll-Umschlag AWZ               | 1.000 t |
 
 ## `swfl_overview_airport.csv`
 
+|   |  |  |
+|:--|--|--|
 | flight_ops  | Flugbewegungen                  | 1.000   |
 
 ## `swfl_emissions.csv`
 
+|   |  |  |
+|:--|--|--|
 | year             | Geschäftsjahr             |
 | co2              | CO₂-Emissionen laut EU ETS |
 | foc_certificates | Gratis-Zertifikate EU ETS |
@@ -79,6 +94,8 @@
 
 Auswertung Daten Stromkennzeichnung
 
+|   |  |  |
+|:--|--|--|
 | carbon_per_kwh  | CO₂-Emissionen pro kWh                | Gramm   |
 | nuclear_pc      | Anteil Kernenergie                    | %       |
 | coal_pc         | Anteil Stein- & Braunkohle            | %       |
@@ -89,7 +106,8 @@ Auswertung Daten Stromkennzeichnung
 
 ## `swfl_mix_heat.csv`
 
-| carbon_per_kwh    | CO₂-Emissionen pro kWh                | Gramm   |
+|   |  |  |
+|:--|--|--|
 | grid              | Netzgebiet                            |         |
 | carbon_per_kwh    | CO₂-Emissionen pro kWh                | Gramm   |
 | coal_pc           | Anteil Steinkohle                     | %       |
