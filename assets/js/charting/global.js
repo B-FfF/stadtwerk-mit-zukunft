@@ -79,7 +79,7 @@
           return index + from;
         });
       },
-      extractColumn: function (data, field, startYear) {
+      extractColumn: function (data, field, startYear, filterColumn, filterValue) {
 
         var dataStartYear = data[0].year;
         startYear = startYear || dataStartYear;
@@ -87,13 +87,18 @@
           throw RangeError("Cannot generate series starting " + startYear +" as earliest available year in data is " + dataStartYear +".");
         }
 
-        return data
-          .map(function(x) { 
-            if (x[field] === null) {
-              return null;
-            }
-            return parseFloat(x[field]);
-          }).slice(startYear - dataStartYear);
+        if (filterColumn !== undefined && filterValue !== undefined) {
+          data = data.filter(function(row) {
+            return row[filterColumn] === filterValue;
+          })
+        }
+
+        return data.map(function(x) {
+          if (x[field] === null) {
+            return null;
+          }
+          return parseFloat(x[field]);
+        }).slice(startYear - dataStartYear);
       },
       getDatarowByYear: function (data, year) {
         for (var i in data) {

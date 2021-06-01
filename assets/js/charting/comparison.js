@@ -214,9 +214,122 @@ var comparisonConfig = {
         format: "{value} %"
       }
     }
-  }
+  };
+
+  var startYearHeatData = 2016;
+  var selectedGrid = "FL";
+  var heatData = {
+    carbon: smz.fn.extractColumn(swflData.Heat, "carbon_per_kwh", startYearHeatData, "grid", selectedGrid),
+    coal: smz.fn.extractColumn(swflData.Heat, "coal_pc", startYearHeatData, "grid", selectedGrid),
+    gas: smz.fn.extractColumn(swflData.Heat, "gas_pc", startYearHeatData, "grid", selectedGrid),
+    biogas: smz.fn.extractColumn(swflData.Heat, "biogas_pc", startYearHeatData, "grid", selectedGrid),
+    oil_heavy: smz.fn.extractColumn(swflData.Heat, "oil_heavy_pc", startYearHeatData, "grid", selectedGrid),
+    oil_light: smz.fn.extractColumn(swflData.Heat, "oil_light_pc", startYearHeatData, "grid", selectedGrid),
+    chips: smz.fn.extractColumn(swflData.Heat, "chips_pc", startYearHeatData, "grid", selectedGrid),
+    chips_recycled: smz.fn.extractColumn(swflData.Heat, "chips_recycled_pc", startYearHeatData, "grid", selectedGrid),
+    waste: smz.fn.extractColumn(swflData.Heat, "waste_pc", startYearHeatData, "grid", selectedGrid),
+  };
   
+  var heatmixConfig = {
+    chart: {
+      type: "area"
+    },
+    legend: {
+      align: "right",
+      maxHeight: 60,
+      navigation: {
+        enabled: false
+      },
+    },
+    plotOptions: {
+      line: {
+        pointStart: 2016,
+      },
+      area: {
+        pointStart: 2016,
+        stacking: "percent"
+      }
+    },
+    series: [{
+      color: Highcharts.defaultOptions.colors[1],
+      data: heatData.coal,
+      name: "Steinkohle"
+    },{
+      color: "#000000",
+      data: heatData.oil_heavy,
+      name: "Schweröl"
+    },{
+      color: "#222222",
+      data: heatData.oil_light,
+      name: "Leichtöl"
+    },{
+      color: Highcharts.defaultOptions.colors[5],
+      data: heatData.gas,
+      name: "Erdgas"
+    },{
+      color: smz.gradient[7],
+      data: heatData.waste,
+      name: "Ersatzbrennstoffe (EBS)"
+    },{
+      color: Highcharts.defaultOptions.colors[9],
+      data: heatData.chips,
+      name: "Holzhackschnitzel"
+    },{
+      color: smz.gradient[10],
+      data: heatData.chips_recycled,
+      name: "Altholzhackschnitzel"
+    },{
+      color: smz.gradient[11],
+      data: heatData.biogas,
+      name: "Biogas"
+    },{
+      color: Highcharts.defaultOptions.colors[3],
+      data: heatData.carbon,
+      dashStyle: "ShortDashDotDot",
+      name: "CO₂-Emissionen pro kWh",
+      shadow: {
+        color: "#FFF",
+        width: 4,
+        opacity: 1
+      },
+      type: "line",
+      yAxis: 1,
+      visible: false
+    }],
+    tooltip: {
+      split: true,
+      formatter: function(e) {
+        var tooltips = this.points.map(v => {
+          if (v.series.index !== 8) {
+            return v.series.name + ": <b>" + Highcharts.numberFormat(v.percentage, 1) + " %</b>"
+          }
+          return v.series.name + ": <b>" + Highcharts.numberFormat(v.y, 2) + " g</b>"
+        });
+        tooltips.unshift(false) // hide x-axis tooltip (redundant)
+        return tooltips.concat('');
+      }
+    },
+    xAxis: {
+      tickInterval: 1
+    },
+    yAxis: [{
+      title: undefined,
+      labels: {
+        format: "{value} %"
+      }
+    },{
+      title: "CO₂-Emissionen pro kWh",
+      labels: {
+        format: "{value} g"
+      },
+      opposite: true,
+      min: 0
+    }]
+  };
+
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.comparison = hc.chart("erneuerbare-energien-in-flensburg-chart", comparisonConfig);
   window.smz.chart.powerMix = hc.chart("strom-produktion-und-vertrieb-stadtwerke-flensburg", powermixConfig);
+  window.smz.chart.heatMix = hc.chart("fernwaermemix-stadtwerke-flensburg", heatmixConfig);
+
 })(window.Highcharts, window.smz, window.SWFL);

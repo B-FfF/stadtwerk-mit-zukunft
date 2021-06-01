@@ -79,10 +79,24 @@
 
 Auswertung Daten Stromkennzeichnung
 
-| carbon_per_kwh  | CO₂-Emissionen pro kWh                | gramm   |
+| carbon_per_kwh  | CO₂-Emissionen pro kWh                | Gramm   |
 | nuclear_pc      | Anteil Kernenergie                    | %       |
 | coal_pc         | Anteil Stein- & Braunkohle            | %       |
 | gas_pc          | Anteil Erdgas                         | %       |
 | other_fossil_pc | Anteil sonstige fossile Energieträger | %       |
 | renewables_pc   | Anteil EE mit Herkunftsnachweisen     | %       |
 | eeg_pc          | Anteil EEG-Umlage                     | %       |
+
+## `swfl_mix_heat.csv`
+
+| carbon_per_kwh    | CO₂-Emissionen pro kWh                | Gramm   |
+| grid              | Netzgebiet                            |         |
+| carbon_per_kwh    | CO₂-Emissionen pro kWh                | Gramm   |
+| coal_pc           | Anteil Steinkohle                     | %       |
+| gas_pc            | Anteil Erdgas                         | %       |
+| biogas_pc         | Anteil Biogas                         | %       |
+| oil_heavy_pc      | Anteil Schweröl                       | %       |
+| oil_light_pc      | Anteil Leichtöl                       | %       |
+| chips_pc          | Anteil Holzhackschnitzel              | %       |
+| chips_recycled_pc | Anteil Altholzhackschnitzel           | %       |
+| waste_pc          | Anteil "Ersatzbrennstoffe" (=Müll)    | %       |

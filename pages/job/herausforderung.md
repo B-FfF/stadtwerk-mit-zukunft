@@ -45,6 +45,14 @@ Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der
 
 Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden[^2]. So zeigt sich, dass der Anteil erneuerbarer Energien zuletzt nur knapp über 10 Prozent lag und damit einen historischen Tiefststand erreicht hat.
 
+### Fernwärmemix {#energietraegermix-fernwaerme-stadtwerke-flensburg}
+
+<figure>
+  <div id="fernwaermemix-stadtwerke-flensburg"></div>
+</figure>
+
+Obige Grafik zeigt den Energieträgermix des Flensburger Fernwärmenetzes, auf Grundlage der jährlichen Veröffentlichungen gemäß §8 Abs. 3 EWKG[^3]. "Ersatzbrennstoffe" ist ein Euphemismus für Müll: es handelt sich dabei vorwiegend um Pappe, Papier und Plastik, welche im Abfallwirtschaftszentrum aufbereitet werden und deren Verbrennung [bis zu 60 % als klimaneutral](https://web.archive.org/web/20210301122409/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/greenco2ncept/#c309) gilt.
+
 ## Das greenco<sub>2</sub>ncept-Ziel
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<sub>2</sub>-neutral zu werden. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden müssen (sprich: einem Zielpfad folgen; Ziel 2). Es wird sich also an einem CO<sub>2</sub>-Budget orientiert, wie es die Klimawissenschaft auch tut.
@@ -163,6 +171,7 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläu
       [2051218800000, 30, 70]
     ],
     Electricity: {{ site.data.swfl_mix_electricity | jsonify }},
+    Heat: {{ site.data.swfl_mix_heat | jsonify }}
   }
 </script>
 <link rel="stylesheet" href="{{ "/assets/css/html5-controls.css" | relative_url }}" />
