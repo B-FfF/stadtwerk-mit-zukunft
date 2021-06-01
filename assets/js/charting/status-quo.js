@@ -1,4 +1,4 @@
-(function(hc, swflData){
+(function(hc, smz, swflData){
 
   var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2020);
 
@@ -16,7 +16,7 @@
       headerFormat: null,
       pointFormat: '{series.name}: <b>{point.percentage:.1f} %</b>',
       formatter: function(point) {
-        return "Umsatz: <strong>" + Highcharts.numberFormat(this.y * 1000000, 0) + " EUR </strong><br>"
+        return "Umsatz: <strong>" + hc.numberFormat(this.y * 1000000, 0) + " EUR </strong><br>"
           + "Umsatzanteil: <strong>" + hc.numberFormat(this.percentage, 2) + ' %</strong>';
       }
     },
@@ -29,7 +29,7 @@
           useHtml: true,
           formatter: function() {
             return "<b>" + this.key + "</b><br>" + 
-              Highcharts.numberFormat(this.y, 1, ',', '.') + ' Mio. EUR ';
+              hc.numberFormat(this.y, 1, ',', '.') + ' Mio. EUR ';
           },
           style: {
             fontWeight: 'normal'
@@ -72,4 +72,4 @@
     }]
   });
 
-})(window.Highcharts, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business)

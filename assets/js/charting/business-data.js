@@ -20,7 +20,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     return this;
 });
 
-(function(hc, swflData){
+(function(hc, smz, swflData) {
 
   var missingYears = [2017, 2018, 2019, 2020];
 
@@ -63,7 +63,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
           var seriesName = point.series.userOptions.id === "energy_taxes" ? 'davon Strom & Erdgassteuern' : point.series.name;
           return '<tr><td><span style="color:'+ color +'; padding-top: 20px">●</span>&nbsp;' + seriesName + ':&nbsp;</td>'
-          + '<td style="text-align: right"><b>' + Highcharts.numberFormat(point.y, point.series.tooltipOptions.valueDecimals) 
+          + '<td style="text-align: right"><b>' + hc.numberFormat(point.y, point.series.tooltipOptions.valueDecimals) 
           + (point.series.tooltipOptions.valueSuffix ? point.series.tooltipOptions.valueSuffix : '') + '</b></td></tr>';
         }), ['</table>']);
 
@@ -279,7 +279,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
               if (this.y == 0) return false;
               var color = this.color.stops !== undefined ? this.color.stops[0][1] : this.color;
               return '<tr><td><span style="color:' + color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + ':&nbsp;</td>'
-              + '<td style="text-align: right"><b>' + Highcharts.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
+              + '<td style="text-align: right"><b>' + hc.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
             }
           }
         },
@@ -381,7 +381,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         labels: {
           format: '{value} %',
           style: {
-            color: Highcharts.defaultOptions.colors[4],
+            color: hc.defaultOptions.colors[4],
           }
         },
         opposite: true,
@@ -434,10 +434,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     }
   }
 
-  window.smz.chart = window.smz.chart || {};
-  window.smz.chart.Sales = drawSalesChart();
-  window.smz.chart.Earnings = drawEarningsChart();
-  window.smz.chart.Capital = drawCapitalChart();
-  window.smz.chart.Dividend = hc.chart('gewinnabfuehrung-stadt', dividendChart);
+  smz.chart = smz.chart || {};
+  smz.chart.Sales = drawSalesChart();
+  smz.chart.Earnings = drawEarningsChart();
+  smz.chart.Capital = drawCapitalChart();
+  smz.chart.Dividend = hc.chart('gewinnabfuehrung-stadt', dividendChart);
 
-})(window.Highcharts, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business)

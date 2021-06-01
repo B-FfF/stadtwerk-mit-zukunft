@@ -1,4 +1,4 @@
-(function(hc, fibreData, smz) {
+(function(hc, smz, fibreData) {
 
   var data = {
     grid: smz.fn.extractColumn(fibreData, "grid"),
@@ -54,4 +54,4 @@
   smz.chart = smz.chart || {};
   smz.chart.Fibre = hc.chart("glasfaser-chart", fibreChartConfig)
 
-})(window.Highcharts, window.SWFL.Business.Fibre, window.smz);
+})(window.Highcharts, window.smz, window.SWFL.Business.Fibre);

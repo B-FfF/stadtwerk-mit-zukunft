@@ -9,7 +9,7 @@
       },
       stops: [
         [0, color],
-        [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+        [1, hc.color(color).brighten(-0.3).get('rgb')] // darken
       ]
     };
   };
@@ -39,7 +39,7 @@
           return '<tr><td>'
           + (showColorLegend ? '<span style="color:' + color + '">●</span>&nbsp;' : '')
           + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' 
-          + Highcharts.numberFormat(this.y, decimals) 
+          + hc.numberFormat(this.y, decimals) 
           + (showValueSuffix ? " " + (this.series.tooltipOptions.valueSuffix || "") : '')
           + '</b></td></tr>';
         }
@@ -63,7 +63,7 @@
           zone[0],
           Object.assign(zone[1], {
             fillColor: {
-              pattern: Object.assign({}, Highcharts.patterns[2], { color: stripeColor, opacity: opacity })
+              pattern: Object.assign({}, hc.patterns[2], { color: stripeColor, opacity: opacity })
             }
           })
         ]
@@ -79,7 +79,7 @@
       }
     },
     color: {swfl: swflColors},
-    gradient: Highcharts.map(Highcharts.defaultOptions.colors.concat(swflColors.lightGreen, swflColors.darkGreen), function getGradient(color) {
+    gradient: hc.map(hc.defaultOptions.colors.concat(swflColors.lightGreen, swflColors.darkGreen), function getGradient(color) {
       return {
         radialGradient: {
           cx: 0.5,
@@ -88,7 +88,7 @@
         },
         stops: [
           [0, color],
-          [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+          [1, hc.color(color).brighten(-0.3).get('rgb')] // darken
         ]
       };
     }),

@@ -1,4 +1,4 @@
-(function(hc, wasteData) {
+(function(hc, smz, wasteData) {
 
   var data = {
     waste_handled: smz.fn.extractColumn(wasteData, "handling")
@@ -38,4 +38,4 @@
   smz.chart = smz.chart || {};
   smz.chart.Waste = hc.chart("awz-umschlag", wasteChartConfig)
 
-})(window.Highcharts, window.SWFL.Business.Waste);
+})(window.Highcharts, window.smz, window.SWFL.Business.Waste);

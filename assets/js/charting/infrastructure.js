@@ -1,4 +1,4 @@
-(function(hc, swflData){
+(function(hc, smz, swflData){
 
   hc.setOptions({
     tooltip: {
@@ -100,12 +100,12 @@
         tooltip: {
           pointFormatter: function () {
             return '<tr><td><b>Stromabgabe gesamt:</b></td><td style="text-align: right"><b>'
-            + Highcharts.numberFormat(this.total, 1) + ' GWh'
+            + hc.numberFormat(this.total, 1) + ' GWh'
             + '</td></tr><tr><td><span style="color:' + this.color.stops[0][1] + '">●</span>&nbsp;' 
             + this.series.name + ':&nbsp;&nbsp;&nbsp;<b>' 
-            + Highcharts.numberFormat(this.percentage, 1) 
+            + hc.numberFormat(this.percentage, 1) 
             + ' % →&nbsp;</b></td><td style="text-align: right"><b>' 
-            + Highcharts.numberFormat(this.y, 1) + ' GWh</b></td></tr>';
+            + hc.numberFormat(this.y, 1) + ' GWh</b></td></tr>';
           }
         },
         borderWidth: 0
@@ -132,7 +132,7 @@
         visible: false,
         zones: smz.chart.getDottedZone(2005, 2007)
       },{
-        color: Highcharts.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
+        color: hc.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
         data: data.households,
         id: "households",
         name: "Hausanschlüsse",
@@ -241,7 +241,7 @@
         }
       }, {
         data: data.capacity,
-        color: Highcharts.defaultOptions.colors[8],
+        color: hc.defaultOptions.colors[8],
         name: "Erzeugungskapazität",
         shadow: smz.chart.getBoldLineShadow(),
         visible: false
@@ -258,7 +258,7 @@
         },
         labels: {
           style: {
-            color: Highcharts.defaultOptions.colors[3]
+            color: hc.defaultOptions.colors[3]
           }
         }
       },{
@@ -278,8 +278,8 @@
     });
   }
 
-  window.smz.chart = window.smz.chart || {};
-  window.smz.chart.Power = drawPowerChart();
-  window.smz.chart.PowerGrid = drawPowerGridChart();
+  smz.chart = smz.chart || {};
+  smz.chart.Power = drawPowerChart();
+  smz.chart.PowerGrid = drawPowerGridChart();
 
-})(window.Highcharts, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business)

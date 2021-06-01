@@ -1,4 +1,4 @@
-(function(hc, waterData) {
+(function(hc, smz, waterData) {
 
   var data = {
     sales: smz.fn.extractColumn(waterData, "sales"),
@@ -137,4 +137,4 @@
   smz.chart.Water = hc.chart("wasserabsatz", waterChartConfig)
   smz.chart.WaterGrid = hc.chart("wassernetz", waterGridConfig)
 
-})(window.Highcharts, window.SWFL.Business.Water);
+})(window.Highcharts, window.smz, window.SWFL.Business.Water);

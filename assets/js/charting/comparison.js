@@ -10,11 +10,11 @@ var comparisonConfig = {
   series: [{
     name: "Flensburg",
     data: [4.21, 10.3],
-    color: smz.fn.getGradient(Highcharts.Color("#90ed7d").brighten(-.8).get('rgb')),
+    color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
     data: [14.5, 42.1],
-    color: smz.fn.getGradient(Highcharts.Color("#90ed7d").brighten(-0.4).get('rgb')),
+    color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     name: "Kreis Schleswig-Flensburg",
     data: [null, 110],
@@ -47,7 +47,7 @@ var comparisonConfig = {
             return output + this.series.name + ": > 100 %";
           }
 
-          return output + this.series.name + ": " + Highcharts.numberFormat(this.y, 1) + " %";
+          return output + this.series.name + ": " + hc.numberFormat(this.y, 1) + " %";
         }
       },
       label: {
@@ -164,7 +164,7 @@ var comparisonConfig = {
       }
     },
     series: [{
-      color: Highcharts.defaultOptions.colors[6],
+      color: hc.defaultOptions.colors[6],
       data: powerData.nuclear,
       legendIndex: 0,
       name: "Kernenergie"
@@ -199,7 +199,7 @@ var comparisonConfig = {
       split: true,
       formatter: function(e) {
         var tooltips = this.points.map(v => {
-          return v.series.name + ": <b>" + Highcharts.numberFormat(v.percentage, 1) + " %</b>"
+          return v.series.name + ": <b>" + hc.numberFormat(v.percentage, 1) + " %</b>"
         });
         tooltips.unshift(false) // hide x-axis tooltip (redundant)
         return tooltips.concat('');
@@ -301,9 +301,9 @@ var comparisonConfig = {
       formatter: function(e) {
         var tooltips = this.points.map(v => {
           if (v.series.index !== 8) {
-            return v.series.name + ": <b>" + Highcharts.numberFormat(v.percentage, 1) + " %</b>"
+            return v.series.name + ": <b>" + hc.numberFormat(v.percentage, 1) + " %</b>"
           }
-          return v.series.name + ": <b>" + Highcharts.numberFormat(v.y, 2) + " g</b>"
+          return v.series.name + ": <b>" + hc.numberFormat(v.y, 2) + " g</b>"
         });
         tooltips.unshift(false) // hide x-axis tooltip (redundant)
         return tooltips.concat('');
@@ -327,9 +327,9 @@ var comparisonConfig = {
     }]
   };
 
-  window.smz.chart = window.smz.chart || {};
-  window.smz.chart.comparison = hc.chart("erneuerbare-energien-in-flensburg-chart", comparisonConfig);
-  window.smz.chart.powerMix = hc.chart("strom-produktion-und-vertrieb-stadtwerke-flensburg", powermixConfig);
-  window.smz.chart.heatMix = hc.chart("fernwaermemix-stadtwerke-flensburg", heatmixConfig);
+  smz.chart = smz.chart || {};
+  smz.chart.comparison = hc.chart("erneuerbare-energien-in-flensburg-chart", comparisonConfig);
+  smz.chart.powerMix = hc.chart("strom-produktion-und-vertrieb-stadtwerke-flensburg", powermixConfig);
+  smz.chart.heatMix = hc.chart("fernwaermemix-stadtwerke-flensburg", heatmixConfig);
 
 })(window.Highcharts, window.smz, window.SWFL);

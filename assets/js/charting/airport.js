@@ -1,4 +1,4 @@
-(function(hc, airportData) {
+(function(hc, smz, airportData) {
 
   var data = {
     flight_ops: smz.fn.extractColumn(airportData, "flight_ops")
@@ -35,4 +35,4 @@
   smz.chart = smz.chart || {};
   smz.chart.Waste = hc.chart("flugbewegungen", airportChartConfig)
 
-})(window.Highcharts, window.SWFL.Business.Airport);
+})(window.Highcharts, window.smz, window.SWFL.Business.Airport);

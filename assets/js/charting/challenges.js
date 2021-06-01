@@ -1,4 +1,4 @@
-(function(hc, swflData, smz) {
+(function(hc, smz, swflData) {
 
   var startYear = 2007;
   /**
@@ -135,7 +135,7 @@
     yAxis: {
       labels: {
         formatter: function() {
-          return Highcharts.numberFormat(this.value, 0) + " t";
+          return hc.numberFormat(this.value, 0) + " t";
         }
       },        
       title: {
@@ -193,8 +193,8 @@
         pointFormatter: function() {
 
           return "<tr>"
-              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ Highcharts.numberFormat(shouldIs.overshoot[this.index], 0) + " t</strong></td><br>"
-              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + Highcharts.numberFormat(shouldIs.accumulated[this.index], 0) + " t</strong></td>"
+              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ hc.numberFormat(shouldIs.overshoot[this.index], 0) + " t</strong></td><br>"
+              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + hc.numberFormat(shouldIs.accumulated[this.index], 0) + " t</strong></td>"
               + "</tr>";
         }
       },
@@ -279,7 +279,7 @@
       data: consumedBudgetSeries.area[0],
       tooltip: {
         pointFormatter: function() {
-          return "Verbleibendes Budget: <strong>" + Highcharts.numberFormat(consumedBudgetSeries.accumulated[this.index][1], 0) + " t</strong>"
+          return "Verbleibendes Budget: <strong>" + hc.numberFormat(consumedBudgetSeries.accumulated[this.index][1], 0) + " t</strong>"
         }
       },
       showInLegend: false
@@ -372,7 +372,7 @@
     var requiredCertificatesSeries = [],
         freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_certificates", 2012),
         emissionsSeries = getSeries(2012),
-        responsiveRule = Highcharts.defaultOptions.responsive.rules[0];
+        responsiveRule = hc.defaultOptions.responsive.rules[0];
     
     for (var i in freeOfChargeAllocationsSeries) {
       requiredCertificatesSeries.push(emissionsSeries[i] - freeOfChargeAllocationsSeries[i]);
@@ -415,7 +415,7 @@
       yAxis: [{
         labels: {
           style: {
-            color: Highcharts.defaultOptions.colors[8]
+            color: hc.defaultOptions.colors[8]
           }
         },
         title: {
@@ -429,7 +429,7 @@
         labels: {
           format: '<b>{value} €</b>',
           style: {
-            color: Highcharts.defaultOptions.colors[7]
+            color: hc.defaultOptions.colors[7]
           },
           y: -2,
           x: -10
@@ -447,19 +447,19 @@
         name: "Gratis-Zertifikate",
         data: freeOfChargeAllocationsSeries,
         stack: 0,
-        color: Highcharts.defaultOptions.colors[2],
+        color: hc.defaultOptions.colors[2],
         yAxis: 0
       },{   // 1
         type: "column",
         stack: 0,
         name: "Benötigte Zertifikate",
         data: requiredCertificatesSeries,
-        color: Highcharts.defaultOptions.colors[8],
+        color: hc.defaultOptions.colors[8],
         yAxis: 0
       },{
         gapSize: 40,
         name: "EU ETS",
-        color: Highcharts.defaultOptions.colors[7],
+        color: hc.defaultOptions.colors[7],
         data: window.SWFL.EUA,
         shadow: {
           color: "#FFF",
@@ -478,10 +478,10 @@
         marker: {
           enabled: false
         },
-        color: Highcharts.defaultOptions.colors[7],
+        color: hc.defaultOptions.colors[7],
         fillColor: {
           pattern: {
-            color: Highcharts.defaultOptions.colors[3],
+            color: hc.defaultOptions.colors[3],
           }
         },
         visible: false,
@@ -578,7 +578,7 @@
         stacking: "normal",
         pointStart: methaneSeriesStartYear,
         type: "area",
-        color: Highcharts.defaultOptions.colors[6],
+        color: hc.defaultOptions.colors[6],
         zIndex: 2
       },
       Object.assign({}, template.series[1]),  // duplicating series to allow separate stacks for 20 / 100 year perspective
@@ -589,7 +589,7 @@
         stacking: "normal",
         pointStart: methaneSeriesStartYear,
         type: "area",
-        color: Highcharts.defaultOptions.colors[3]
+        color: hc.defaultOptions.colors[3]
       },
       template.series[0],   // [6]
       ],
@@ -634,7 +634,7 @@
 
 
 
-  window.smz.chart = window.smz.chart || {};
+  smz.chart = smz.chart || {};
   var charts = {
     Emissions: drawEmissionsChart,
     Emissions2030: drawEmissionsChart2030,
@@ -643,10 +643,10 @@
   };
   for (var key in charts) {
     try {
-      window.smz.chart[key] = smz.chart.enableFullscreen(charts[key]());
+      smz.chart[key] = smz.chart.enableFullscreen(charts[key]());
     } catch (error) {
             
     }
   }
 
-})(window.Highcharts, window.SWFL.Emissions, window.smz)
+})(window.Highcharts, window.smz, window.SWFL.Emissions)

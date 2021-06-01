@@ -1,4 +1,4 @@
-(function(hc, harbourData, smz) {
+(function(hc, smz, harbourData) {
 
   var data = {
     ships: smz.fn.extractColumn(harbourData, "ships"),
@@ -46,4 +46,4 @@
   smz.chart = smz.chart || {};
   smz.chart.Harbour = hc.chart("hafen", harbourChartConfig)
 
-})(window.Highcharts, window.SWFL.Business.Harbour, window.smz);
+})(window.Highcharts, window.smz, window.SWFL.Business.Harbour);
