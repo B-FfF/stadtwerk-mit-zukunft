@@ -42,12 +42,12 @@
     series: [{
       name: "Wasserförderung",
       data: data.production,
-      color: Highcharts.defaultOptions.colors[7],
+      color: smz.gradient[7],
       pointPadding: 0
     },{
       name: "Wasserabgabe",
       data: data.sales,
-      color: Highcharts.defaultOptions.colors[0],
+      color: smz.gradient[0],
       pointPadding: 0.15
     },{
       type: "line",
@@ -55,7 +55,7 @@
       data: data.meters.map(function(meterCount, idx) { return Math.round(data.sales[idx] * 1000000 / meterCount, 0) }),
       color: '#333',
       yAxis: 1,
-      shadow: true,
+      shadow: smz.chart.getBoldLineShadow(),
       zIndex: 1,
       tooltip: {
         valueSuffix: ' m³'
@@ -87,7 +87,7 @@
     series: [{
       name: "Leitungsnetz",
       data: data.grid,
-      color: Highcharts.defaultOptions.colors[7],
+      color: smz.gradient[7],
       tooltip: {
         valueSuffix: ' km',
       },
@@ -106,7 +106,7 @@
       yAxis: 1
     },{
       name: "Verluste (Absatz / Erzeugung)",
-      color: Highcharts.defaultOptions.colors[8],
+      color: smz.gradient[8],
       data: data.production.map(function(produced, idx) { 
         return produced ? (1 - (data.sales[idx] / produced)) * 100 : produced
       }),

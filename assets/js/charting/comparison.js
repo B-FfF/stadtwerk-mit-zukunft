@@ -10,15 +10,15 @@ var comparisonConfig = {
   series: [{
     name: "Flensburg",
     data: [4.21, 10.3],
-    color: Highcharts.Color("#90ed7d").brighten(-.8).get('rgb'),
+    color: smz.fn.getGradient(Highcharts.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
     data: [14.5, 42.1],
-    color: Highcharts.Color("#90ed7d").brighten(-0.4).get('rgb'),
+    color: smz.fn.getGradient(Highcharts.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     name: "Kreis Schleswig-Flensburg",
     data: [null, 110],
-    color: Highcharts.defaultOptions.colors[2],
+    color: smz.gradient[2],
     dataLabels: {
       align: "right",
       inside: true
@@ -169,12 +169,12 @@ var comparisonConfig = {
       legendIndex: 0,
       name: "Kernenergie"
     },{
-      color: Highcharts.defaultOptions.colors[5],
+      color: smz.gradient[5],
       data: powerData.gas,
       legendIndex: 2,
       name: "Erdgas"
     },{
-      color: Highcharts.defaultOptions.colors[1],
+      color: smz.gradient[1],
       data: powerData.coal,
       legendIndex: 4,
       name: "Braun- & Steinkohle"
@@ -251,19 +251,19 @@ var comparisonConfig = {
       }
     },
     series: [{
-      color: Highcharts.defaultOptions.colors[1],
+      color: smz.gradient[1],
       data: heatData.coal,
       name: "Steinkohle"
     },{
-      color: "#000000",
+      color: smz.fn.getGradient("#000000"),
       data: heatData.oil_heavy,
       name: "Schweröl"
     },{
-      color: "#222222",
+      color: smz.fn.getGradient("#222222"),
       data: heatData.oil_light,
       name: "Leichtöl"
     },{
-      color: Highcharts.defaultOptions.colors[5],
+      color: smz.gradient[8],
       data: heatData.gas,
       name: "Erdgas"
     },{
@@ -271,7 +271,7 @@ var comparisonConfig = {
       data: heatData.waste,
       name: "Ersatzbrennstoffe (EBS)"
     },{
-      color: Highcharts.defaultOptions.colors[9],
+      color: smz.gradient[9],
       data: heatData.chips,
       name: "Holzhackschnitzel"
     },{
@@ -283,7 +283,7 @@ var comparisonConfig = {
       data: heatData.biogas,
       name: "Biogas"
     },{
-      color: Highcharts.defaultOptions.colors[3],
+      color: smz.gradient[3],
       data: heatData.carbon,
       dashStyle: "ShortDashDotDot",
       name: "CO₂-Emissionen pro kWh",

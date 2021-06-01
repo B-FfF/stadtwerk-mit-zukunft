@@ -1,5 +1,24 @@
 (function (hc) {
 
+  function getGradient(color) {
+    return {
+      radialGradient: {
+        cx: 0.5,
+        cy: 0.3,
+        r: 0.7
+      },
+      stops: [
+        [0, color],
+        [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+      ]
+    };
+  };
+
+  var swflColors = {
+    lightGreen: '#73c82c',
+    darkGreen: '#177d35'
+  };
+
   window.smz = {
     chart: {
       enableFullscreen: function(chart) {
@@ -16,8 +35,9 @@
         showColorLegend = showColorLegend || true;
         showValueSuffix = showValueSuffix || true;
         return function() {
+          var color = this.color.stops === undefined ? this.color : this.color.stops[0][1];
           return '<tr><td>'
-          + (showColorLegend ? '<span style="color:'+this.color+'">●</span>&nbsp;' : '')
+          + (showColorLegend ? '<span style="color:' + color + '">●</span>&nbsp;' : '')
           + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' 
           + Highcharts.numberFormat(this.y, decimals) 
           + (showValueSuffix ? " " + (this.series.tooltipOptions.valueSuffix || "") : '')
@@ -58,12 +78,20 @@
         }
       }
     },
-    color: {
-      swfl: {
-        lightGreen: '#73c82c',
-        darkGreen: '#177d35'
-      }
-    },
+    color: {swfl: swflColors},
+    gradient: Highcharts.map(Highcharts.defaultOptions.colors.concat(swflColors.lightGreen, swflColors.darkGreen), function getGradient(color) {
+      return {
+        radialGradient: {
+          cx: 0.5,
+          cy: 0.3,
+          r: 0.7
+        },
+        stops: [
+          [0, color],
+          [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
+        ]
+      };
+    }),
     fn: {
       /**
        * @param {Number} from 
@@ -106,7 +134,8 @@
             return data[i];
           }
         }
-      }
+      },
+      getGradient: getGradient
     }
   }
 

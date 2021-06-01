@@ -21,7 +21,7 @@
     series: [{
       name: "Aufbereiteter Müll",
       data: data.waste_handled.map(function(wasteInThousands) { return wasteInThousands * 1000 || null }),
-      color: '#333',
+      color: smz.fn.getGradient("#666"),
       tooltip: {
         valueSuffix: ' t',
       },

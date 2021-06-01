@@ -94,15 +94,14 @@
         zIndex: 1
       },{
         name: "Stromverkauf Flensburg",
-        color: smz.color.swfl.darkGreen,
+        color: smz.gradient[11],
         type: 'column',
         data: data.sales.map(function(entry, i) { return entry * data.salesFL[i]; }),
         tooltip: {
           pointFormatter: function () {
-            console.log(data.salesFL)
             return '<tr><td><b>Stromabgabe gesamt:</b></td><td style="text-align: right"><b>'
             + Highcharts.numberFormat(this.total, 1) + ' GWh'
-            + '</td></tr><tr><td><span style="color:' + this.color + '">●</span>&nbsp;' 
+            + '</td></tr><tr><td><span style="color:' + this.color.stops[0][1] + '">●</span>&nbsp;' 
             + this.series.name + ':&nbsp;&nbsp;&nbsp;<b>' 
             + Highcharts.numberFormat(this.percentage, 1) 
             + ' % →&nbsp;</b></td><td style="text-align: right"><b>' 
@@ -120,7 +119,7 @@
         type: "column",
         name: "Eigene Stromproduktion (Kohle + Gas)",
         data: data.production,
-        color: Highcharts.defaultOptions.colors[8],
+        color: smz.gradient[8],
         pointPadding: 0,
         stack: 1,
         zIndex: -1
@@ -215,22 +214,22 @@
         type: 'area',
         name: "Hochspannungsnetz 60/150 kV",
         data: data.gridHigh,
-        color: Highcharts.defaultOptions.colors[5],
-        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[5])
+        color: smz.gradient[5],
+        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[5])
       },{
         type: 'area',
         name: "Mittelspannungsnetz 15 (20) kV",
-        color: Highcharts.defaultOptions.colors[3],
+        color: smz.gradient[3],
         data: data.gridMedium,
         zIndex: -1,
-        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[3])
+        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[3])
       },{
         name: "Niederspannungsnetz 220V",
         data: data.gridLow,
-        color: Highcharts.defaultOptions.colors[6],
+        color: smz.gradient[6],
         type: 'area',
         zIndex: -2,
-        zones: smz.chart.getStripedZone(2005, 2007, Highcharts.defaultOptions.colors[6], .5)
+        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[6], .5)
       },{
         data: data.peak,
         color: smz.color.swfl.darkGreen,

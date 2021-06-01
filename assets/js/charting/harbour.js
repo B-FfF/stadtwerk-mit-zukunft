@@ -21,13 +21,13 @@
     series: [{
       name: "Güterumschlag",
       data: data.cargo.map(function(cargoInThousands){ return cargoInThousands * 1000 || null }),
-      color: smz.color.swfl.darkGreen,
+      color: smz.gradient[11],
       tooltip: {
         valueSuffix: ' t'
       }
     },{
       name: "Eingelaufene Schiffe",
-      color: smz.color.swfl.lightGreen,
+      color: smz.gradient[10],
       data: data.ships,
       visible: false,
       yAxis: 1

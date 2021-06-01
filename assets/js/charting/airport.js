@@ -21,7 +21,7 @@
     series: [{
       name: "Flugbewegungen",
       data: data.flight_ops.map(function(thousandFlights) { return thousandFlights * 1000 || null }),
-      color: Highcharts.defaultOptions.colors[3]
+      color: smz.gradient[3]
     }],
     xAxis: {
       missing: missingYears

@@ -59,8 +59,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             return point.series.tooltipOptions.pointFormatter.apply(point);
           }
 
+          var color = point.color.stops !== undefined ? point.color.stops[0][1] : point.color;
+
           var seriesName = point.series.userOptions.id === "energy_taxes" ? 'davon Strom & Erdgassteuern' : point.series.name;
-          return '<tr><td><span style="color:'+ point.color +'; padding-top: 20px">●</span>&nbsp;' + seriesName + ':&nbsp;</td>'
+          return '<tr><td><span style="color:'+ color +'; padding-top: 20px">●</span>&nbsp;' + seriesName + ':&nbsp;</td>'
           + '<td style="text-align: right"><b>' + Highcharts.numberFormat(point.y, point.series.tooltipOptions.valueDecimals) 
           + (point.series.tooltipOptions.valueSuffix ? point.series.tooltipOptions.valueSuffix : '') + '</b></td></tr>';
         }), ['</table>']);
@@ -126,36 +128,36 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       series: [{
         name: "EBIT Konzern",
         data: data.ebitCorporation,
-        color: '#999',
+        color: smz.fn.getGradient("#999"),
         pointPadding: 0.25,
         pointPlacement: -0.22,
       },{
         name: "EBIT GmbH",
         data: data.ebit,
-        color: '#666',
+        color: smz.fn.getGradient("#666"),
         pointPadding: 0.25,
         pointPlacement: 0.2,
       },{
         name: "Gewinn Konzern",
-        color: smz.color.swfl.lightGreen,
+        color: smz.gradient[10],
         data: data.earningsCorporation,
         pointPadding: 0.25,
         pointPlacement: -0.22,
         borderWidth: 0.5,
         zones: [{
           value: 0,
-          color: "rgba(255,0,0,.5)"
+          color: smz.fn.getGradient("rgba(255,0,0,.5)")
         }]
       },{
         name: "Gewinn GmbH",
-        color: smz.color.swfl.darkGreen,
+        color: smz.gradient[11],
         data: data.earnings,
         pointPadding: 0.25,
         pointPlacement: 0.2,
         borderWidth: 0.5,
         zones: [{
           value: 0,
-          color: "rgba(255,0,0,.8)"
+          color: smz.fn.getGradient("rgba(255,0,0,.8)")
         }]
       },{
         type: 'line',
@@ -225,18 +227,18 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },
       series: [{
         name: 'Umsätze Konzern',
-        color: smz.color.swfl.lightGreen,
+        color: smz.gradient[10],
         data: data.salesCorporation,
         stack: "konzern",
         pointPadding: 0
       }, {
         name: 'Umsätze GmbH',
         pointPadding: 0.1,
-        color: smz.color.swfl.darkGreen,
+        color: smz.gradient[11],
         data: data.sales,
       },{
         name: 'Strom und Erdgassteuer',
-        color: '#dddddd',
+        color: smz.fn.getGradient("#dddddd"),
         id: 'energy_taxes',
         data: data.energyTaxes,
       }],
@@ -275,7 +277,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             valueSuffix: ' €',
             pointFormatter: function () {
               if (this.y == 0) return false;
-              return '<tr><td><span style="color:' + this.color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + ':&nbsp;</td>'
+              var color = this.color.stops !== undefined ? this.color.stops[0][1] : this.color;
+              return '<tr><td><span style="color:' + color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + ':&nbsp;</td>'
               + '<td style="text-align: right"><b>' + Highcharts.numberFormat(Math.abs(this.y), 2) + this.series.tooltipOptions.valueSuffix + '</b></td></tr>';
             }
           }
@@ -294,38 +297,38 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       series: [{
         name: "Eigenkapital",
         data: data.equity,
-        color: smz.color.swfl.darkGreen,
+        color: smz.gradient[11],
       },{
         name: "Andere Verbindlichkeiten",
-        color: '#333',
+        color: smz.fn.getGradient("#333"),
         data: mirror(data.otherLiabilities),
         stack: "debt",
       },{
         name: "Rückstellungen",
-        color: '#666',
+        color: smz.fn.getGradient("#666"),
         data: mirror(data.provision),
         stack: "debt"
       },{ // to fill up missing split data for year 2000
         name: "Kredite gesamt",
-        color: Highcharts.defaultOptions.colors[5],
+        color: smz.gradient[5],
         data: mirror([data.creditLiabilities[0]]),
         showInLegend: false,
         stack: "debt"
       },{
         name: "Kredite < 1 Jahr",
-        color: Highcharts.defaultOptions.colors[6],
+        color: smz.gradient[6],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit < 1 Jahr",
         data: mirror(data.creditLiabilitiesShort),
         stack: "debt"
       },{
         name: "Kredite 1 - 5 Jahre",
-        color: Highcharts.defaultOptions.colors[3],
+        color: smz.gradient[3],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit 1 bis 5 Jahre",
         data: mirror(data.creditLiabilitiesMedium),
         stack: "debt"
       },{
         name: "Kredite > 5 Jahre",
-        color: Highcharts.defaultOptions.colors[5],
+        color: smz.gradient[5],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit > 5 Jahre",
         data: mirror(data.creditLiabilitiesLong),
         stack: "debt"
@@ -345,7 +348,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             + creditLiabilities
             ) / equityCapital * 100;
         }),
-        color: Highcharts.defaultOptions.colors[4],
+        color: smz.gradient[4],
         pointStart: 2000,
         yAxis: 1,
         shadow: smz.chart.getBoldLineShadow(),
@@ -416,7 +419,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     series: [{
       groupPadding: 0.1,
       pointPadding: 0.1,
-      color: smz.color.swfl.lightGreen,
+      color: smz.gradient[10],
       data: data.dividend,
       name: 'Ausschüttung'
     }],

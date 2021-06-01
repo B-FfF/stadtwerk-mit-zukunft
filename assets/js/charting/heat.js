@@ -49,12 +49,12 @@
     series: [{
       name: "Wärmeerzeugung gesamt",
       data: data.production,
-      color: Highcharts.defaultOptions.colors[8],
+      color: smz.gradient[8],
       pointPadding: 0
     },{
       name: "Wärmeabsatz gesamt",
       data: data.sales,
-      color: smz.color.swfl.darkGreen,
+      color: smz.gradient[11],
       pointPadding: 0.15,
     },{
       type: "line",
@@ -62,7 +62,7 @@
       data: data.meters.map(function(meterCount, idx) { return Math.round(data.sales[idx] * 1000000 / meterCount, 1) }),
       color: '#333',
       yAxis: 1,
-      shadow: true,
+      shadow: smz.chart.getBoldLineShadow(),
       zIndex: 1,
       tooltip: {
         valueSuffix: ' kWh',
@@ -95,7 +95,7 @@
     series: [{
       name: "Leitungsnetz",
       data: data.grid,
-      color: smz.color.swfl.darkGreen,
+      color: smz.gradient[11],
       tooltip: {
         valueSuffix: ' km'
       },
@@ -113,7 +113,7 @@
       yAxis: 1
     },{
       name: "Fernwärmeverluste (Absatz / Erzeugung)",
-      color: Highcharts.defaultOptions.colors[8],
+      color: smz.gradient[8],
       data: data.production.map(function(produced, idx) { 
         return produced ? (1 - (data.sales[idx] / produced)) * 100 : produced
       }),

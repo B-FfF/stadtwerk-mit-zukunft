@@ -2,22 +2,6 @@
 
   var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2020);
 
-  Highcharts.setOptions({
-    colors: Highcharts.map([ "#f45b5b", "#f7a35c", "#7cb5ec", "#90ed7d", "#f15c80", "#434348", "#e4d354"], function (color) {
-        return {
-            radialGradient: {
-                cx: 0.5,
-                cy: 0.3,
-                r: 0.7
-            },
-            stops: [
-                [0, color],
-                [1, Highcharts.color(color).brighten(-0.3).get('rgb')] // darken
-            ]
-        };
-    })
-  });
-
   hc.chart('umsatz-nach-produkten', {
     chart: {
       plotBackgroundColor: null,
@@ -56,26 +40,32 @@
     series: [{
       name: 'Umsatzanteil',
       data: [{
+        color: smz.gradient[8],
         name: "Fernwärme",
         y: parseFloat(pieData['heat']),
         sliced: true
       },{
+        color: smz.gradient[3],
         name: "Erdgas",
         y: parseFloat(pieData['gas']),
         sliced: true
       },{
+        color: smz.gradient[0],
         name: "Wasser",
         y: parseFloat(pieData['water']),
         sliced: true
       },{
+        color: smz.gradient[2],
         name: "Glasfaser",
         y: parseFloat(pieData['fibre']),
         sliced: true
       },{
+        color: smz.gradient[5],
         name: "Sonstige Erlöse",
         y: parseFloat(pieData['other']),
         sliced: true
       },{
+        color: smz.gradient[1],
         name: "Strom",
         y: parseFloat(pieData['electricity'])
       }]

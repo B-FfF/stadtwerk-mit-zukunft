@@ -31,11 +31,11 @@
     },{
       name: "Hausanschlüsse",
       data: data.households,
-      color: smz.color.swfl.lightGreen,
+      color: smz.gradient[10],
       yAxis: 1
     },{
       name: "Kund*innen",
-      color: smz.color.swfl.darkGreen,
+      color: smz.gradient[11],
       data: data.customers,
       yAxis: 1
     }],
