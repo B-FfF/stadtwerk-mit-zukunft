@@ -106,9 +106,6 @@
   var emissionSeries = getSeries(startYear);
   var shouldIs = getOvershootRangeSeries(startYear, 2020, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
-    chart: {
-      height: '50%'
-    },
     tooltip: {
       valueSuffix: ' t',
       valueDecimals: 0,
@@ -546,9 +543,6 @@
 
     var gasSeries = calculateGasSeries();
     var chartConfig = {
-      chart: {
-        height: "50%"
-      },
       yAxis: Object.assign({
         reversedStacks: false
       }, template.yAxis),

@@ -28,7 +28,7 @@ Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://we
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
-<figure class="image left">
+<figure class="image left" style="min-height: calc(55vw * (447/800)); max-height: 447px">
   <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
   <figcaption>
     Quelle: EKSH – <a href="https://web.archive.org/web/20210531123425/https://dokumente.stadtwerk-mit-zukunft.de/studien/2018-3%20Broschuere_Energieforschung_EKSH.pdf">„Energieforschung in Schleswig-Holstein“</a> S.23
@@ -39,29 +39,44 @@ Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der
 
 ### Strommix (Produktion und -Vertrieb) {#strommix-stadtwerke-flensburg}
 
-<figure>
-  <div id="strom-produktion-und-vertrieb-stadtwerke-flensburg"></div>
-</figure>
-
-Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden[^2]. So zeigt sich, dass der Anteil erneuerbarer Energien zuletzt nur knapp über 10 Prozent lag und damit einen historischen Tiefststand erreicht hat.
+<div class="row">
+  <figure class="col-8 col-12-wide">
+    <div id="strom-produktion-und-vertrieb-stadtwerke-flensburg"></div>
+  </figure>
+  <div class="col-4 col-12-wide">
+    <p>
+Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden<sup><a href="#fn:2">1</a></sup>. So zeigt sich, dass der Anteil erneuerbarer Energien zuletzt nur knapp über 10 Prozent lag und damit einen historischen Tiefststand erreicht hat.
+    </p>
+  </div>
+</div>
 
 ### Fernwärmemix {#energietraegermix-fernwaerme-stadtwerke-flensburg}
 
-<figure>
-  <div id="fernwaermemix-stadtwerke-flensburg"></div>
-</figure>
-
-Obige Grafik zeigt den Energieträgermix des Flensburger Fernwärmenetzes, auf Grundlage der jährlichen Veröffentlichungen gemäß §8 Abs. 3 EWKG[^3]. "Ersatzbrennstoffe" ist ein Euphemismus für Müll: es handelt sich dabei vorwiegend um Pappe, Papier und Plastik, welche im Abfallwirtschaftszentrum aufbereitet werden und deren Verbrennung [bis zu 60 % als klimaneutral](https://web.archive.org/web/20210301122409/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/greenco2ncept/#c309) gilt.
+<div class="row">
+  <figure class="col-8 col-12-wide">
+    <div id="fernwaermemix-stadtwerke-flensburg"></div>
+  </figure>
+  <div class="col-4 col-12-wide">
+    <p>
+      Der Energieträgermix des Flensburger Fernwärmenetzes basiert auf den jährlichen Veröffentlichungen gemäß §8 Abs. 3 EWKG<sup><a href="#fn:3">2</a></sup>. "Ersatzbrennstoffe" ist ein Euphemismus für Müll: es handelt sich dabei vorwiegend um Pappe, Papier und Plastik, welche im Abfallwirtschaftszentrum aufbereitet werden und deren Verbrennung <a href="https://web.archive.org/web/20210301122409/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/greenco2ncept/#c309">bis zu 60 % als klimaneutral</a> gilt.
+    </p>
+  </div>
+</div>
 
 ## Das greenco<sub>2</sub>ncept-Ziel
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<sub>2</sub>-neutral zu werden. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden müssen (sprich: einem Zielpfad folgen; Ziel 2). Es wird sich also an einem CO<sub>2</sub>-Budget orientiert, wie es die Klimawissenschaft auch tut.
 
-<figure class="image left" style="min-height:auto">
-    <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
-</figure>
-
+<div class="row">
+<div class="col-7 col-12-wide">
+    <div id="co2-emissionen-der-stadtwerke-flensburg" style="padding-top: 18px; min-height: 380px"></div>
+</div>
+  <div class="col-5 col-12-wide">
+    <p>
 Die jährlichen Gesamtemissionen liegen heute im Schnitt 100.000 Tonnen unter denen von 2007. Leider liegen sie immer noch deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 850.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden – was dem Gesamtbudget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+    </p>
+  </div>
+</div>
 
 ### Emissionen mit Kessel 13 {#unzureichende-emissionsreduktion-kessel-13}
 
@@ -69,8 +84,8 @@ Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][
 
 Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ + 97 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO<sub>2</sub>][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
-<figure class=chart style="min-height: auto">
-    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
+<figure class=chart>
+    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030" style="height: 60vh"></div>
     <div id="play-controls" class="row">
       <div class="col-7"><input id="play-range" type="range" value="23" min="0" max="23"></div>
       <div class="col-4"><button id="play-pause-button" class="fa fa-play" title="play"></button></div>
@@ -87,7 +102,7 @@ Bei Abbau, Transport und Lagerung entweichen [laut Aussage der IEA][iea-slip] 1,
 So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Klimawandel, wie in der folgenden Grafik in CO<sub>2</sub>-Äquivalenten umgerechnet dargestellt[^1]:
 
 <figure class=chart>
-    <div id="diagramm-klimaschaedlichkeit-methan"></div>
+    <div id="diagramm-klimaschaedlichkeit-methan" style="height: 60vh"></div>
 </figure>
 
 ## Wirtschaftliche Belastung durch CO<sub>2</sub>-Emissionen
