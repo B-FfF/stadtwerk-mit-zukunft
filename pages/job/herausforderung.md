@@ -113,7 +113,7 @@ Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO
     <div id="entwicklung-co2-zertifikatspreise"></div>
 </figure>
 
-Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13){:.scrolly} erläutert, wird der CO<sub>2</sub>-Ausstoß beim momentanen Plan auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € – der nun bereits erreicht ist – entstehen (im Vergleich zum Durchschnittspreis ~25 € der letzten Jahre) **Mehrkosten von über 10 Mio € für die Stadtwerke Flensburg**. Diese Summe entspricht dem gesamten zuletzt bekannten Jahresgewinn von 2019, und vor dieser Situation haben wir seit Jahren immer wieder gewarnt. Die weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung ist nun gefährdet, außer die Stadtwerke erhöhen ihre Preise deutlich.
+Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird der CO<sub>2</sub>-Ausstoß beim momentanen Plan auch langfristig jenseits von 400.000 Tonnen liegen. Bei einem Emissionsrechtepreis ab 50 € – der nun bereits erreicht ist – entstehen (im Vergleich zum Durchschnittspreis ~25 € der letzten Jahre) **Mehrkosten von über 10 Mio € für die Stadtwerke Flensburg**. Diese Summe entspricht dem gesamten zuletzt bekannten Jahresgewinn von 2019, und vor dieser Situation haben wir seit Jahren immer wieder gewarnt. Die weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung ist nun gefährdet, außer die Stadtwerke erhöhen ihre Preise deutlich.
 
 [^1]: 
     **Annahmen Methanberechnung**
