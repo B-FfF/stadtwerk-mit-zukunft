@@ -34,6 +34,20 @@ sidebar:
   </figure>
 </div>
 
+#### Prozentuale Umsatzverteilung nach Geschäftbereichen
+
+<div class="row">
+  <figure id="umsatz-nach-produkten-verlauf" class="col-8 col-12-wide">
+  </figure>
+  <div class="col-4 col-12-wide">
+    <p>
+      Obwohl sich die Strom-Kundschaft seit 2009 nahezu verdoppelt hat und der Stromabsatz um 60 % gestiegen ist, macht 
+      das Stromgeschäft relativ konstant etwa drei Viertel des Gesamtumsatzes aus. Der am stärksten wachsende Geschäftsbereich 
+      ist der externe Vertrieb von Erdgas.
+    </p>
+  </div>
+</div>
+
 ### Stromverkauf & Infrastruktur
 
 <div class="row">
