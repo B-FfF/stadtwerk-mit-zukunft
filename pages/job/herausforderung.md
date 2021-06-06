@@ -8,7 +8,7 @@ caption: >-
   Obwohl es auf der Profitseite zurzeit gut aussieht, bedarf es umfassender Umbauten
   in der Erzeugungsstruktur der Stadtwerke Flensburg, um auch in kommenden Jahrzehnten solide aufgestellt zu sein.
 description: |
-  Sowohl Fernwärmenetz als auch Strommix der Stadtwerke Flensburg haben nur einen sehr geringen Anteil an erneuerbaren Energien. Gleichzeitig ist sind die Treibhausgasemissionen besorgniserregend hoch. Dies hat auch wirtschaftliche Implikationen.
+  Weniger als 10 % erneuerbare Energien – bei besorgniserregend hohen Treibhausgasemissionen. Dies hat auch wirtschaftliche Implikationen.
 sidebar:
   box:
     header: Work in progress
