@@ -24,7 +24,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider jegliche Angaben zum Konzern.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den [Geschäftsberichten](#geschaeftsberichte) leider jegliche Angaben zum Konzern.
 <br>
 
 <div class="row">
@@ -57,7 +57,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den [Geschäftsberichten](#geschaeftsberichte) leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006.
 
 ### Fernwärme
 
@@ -68,7 +68,7 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den Geschäftsberichten leider die Angaben zu eigener Wärmeproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
+> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den [Geschäftsberichten](#geschaeftsberichte) leider die Angaben zu eigener Wärmeproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
 
 ### Wasser
 
@@ -79,7 +79,7 @@ sidebar:
   </figure>
 </div>
 
-> Zu den mit einem Sternchen (**\***{: style="color: #000"}) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben zu eigener Wasserproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
+> Zu den mit einem Sternchen (**\***{: style="color: #000"}) gekennzeichneten Jahren fehlen in den [Geschäftsberichten](#geschaeftsberichte) leider die Angaben zu eigener Wasserproduktion, Leitungsnetz, sowie Zählern und Hausanschlüssen im Netz.
 
 ### Glasfaser
 
@@ -88,7 +88,7 @@ sidebar:
   </figure>
   <blockquote class="col-6 col-12-wide">
     <p>
-      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben bzgl. Leitungsnetz bzw. Kund*innenzahl
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben bzgl. Leitungsnetz bzw. Kund*innenzahl.
     </p>
   </blockquote>
 </div>
@@ -100,7 +100,7 @@ sidebar:
   </figure>
   <blockquote class="col-6 col-12-wide">
     <p>
-      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider die Angaben bzgl. der Zahl der eingelaufenen Schiffe bzw. des Güterumschlags
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben bzgl. der Zahl der eingelaufenen Schiffe bzw. des Güterumschlags.
     </p>
   </blockquote>
 </div>
@@ -113,7 +113,7 @@ sidebar:
   <blockquote class="col-6 col-12-wide">
     <p>
       Geschäftsbericht 2009: „ Die AWZ soll zukünftig als Biomassezentrum einen logistischen Beitrag zum angestrebten CO<sub>2</sub>-neutralen Kraftwerksbetrieb in Flensburg leisten.<br>Die Bioabfallkompostierung wurde zum 1.8.2009 eingestellt, da sich in diesem Geschäft dringend erforderliche Standort-Investitionen über auskömmliche Absatzverträge des Biokomposts mit entsprechenden Laufzeiten nicht darstellen ließen.”<br><br>
-      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider Angaben zum Müllumschlag.
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider Angaben zum Müllumschlag.
     </p>
   </blockquote>
 </div>
@@ -125,7 +125,7 @@ sidebar:
   </figure>
   <blockquote class="col-6 col-12-wide">
     <p>
-      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den Geschäftsberichten leider Angaben zu Flugbewegungen.
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider Angaben zu Flugbewegungen.
     </p>
   </blockquote>
 </div>
@@ -170,7 +170,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 
 <br>
 
-### Geschäftsberichte
+### Geschäftsberichte {#geschaeftsberichte}
 
 |------|------|------|------|------|------|------|------|------|------|
 |[2001]&nbsp;|[2002]&nbsp;|[2003]&nbsp;|[2004]&nbsp;|[2005]&nbsp;|[2006]&nbsp;|[2007]&nbsp;|[2008]&nbsp;|[2009]&nbsp;|[2010]
@@ -180,30 +180,30 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html
   [umwandlung-gmbh]: https://www.ulrich-jochimsen.de/files/Monopol_1%2013.pdf
-  [fl-atomstromfrei]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/flensburg-atomstromfrei-shz-beilage.pdf
-  [introducing-render]: https://www.stadtwerke-flensburg.de/unternehmen/news/news/matthias-wolfskeil-stellt-kollegen-beim-4-flensburger-energieforum-vor-maik-render-technischer-ges/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ea5d1578dbc441a4eebad8b47d3a65cc
+  [fl-atomstromfrei]: https://web.archive.org/web/20210606222838/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/flensburg-atomstromfrei-shz-beilage.pdf
+  [introducing-render]: https://web.archive.org/web/20210116150455/https://www.stadtwerke-flensburg.de/unternehmen/news/news/matthias-wolfskeil-stellt-kollegen-beim-4-flensburger-energieforum-vor-maik-render-technischer-ges/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ea5d1578dbc441a4eebad8b47d3a65cc
   [wolfskeil-nicht-entlastet]: https://www.shz.de/lokales/flensburger-tageblatt/keine-entlastung-fuer-den-ex-chef-id175722.html
 
-  [2020]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2020.pdf
-  [2019]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2019.pdf
-  [2018]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2018.pdf
-  [2017]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2017.pdf
-  [2016]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2016.pdf
-  [2015]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2015.pdf
-  [2014]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/swfl-geschaeftsbericht-2014.pdf
-  [2013]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/geschaeftsbericht-swfl-2013.pdf
-  [2012]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2012_11.pdf
-  [2011]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2011_12.pdf
-  [2010]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2010_11.pdf
-  [2009]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2009_11.pdf
-  [2008]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2008_11.pdf
-  [2007]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2007_09.pdf
-  [2006]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2006_09.pdf
-  [2005]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2005_09.pdf
-  [2004]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2004_11.pdf
-  [2003]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2003_10.pdf
-  [2002]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2002_03.pdf
-  [2001]: https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2001_11.pdf
+  [2020]: https://web.archive.org/web/20210606222751/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2020.pdf
+  [2019]: https://web.archive.org/web/20210606222714/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2019.pdf
+  [2018]: https://web.archive.org/web/20210129195231/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2018.pdf
+  [2017]: https://web.archive.org/web/20210129210538/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2017.pdf
+  [2016]: https://web.archive.org/web/20210130224054/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2016.pdf
+  [2015]: https://web.archive.org/web/20210606222621/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2015.pdf
+  [2014]: https://web.archive.org/web/20210606222615/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/swfl-geschaeftsbericht-2014.pdf
+  [2013]: https://web.archive.org/web/20210606222429/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/geschaeftsbericht-swfl-2013.pdf
+  [2012]: https://web.archive.org/web/20201020052115/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2012_11.pdf
+  [2011]: https://web.archive.org/web/20201020063039/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2011_12.pdf
+  [2010]: https://web.archive.org/web/20210606222325/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2010_11.pdf
+  [2009]: https://web.archive.org/web/20210606222234/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2009_11.pdf
+  [2008]: https://web.archive.org/web/20210606222229/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB2008_11.pdf
+  [2007]: https://web.archive.org/web/20201020063602/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2007_09.pdf
+  [2006]: https://web.archive.org/web/20210606222215/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2006_09.pdf
+  [2005]: https://web.archive.org/web/20210606222139/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2005_09.pdf
+  [2004]: https://web.archive.org/web/20210606222135/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2004_11.pdf
+  [2003]: https://web.archive.org/web/20210606222059/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2003_10.pdf
+  [2002]: https://web.archive.org/web/20210606222049/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2002_03.pdf
+  [2001]: https://web.archive.org/web/20201020064054/https://www.stadtwerke-flensburg.de/fileadmin/_migrated/content_uploads/GB_StwFl_2001_11.pdf
 
 <script>
   window.SWFL = {
