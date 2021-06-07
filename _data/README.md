@@ -84,11 +84,21 @@
 
 ## `swfl_emissions.csv`
 
+Fossile CO₂-Emissionen und Gratis-Zertifikate laut EU ETS
+
 |   |  |  |
 |:--|--|--|
-| year             | Geschäftsjahr             |
-| co2              | CO₂-Emissionen laut EU ETS |
-| foc_certificates | Gratis-Zertifikate EU ETS |
+| year             | Geschäftsjahr                                                 |
+| co2_main         | Emissionen Hauptstandort Batteriestr. (Installation-ID: 760)  |
+| co2_north        | Emissionen Reserveheizwerk Nord (Installation-ID: 733)        |
+| co2_south        | Emissionen Reserveheizwerk Süd (Installation-ID: 734)         |
+| co2_engelsby     | Emissionen Reserveheizwerk Engelsby (Installation-ID: 736)    |
+| co2_gluecksburg  | Emissionen Reserveheizwerk Glücksburg (Installation-ID: 716)  |
+| foc_main         | Gratis-Zertifikate für Hauptstandort                          |
+| foc_north        | Gratis-Zertifikate für Reserveheizwerk Nord                   |
+| foc_south        | Gratis-Zertifikate für Reserveheizwerk Süd                    |
+| foc_engelsby     | Gratis-Zertifikate für Reserveheizwerk Engelsby               |
+| foc_gluecksburg  | Gratis-Zertifikate für Reserveheizwerk Glücksburg             |
 
 ## `swfl_mix_electricity.csv`
 

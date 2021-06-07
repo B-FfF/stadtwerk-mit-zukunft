@@ -47,7 +47,9 @@
     if (startYear < swflDataStartYear) {
       throw RangeError("Cannot generate Path starting " + startYear + ", as earliest available year in data series is " + swflDataStartYear);
     }
-    let startValue = parseInt(swflData[startYear - swflDataStartYear].co2);
+    let startValue = parseInt(swflData[startYear - swflDataStartYear].co2_main) 
+        + parseInt(swflData[startYear - swflDataStartYear].co2_north) + parseInt(swflData[startYear - swflDataStartYear].co2_south) 
+        + parseInt(swflData[startYear - swflDataStartYear].co2_engelsby) + parseInt(swflData[startYear - swflDataStartYear].co2_gluecksburg);
     let returnArray = [startValue];
     let divisor = GC_END_YEAR - startYear;
     for (startYear++; startYear <= stopYear; startYear++) {
@@ -64,9 +66,29 @@
     return returnArray;
   }
 
+  var emissionsDataCache;
   function getSeries(startYear) {
-    return smz.fn.extractColumn(swflData, "co2", startYear);
+    if (emissionsDataCache === undefined) {
+      emissionsDataCache = {
+        main: smz.fn.extractColumn(swflData, "co2_main"),
+        north: smz.fn.extractColumn(swflData, "co2_north"),
+        south: smz.fn.extractColumn(swflData, "co2_south"),
+        engelsby: smz.fn.extractColumn(swflData, "co2_engelsby"),
+        gluecksburg: smz.fn.extractColumn(swflData, "co2_gluecksburg")
+      }      
+    }
+    
+    return emissionsDataCache.main.slice(startYear - swflDataStartYear).map(function(value, idx) {
+      return value + emissionsDataCache.north[idx]
+          + emissionsDataCache.south[idx] + emissionsDataCache.engelsby[idx]
+          + emissionsDataCache.gluecksburg[idx];
+    });
   }
+
+  function getSeriesOld(startYear) {
+    return smz.fn.extractColumn(swflData, "co2_main", startYear);
+  }
+
 
   function getConsumedBudgetSeries(greenconceptPath, consumedBudget) {
     var sinkRate = greenconceptPath[0] - greenconceptPath[1];
@@ -366,9 +388,11 @@
 
   function drawCertificatePriceChart() {
 
+    var startYear = 2012;
+
     var requiredCertificatesSeries = [],
-        freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_certificates", 2012),
-        emissionsSeries = getSeries(2012),
+        freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_main", startYear),
+        emissionsSeries = getSeries(startYear),
         responsiveRule = hc.defaultOptions.responsive.rules[0];
     
     for (var i in freeOfChargeAllocationsSeries) {
@@ -393,7 +417,7 @@
           pointRange: 365 * 24 * 3600 * 1000,
           pointIntervalUnit: "year",
           pointPadding: 0.1,
-          pointStart: new Date("Jan 2 2012").getTime(),
+          pointStart: new Date("Jan 2 " + startYear).getTime(),
           yAxis: 0,
           zIndex: 0
         }
