@@ -20,8 +20,7 @@ sidebar:
 
 ## Erneuerbare Energien in Flensburg
 
-<figure class="chart">
-  <div id="erneuerbare-energien-in-flensburg-chart"></div>
+<figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
 Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20210531121551/https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2020-04-03_hgp-ee-in-zahlen_bf.pdf)

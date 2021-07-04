@@ -201,7 +201,7 @@
     responsive: {
       rules: [{
         condition: {
-          maxWidth: 500
+          maxWidth: 482
         },
         chartOptions: {
           title: {

@@ -16,13 +16,14 @@ var comparisonConfig = {
     data: [14.5, 42.1],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
-    name: "Kreis Schleswig-Flensburg",
-    data: [null, 110],
     color: smz.gradient[2],
+    data: [null, 110],
     dataLabels: {
       align: "right",
       inside: true
-    }
+    },
+    id: "slfl",
+    name: "Kreis Schleswig-Flensburg",
   }],
   plotOptions: {
     bar: {
@@ -58,7 +59,7 @@ var comparisonConfig = {
   responsive: {
     rules: [{
       condition: {
-        maxWidth: 500
+        maxWidth: 482   // exactly "narrower"-breakpoint incl. sidebar
       },
       chartOptions: {
         xAxis: {
@@ -77,6 +78,14 @@ var comparisonConfig = {
             }
           }
         },
+        series: [
+          {},{},{
+            id: "slfl",
+            dataLabels: {
+              align: "left"
+            }
+          }
+        ],
         xAxis: {
           labels: {
             style: {
