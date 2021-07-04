@@ -2047,4 +2047,33 @@
 				}
 			}
 
+			#content .row > figure {
+				min-height: 90%;
+			}
+
+			#content figure {
+				.row > & {
+					min-height: 314px;
+				}
+			}
 	}
+
+
+
+#co2-emissionen-der-stadtwerke-flensburg {
+	padding-top: 18px;	
+	min-height: 380px;
+
+	@include breakpoint('<=mobile') {
+		min-height: 312px;
+	}
+}
+
+#co2-emissionen-der-stadtwerke-flensburg-bis-2030,
+#diagramm-klimaschaedlichkeit-methan {
+	height: 60vh;
+
+	@include breakpoint('<=narrower') {
+		height: 100%;
+	}
+}

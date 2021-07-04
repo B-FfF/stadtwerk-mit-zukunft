@@ -68,7 +68,7 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<s
 
 <div class="row">
 <div class="col-7 col-12-wide">
-    <div id="co2-emissionen-der-stadtwerke-flensburg" style="padding-top: 18px; min-height: 380px"></div>
+    <div id="co2-emissionen-der-stadtwerke-flensburg"></div>
 </div>
   <div class="col-5 col-12-wide">
     <p>
@@ -84,7 +84,7 @@ Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][
 Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ + 97 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO<sub>2</sub>][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
 <figure class=chart>
-    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030" style="height: 60vh"></div>
+    <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
     <div id="play-controls" class="row">
       <div class="col-7"><input id="play-range" type="range" value="23" min="0" max="23"></div>
       <div class="col-4"><button id="play-pause-button" class="fa fa-play" title="play"></button></div>
@@ -100,8 +100,7 @@ Methan ist der Hauptbestandteil von Erdgas und -- über den Zeitraum von 100 Jah
 Bei Abbau, Transport und Lagerung entweichen [laut Aussage der IEA][iea-slip] 1,7 % der weltweit geförderten Erdgasmenge in die Atmosphäre -- der so genannte **„Methanschlupf“**. [Diverse Studien][slip-comparison] kommen auf höhere Werte -- besonders wenn das Erdgas per Fracking gewonnen wurde: dabei wird von einem Methanschlupf bis zu 5,8 % ausgegangen.  
 So steigt mit zunehmendem Einsatz von importiertem Erdgas der Effekt auf den Klimawandel, wie in der folgenden Grafik in CO<sub>2</sub>-Äquivalenten umgerechnet dargestellt[^1]:
 
-<figure class=chart>
-    <div id="diagramm-klimaschaedlichkeit-methan" style="height: 60vh"></div>
+<figure class=chart id="diagramm-klimaschaedlichkeit-methan">
 </figure>
 
 ## Wirtschaftliche Belastung durch CO<sub>2</sub>-Emissionen
