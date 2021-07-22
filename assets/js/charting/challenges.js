@@ -79,6 +79,7 @@
     }
     
     return emissionsDataCache.main.slice(startYear - swflDataStartYear).map(function(value, idx) {
+      idx += (startYear - swflDataStartYear);
       return value + emissionsDataCache.north[idx]
           + emissionsDataCache.south[idx] + emissionsDataCache.engelsby[idx]
           + emissionsDataCache.gluecksburg[idx];
