@@ -284,6 +284,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
           }
         },
         line: {
+          pointStart: 2000,
           tooltip: {
             valueSuffix: ' %'
           }
@@ -332,6 +333,17 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit > 5 Jahre",
         data: mirror(data.creditLiabilitiesLong),
         stack: "debt"
+      },{
+        color: smz.gradient[11],
+        data: data.equity.map(function(equityCapital, i) {
+          var totalCapital = equityCapital + data.provision[i] + data.creditLiabilities[i] + data.otherLiabilities[i];
+          return Math.round(equityCapital * 100/ totalCapital, 2);
+        }),
+        name: 'Eigenkapitalquote',
+        shadow: smz.chart.getBoldLineShadow(),
+        type: 'line',
+        visible: false,
+        yAxis: 2
       },{
         type: 'line',
         name: "Verschuldungsquote",
@@ -394,6 +406,21 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         max: 225,
         min: 0,
         reversed: true
+      }, {
+        startOnTick: false,
+        endOnTick: false,
+        max: 100,
+        min: -125,
+        labels: {
+          format: '{value} %',
+          style: {
+            color: smz.color.swfl.darkGreen,
+          }
+        },
+        opposite: true,
+        title: {
+          text: "Eigenkapitalquote"
+        },
       }]
     }
     
