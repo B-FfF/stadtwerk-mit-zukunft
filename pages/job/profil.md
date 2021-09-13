@@ -6,6 +6,7 @@ title: Geschäftsführer*in (m/w/d)
 caption: >-
   Nicht jede*r ist aus dem nötigen Holz geschnitzt. Wir hoffen, dass Sie es sind oder einen Menschen kennen, der es ist! Erhalten Sie hier einen Überblick über das Anforderungsprofil der höchstdotierten Stelle Flensburgs.
 description: Neue Geschäftsleitung für die Stadtwerke Flensburg gesucht!
+noindex: true
 ---
 
 ## Hallo, sind Sie unser neuer [Prinz\*][prinz]?
