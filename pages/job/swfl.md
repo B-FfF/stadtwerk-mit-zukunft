@@ -125,7 +125,8 @@ sidebar:
   </figure>
   <blockquote class="col-6 col-12-wide">
     <p>
-      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider Angaben zu Flugbewegungen.
+      Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten der Stadtwerke</a> leider die Angaben zu Flugbewegungen.<br><br>
+      Einige dieser Lücken konnten mit Daten aus der <a href="https://web.archive.org/web/20211123194334/https://www.flensburger-flughafen.de/images/pdf/Flugbewegungen_2009_2018.pdf">Übersicht</a> sowie den <a href="https://web.archive.org/web/20211123194401/https://www.flensburger-flughafen.de/images/pdf/Dokumentation_ffb.pdf">„Entwicklungen und Perspektiven 2021“</a> von der Webseite des Flensburger Flughafens aufgefüllt werden.
     </p>
   </blockquote>
 </div>
