@@ -155,7 +155,17 @@ var comparisonConfig = {
       },
       itemHoverStyle: {
         cursor: "default"
-      }
+      },
+      labelFormatter: function () {
+        var tooltip;
+        if (this.index === 5) {
+          return '<span title="Ab 2020 Wert aus „Residual Mix“, &#13;da nicht mehr separat im Unternehmensmix ausgewiesen" ' 
+            + 'style="cursor: pointer">' + this.name + '</span>';
+        }
+
+        return '<span>' + this.name + '</span>';
+      },
+      useHTML: true,
     },
     plotOptions: {
       area: {
@@ -201,7 +211,7 @@ var comparisonConfig = {
       color: smz.color.swfl.darkGreen,
       data: powerData.renewables_eeg,
       legendIndex: 5,
-      name: "Erneuerbare Energien, über EEG-Umlage finanziert",
+      name: "Erneuerbare Energien, über EEG-Umlage finanziert *",
       visible: false
     }],
     tooltip: {

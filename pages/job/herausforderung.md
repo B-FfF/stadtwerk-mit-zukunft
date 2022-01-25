@@ -44,7 +44,7 @@ Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der
   </figure>
   <div class="col-4 col-12-wide">
     <p>
-Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden<sup><a href="#fn:2">1</a></sup>. So zeigt sich, dass der Anteil erneuerbarer Energien zuletzt nur knapp über 10 Prozent lag und damit einen historischen Tiefststand erreicht hat.
+Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlich vorgeschriebenen Veröffentlichung, der so genannten „Stromkennzeichnung“. Um ein Bild des tatsächlichen Strommixes zu erhalten, muss der Anteil der EEG-Umlage herausgerechnet werden<sup><a href="#fn:2">1</a></sup> – was seit 2020 auch der gesetzlichen Vorgabe entspricht.
     </p>
   </div>
 </div>
@@ -124,9 +124,9 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
 [^2]:
     **Stromkennzeichnung Stadtwerke Flensburg**
 
-    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019]
+    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019] | [2020][Mix-2020]
 
-    Der EEG-Anteil wurde in der Darstellung des Strommixes ausgeblendet, er besitzt zur Ermittlung der tatsächlichen Nutzung erneuerbarer Energien keine Aussagekraft. Dieses begründet sich in der [Zusammensetzung des Strompreises](https://strom-report.de/medien/strompreiszusammensetzung-2019.png) – der Anteil der EEG-Umlage, der von der Kundschaft gezahlt und vom Energieversorger direkt an den Netzbetreiber weitergeleitet wird, wird in der Stromkennzeichnung entsprechend dargestellt. Deswegen betrug im Jahr 2019 (wie der Stromversorger [Lichtblick schreibt](https://web.archive.org/web/20210531224339/https://www.lichtblick.de/oekostrom/stromkennzeichnung)) »bei vielen Versorgern fast 60 %, auch wenn die Versorger diesen Strom gar nicht kaufen oder an den Kunden verkaufen.« – .
+    Der EEG-Anteil wird in unserer Darstellung des Strommixes ausgeblendet, denn er besitzt zur Ermittlung der tatsächlichen Nutzung erneuerbarer Energien keine Aussagekraft. Dieses begründet sich in der [Zusammensetzung des Strompreises](https://strom-report.de/medien/strompreiszusammensetzung-2019.png). Der Anteil der EEG-Umlage, der von der Kundschaft gezahlt und vom Energieversorger direkt an den Netzbetreiber weitergeleitet wird, wurde bis 2019 in der Stromkennzeichnung entsprechend dargestellt. Er betrug z.B. im Jahr 2019 (wie der Stromversorger [Lichtblick schreibt](https://web.archive.org/web/20210531224339/https://www.lichtblick.de/oekostrom/stromkennzeichnung)) »bei vielen Versorgern fast 60 %, auch wenn die Versorger diesen Strom gar nicht kaufen oder an den Kunden verkaufen.« – .
 
 [^3]:
     **Zusammensetzung Fernwärme**
@@ -170,6 +170,7 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
   [Mix-2017]: https://web.archive.org/web/20210531113911/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-SWFL-2017.pdf
   [Mix-2018]: https://web.archive.org/web/20210531121206/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2018.pdf
   [Mix-2019]: https://web.archive.org/web/20210531114224/https://www.swfl.de/fileadmin/user_upload/Strommix-SWFL-2019.pdf
+  [Mix-2020]: https://web.archive.org/web/20211223110557/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/Strommix-SWFL.pdf
 
 
 <script>
