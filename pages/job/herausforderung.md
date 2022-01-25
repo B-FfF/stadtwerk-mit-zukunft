@@ -27,7 +27,7 @@ Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://we
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
-<figure class="image left" style="min-height: calc(55vw * (447/800)); max-height: 447px">
+<figure class="image left" id="flensburg-insel-ee">
   <img src="{{ "assets/images/flensburg-insel-erneuerbare-energien-new-4.0.png" | relative_url }}">
   <figcaption>
     Quelle: EKSH – <a href="https://web.archive.org/web/20210531123425/https://dokumente.stadtwerk-mit-zukunft.de/studien/2018-3%20Broschuere_Energieforschung_EKSH.pdf">„Energieforschung in Schleswig-Holstein“</a> S.23

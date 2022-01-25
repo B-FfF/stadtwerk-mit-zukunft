@@ -2065,3 +2065,25 @@
 		height: 100%;
 	}
 }
+
+.row > #content figure#flensburg-insel-ee {
+
+	@include breakpoint('<=wide') {
+		&.left {
+			margin: 0 1em 1em 0;
+ 		}
+	}
+
+	min-height: 451.05px;
+	width: 850px;
+	@include breakpoint('<=wide') {
+		min-height: 400px;
+		width: initial;
+	}
+
+
+	@include breakpoint('<=normal') {
+	 	min-height: calc(55vw * (447/800));
+		max-height: 447px;
+	}
+}
