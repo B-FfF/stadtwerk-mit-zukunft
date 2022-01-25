@@ -112,10 +112,10 @@
 
 	body {
 		background: #f0f4f4;
-		color: #222222;
-		font-size: 15pt;
-		line-height: 1.85em;
-		font-family: 'Source Sans Pro', sans-serif;
+		color: #424242;
+		font-size: 18px;
+		line-height: 1.8;
+		font-family: 'Source Sans Pro', sans-serif;		
 		font-weight: 300;
 
 		// Stops initial animations until page loads.
@@ -267,7 +267,7 @@
 	}
 
 	p {
-		text-align: justify;
+		text-align: left;
 	}
 
 	br.clear {
@@ -1516,7 +1516,6 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 14pt;
 				line-height: 1.75em;
 			}
 
@@ -1544,7 +1543,7 @@
 		/* Basic */
 		body, input, textarea, select {
 			font-size: 12pt;
-			line-height: 1.5em;
+			line-height: 1.65;
 		}
 
 		.homepage {
@@ -1593,11 +1592,6 @@
 	@include breakpoint('<=narrower') {
 
 		/* Basic */
-
-			body, input, textarea, select {
-				// font-size: 13pt;
-				line-height: 1.65em;
-			}
 
 			.tweet {
 				text-align: center;
@@ -1656,11 +1650,6 @@
 			html, body {
 				overflow-x: hidden;
 				font-weight: 400;
-			}
-
-			body, input, textarea, select {
-				font-size: 12.5pt;
-				line-height: 1.5em;
 			}
 
 			h2 {
