@@ -142,7 +142,7 @@
   hc.setOptions({
     chart: {
       style: {
-        fontFamily: 'Source Sans Pro',
+        fontFamily: '"Open Sans", arial, sans-serif',
         fontSize: "1em"
       },
       spacingLeft: 0,
