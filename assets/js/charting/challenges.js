@@ -392,12 +392,26 @@
     var startYear = 2012;
 
     var requiredCertificatesSeries = [],
-        freeOfChargeAllocationsSeries = smz.fn.extractColumn(swflData, "foc_main", startYear),
+        freeOfChargeAllocationsTotal = [],
+        freeOfChargeAllocationsMain = smz.fn.extractColumn(swflData, "foc_main", startYear),
+        freeOfChargeAllocationsNorth = smz.fn.extractColumn(swflData, "foc_north", startYear),
+        freeOfChargeAllocationsSouth = smz.fn.extractColumn(swflData, "foc_south", startYear),
+        freeOfChargeAllocationsEngelsby = smz.fn.extractColumn(swflData, "foc_engelsby", startYear),
+        freeOfChargeAllocationsGluecksburg = smz.fn.extractColumn(swflData, "foc_gluecksburg", startYear),
         emissionsSeries = getSeries(startYear),
         responsiveRule = hc.defaultOptions.responsive.rules[0];
     
-    for (var i in freeOfChargeAllocationsSeries) {
-      requiredCertificatesSeries.push(emissionsSeries[i] - freeOfChargeAllocationsSeries[i]);
+    for (var i in freeOfChargeAllocationsMain) {
+      var currentFreeOfChargeSum = freeOfChargeAllocationsMain[i]
+          + freeOfChargeAllocationsNorth[i]
+          + freeOfChargeAllocationsSouth[i]
+          + freeOfChargeAllocationsEngelsby[i]
+          + freeOfChargeAllocationsGluecksburg[i];
+      
+      freeOfChargeAllocationsTotal.push(currentFreeOfChargeSum);
+      requiredCertificatesSeries.push(
+        emissionsSeries[i] - currentFreeOfChargeSum
+      );
     }
 
     responsiveRule.chartOptions.xAxis.minPadding = 0.06;
@@ -467,7 +481,7 @@
       series: [{  // 0
         type: "column",
         name: "Gratis-Zertifikate",
-        data: freeOfChargeAllocationsSeries,
+        data: freeOfChargeAllocationsTotal,
         stack: 0,
         color: hc.defaultOptions.colors[2],
         yAxis: 0
