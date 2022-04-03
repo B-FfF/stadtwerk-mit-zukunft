@@ -127,7 +127,7 @@
 
   var greenconceptPath = getGreenconceptPath(startYear);
   var emissionSeries = getSeries(startYear);
-  var shouldIs = getOvershootRangeSeries(startYear, 2020, greenconceptPath, emissionSeries);
+  var shouldIs = getOvershootRangeSeries(startYear, 2021, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
     tooltip: {
       valueSuffix: ' t',
@@ -194,7 +194,7 @@
       zIndex: 1,
       zoneAxis: 'x',
       zones: [{
-        value: 2020
+        value: 2021
       },{
         dashStyle: "Dot"
       }]
@@ -224,7 +224,7 @@
 
   function drawEmissionsChart() {
     var template = Object.assign({}, emissionsChartTemplate);
-    template.xAxis.max = 2020.5;
+    template.xAxis.max = 2021.5;
     template.credits = {
       enabled: true,
       text: "Quelle: EU ETS",
@@ -258,7 +258,7 @@
     template.yAxis.min = 0;
     template.yAxis.max = 700000;
     template.series[1].animation = animation;
-    template.series[1].data = template.series[1].data.concat([520000, 520000, 400000, 400000, 400000, 400000, 400000, 400000, 400000, 400000]);
+    template.series[1].data = template.series[1].data.concat([500000, 420000, 420000, 420000, 420000, 420000, 420000, 420000, 420000]);
     shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[1].data);
     var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[ shouldIs.accumulated.length - 1]);
     var motionData = [
