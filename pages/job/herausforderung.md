@@ -23,7 +23,7 @@ sidebar:
 <figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
-Stand 2019, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20210531121551/https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/2020-04-03_hgp-ee-in-zahlen_bf.pdf)
+Stand 2020, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20220717205944/https://www.umweltbundesamt.de/sites/default/files/medien/372/bilder/anteil_ee_in_den_sektoren_03-2022.png)
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 

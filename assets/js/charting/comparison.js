@@ -9,11 +9,11 @@ var comparisonConfig = {
   },
   series: [{
     name: "Flensburg",
-    data: [4.21, 10.3],
+    data: [1.78, 16],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
-    data: [14.5, 42.1],
+    data: [15.3, 45.2],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     color: smz.gradient[2],
@@ -42,7 +42,7 @@ var comparisonConfig = {
             output = '<span style="font-weight: normal">';
           }
           if (this.key === "Wärme" && this.series.name === "Flensburg") {
-            return output + this.series.name + ": < 5 %";
+            return output + this.series.name + ": < 3 %";
           }
           if (this.key === "Strom" && this.series.name === "Kreis Schleswig-Flensburg") {
             return output + this.series.name + ": > 100 %";
