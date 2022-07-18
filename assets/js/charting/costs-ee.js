@@ -40,12 +40,16 @@
         'PV Dach klein (Norddt.)',
         'Wind Offshore',
         'Erdgas GuD',
-        'Biogas',   // mit Kraft-Wärme-Kopplung
+        'Biogas<br>(mit Kraft-Wärme-Kopplung)',   // mit Kraft-Wärme-Kopplung
         'Steinkohle'
       ],
       labels: {
         style: {
-          fontSize: "1.5em"
+          textAlign: 'center',
+          padding: '0.5em',
+          fontSize: "1em",
+          color: "black",
+          fontWeight: "bold"
         }
       }
     },
