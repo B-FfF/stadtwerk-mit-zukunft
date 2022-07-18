@@ -176,6 +176,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 |------|------|------|------|------|------|------|------|------|------|
 |[2001]&nbsp;|[2002]&nbsp;|[2003]&nbsp;|[2004]&nbsp;|[2005]&nbsp;|[2006]&nbsp;|[2007]&nbsp;|[2008]&nbsp;|[2009]&nbsp;|[2010]
 |[2011]&nbsp;|[2012]&nbsp;|[2013]&nbsp;|[2014]&nbsp;|[2015]&nbsp;|[2016]&nbsp;|[2017]&nbsp;|[2018]&nbsp;|[2019]&nbsp;|[2020]
+|[2021]
 
 
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
@@ -185,6 +186,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
   [introducing-render]: https://web.archive.org/web/20210116150455/https://www.stadtwerke-flensburg.de/unternehmen/news/news/matthias-wolfskeil-stellt-kollegen-beim-4-flensburger-energieforum-vor-maik-render-technischer-ges/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ea5d1578dbc441a4eebad8b47d3a65cc
   [wolfskeil-nicht-entlastet]: https://www.shz.de/lokales/flensburger-tageblatt/keine-entlastung-fuer-den-ex-chef-id175722.html
 
+  [2021]: https://web.archive.org/web/20220718014352/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/geschaeftsberichte/2021/stadtwerke-flensburg-geschaeftsbericht-2021.pdf
   [2020]: https://web.archive.org/web/20210606222751/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2020.pdf
   [2019]: https://web.archive.org/web/20210606222714/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2019.pdf
   [2018]: https://web.archive.org/web/20210129195231/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2018.pdf

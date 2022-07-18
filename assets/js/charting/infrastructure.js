@@ -8,7 +8,7 @@
     },
   });
 
-  var missingYears = [2003, 2006, 2018, 2019, 2020];
+  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021];
 
   function drawPowerChart() {
 
@@ -248,7 +248,7 @@
       }],
       xAxis: {
         min: 2003,
-        max: 2020,
+        max: 2021,
         missing: missingYears
       },
       yAxis: [{
