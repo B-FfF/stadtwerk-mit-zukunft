@@ -4,7 +4,7 @@
     flight_ops: smz.fn.extractColumn(airportData, "flight_ops_total")
   };
 
-  var missingYears = [2002, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019];
+  var missingYears = [2002, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020, 2021];
 
   var airportChartConfig = {
     chart: {
