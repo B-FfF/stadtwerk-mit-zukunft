@@ -87,7 +87,7 @@ Hinweis: Flugbewegungen sind Starts und Landungen (das Statistische Bundesamt z�
 
 ## `swfl_emissions.csv`
 
-Fossile CO₂-Emissionen und Gratis-Zertifikate laut EU ETS
+Fossile CO₂-Emissionen und Gratis-Zertifikate laut EU ETS (in Tonnen)
 
 |   |  |  |
 |:--|--|--|
@@ -102,6 +102,7 @@ Fossile CO₂-Emissionen und Gratis-Zertifikate laut EU ETS
 | foc_south        | Gratis-Zertifikate für Reserveheizwerk Süd                    |
 | foc_engelsby     | Gratis-Zertifikate für Reserveheizwerk Engelsby               |
 | foc_gluecksburg  | Gratis-Zertifikate für Reserveheizwerk Glücksburg             |
+| total_eua_cost   | Aufwendungen für Emissionsrechte in € (lt. Geschäftsbericht)  |
 
 ## `swfl_mix_electricity.csv`
 
