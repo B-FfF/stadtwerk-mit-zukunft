@@ -111,7 +111,11 @@ Im EU Emissions Trading System (ETS) ist vorgeschrieben, dass Verursacher von CO
     <div id="entwicklung-co2-zertifikatspreise"></div>
 </figure>
 
-Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird der CO<sub>2</sub>-Ausstoß beim momentanen Plan auch langfristig jenseits von 400.000 Tonnen liegen. Schon ab einem Emissionsrechtepreis ab 50 € entstehen **Mehrkosten von über 10 Mio € für die Stadtwerke Flensburg** (verglichen mit durchschnittlich 25 € in den Vorjahren). Diese Summe entspricht dem gesamten Jahresgewinn von 2019. Die weitere Finanzierung des kommunalen Haushalts über die jährliche Gewinnabführung ist nun gefährdet, außer die Stadtwerke erhöhen ihre Preise deutlich.
+Dementsprechend sind die Aufwendungen für Emissionsrechte in den letzten Jahren sprunghaft gestiegen:
+
+<figure class=chart id="aufwendungen-fuer-emissionsrechte"></figure>
+
+Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des Fernwärmepreises aus. Die jährliche Gewinnabführung an den kommunalen Haushalt musste 2021 ausgesetzt werden, und die Stadtwerke die größte Preiserhöhung der letzten 20 Jahre vornehmen. Es gäbe also kaum etwas wirtschaftlicheres, als die CO<sub>2</sub>-Emissionen zu verringern.
 
 [^1]: 
     **Annahmen Methanberechnung**
@@ -204,3 +208,4 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/comparison.js" | relative_url }}"></script>
+<script src="{{ "assets/js/charting/emissions-cost.js" | relative_url }}"></script>
