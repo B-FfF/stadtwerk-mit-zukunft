@@ -80,7 +80,7 @@
 
 |   |  |  |
 |:--|--|--|
-| flight_ops_total  | Flugbewegungen                       | 1.000   |
+| flight_ops_total  | Flugbewegungen                       | 1.000 |
 | commercial        | davon gewerblich (inkl. Werkverkehr) | 1.000 |
 
 Hinweis: Flugbewegungen sind Starts und Landungen (das Statistische Bundesamt zählt nur Starts).
