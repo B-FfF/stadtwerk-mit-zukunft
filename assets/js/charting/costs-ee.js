@@ -14,11 +14,11 @@
           '#ff0',
           Highcharts.defaultOptions.colors[0],
           '#ff0',
-          Highcharts.defaultOptions.colors[1],
-          '#f00',
-          '#003399',
           '#ff0',
+          '#003399',
+          '#f00',
           Highcharts.defaultOptions.colors[2],
+          Highcharts.defaultOptions.colors[1]
         ]
       }
     },
@@ -37,11 +37,11 @@
         'PV frei (Norddt.)',
         'Wind Onshore',
         'PV Dach ab 70m² (Norddt.)',
-        'Steinkohle',
-        'Erdgas GuD',
-        'Wind Offshore',
         'PV Dach klein (Norddt.)',
-        'Biogas'
+        'Wind Offshore',
+        'Erdgas GuD',
+        'Biogas',   // mit Kraft-Wärme-Kopplung
+        'Steinkohle'
       ],
       labels: {
         style: {
@@ -67,14 +67,14 @@
     series: [{
       name: 'Stromgestehungskosten',
       data: [
-        [5.08, 6.77],
-        [4.0, 8.2], // geschätzt
-        [6.77, 8.46],
-        [6.3, 9.8],   // geschätzt
-        [7.8, 10],    // geschätzt
-        [7.5, 13.75], // geschätzt
-        [9.89, 11.54], 
-        [10.2, 14.75], // geschätzt
+        [4.27, 5.7],
+        [3.94, 8.29],
+        [6.34, 9.78],
+        [7.96, 11.01], 
+        [7.23, 12.13],
+        [7.79, 13.06],
+        [8.45, 17.26],
+        [11.03, 20.04]
       ],
       showInLegend: false
     }]
