@@ -157,7 +157,11 @@
     },
     plotOptions: {
       series: {
-        animation: true
+        animation: true,
+        label: {
+          minFontSize: 8,
+          maxFontSize: 20,
+        },
       },
       arearange: {
         fillColor: {
@@ -203,13 +207,19 @@
         condition: {
           maxWidth: 482
         },
-        chartOptions: {
+      chartOptions: {
           title: {
             y: 4
           },
           chart: {
             marginTop: 14,
             height: '90%'
+          },
+          plotOptions: {
+            dataLabels: { enabled: false },
+            area: { dataLabels: { enabled: false } },
+            column: { dataLabels: { enabled: false } },
+            series: { label: { enabled: false } },
           },
           legend: {
             align: 'center',

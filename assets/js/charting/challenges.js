@@ -427,6 +427,10 @@
             footerFormat: '</table>',
             xDateFormat: "%Y",
           },
+          dataLabels: {
+            enabled: true,
+            formatter: function() { return hc.numberFormat(this.y / 1000, 0) + "k"}
+          },
           groupPadding: 0,
           pointPlacement: "between",
           pointRange: 365 * 24 * 3600 * 1000,
@@ -435,6 +439,12 @@
           pointStart: new Date("Jan 2 " + startYear).getTime(),
           yAxis: 0,
           zIndex: 0
+        },
+        line: {
+          label: {
+            enabled: true,
+            onArea: false
+          },
         }
       },
       responsive: {
@@ -442,7 +452,12 @@
       },
       tooltip: {
         shared: true,
-        useHTML: true
+        useHTML: true,
+        shadow: false,
+        backgroundColor: 'white',
+        style: {
+          opacity: 1
+        }
       },
       xAxis: {
         type: 'datetime',

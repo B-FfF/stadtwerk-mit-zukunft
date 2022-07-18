@@ -179,8 +179,26 @@ var comparisonConfig = {
               return false;
             }
           }
-        }
-      }
+        },
+        label: {
+          formatter: function() {
+            // Applying some em-space hacks to force spacing (otherwise collides with dataLabels)
+            if (this.userOptions.legendIndex === 0) return "<span>Kern-<br>Energie </span>"
+            if (this.userOptions.legendIndex === 3) return "<span> <br>Erneuerbare Energien </span>"
+            if (this.userOptions.legendIndex === 4) return "<span> Braun- & Steinkohle </span>"
+            return ' ' + this.userOptions.name + ' '
+          },
+        },
+        dataLabels: {
+          enabled: true,
+          formatter: function(e, f) {
+            this.y = this.y-10
+            if (this.series.name === 'Sonstige fossile Energieträger') return   // too narrow to display this
+            return hc.numberFormat(this.percentage, 0 ) + ' %'
+          },
+          verticalAlign: 'top',
+        },        
+      },
     },
     series: [{
       color: hc.defaultOptions.colors[6],
@@ -265,6 +283,15 @@ var comparisonConfig = {
         pointStart: 2016,
       },
       area: {
+        dataLabels: { 
+          enabled: true,
+          formatter: function(e, f) {
+            this.y = this.y-10
+            if (!['Steinkohle', 'Erdgas'].includes(this.series.name)) return   // too narrow to the others
+            return hc.numberFormat(this.percentage, 0 ) + ' %'
+          },
+          verticalAlign: 'top',
+        },
         pointStart: 2016,
         stacking: "percent"
       }

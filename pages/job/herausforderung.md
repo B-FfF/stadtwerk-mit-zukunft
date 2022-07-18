@@ -199,6 +199,7 @@ Wie [weiter oben](#unzureichende-emissionsreduktion-kessel-13) erläutert, wird 
 <script src="{{ "assets/js/lib/highcharts-9.3.2/highcharts-more.js" | relative_url }}"></script>
 <script src="{{ "assets/js/lib/highcharts-9.3.2/pattern-fill.js" | relative_url }}"></script>
 <script src="{{ "assets/js/lib/highcharts-9.3.2/broken-axis.js" | relative_url }}"></script>
+<script src="{{ "assets/js/lib/highcharts-9.3.2/series-label.js" | relative_url }}"></script>
 
 <script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
 <script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
