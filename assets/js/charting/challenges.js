@@ -7,10 +7,10 @@
   var GC_END_YEAR = 2050;
 
   var swflDataStartYear = swflData[0].year;
-
+  
   function getOvershootRangeSeries(startYear, stopYear, shouldSeries, isSeries) {
     var should = shouldSeries || getGreenconceptPath(startYear, stopYear);
-    var is = isSeries || getSeries(startYear);
+    var is = isSeries || getEmissionsDataSeries(swflData, startYear);
 
     var range = [], overshoot = [], accumulatedOvershoot = [];
     var accumulated = 0;
@@ -66,31 +66,6 @@
     return returnArray;
   }
 
-  var emissionsDataCache;
-  function getSeries(startYear) {
-    if (emissionsDataCache === undefined) {
-      emissionsDataCache = {
-        main: smz.fn.extractColumn(swflData, "co2_main"),
-        north: smz.fn.extractColumn(swflData, "co2_north"),
-        south: smz.fn.extractColumn(swflData, "co2_south"),
-        engelsby: smz.fn.extractColumn(swflData, "co2_engelsby"),
-        gluecksburg: smz.fn.extractColumn(swflData, "co2_gluecksburg")
-      }      
-    }
-    
-    return emissionsDataCache.main.slice(startYear - swflDataStartYear).map(function(value, idx) {
-      idx += (startYear - swflDataStartYear);
-      return value + emissionsDataCache.north[idx]
-          + emissionsDataCache.south[idx] + emissionsDataCache.engelsby[idx]
-          + emissionsDataCache.gluecksburg[idx];
-    });
-  }
-
-  function getSeriesOld(startYear) {
-    return smz.fn.extractColumn(swflData, "co2_main", startYear);
-  }
-
-
   function getConsumedBudgetSeries(greenconceptPath, consumedBudget) {
     var sinkRate = greenconceptPath[0] - greenconceptPath[1];
     var consumedBudgetSeries = [], accumulatedBudgetSeries = [];
@@ -126,7 +101,7 @@
   }
 
   var greenconceptPath = getGreenconceptPath(startYear);
-  var emissionSeries = getSeries(startYear);
+  var emissionSeries = smz.fn.getEmissionsDataSeries(swflData, startYear);
   var shouldIs = getOvershootRangeSeries(startYear, 2021, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
     tooltip: {
@@ -387,160 +362,6 @@
    update();
   }
 
-  function drawCertificatePriceChart() {
-
-    var startYear = 2012;
-
-    var requiredCertificatesSeries = [],
-        freeOfChargeAllocationsTotal = [],
-        freeOfChargeAllocationsMain = smz.fn.extractColumn(swflData, "foc_main", startYear),
-        freeOfChargeAllocationsNorth = smz.fn.extractColumn(swflData, "foc_north", startYear),
-        freeOfChargeAllocationsSouth = smz.fn.extractColumn(swflData, "foc_south", startYear),
-        freeOfChargeAllocationsEngelsby = smz.fn.extractColumn(swflData, "foc_engelsby", startYear),
-        freeOfChargeAllocationsGluecksburg = smz.fn.extractColumn(swflData, "foc_gluecksburg", startYear),
-        emissionsSeries = getSeries(startYear),
-        responsiveRule = hc.defaultOptions.responsive.rules[0];
-    
-    for (var i in freeOfChargeAllocationsMain) {
-      var currentFreeOfChargeSum = freeOfChargeAllocationsMain[i]
-          + freeOfChargeAllocationsNorth[i]
-          + freeOfChargeAllocationsSouth[i]
-          + freeOfChargeAllocationsEngelsby[i]
-          + freeOfChargeAllocationsGluecksburg[i];
-      
-      freeOfChargeAllocationsTotal.push(currentFreeOfChargeSum);
-      requiredCertificatesSeries.push(
-        emissionsSeries[i] - currentFreeOfChargeSum
-      );
-    }
-
-    responsiveRule.chartOptions.xAxis.minPadding = 0.06;
-    responsiveRule.chartOptions.yAxis[1].offset = 0;
-    return hc.chart("entwicklung-co2-zertifikatspreise", {
-      plotOptions: {
-        column: {
-          stacking: "normal",
-          tooltip: {
-            headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
-            pointFormat: '<tr><td>{series.name}: </td>' +
-            '<td style="color: {series.color}; text-align: right; font-weight: bold">&nbsp;{point.y} t</b></td></tr>',
-            footerFormat: '</table>',
-            xDateFormat: "%Y",
-          },
-          dataLabels: {
-            enabled: true,
-            formatter: function() { return hc.numberFormat(this.y / 1000, 0) + "k"}
-          },
-          groupPadding: 0,
-          pointPlacement: "between",
-          pointRange: 365 * 24 * 3600 * 1000,
-          pointIntervalUnit: "year",
-          pointPadding: 0.1,
-          pointStart: new Date("Jan 2 " + startYear).getTime(),
-          yAxis: 0,
-          zIndex: 0
-        },
-        line: {
-          label: {
-            enabled: true,
-            onArea: false
-          },
-        }
-      },
-      responsive: {
-        rules: [ responsiveRule ]
-      },
-      tooltip: {
-        shared: true,
-        useHTML: true,
-        shadow: false,
-        backgroundColor: 'white',
-        style: {
-          opacity: 1
-        }
-      },
-      xAxis: {
-        type: 'datetime',
-        tickInterval: "year"
-      },
-      yAxis: [{
-        labels: {
-          style: {
-            color: hc.defaultOptions.colors[8]
-          }
-        },
-        title: {
-          text: "Zertifkate-Bedarf der Stadtwerke Flensburg"
-        },
-        min: 0,
-        ceiling: 800000,  // not working with 2 axis' unless using endOnTick
-        max: 800000       // not working with 2 axis'
-      },
-      {
-        labels: {
-          format: '<b>{value} €</b>',
-          style: {
-            color: hc.defaultOptions.colors[7]
-          },
-          y: -2,
-          x: -10
-        },
-        title: {
-          text: "Preis in € pro Tonne CO₂-Emissionsrechte"
-        },
-        offset: -10,
-        opposite: true,
-        min: 0,
-        softMax: 42,
-      }],
-      series: [{  // 0
-        type: "column",
-        name: "Gratis-Zertifikate",
-        data: freeOfChargeAllocationsTotal,
-        stack: 0,
-        color: hc.defaultOptions.colors[2],
-        yAxis: 0
-      },{   // 1
-        type: "column",
-        stack: 0,
-        name: "Benötigte Zertifikate",
-        data: requiredCertificatesSeries,
-        color: hc.defaultOptions.colors[8],
-        yAxis: 0
-      },{
-        gapSize: 40,
-        name: "EU ETS",
-        color: hc.defaultOptions.colors[7],
-        data: window.SWFL.EUA,
-        shadow: {
-          color: "#FFF",
-          width: 4,
-          opacity: 1
-        },
-        tooltip: {
-          valueSuffix: ' €'
-        },
-        zIndex: 1,
-        yAxis: 1
-      },{
-        name: "Prognose Fraunhofer ISE",
-        type: "arearange",
-        data: SWFL.EUE_ISE_forecast,
-        marker: {
-          enabled: false
-        },
-        color: hc.defaultOptions.colors[7],
-        fillColor: {
-          pattern: {
-            color: hc.defaultOptions.colors[3],
-          }
-        },
-        visible: false,
-        yAxis: 1
-      }]
-    })
-  }
-
   function drawMethaneChart() {
     var emissionsSeries = emissionsChartTemplate.series[1].data,
       methaneSeriesStartYear = 2016,
@@ -686,7 +507,6 @@
   var charts = {
     Emissions: drawEmissionsChart,
     Emissions2030: drawEmissionsChart2030,
-    CertificatePrices: drawCertificatePriceChart,
     Methane: drawMethaneChart
   };
   for (var key in charts) {

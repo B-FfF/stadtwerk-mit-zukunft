@@ -1,4 +1,25 @@
 (function (hc) {
+  
+  var emissionsDataCache;
+  function getSeries(data, startYear) {
+    var swflDataStartYear = data[0].year;
+    if (emissionsDataCache === undefined) {
+      emissionsDataCache = {
+        main: smz.fn.extractColumn(data, "co2_main"),
+        north: smz.fn.extractColumn(data, "co2_north"),
+        south: smz.fn.extractColumn(data, "co2_south"),
+        engelsby: smz.fn.extractColumn(data, "co2_engelsby"),
+        gluecksburg: smz.fn.extractColumn(data, "co2_gluecksburg")
+      }      
+    }
+    
+    return emissionsDataCache.main.slice(startYear - swflDataStartYear).map(function(value, idx) {
+      idx += (startYear - swflDataStartYear);
+      return value + emissionsDataCache.north[idx]
+          + emissionsDataCache.south[idx] + emissionsDataCache.engelsby[idx]
+          + emissionsDataCache.gluecksburg[idx];
+    });
+  }
 
   function getGradient(color) {
     return {
@@ -19,7 +40,7 @@
     darkGreen: '#177d35'
   };
 
-  window.smz = {
+  var smz = {
     chart: {
       enableFullscreen: function(chart) {
 
@@ -135,7 +156,8 @@
           }
         }
       },
-      getGradient: getGradient
+      getEmissionsDataSeries: getSeries,
+      getGradient: getGradient,
     }
   }
 
@@ -262,6 +284,8 @@
       }]
     }
   });
+
+  window.smz = smz
 
 })(window.Highcharts)
 
