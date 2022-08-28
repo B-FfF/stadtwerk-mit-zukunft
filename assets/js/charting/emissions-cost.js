@@ -103,6 +103,7 @@
         },
         offset: -10,
         opposite: true,
+        max: 100,        
         min: 0,
         softMax: 42,
       }],
@@ -218,6 +219,7 @@
       opposite: true,
       title: { enabled: false },
     },{
+      max: 100,
       labels: {
         format: '<b>{value} €</b>',
         style: { color: hc.defaultOptions.colors[7] },
