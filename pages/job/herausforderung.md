@@ -23,7 +23,7 @@ sidebar:
 <figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
-Stand 2020, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20220717205944/https://www.umweltbundesamt.de/sites/default/files/medien/372/bilder/anteil_ee_in_den_sektoren_03-2022.png)
+Stand 2021, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20220717205944/https://www.umweltbundesamt.de/sites/default/files/medien/372/bilder/anteil_ee_in_den_sektoren_03-2022.png)
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
@@ -128,7 +128,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
 [^2]:
     **Stromkennzeichnung Stadtwerke Flensburg**
 
-    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019] | [2020][Mix-2020]
+    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019] | [2020][Mix-2020] | [2021][Mix-2021]
 
     Der EEG-Anteil wird in unserer Darstellung des Strommixes ausgeblendet, denn er besitzt zur Ermittlung der tatsächlichen Nutzung erneuerbarer Energien keine Aussagekraft. Dieses begründet sich in der [Zusammensetzung des Strompreises](https://strom-report.de/medien/strompreiszusammensetzung-2019.png). Der Anteil der EEG-Umlage, der von der Kundschaft gezahlt und vom Energieversorger direkt an den Netzbetreiber weitergeleitet wird, wurde bis 2019 in der Stromkennzeichnung entsprechend dargestellt. Er betrug z.B. im Jahr 2019 (wie der Stromversorger [Lichtblick schreibt](https://web.archive.org/web/20210531224339/https://www.lichtblick.de/oekostrom/stromkennzeichnung)) »bei vielen Versorgern fast 60 %, auch wenn die Versorger diesen Strom gar nicht kaufen oder an den Kunden verkaufen.« – .
 
@@ -178,6 +178,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [Mix-2018]: https://web.archive.org/web/20210531121206/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2018.pdf
   [Mix-2019]: https://web.archive.org/web/20210531114224/https://www.swfl.de/fileadmin/user_upload/Strommix-SWFL-2019.pdf
   [Mix-2020]: https://web.archive.org/web/20211223110557/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/Strommix-SWFL.pdf
+  [Mix-2021]: https://web.archive.org/web/20230121124702/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix.pdf
 
 
 <script>

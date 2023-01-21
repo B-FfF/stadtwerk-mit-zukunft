@@ -9,11 +9,11 @@ var comparisonConfig = {
   },
   series: [{
     name: "Flensburg",
-    data: [1.78, 16],
+    data: [1.78, 35.9],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
-    data: [15.3, 45.2],
+    data: [16.5, 41.1],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     color: smz.gradient[2],
@@ -159,7 +159,7 @@ var comparisonConfig = {
       labelFormatter: function () {
         var tooltip;
         if (this.index === 5) {
-          return '<span title="Ab 2020 Wert aus „Residual Mix“, &#13;da nicht mehr separat im Unternehmensmix ausgewiesen" ' 
+          return '<span title="Ab 2020 Wert aus bundesdeutschem Mix, &#13;da nicht mehr separat im Unternehmensmix ausgewiesen" ' 
             + 'style="cursor: pointer">' + this.name + '</span>';
         }
 
