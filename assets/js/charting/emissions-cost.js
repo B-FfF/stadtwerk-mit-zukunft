@@ -68,9 +68,7 @@
         useHTML: true,
         shadow: false,
         backgroundColor: 'white',
-        style: {
-          opacity: 1
-        }
+        style: { opacity: 1 }
       },
       xAxis: {
         type: 'datetime',
@@ -131,24 +129,16 @@
           width: 4,
           opacity: 1
         },
-        tooltip: {
-          valueSuffix: ' €'
-        },
+        tooltip: { valueSuffix: ' €' },
         zIndex: 1,
         yAxis: 1
       },{
         name: "Prognose Fraunhofer ISE",
         type: "arearange",
         data: SWFL.EUE_ISE_forecast,
-        marker: {
-          enabled: false
-        },
+        marker: { enabled: false },
         color: hc.defaultOptions.colors[7],
-        fillColor: {
-          pattern: {
-            color: hc.defaultOptions.colors[3],
-          }
-        },
+        fillColor: { pattern: { color: hc.defaultOptions.colors[3] } },
         visible: false,
         yAxis: 1
       }]
@@ -164,6 +154,13 @@
       pointIntervalUnit: "year",
       pointStart: new Date("Jan 2 " + 2012).getTime(),
       pointPadding: 0.1,
+      tooltip: {
+        headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
+        pointFormat: '<tr><td>{series.name}: </td>' +
+        '<td style="color: {series.color}; text-align: right; font-weight: bold">&nbsp;{point.y} €</b></td></tr>',
+        footerFormat: '</table>',
+        xDateFormat: "%Y",
+      },  
     }},
     series: [{
       color: smz.gradient[8],
@@ -199,19 +196,16 @@
         width: 4,
         opacity: 1
       },
-      tooltip: {
-        valueSuffix: ' €'
-      },
+      tooltip: { valueSuffix: ' €' },
       type: 'line',
       zIndex: 1,
       yAxis: 1
     }],
-    tooltip: { headerFormat: '<strong>{point.key:%Y}</strong><br>', pointFormat: '{point.y:,.0f} €' },
     xAxis: {
       type: 'datetime',
       tickInterval: 'year',
       tickmarkPlacement: 'on'
-    },    
+    },
     yAxis: [{
       labels: { 
         format: '<strong>{value:,.0f} €</strong>',
