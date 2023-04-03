@@ -7,6 +7,7 @@
   var GC_END_YEAR = 2050;
 
   var swflDataStartYear = swflData[0].year;
+  var swflDataEndYear = parseInt(swflData[swflData.length - 1].year)
   
   function getOvershootRangeSeries(startYear, stopYear, shouldSeries, isSeries) {
     var should = shouldSeries || getGreenconceptPath(startYear, stopYear);
@@ -102,7 +103,7 @@
 
   var greenconceptPath = getGreenconceptPath(startYear);
   var emissionSeries = smz.fn.getEmissionsDataSeries(swflData, startYear);
-  var shouldIs = getOvershootRangeSeries(startYear, 2021, greenconceptPath, emissionSeries);
+  var shouldIs = getOvershootRangeSeries(startYear, swflDataEndYear, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
     tooltip: {
       valueSuffix: ' t',
@@ -169,7 +170,7 @@
       zIndex: 1,
       zoneAxis: 'x',
       zones: [{
-        value: 2021
+        value: swflDataEndYear
       },{
         dashStyle: "Dot"
       }]
@@ -199,7 +200,7 @@
 
   function drawEmissionsChart() {
     var template = Object.assign({}, emissionsChartTemplate);
-    template.xAxis.max = 2021.5;
+    template.xAxis.max = swflDataEndYear + .5;
     template.credits = {
       enabled: true,
       text: "Quelle: EU ETS",
