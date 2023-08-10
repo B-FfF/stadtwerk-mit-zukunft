@@ -7,7 +7,7 @@
     },
   });
 
-  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021];
+  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021, 2022];
 
   function drawPowerChart() {
 

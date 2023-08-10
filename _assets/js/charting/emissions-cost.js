@@ -158,24 +158,24 @@
     series: [{
       color: smz.gradient[8],
       data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", 2012)
-              .slice(0, -2) // temporary until definitive cost is available
-              .concat(64 * 500000),
+              .slice(0, -1) // temporary until definitive cost is available
+              .concat(60 * 500000),
       dataLabels: {
         align: 'left',
         inside: true,
         enabled: true,
         formatter: function(e) {
-          if (new Date(this.x).getFullYear() !== 2022) return
-          return 'Prognose (500.000 x 64 €)'
+          if (new Date(this.x).getFullYear() !== 2023) return hc.numberFormat(this.y / 1000000, 1) + " Mio. €"
+          return 'Prognose: 30 Mio. € <br>(500.000 t * 60 €)'
         },
         rotation: -90,
         verticalAlign: 'bottom',
-        y: -16,
+        y: -8,
       },                      
       name: 'Aufwendungen für Emissionrechte',
       zoneAxis: 'x',
       zones: [{
-        value: new Date("Jan 2 " + 2022).getTime(),
+        value: new Date("Jan 2 " + 2023).getTime(),
       },{
         color: hc.defaultOptions.colors[3],
       }]

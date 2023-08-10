@@ -1,6 +1,6 @@
 (function(hc, smz, swflData){
 
-  var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2020);
+  var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, 2022);
 
   var pieChartConfig = {
     chart: {
@@ -9,7 +9,7 @@
       plotShadow: false,
       type: 'pie'
     },
-    title: { text: 'Umsatz nach Produkten (2020)' },
+    title: { text: 'Umsatz nach Produkten (2022)' },
     tooltip: {
       headerFormat: null,
       pointFormat: '{series.name}: <b>{point.percentage:.1f} %</b>',
