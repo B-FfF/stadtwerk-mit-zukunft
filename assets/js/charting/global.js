@@ -287,7 +287,7 @@
 
   window.smz = smz
 
-})(window.Highcharts)
+})(window.Highcharts);
 
 
 if (typeof Object.assign !== 'function') {

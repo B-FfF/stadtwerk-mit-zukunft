@@ -282,4 +282,4 @@
   smz.chart.Power = drawPowerChart();
   smz.chart.PowerGrid = drawPowerGridChart();
 
-})(window.Highcharts, window.smz, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business);

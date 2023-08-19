@@ -153,4 +153,4 @@
   window.smz.chart.PieByProduct = hc.chart('umsatz-nach-produkten', pieChartConfig);
   window.smz.chart.ByProduct = hc.chart('umsatz-nach-produkten-verlauf', salesChart);
 
-})(window.Highcharts, window.smz, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business);

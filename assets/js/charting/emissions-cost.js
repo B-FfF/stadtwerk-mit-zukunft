@@ -230,4 +230,4 @@
   smz.chart.CertificatePrices = hc.chart("entwicklung-co2-zertifikatspreise", certifcatePriceConfig)
   smz.chart.EuaExpenses = hc.chart('aufwendungen-fuer-emissionsrechte', euaCostConfig)
   
-})(window.Highcharts, window.smz, window.SWFL)
+})(window.Highcharts, window.smz, window.SWFL);

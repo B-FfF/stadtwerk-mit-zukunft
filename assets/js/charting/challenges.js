@@ -518,4 +518,4 @@
     }
   }
 
-})(window.Highcharts, window.smz, window.SWFL.Emissions)
+})(window.Highcharts, window.smz, window.SWFL.Emissions);

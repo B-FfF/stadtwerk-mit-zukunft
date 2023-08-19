@@ -467,4 +467,4 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
   smz.chart.Capital = drawCapitalChart();
   smz.chart.Dividend = hc.chart('gewinnabfuehrung-stadt', dividendChart);
 
-})(window.Highcharts, window.smz, window.SWFL.Business)
+})(window.Highcharts, window.smz, window.SWFL.Business);
