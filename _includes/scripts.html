@@ -1,8 +1,11 @@
 <!-- Scripts -->
-<script src="{{ "assets/js/lib/jquery-3.4.1.min.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/jquery.dropotron-1.4.3.min.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/browser-1.0.min.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/breakpoints-1.0.min.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/util.js" | relative_url }}"></script>
-<script src="{{ "assets/js/main.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/lazysizes-5.2.0.min.js" | relative_url }}" async></script>
+{% javascript_asset_tag global %}
+- /_assets/js/lib/jquery-3.4.1.min.js
+- /_assets/js/lib/jquery.dropotron-1.4.3.min.js
+- /_assets/js/lib/browser-1.0.min.js
+- /_assets/js/lib/breakpoints-1.0.min.js
+- /_assets/js/lib/util.js
+- /_assets/js/main.js
+- /_assets/js/lib/lazysizes-5.2.0.min.js
+{% endjavascript_asset_tag %}    
+
