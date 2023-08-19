@@ -200,13 +200,18 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   }
 </script>
 <link rel="stylesheet" href="{{ "/assets/css/html5-controls.css" | relative_url }}" />
-<script src="{{ "assets/js/lib/highcharts-9.3.2/highcharts.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/highcharts-more.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/pattern-fill.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/broken-axis.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/series-label.js" | relative_url }}"></script>
 
-<script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/challenges.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/comparison.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/emissions-cost.js" | relative_url }}"></script>
+{% javascript_asset_tag smz-charting %}
+- /_assets/js/lib/highcharts-9.3.2/highcharts.js
+- /_assets/js/lib/highcharts-9.3.2/pattern-fill.js
+- /_assets/js/charting/global.js
+{% endjavascript_asset_tag %}    
+
+{% javascript_asset_tag smz-challenges %}
+- /_assets/js/lib/highcharts-9.3.2/highcharts-more.js
+- /_assets/js/lib/highcharts-9.3.2/broken-axis.js
+- /_assets/js/lib/highcharts-9.3.2/series-label.js
+- /_assets/js/charting/challenges.js
+- /_assets/js/charting/comparison.js
+- /_assets/js/charting/emissions-cost.js
+{% endjavascript_asset_tag %}    

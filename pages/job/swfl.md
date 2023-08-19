@@ -223,15 +223,21 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
     }
   }
 </script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/highcharts.js" | relative_url }}"></script>
-<script src="{{ "assets/js/lib/highcharts-9.3.2/pattern-fill.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/global.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/business-data.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/infrastructure.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/heat.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/water.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/fibre.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/harbour.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/waste.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/airport.js" | relative_url }}"></script>
-<script src="{{ "assets/js/charting/status-quo.js" | relative_url }}"></script>
+
+{% javascript_asset_tag smz-charting %}
+- /_assets/js/lib/highcharts-9.3.2/highcharts.js
+- /_assets/js/lib/highcharts-9.3.2/pattern-fill.js
+- /_assets/js/charting/global.js
+{% endjavascript_asset_tag %}    
+
+{% javascript_asset_tag smz-swfl %}
+- /_assets/js/charting/business-data.js
+- /_assets/js/charting/infrastructure.js
+- /_assets/js/charting/heat.js
+- /_assets/js/charting/water.js
+- /_assets/js/charting/fibre.js
+- /_assets/js/charting/harbour.js
+- /_assets/js/charting/waste.js
+- /_assets/js/charting/airport.js
+- /_assets/js/charting/status-quo.js
+{% endjavascript_asset_tag %}    
