@@ -27,6 +27,7 @@ theme: null   # workaround for jekyll issue #7478 (caused by github-pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll_asset_pipeline
 
 defaults:
   - scope:        # set default open graph preview image (i.e. for facebook/twitter) as per https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md
@@ -44,6 +45,10 @@ exclude:
   - LICENSE
   - Gemfile*
 
+asset_pipeline:
+  display_path: stadtwerk-mit-zukunft/assets
+  staging_path: ../.asset-pipeline  # dirty fix for https://github.com/matthodan/jekyll-asset-pipeline/issues/51
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -55,3 +60,4 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
