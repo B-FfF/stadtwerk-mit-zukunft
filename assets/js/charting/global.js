@@ -79,7 +79,7 @@
           throw TypeError("No value supplied for striped zone");
         
         opacity = opacity || 1;
-        zone = smz.chart.getDottedZone(from, to);
+        var zone = smz.chart.getDottedZone(from, to);
         return [
           zone[0],
           Object.assign(zone[1], {
