@@ -2,5 +2,6 @@ url: "https://stadtwerk-mit-zukunft.de" # the base hostname & protocol for your 
 baseurl: "" # the subpath of your site, e.g. /blog
 
 asset_pipeline:
+  compress: true
   display_path: assets
   staging_path: .asset_pipeline

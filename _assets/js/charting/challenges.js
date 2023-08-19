@@ -48,11 +48,11 @@
     if (startYear < swflDataStartYear) {
       throw RangeError("Cannot generate Path starting " + startYear + ", as earliest available year in data series is " + swflDataStartYear);
     }
-    let startValue = parseInt(swflData[startYear - swflDataStartYear].co2_main) 
+    var startValue = parseInt(swflData[startYear - swflDataStartYear].co2_main) 
         + parseInt(swflData[startYear - swflDataStartYear].co2_north) + parseInt(swflData[startYear - swflDataStartYear].co2_south) 
         + parseInt(swflData[startYear - swflDataStartYear].co2_engelsby) + parseInt(swflData[startYear - swflDataStartYear].co2_gluecksburg);
-    let returnArray = [startValue];
-    let divisor = GC_END_YEAR - startYear;
+    var returnArray = [startValue];
+    var divisor = GC_END_YEAR - startYear;
     for (startYear++; startYear <= stopYear; startYear++) {
 
       if (startYear === stopYear) {

@@ -62,9 +62,9 @@ var comparisonConfig = {
         maxWidth: 482   // exactly "narrower"-breakpoint incl. sidebar
       },
       chartOptions: {
-        xAxis: {
-          minPadding: 0.1
-        },
+        // xAxis: { // duplicate !
+        //   minPadding: 0.1
+        // },
         chart: {
           marginTop: 14,
           height: 160
@@ -235,7 +235,7 @@ var comparisonConfig = {
     tooltip: {
       split: true,
       formatter: function(e) {
-        var tooltips = this.points.map(v => {
+        var tooltips = this.points.map(function(v) {
           return v.series.name + ": <b>" + hc.numberFormat(v.percentage, 1) + " %</b>"
         });
         tooltips.unshift(false) // hide x-axis tooltip (redundant)
@@ -345,7 +345,7 @@ var comparisonConfig = {
     tooltip: {
       split: true,
       formatter: function(e) {
-        var tooltips = this.points.map(v => {
+        var tooltips = this.points.map(function(v) {
           if (v.series.index !== 8) {
             return v.series.name + ": <b>" + hc.numberFormat(v.percentage, 1) + " %</b>"
           }

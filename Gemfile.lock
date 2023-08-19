@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    closure-compiler (1.1.14)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     em-websocket (0.5.3)
@@ -73,6 +74,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  closure-compiler
   jekyll (~> 4.3)
   jekyll-feed (~> 0.6)
   jekyll-seo-tag
