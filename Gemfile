@@ -32,3 +32,4 @@ end
 
 
 gem "webrick", "~> 1.7"
+gem "jekyll_asset_pipeline"
