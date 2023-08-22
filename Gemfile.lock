@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    closure-compiler (1.1.14)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     em-websocket (0.5.3)
@@ -39,6 +40,9 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll_asset_pipeline (0.6.2)
+      jekyll (>= 3.5, < 5.0)
+      liquid (~> 4.0)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -70,9 +74,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  closure-compiler
   jekyll (~> 4.3)
   jekyll-feed (~> 0.6)
   jekyll-seo-tag
+  jekyll_asset_pipeline
   webrick (~> 1.7)
 
 BUNDLED WITH

@@ -435,7 +435,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       column: {
         pointStart: 2000,
         tooltip: {
-          valueDecimals: 0,
+          valueDecimals: 0, 
           valueSuffix: ' €'
         }
       }
@@ -456,6 +456,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     yAxis: {
       title: {
         text: 'Abführung Mio. €'
+      
       },
       endOnTick: false
     }

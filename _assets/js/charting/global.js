@@ -203,11 +203,11 @@
       text: undefined,
       useHtml: true // !!
     },
-    yAxis: {  // double / overwritten
-      title: {
-        margin: 6
-      }
-    },
+    // yAxis: {  // double / overwritten
+    //   title: {
+    //     margin: 6
+    //   }
+    // },
     tooltip: {
       useHTML: true
     },
