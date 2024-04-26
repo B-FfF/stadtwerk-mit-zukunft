@@ -215,21 +215,21 @@
         name: "Hochspannungsnetz 60/150 kV",
         data: data.gridHigh,
         color: smz.gradient[5],
-        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[5])
+        zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[5])
       },{
         type: 'area',
         name: "Mittelspannungsnetz 15 (20) kV",
         color: smz.gradient[3],
         data: data.gridMedium,
         zIndex: -1,
-        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[3])
+        zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[3])
       },{
         name: "Niederspannungsnetz 220V",
         data: data.gridLow,
         color: smz.gradient[6],
         type: 'area',
         zIndex: -2,
-        zones: smz.chart.getStripedZone(2005, 2007, smz.gradient[6], .5)
+        zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[6], .5)
       },{
         data: data.peak,
         color: smz.color.swfl.darkGreen,
