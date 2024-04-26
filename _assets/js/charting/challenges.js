@@ -145,11 +145,7 @@
       },
       arearange: {
         pointStart: startYear,
-        fillColor: {
-          pattern: {
-              color: '#d11'
-          }
-        }
+        fillColor: smz.chart.stripedPattern
       }
     },
     series: [{  // 0
