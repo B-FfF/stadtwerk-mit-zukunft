@@ -17,7 +17,7 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: 🛎 Check out master
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 1
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
@@ -39,10 +39,10 @@ jobs:
     - name: 🔨 Build site
       run: bundle exec jekyll build --config _config.yml,_config_production.yml
     - name: 🚀 Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ${{secrets.FTP_SERVER}}
-        FTP_USERNAME: ${{secrets.FTP_USERNAME}}
-        FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
-        LOCAL_DIR: _site
-        ARGS: --delete --parallel=4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{secrets.FTP_SERVER}}
+        username: ${{secrets.FTP_USERNAME}}
+        password: ${{secrets.FTP_PASSWORD}}
+        protocol: ftps
+        local-dir: ./_site/
