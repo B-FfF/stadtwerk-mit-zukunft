@@ -72,7 +72,7 @@ Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<s
 </div>
   <div class="col-5 col-12-wide">
     <p>
-Die jährlichen Gesamtemissionen liegen heute im Schnitt 100.000 Tonnen unter denen von 2007. Leider liegen sie immer noch deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 850.000 Tonnen zuviel CO<sub>2</sub> emittiert wurden – was dem Gesamtbudget der Jahre 2041 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
+Die jährlichen Gesamtemissionen liegen heute zwar im Schnitt 135.000 Tonnen unter denen von 2007. Leider liegen sie immer noch deutlich über dem greenco<sub>2</sub>ncept-Zielpfad, wodurch bereits über 1,2 Mrd. Tonnen zuviel CO<sub>2</sub> emittiert wurden – was dem Gesamtbudget der Jahre 2036 bis 2050 entspricht. So wird es mit fortschreitender Zeit immer unwahrscheinlicher, das greenco<sub>2</sub>ncept-Ziel noch einzuhalten, wie aus dem nächsten Diagramm ersichtlich wird.
     </p>
   </div>
 </div>

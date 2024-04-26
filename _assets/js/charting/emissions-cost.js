@@ -165,7 +165,7 @@
     series: [{
       color: smz.gradient[8],
       data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", 2012)
-              .slice(0, -1) // temporary until definitive cost is available
+              .slice(0, -2) // temporary until definitive cost is available
               .concat(64 * 500000),
       dataLabels: {
         align: 'left',
