@@ -81,7 +81,7 @@ Die jährlichen Gesamtemissionen liegen heute zwar im Schnitt 135.000 Tonnen unt
 
 Nach der Inbetriebnahme des GuD-Kessel 12 (Leistung [75 MWₑₗ + 75 MWₜₕ][swfl-kessel-12-web]) am 21.04.2016 wurden die beiden kohlebefeuerten Kessel 7 & 8 (zusammen [64 MWₑₗ][ebc-kessel78-mwel] + [125 MWₜₕ][swfl-kessel12-poster]) stillgelegt. Die CO<sub>2</sub>-Emissionen sanken zwischen 2015 und 2017 um etwa **70.000 Tonnen**.
 
-Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ + 97 MWₜₕ][swfl-kessel-13-web]) ist die Stilllegung der Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) geplant. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO<sub>2</sub>][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
+Nach Inbetriebnahme von Kessel 13 im Herbst 2023 (Leistung [100 MWₑₗ + 90 MWₜₕ][swfl-kessel-13-web]) werden Kessel 9 & 10 (zusammen [69 MWₑₗ + 124 MWₜₕ][uba-kkw]) stillgelegt. Dadurch sollen »[jährlich bis zu **120.000 Tonnen** CO<sub>2</sub>][swfl-kessel-13-web]« eingespart werden -- unter dieser Annahme würde sich bis zum Jahr 2030 folgendes Bild ergeben:
 
 <figure class=chart>
     <div id="co2-emissionen-der-stadtwerke-flensburg-bis-2030"></div>
@@ -92,7 +92,7 @@ Nach der für 2022 geplanten Inbetriebnahme von Kessel 13 (Leistung [89 MWₑₗ
     </div>
 </figure>
 
-Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2036 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
+Es zeigt sich, dass das greenco<sub>2</sub>ncept-Budget bei dieser Planung im Jahr 2030 nur noch bis Ende 2035 reichen wird. Um das Budget noch einzuhalten, müssten die Emissionen dann abrupt von mehreren Hunderttausend Tonnen auf Null sinken.
 
 ### Klimaschädlichkeit von Erdgas
 
@@ -144,7 +144,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [ebc-kessel78-mwel]: https://d3ihh3ce7usp68.cloudfront.net/wp-content/uploads/2020/04/2020-04-21_Europe_Beyond_Coal-European_Coal_Database_hc.xlsx
   [swfl-kessel12-poster]: https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/kessel12/faltplakat-kessel-12.pdf
   [uba-kkw]: https://www.umweltbundesamt.de/sites/default/files/medien/1410/publikationen/171207_uba_hg_braunsteinkohle_bf.pdf "Umweltbundesamt: Daten und Fakten zu Braun- und  Steinkohlen, Seite 48"
-  [swfl-kessel-13-web]: https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-13/
+  [swfl-kessel-13-web]: https://web.archive.org/web/20240210050645/https://www.stadtwerke-flensburg.de/foerdepost/fotobuch-k13
   [ise-2018-sgk-ee]: https://www.ise.fraunhofer.de/content/dam/ise/de/documents/publications/studies/DE2018_ISE_Studie_Stromgestehungskosten_Erneuerbare_Energien.pdf
 
   [gas-gwp]: https://de.wikipedia.org/wiki/Methan#Treibhausgas

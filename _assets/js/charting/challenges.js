@@ -230,7 +230,7 @@
     template.yAxis.min = 0;
     template.yAxis.max = 700000;
     template.series[1].animation = animation;
-    template.series[1].data = template.series[1].data.concat([500000, 420000, 420000, 420000, 420000, 420000, 420000, 420000, 420000]);
+    template.series[1].data = template.series[1].data.concat([465000, 425000, 425000, 425000, 425000, 425000, 425000, 425000]);
     shouldIs = getOvershootRangeSeries(startYear, 2030, greenconceptPath, template.series[1].data);
     var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, shouldIs.accumulated[ shouldIs.accumulated.length - 1]);
     var motionData = [
@@ -258,7 +258,7 @@
         },
         verticalAlign: 'middle'
       },
-      value: 2022
+      value: 2022.7
     }];
 
     template.series[3] = {
