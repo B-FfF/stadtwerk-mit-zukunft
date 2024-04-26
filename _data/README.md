@@ -127,6 +127,7 @@ Auswertung Daten Stromkennzeichnung
 | coal_pc           | Anteil Steinkohle                     | %       |
 | gas_pc            | Anteil Erdgas                         | %       |
 | biogas_pc         | Anteil Biogas                         | %       |
+| biomass_pc        | Anteil feste Biomasse                 | %       |
 | oil_heavy_pc      | Anteil Schweröl                       | %       |
 | oil_light_pc      | Anteil Leichtöl                       | %       |
 | chips_pc          | Anteil Holzhackschnitzel              | %       |

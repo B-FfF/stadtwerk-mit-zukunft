@@ -23,7 +23,7 @@ sidebar:
 <figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
-Stand 2021, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20220717205944/https://www.umweltbundesamt.de/sites/default/files/medien/372/bilder/anteil_ee_in_den_sektoren_03-2022.png)
+Stand 2022, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20230601214201/https://www.umweltbundesamt.de/sites/default/files/medien/376/bilder/cover_ee-anteile_deu_03-2023.png)
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
@@ -34,7 +34,7 @@ Stand 2021, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://we
   </figcaption>
 </figure>
 
-Wie aus den Grafiken ersichtlich wird, liegt der Anteil fossiler Energien in der Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
+Wie aus der Grafik ersichtlich wird, liegt der Anteil fossiler Energien in der lokalen Stromerzeugung in Flensburg über 85 Prozent, während im Umland ein Überangebot an erneuerbarem Strom existiert. Die Küstenstadt ist quasi eine Insel der fossilen Energien in einem Meer von erneuerbaren und mit diesem Wert sogar das traurige Schlusslicht Schleswig-Holsteins. 
 
 ### Strommix (Produktion und -Vertrieb) {#strommix-stadtwerke-flensburg}
 
@@ -128,16 +128,16 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
 [^2]:
     **Stromkennzeichnung Stadtwerke Flensburg**
 
-    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019] | [2020][Mix-2020] | [2021][Mix-2021]
+    [2014][Mix-2014] | [2015][Mix-2015] | [2016][Mix-2016] | [2017][Mix-2017] | [2018][Mix-2018] | [2019][Mix-2019] | [2020][Mix-2020] | [2021][Mix-2021] | [2022][Mix-2022]
 
     Der EEG-Anteil wird in unserer Darstellung des Strommixes ausgeblendet, denn er besitzt zur Ermittlung der tatsächlichen Nutzung erneuerbarer Energien keine Aussagekraft. Dieses begründet sich in der [Zusammensetzung des Strompreises](https://strom-report.de/medien/strompreiszusammensetzung-2019.png). Der Anteil der EEG-Umlage, der von der Kundschaft gezahlt und vom Energieversorger direkt an den Netzbetreiber weitergeleitet wird, wurde bis 2019 in der Stromkennzeichnung entsprechend dargestellt. Er betrug z.B. im Jahr 2019 (wie der Stromversorger [Lichtblick schreibt](https://web.archive.org/web/20210531224339/https://www.lichtblick.de/oekostrom/stromkennzeichnung)) »bei vielen Versorgern fast 60 %, auch wenn die Versorger diesen Strom gar nicht kaufen oder an den Kunden verkaufen.« – .
 
 [^3]:
     **Zusammensetzung Fernwärme**  
 
-    Flensburg  | [2016][FW-FL-2016] | [2017][FW-FL-2017] | [2018][FW-FL-2018] | [2019][FW-FL-2019] | [2020][FW-FL-2020] | [2021][FW-FL-2021]
-    Tarp       | [2016][FW-T-2016]  | [2017][FW-T-2017]  | [2018][FW-T-2018]  | [2019][FW-T-2019]  | [2020][FW-T-2020]  | [2021][FW-T-2021]
-    Langballig | [2016][FW-LB-2016] | [2017][FW-LB-2017] | [2018][FW-LB-2018] | [2019][FW-LB-2019] | [2020][FW-LB-2020] | [2021][FW-LB-2021]
+    Flensburg  | [2016][FW-FL-2016] | [2017][FW-FL-2017] | [2018][FW-FL-2018] | [2019][FW-FL-2019] | [2020][FW-FL-2020] | [2021][FW-FL-2021] | [2022][FW-FL-2022] | [2023][FW-FL-2023]
+    Tarp       | [2016][FW-T-2016]  | [2017][FW-T-2017]  | [2018][FW-T-2018]  | [2019][FW-T-2019]  | [2020][FW-T-2020]  | [2021][FW-T-2021] | [2022][FW-T-2022] | [2023][FW-T-2023]
+    Langballig | [2016][FW-LB-2016] | [2017][FW-LB-2017] | [2018][FW-LB-2018] | [2019][FW-LB-2019] | [2020][FW-LB-2020] | [2021][FW-LB-2021] | [2022][FW-LB-2022] | [2023][FW-LB-2023]
 
   [ndr-kessel-13]: https://web.archive.org/web/20190423101117/https://www.ndr.de/nachrichten/schleswig-holstein/Flensburger-Meilenstein-auf-dem-Weg-zum-Kohleausstieg,gaskraftwerk140.html
   [swfl-kessel-12-web]: https://web.archive.org/web/20191230235758/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/kessel-12/zusaetzliche-informationen/
@@ -158,18 +158,24 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [FW-FL-2019]: https://web.archive.org/web/20210531111033/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Flensburg/EWKG-Angaben-Flensburg-2019.pdf
   [FW-FL-2020]: https://web.archive.org/save/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Flensburg/EWKG-Angaben-Flensburg-2020.pdf
   [FW-FL-2021]: https://web.archive.org/web/20220717211438/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg-2021.pdf
+  [FW-FL-2022]: https://web.archive.org/web/20230606210714/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
+  [FW-FL-2023]: https://web.archive.org/web/20240426180907/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
   [FW-LB-2016]: https://web.archive.org/web/20210531112345/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Langballig-2016.pdf
   [FW-LB-2017]: https://web.archive.org/web/20210531111820/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2017.pdf
   [FW-LB-2018]: https://web.archive.org/web/20210531111750/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2018.pdf
   [FW-LB-2019]: https://web.archive.org/web/20210531111644/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2019.pdf
   [FW-LB-2020]: https://web.archive.org/web/20220106233922/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2020.pdf
-  [FW-LB-2021]: https://web.archive.org/web/20220717211553/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Langballig-2021.pdf
+  [FW-LB-2021]: https://web.archive.org/web/20220717211553/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/
+  [FW-LB-2022]: https://web.archive.org/web/20230606195932/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Langballig.pdf
+  [FW-LB-2023]: https://web.archive.org/web/20240426180954/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Langballig.pdf
   [FW-T-2016]: https://web.archive.org/web/20210531112453/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Tarp-2016.pdf
   [FW-T-2017]: https://web.archive.org/web/20210531112749/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2017.pdf
   [FW-T-2018]: https://web.archive.org/web/20210531112633/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2018.pdf
   [FW-T-2019]: https://web.archive.org/web/20210531112603/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2019.pdf
   [FW-T-2020]: https://web.archive.org/web/20220106233815/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Tarp/EWKG-Angaben-Tarp-2020.pdf
   [FW-T-2021]: https://web.archive.org/web/20220717211646/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp-2021.pdf
+  [FW-T-2022]: https://web.archive.org/web/20230606192422/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
+  [FW-T-2023]: https://web.archive.org/web/20240426181500/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
 
   [Mix-2014]: https://web.archive.org/web/20210531120644/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2014.pdf
   [Mix-2015]: https://web.archive.org/web/20210531115037/https://www.swfl.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-Stadtwerke-Flensburg-2015.pdf
@@ -179,7 +185,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [Mix-2019]: https://web.archive.org/web/20210531114224/https://www.swfl.de/fileadmin/user_upload/Strommix-SWFL-2019.pdf
   [Mix-2020]: https://web.archive.org/web/20211223110557/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/Strommix-SWFL.pdf
   [Mix-2021]: https://web.archive.org/web/20230121124702/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix.pdf
-
+  [Mix-2022]: https://web.archive.org/web/20240426181648/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix_01.pdf
 
 <script>
   window.SWFL = {
