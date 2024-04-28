@@ -210,9 +210,6 @@
     tooltip: {
       useHTML: true
     },
-    xAxis: {
-      labels: { useHTML: true }
-    },
     yAxis: {
       showEmpty: false,
       title: {
