@@ -79,6 +79,11 @@ var comparisonConfig = {
           labels: {
             style: { fontSize: "14px" }
           }
+        },
+        title: { 
+          style: { fontSize: '0.5em' },
+          widthAdjust: -240,
+          x: -4,
         }
       }
     }]
