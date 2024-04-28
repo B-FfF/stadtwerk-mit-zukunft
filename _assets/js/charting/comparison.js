@@ -140,7 +140,6 @@ var comparisonConfig = {
       navigation: { enabled: false },
       itemHoverStyle: { cursor: "default" },
       labelFormatter: function () {
-        var tooltip;
         if (this.index === 5) {
           return '<span title="Ab 2020 Wert aus bundesdeutschem Mix, &#13;da nicht mehr separat im Unternehmensmix ausgewiesen" ' 
             + 'style="cursor: pointer">' + this.name + '</span>';
