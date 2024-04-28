@@ -6,17 +6,18 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     
     proceed.call(this);
 
-	if (!chart.seriesGroup) {
-		chart.seriesGroup = chart.renderer.g('series-group')
-			.attr({ zIndex: 3 })
-			.add();
-	}
+    if (!chart.seriesGroup) {
+      chart.seriesGroup = chart.renderer.g('series-group')
+        .attr({ zIndex: 3 })
+        .add();
+    }
 
     if (this.svgElem.parentGroup !== chart.seriesGroup) {
     	this.svgElem
-        	.attr({ zIndex: this.options.zIndex })
-        	.add(chart.seriesGroup);
+        .attr({ zIndex: this.options.zIndex })
+        .add(chart.seriesGroup);
     }
+
     return this;
 });
 
@@ -42,9 +43,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     },
     xAxis: {
       tickInterval: 1,
-      labels: {
-        formatter: markMissing
-      }
+      labels: { formatter: markMissing }
     },
     tooltip: {
       useHTML: true,
@@ -110,14 +109,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
           shadow: false,
           borderWidth: 0,
           groupPadding: 0.1,
-          tooltip: {
-            valueSuffix: ' €'
-          }
+          tooltip: { valueSuffix: ' €' }
         },
         line: {
-          tooltip: {
-            valueSuffix: ' %'
-          }
+          tooltip: { valueSuffix: ' %' }
         }
       },
       title: {
@@ -167,9 +162,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         pointStart: 2000,
         yAxis: 1,
         shadow: smz.chart.getBoldLineShadow(),
-        marker: {
-          radius: 2
-        },
+        marker: { radius: 2 },
         visible: false
       },{
         type: 'line',
@@ -178,9 +171,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         color: smz.color.swfl.darkGreen,
         pointStart: 2000,
         shadow: smz.chart.getBoldLineShadow(),
-        marker: {
-          radius: 2
-        },
+        marker: { radius: 2 },
         yAxis: 1,
         visible: false
       }],
@@ -188,19 +179,13 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         missing: missingYears,
       },
       yAxis: [{
-        title: {
-          text: "Gewinn in Mio. €"
-        },
+        title: { text: "Gewinn in Mio. €" },
         min: -12000000,
         max: 36000000
       },{
-        labels: {
-          format: '{value} %'
-        },
+        labels: { format: '{value} %' },
         opposite: true,
-        title: {
-          text: undefined
-        }
+        title: { text: undefined }
       }]
     });
   }
@@ -242,17 +227,13 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         id: 'energy_taxes',
         data: data.energyTaxes,
       }],
-      tooltip: {
-        valueSuffix: ' €'
-      },
+      tooltip: { valueSuffix: ' €' },
       xAxis: {
         missing: missingYears,
       },
       yAxis: [{
         tickInterval: 100000000,
-        title: {
-          text: "Umsätze in Mio. €"
-        }
+        title: { text: "Umsätze in Mio. €" }
       }]
     });
   }
@@ -270,9 +251,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         area: {
           pointStart: 2000,
           stacking: "normal",
-          marker: {
-            enabled: false
-          },
+          marker: { enabled: false },
           tooltip: {
             valueSuffix: ' €',
             pointFormatter: function () {
@@ -285,9 +264,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         },
         line: {
           pointStart: 2000,
-          tooltip: {
-            valueSuffix: ' %'
-          }
+          tooltip: { valueSuffix: ' %' }
         }
       },
       title: {
@@ -364,18 +341,14 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         pointStart: 2000,
         yAxis: 1,
         shadow: smz.chart.getBoldLineShadow(),
-        marker: {
-          radius: 2
-        },
+        marker: { radius: 2 },
         zIndex: 2
       }],
       yAxis: [{
-        title: {
-          text: "Kapital in Mio. €"
-        },
+        title: { text: "Kapital in Mio. €" },
         labels: {
           formatter: function () {
-              return Math.abs(Math.round(this.value / 1000000)) + 'M';
+            return Math.abs(Math.round(this.value / 1000000)) + 'M';
           }
         },
         max: 200000000,
@@ -392,14 +365,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },{
         labels: {
           format: '{value} %',
-          style: {
-            color: hc.defaultOptions.colors[4],
-          }
+          style: { color: hc.defaultOptions.colors[4] }
         },
         opposite: true,
-        title: {
-          text: "Verschuldungsquote"
-        },
+        title: { text: "Verschuldungsquote" },
         tickInterval: 50,
         startOnTick: false,
         endOnTick: false,
@@ -413,14 +382,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         min: -125,
         labels: {
           format: '{value} %',
-          style: {
-            color: smz.color.swfl.darkGreen,
-          }
+          style: { color: smz.color.swfl.darkGreen }
         },
         opposite: true,
-        title: {
-          text: "Eigenkapitalquote"
-        },
+        title: { text: "Eigenkapitalquote" },
       }]
     }
     
@@ -440,9 +405,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         }
       }
     },
-    title: {
-      text: 'Gewinnabführungen an die Stadt Flensburg'
-    },
+    title: { text: 'Gewinnabführungen an die Stadt Flensburg' },
     series: [{
       groupPadding: 0.1,
       pointPadding: 0.1,
@@ -454,10 +417,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       tickPositions: smz.fn.getYearSeries(2001, 2021),
     },
     yAxis: {
-      title: {
-        text: 'Abführung Mio. €'
-      
-      },
+      title: { text: 'Abführung Mio. €' },
       endOnTick: false
     }
   }

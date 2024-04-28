@@ -43,10 +43,10 @@
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Leitungsnetz in km"},
+      title: { text: "Leitungsnetz in km" },
       min: 0
     },{
-      title: {text: "Anschlüsse"},
+      title: { text: "Anschlüsse" },
       opposite: true
     }]
   };

@@ -13,18 +13,14 @@
       column: {
         groupPadding: 0.05,
         pointStart: 2000,
-        tooltip: {
-          valueDecimals: 0
-        },
+        tooltip: { valueDecimals: 0 },
       }
     },
     series: [{
       name: "Güterumschlag",
       data: data.cargo.map(function(cargoInThousands){ return cargoInThousands * 1000 || null }),
       color: smz.gradient[11],
-      tooltip: {
-        valueSuffix: ' t'
-      }
+      tooltip: { valueSuffix: ' t' }
     },{
       name: "Eingelaufene Schiffe",
       color: smz.gradient[10],
@@ -36,9 +32,9 @@
       missing: [2002, 2003, 2006, 2017, 2018, 2019]
     },
     yAxis: [{
-      title: {text: "Umschlag in Tonnen"}
+      title: { text: "Umschlag in Tonnen" }
     },{
-      title: {text: "Anzahl Schiffe"},
+      title: { text: "Anzahl Schiffe" },
       opposite: true
     }]
   };

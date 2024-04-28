@@ -9,9 +9,7 @@
       plotShadow: false,
       type: 'pie'
     },
-    title: {
-      text: 'Umsatz nach Produkten (2020)'
-    },
+    title: { text: 'Umsatz nach Produkten (2020)' },
     tooltip: {
       headerFormat: null,
       pointFormat: '{series.name}: <b>{point.percentage:.1f} %</b>',
@@ -29,9 +27,7 @@
           formatter: function() {
             return "<b>" + this.key + "</b><br>" + hc.numberFormat(this.y, 1) + ' Mio. EUR';
           },
-          style: {
-            fontWeight: 'normal'
-          }
+          style: { fontWeight: 'normal' }
         }
       }
     },
@@ -87,12 +83,8 @@
     legend: {
       align: "right",
       maxHeight: 60,
-      navigation: {
-        enabled: false
-      },
-      itemHoverStyle: {
-        cursor: "default"
-      }
+      navigation: { enabled: false },
+      itemHoverStyle: { cursor: "default" }
     },
     plotOptions: {
       area: {
@@ -143,9 +135,7 @@
     },
     yAxis: [{
       title: undefined,
-      labels: {
-        format: "{value} %"
-      }
+      labels: { format: "{value} %" }
     }]
   };
 

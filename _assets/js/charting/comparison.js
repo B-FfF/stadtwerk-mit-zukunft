@@ -32,9 +32,7 @@ var comparisonConfig = {
       dataLabels: {
         enabled: true,
         inside: false,
-        style: {
-          fontSize: "1em"
-        },
+        style: { fontSize: "1em" },
         formatter: function() {
 
           var output = "";
@@ -58,9 +56,7 @@ var comparisonConfig = {
   },
   responsive: {
     rules: [{
-      condition: {
-        maxWidth: 482   // exactly "narrower"-breakpoint incl. sidebar
-      },
+      condition: { maxWidth: 482 }, // exactly "narrower"-breakpoint incl. sidebar
       chartOptions: {
         // xAxis: { // duplicate !
         //   minPadding: 0.1
@@ -72,25 +68,19 @@ var comparisonConfig = {
         plotOptions: {
           bar: {
             dataLabels: {
-              style: {
-                fontSize: "11px"
-              }
+              style: { fontSize: "11px" }
             }
           }
         },
         series: [
           {},{},{
             id: "slfl",
-            dataLabels: {
-              align: "left"
-            }
+            dataLabels: { align: "left" }
           }
         ],
         xAxis: {
           labels: {
-            style: {
-              fontSize: "14px"
-            }
+            style: { fontSize: "14px" }
           }
         }
       }
@@ -150,12 +140,8 @@ var comparisonConfig = {
     legend: {
       align: "right",
       maxHeight: 60,
-      navigation: {
-        enabled: false
-      },
-      itemHoverStyle: {
-        cursor: "default"
-      },
+      navigation: { enabled: false },
+      itemHoverStyle: { cursor: "default" },
       labelFormatter: function () {
         var tooltip;
         if (this.index === 5) {
@@ -247,9 +233,7 @@ var comparisonConfig = {
     },
     yAxis: {
       title: undefined,
-      labels: {
-        format: "{value} %"
-      }
+      labels: { format: "{value} %" }
     }
   };
 
@@ -360,14 +344,10 @@ var comparisonConfig = {
     },
     yAxis: [{
       title: undefined,
-      labels: {
-        format: "{value} %"
-      }
+      labels: { format: "{value} %" }
     },{
       title: "CO₂-Emissionen pro kWh",
-      labels: {
-        format: "{value} g"
-      },
+      labels: { format: "{value} g" },
       opposite: true,
       min: 0
     }]

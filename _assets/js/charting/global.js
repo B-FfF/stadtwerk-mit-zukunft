@@ -211,27 +211,19 @@
       useHTML: true
     },
     xAxis: {
-      labels: {
-        useHTML: true
-      }
+      labels: { useHTML: true }
     },
     yAxis: {
       showEmpty: false,
       title: {
-        style: {
-          fontSize: "0.75em"
-        }
+        style: { fontSize: "0.75em" }
       }
     },
     responsive: {
       rules: [{
-        condition: {
-          maxWidth: 482
-        },
-      chartOptions: {
-          title: {
-            y: 4
-          },
+        condition: { maxWidth: 482 },
+        chartOptions: {
+          title: { y: 4 },
           chart: {
             marginTop: 14,
             height: '90%'
@@ -250,9 +242,7 @@
           xAxis: {
             labels: {
               rotation: 90,
-              style: {
-                textOverflow: 'none'
-              }
+              style: { textOverflow: 'none' }
             },
             minPadding: 0.02
           },
@@ -263,22 +253,16 @@
               x: 0,
               y: -5
             },
-            title: {
-              text: null
-            },
+            title: { text: null },
           },{
             labels: {
               align: 'right',
               x: 0,
               y: -5
             },
-            title: {
-              text: null
-            }
+            title: { text: null }
           }],
-          subtitle: {
-            text: null
-          }
+          subtitle: { text: null }
         }
       }]
     }

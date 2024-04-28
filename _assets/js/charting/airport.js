@@ -27,7 +27,7 @@
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Tausend Flugbewegungen"},
+      title: { text: "Tausend Flugbewegungen" },
       min: 0
     }]
   };

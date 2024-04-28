@@ -57,21 +57,15 @@
       yAxis: 1,
       shadow: smz.chart.getBoldLineShadow(),
       zIndex: 1,
-      tooltip: {
-        valueSuffix: ' m³'
-      }
+      tooltip: { valueSuffix: ' m³' }
     }],
     xAxis: {
       missing: missingYears
     },
     yAxis: [{
-      title: {
-        text: "Wasser in Mio. m³"
-      }
+      title: { text: "Wasser in Mio. m³" }
     },{
-      title: {
-        text: "Absatz pro Zähler in m³"
-      },
+      title: { text: "Absatz pro Zähler in m³" },
       opposite: true,
       min: 0
     }]
@@ -88,9 +82,7 @@
       name: "Leitungsnetz",
       data: data.grid,
       color: smz.gradient[7],
-      tooltip: {
-        valueSuffix: ' km',
-      },
+      tooltip: { valueSuffix: ' km' },
       zIndex: 1
     },{
       name: "Zähler im Netz",
@@ -110,25 +102,21 @@
       data: data.production.map(function(produced, idx) { 
         return produced ? (1 - (data.sales[idx] / produced)) * 100 : produced
       }),
-      tooltip: {
-        valueSuffix: ' %'
-      },
+      tooltip: { valueSuffix: ' %' },
       yAxis: 2
     }],
     xAxis: {
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Leitungsnetz in km"}
+      title: { text: "Leitungsnetz in km" }
     },{
-      title: {text: undefined},
+      title: { text: undefined },
       opposite: true
     },{
-      title: {text: undefined},
+      title: { text: undefined },
       opposite: true,
-      labels: {
-        format: "{value} %"
-      },
+      labels: { format: "{value} %" },
       max: 14
     }]
   };

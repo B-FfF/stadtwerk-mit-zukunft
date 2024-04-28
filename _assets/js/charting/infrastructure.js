@@ -88,9 +88,7 @@
         color: '#333',
         yAxis: 1,
         shadow: smz.chart.getBoldLineShadow(),
-        tooltip: {
-          valueDecimals: 0
-        },
+        tooltip: { valueDecimals: 0 },
         zIndex: 1
       },{
         name: "Stromverkauf Flensburg",
@@ -151,22 +149,16 @@
           text: "Mio. KWh"
         },
         labels: {
-          style: {
-            color: smz.color.swfl.darkGreen,
-          }
+          style: { color: smz.color.swfl.darkGreen }
         },
         reversedStacks: false
       },{
         title: {
           text: "Kund*innen",
-          style: {
-            color: '#333'
-          }
+          style: { color: '#333' }
         },
         labels: {
-          style: {
-            color: '#333'
-          }
+          style: { color: '#333' }
         },
         opposite: true,
         min: 0
@@ -188,9 +180,7 @@
       plotOptions: {
         area: {
           connectNulls: true,
-          marker: {
-            enabled: false
-          },
+          marker: { enabled: false },
           pointStart: 2004,
           tooltip: {
             valueSuffix: ' km',
@@ -207,9 +197,7 @@
           zones: smz.chart.getDottedZone(2005, 2007)
         }
       },
-      title: {
-        text: 'Stromnetze Flensburg'
-      },
+      title: { text: 'Stromnetze Flensburg' },
       series: [{
         type: 'area',
         name: "Hochspannungsnetz 60/150 kV",
@@ -257,19 +245,13 @@
           text: "Netz in km"
         },
         labels: {
-          style: {
-            color: hc.defaultOptions.colors[3]
-          }
+          style: { color: hc.defaultOptions.colors[3] }
         }
       },{
-        title: {
-          enabled: false
-        },
+        title: { enabled: false },
         labels: {
           format: '{value} MW',
-          style: {
-            color: smz.color.swfl.darkGreen,
-          }
+          style: { color: smz.color.swfl.darkGreen }
         },
         opposite: true
       },{

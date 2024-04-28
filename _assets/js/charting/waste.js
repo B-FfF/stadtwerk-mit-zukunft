@@ -13,24 +13,20 @@
     plotOptions: {
       column: {
         pointStart: 2000,
-        tooltip: {
-          valueDecimals: 0
-        }
+        tooltip: { valueDecimals: 0 }
       }
     },
     series: [{
       name: "Aufbereiteter Müll",
       data: data.waste_handled.map(function(wasteInThousands) { return wasteInThousands * 1000 || null }),
       color: smz.fn.getGradient("#666"),
-      tooltip: {
-        valueSuffix: ' t',
-      },
+      tooltip: { valueSuffix: ' t' },
     }],
     xAxis: {
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Umschlag in Tonnen"},
+      title: { text: "Umschlag in Tonnen" },
       min: 0
     }]
   };

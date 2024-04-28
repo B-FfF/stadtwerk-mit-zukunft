@@ -134,9 +134,7 @@
           return hc.numberFormat(this.value, 0) + " t";
         }
       },        
-      title: {
-        text: 'CO₂-Emissionen in Tonnen'
-      },
+      title: { text: 'CO₂-Emissionen in Tonnen' },
       tickInterval: 100000
     },
     plotOptions: {
@@ -244,18 +242,14 @@
     template.xAxis.plotLines = [{
       label: {
         text: 'Kessel 12',
-        style: {
-          color: '#999'
-        },
+        style: { color: '#999' },
         verticalAlign: 'middle'
       },
       value: 2015.3
     },{
       label: {
         text: 'Kessel 13',
-        style: {
-          color: '#999'
-        },
+        style: { color: '#999' },
         verticalAlign: 'middle'
       },
       value: 2022.7

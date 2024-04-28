@@ -76,13 +76,9 @@
       },
       yAxis: [{
         labels: {
-          style: {
-            color: hc.defaultOptions.colors[8]
-          }
+          style: { color: hc.defaultOptions.colors[8] }
         },
-        title: {
-          text: "Zertifkate-Bedarf der Stadtwerke Flensburg"
-        },
+        title: { text: "Zertifkate-Bedarf der Stadtwerke Flensburg" },
         min: 0,
         ceiling: 800000,  // not working with 2 axis' unless using endOnTick
         max: 800000       // not working with 2 axis'
@@ -96,9 +92,7 @@
           y: -2,
           x: -10
         },
-        title: {
-          text: "Preis in € pro Tonne CO₂-Emissionsrechte"
-        },
+        title: { text: "Preis in € pro Tonne CO₂-Emissionsrechte" },
         offset: -10,
         opposite: true,
         max: 100,        

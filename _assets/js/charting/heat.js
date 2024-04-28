@@ -43,9 +43,7 @@
         }]
       }
     },
-    tooltip: {
-      valueSuffix: ' GWh'
-    },
+    tooltip: { valueSuffix: ' GWh' },
     series: [{
       name: "Wärmeerzeugung gesamt",
       data: data.production,
@@ -73,13 +71,9 @@
       missing: missingYears
     },
     yAxis: [{
-      title: {
-        text: "Wärme in Mio. kWh"
-      }
+      title: { text: "Wärme in Mio. kWh" }
     },{
-      title: {
-        text: "Absatz pro Zähler in kWh"
-      },
+      title: { text: "Absatz pro Zähler in kWh" },
       opposite: true,
       min: 0
     }]
@@ -96,9 +90,7 @@
       name: "Leitungsnetz",
       data: data.grid,
       color: smz.gradient[11],
-      tooltip: {
-        valueSuffix: ' km'
-      },
+      tooltip: { valueSuffix: ' km' },
     },{
       name: "Zähler im Netz",
       data: data.meters,
@@ -117,25 +109,21 @@
       data: data.production.map(function(produced, idx) { 
         return produced ? (1 - (data.sales[idx] / produced)) * 100 : produced
       }),
-      tooltip: {
-        valueSuffix: ' %'
-      },
+      tooltip: { valueSuffix: ' %' },
       yAxis: 2
     }],
     xAxis: {
       missing: missingYears
     },
     yAxis: [{
-      title: {text: "Leitungsnetz in km"}
+      title: { text: "Leitungsnetz in km" }
     },{
-      title: {text: undefined},
+      title: { text: undefined },
       opposite: true
     },{
-      title: {text: undefined},
+      title: { text: undefined },
       opposite: true,
-      labels: {
-        format: "{value} %"
-      },
+      labels: { format: "{value} %" },
       max: 20
     }]
   }
