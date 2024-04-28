@@ -58,9 +58,6 @@ var comparisonConfig = {
     rules: [{
       condition: { maxWidth: 482 }, // exactly "narrower"-breakpoint incl. sidebar
       chartOptions: {
-        // xAxis: { // duplicate !
-        //   minPadding: 0.1
-        // },
         chart: {
           marginTop: 14,
           height: 160

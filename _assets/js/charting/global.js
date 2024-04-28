@@ -201,11 +201,6 @@
     title: {
       text: undefined,
     },
-    // yAxis: {  // double / overwritten
-    //   title: {
-    //     margin: 6
-    //   }
-    // },
     tooltip: {
       useHTML: true
     },
