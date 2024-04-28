@@ -244,16 +244,16 @@
               x: 0,
               y: -5
             },
-            title: { text: null },
+            title: null,
           },{
             labels: {
               align: 'right',
               x: 0,
               y: -5
             },
-            title: { text: null }
+            title: null,
           }],
-          subtitle: { text: null }
+          subtitle: null
         }
       }]
     }

@@ -184,7 +184,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },{
         labels: { format: '{value} %' },
         opposite: true,
-        title: { text: undefined }
+        title: null
       }]
     });
   }

@@ -111,10 +111,10 @@
     yAxis: [{
       title: { text: "Leitungsnetz in km" }
     },{
-      title: { text: undefined },
+      title: null,
       opposite: true
     },{
-      title: { text: undefined },
+      title: null,
       opposite: true,
       labels: { format: "{value} %" },
       max: 14
