@@ -3,7 +3,6 @@
   hc.setOptions({
     tooltip: {
       backgroundColor: '#ffffff',
-      useHTML: true,
       shared: true
     },
   });

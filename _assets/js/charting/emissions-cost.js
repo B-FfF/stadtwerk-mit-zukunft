@@ -65,7 +65,6 @@
       },
       tooltip: {
         shared: true,
-        useHTML: true,
         shadow: false,
         backgroundColor: 'white',
         style: { opacity: 1 }

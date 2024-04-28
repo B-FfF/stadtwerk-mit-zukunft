@@ -46,7 +46,6 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       labels: { formatter: markMissing }
     },
     tooltip: {
-      useHTML: true,
       shared: true,
       formatter: function (e) {
         var missingYears = e.chart.userOptions.xAxis ? e.chart.userOptions.xAxis.missing : undefined;
