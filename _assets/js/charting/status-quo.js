@@ -134,7 +134,7 @@
         return '<tr>' +
           '<td><span style="color:' + color + '; padding-top: 20px">●</span>&nbsp;' + this.series.name + ':&nbsp;</td>' +
           '<td style="text-align: right"><strong>' + hc.numberFormat(this.percentage, 2) + " %&nbsp;</strong></td>" + 
-          '<td style="text-align: right">(' + hc.numberFormat(this.y, 3) + " Mio. EUR)</strong></td>" + 
+          '<td style="text-align: right">(' + hc.numberFormat(this.y, 1) + " Mio. EUR)</strong></td>" + 
           '</tr>';
       }
     },
