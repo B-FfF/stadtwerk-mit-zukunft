@@ -1,1 +1,45 @@
 ErrorDocument 404 /404.html
+
+<IfModule mod_expires.c>
+
+  ExpiresActive on
+  
+  ExpiresDefault  "access plus 1 month"
+  
+  # JavaScript
+
+  ExpiresByType application/javascript                "access plus 1 year"
+  ExpiresByType application/x-javascript              "access plus 1 year"
+  ExpiresByType text/javascript                       "access plus 1 year"
+
+  ExpiresByType text/html                             "modification"
+  
+</IfModule>
+
+<IfModule mod_headers.c>
+  <filesmatch "\.(css|jpg|jpeg|js|png)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </filesmatch>
+  <filesmatch "\.(html|xml)$">
+    Header set Cache-Control "no-store, max-age=0"
+  </filesmatch>
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# ETag removal
+# ----------------------------------------------------------------------
+
+# FileETag None is not enough for every server.
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+
+# Since we're sending far-future expires, we don't need ETags for
+# static content.
+#   developer.yahoo.com/performance/rules.html#etags
+FileETag None
+
+<IfModule mod_headers.c>
+  Header unset Server
+</IfModule>
