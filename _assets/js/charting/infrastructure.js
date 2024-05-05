@@ -259,8 +259,67 @@
     });
   }
 
+  function PowerIncomeByCustomer() {
+
+    var startYear = 2009;
+    var data = {
+      customers: smz.fn.extractColumn(swflData.Electricity, "customers", startYear),
+      salesIncome: smz.fn.extractColumn(swflData.ByProduct, "electricity", startYear),
+      sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear)
+    };
+
+    return hc.chart('stromabsatz-vs-kundschaft', {
+      title: {
+        floating: true,
+        text: 'Stromgeschäft je Stromkund*in',
+        y: 20
+      },
+      plotOptions: {
+        series: {
+          pointStart: startYear
+        }
+      },
+      series: [{
+        color: smz.color.swfl.darkGreen,
+        data: data.customers.map(function(customerCount, i) {
+          return (data.sales[i] / customerCount) * 1000000
+        }),
+        name: 'Absatz / Stromkund*in kWh',
+        type: 'column'
+      },{
+        color: '#000',
+        data: data.customers.map(function(customerCount, i) {
+          return (data.salesIncome[i] / customerCount) * 1000000
+        }),
+        name: 'Umsatz / Stromkund*in €',
+        yAxis: 1
+      }],
+      xAxis: {
+        missing: [2022]
+      },
+      yAxis: [{
+        labels: {
+          formatter: function() {
+            return (this.value / 1000) + " MWh"
+          },
+          style: { color: smz.color.swfl.darkGreen }
+        },
+        title: { enabled: false }
+      }, {
+        labels: { 
+          format: '{value:,.0f} €',
+          style: { color: '#000' },
+        },
+        min: 0,
+        opposite: true,
+        title: { enabled: false }
+      }]
+    });
+  }
+
   smz.chart = smz.chart || {};
   smz.chart.Power = drawPowerChart();
   smz.chart.PowerGrid = drawPowerGridChart();
+  smz.chart.PowerIncomeByCustomer = PowerIncomeByCustomer();
 
 })(window.Highcharts, window.smz, window.SWFL.Business);

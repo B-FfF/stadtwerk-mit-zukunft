@@ -57,7 +57,15 @@ sidebar:
   </figure>
 </div>
 
-> In den Jahren mit einem Sternchen (**\***{: style="color: #000"}) fehlen in den [Geschäftsberichten](#geschaeftsberichte) leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund\*innenzahl gibt es erst seit 2006 und fehlen für das Geschäftsjahr 2022 („4. Quartal von rückläufigen Produktkundenzahlen geprägt“).
+<div class="row">
+  <figure id="stromabsatz-vs-kundschaft" class="col-6 col-12-wide">
+  </figure>
+  <blockquote class="col-6 col-12-wide">
+    <p>
+      In den Jahren mit einem Sternchen (<strong style="font-color: #000">*</strong>) fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund*innenzahl gibt es erst seit 2006 und fehlen für das Geschäftsjahr 2022 („4. Quartal von rückläufigen Produktkundenzahlen geprägt“).
+    </p>
+  </blockquote>
+</div>
 
 ### Fernwärme
 
