@@ -139,7 +139,7 @@
       }],
       xAxis: {
         categories: data.years,
-        tickmarkPlacement: "between",
+        tickWidth: 1,
         missing: missingYears
       },
       yAxis: [{
@@ -173,6 +173,7 @@
       gridLow: smz.fn.extractColumn(swflData.Electricity, "grid_low", 2004),
       capacity: smz.fn.extractColumn(swflData.Electricity, "capacity", 2004),
       peak: smz.fn.extractColumn(swflData.Electricity, "peak", 2004),
+      years: smz.fn.extractColumn(swflData.Electricity, "year", 2003)
     };
 
     return hc.chart('stromnetz', {
@@ -181,6 +182,8 @@
           connectNulls: true,
           marker: { enabled: false },
           pointStart: 2004,
+          pointPlacement: .5,
+          pointRange: 1,
           tooltip: {
             valueSuffix: ' km',
             valueDecimals: 0
@@ -235,7 +238,8 @@
       }],
       xAxis: {
         min: 2003,
-        max: 2021,
+        categories: data.years,
+        tickWidth: 1,
         missing: missingYears
       },
       yAxis: [{
@@ -265,7 +269,8 @@
     var data = {
       customers: smz.fn.extractColumn(swflData.Electricity, "customers", startYear),
       salesIncome: smz.fn.extractColumn(swflData.ByProduct, "electricity", startYear),
-      sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear)
+      sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear),
+      years: smz.fn.extractColumn(swflData.Electricity, "year", startYear)
     };
 
     return hc.chart('stromabsatz-vs-kundschaft', {
@@ -295,6 +300,8 @@
         yAxis: 1
       }],
       xAxis: {
+        categories: data.years,
+        tickWidth: 1,
         missing: [2022]
       },
       yAxis: [{
