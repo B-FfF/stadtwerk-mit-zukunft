@@ -10,7 +10,7 @@
     peak_day: smz.fn.extractColumn(waterData, "peak_day"),
   }
 
-  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019, 2020];
+  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019, 2020, 2021, 2022];
 
   var waterChartConfig = {
     chart: {

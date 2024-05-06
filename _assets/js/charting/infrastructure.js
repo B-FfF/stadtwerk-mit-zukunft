@@ -7,7 +7,7 @@
     },
   });
 
-  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021];
+  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021, 2022];
 
   function drawPowerChart() {
 
@@ -139,7 +139,7 @@
       }],
       xAxis: {
         categories: data.years,
-        tickmarkPlacement: "between",
+        tickWidth: 1,
         missing: missingYears
       },
       yAxis: [{
@@ -173,6 +173,7 @@
       gridLow: smz.fn.extractColumn(swflData.Electricity, "grid_low", 2004),
       capacity: smz.fn.extractColumn(swflData.Electricity, "capacity", 2004),
       peak: smz.fn.extractColumn(swflData.Electricity, "peak", 2004),
+      years: smz.fn.extractColumn(swflData.Electricity, "year", 2003)
     };
 
     return hc.chart('stromnetz', {
@@ -181,6 +182,8 @@
           connectNulls: true,
           marker: { enabled: false },
           pointStart: 2004,
+          pointPlacement: .5,
+          pointRange: 1,
           tooltip: {
             valueSuffix: ' km',
             valueDecimals: 0
@@ -235,7 +238,8 @@
       }],
       xAxis: {
         min: 2003,
-        max: 2021,
+        categories: data.years,
+        tickWidth: 1,
         missing: missingYears
       },
       yAxis: [{
@@ -259,8 +263,70 @@
     });
   }
 
+  function PowerIncomeByCustomer() {
+
+    var startYear = 2009;
+    var data = {
+      customers: smz.fn.extractColumn(swflData.Electricity, "customers", startYear),
+      salesIncome: smz.fn.extractColumn(swflData.ByProduct, "electricity", startYear),
+      sales: smz.fn.extractColumn(swflData.Electricity, "sales", startYear),
+      years: smz.fn.extractColumn(swflData.Electricity, "year", startYear)
+    };
+
+    return hc.chart('stromabsatz-vs-kundschaft', {
+      title: {
+        floating: true,
+        text: 'Stromgeschäft je Stromkund*in',
+        y: 20
+      },
+      plotOptions: {
+        series: {
+          pointStart: startYear
+        }
+      },
+      series: [{
+        color: smz.color.swfl.darkGreen,
+        data: data.customers.map(function(customerCount, i) {
+          return (data.sales[i] / customerCount) * 1000000
+        }),
+        name: 'Absatz / Stromkund*in kWh',
+        type: 'column'
+      },{
+        color: '#000',
+        data: data.customers.map(function(customerCount, i) {
+          return (data.salesIncome[i] / customerCount) * 1000000
+        }),
+        name: 'Umsatz / Stromkund*in €',
+        yAxis: 1
+      }],
+      xAxis: {
+        categories: data.years,
+        tickWidth: 1,
+        missing: [2022]
+      },
+      yAxis: [{
+        labels: {
+          formatter: function() {
+            return (this.value / 1000) + " MWh"
+          },
+          style: { color: smz.color.swfl.darkGreen }
+        },
+        title: { enabled: false }
+      }, {
+        labels: { 
+          format: '{value:,.0f} €',
+          style: { color: '#000' },
+        },
+        min: 0,
+        opposite: true,
+        title: { enabled: false }
+      }]
+    });
+  }
+
   smz.chart = smz.chart || {};
   smz.chart.Power = drawPowerChart();
   smz.chart.PowerGrid = drawPowerGridChart();
+  smz.chart.PowerIncomeByCustomer = PowerIncomeByCustomer();
 
 })(window.Highcharts, window.smz, window.SWFL.Business);

@@ -1,8 +1,15 @@
 (function(hc, smz, swflData) {
 
-  var certifcatePriceConfig = (function(data) {
+  var startYear = 2012;
 
-    var startYear = 2012;
+  var responsiveRule = JSON.parse(JSON.stringify(hc.defaultOptions.responsive.rules[0]));
+  responsiveRule.chartOptions.xAxis.minPadding = 0.06;
+  responsiveRule.chartOptions.yAxis[1].offset = 0;
+
+  // hardcoding placement until https://github.com/B-FfF/stadtwerk-mit-zukunft/issues/11 is fixed
+  responsiveRule.chartOptions.xAxis.labels.x = 12;
+
+  var certifcatePriceConfig = (function(data) {
 
     var requiredCertificatesSeries = [],
         freeOfChargeAllocationsTotal = [],
@@ -11,8 +18,7 @@
         freeOfChargeAllocationsSouth = smz.fn.extractColumn(data, "foc_south", startYear),
         freeOfChargeAllocationsEngelsby = smz.fn.extractColumn(data, "foc_engelsby", startYear),
         freeOfChargeAllocationsGluecksburg = smz.fn.extractColumn(data, "foc_gluecksburg", startYear),
-        emissionsSeries = smz.fn.getEmissionsDataSeries(data, startYear),
-        responsiveRule = hc.defaultOptions.responsive.rules[0];
+        emissionsSeries = smz.fn.getEmissionsDataSeries(data, startYear);
     
     for (var i in freeOfChargeAllocationsMain) {
       var currentFreeOfChargeSum = freeOfChargeAllocationsMain[i]
@@ -27,9 +33,8 @@
       );
     }
 
-    responsiveRule.chartOptions.xAxis.minPadding = 0.06;
-    responsiveRule.chartOptions.yAxis[1].offset = 0;
     return {
+      chart: { type: 'column' },
       plotOptions: {
         column: {
           stacking: "normal",
@@ -70,8 +75,9 @@
         style: { opacity: 1 }
       },
       xAxis: {
+        labels: { x: 40 },
         type: 'datetime',
-        tickInterval: "year"
+        tickInterval: 365 * 24 * 3600 * 1000
       },
       yAxis: [{
         labels: {
@@ -81,13 +87,10 @@
         min: 0,
         ceiling: 800000,  // not working with 2 axis' unless using endOnTick
         max: 800000       // not working with 2 axis'
-      },
-      {
+      },{
         labels: {
           format: '<b>{value} €</b>',
-          style: {
-            color: hc.defaultOptions.colors[7]
-          },
+          style: { color: hc.defaultOptions.colors[7] },
           y: -2,
           x: -10
         },
@@ -95,18 +98,15 @@
         offset: -10,
         opposite: true,
         max: 100,        
-        min: 0,
-        softMax: 42,
+        min: 0
       }],
       series: [{  // 0
-        type: "column",
         name: "Gratis-Zertifikate",
         data: freeOfChargeAllocationsTotal,
         stack: 0,
         color: hc.defaultOptions.colors[2],
         yAxis: 0
       },{   // 1
-        type: "column",
         stack: 0,
         name: "Benötigte Zertifikate",
         data: requiredCertificatesSeries,
@@ -123,6 +123,7 @@
           opacity: 1
         },
         tooltip: { valueSuffix: ' €' },
+        type: "line",
         zIndex: 1,
         yAxis: 1
       },{
@@ -142,10 +143,10 @@
     chart: { type: 'column' },
     plotOptions: { column: {
       groupPadding: 0,
-      // pointPlacement: "between",
+      pointPlacement: "between",
       pointRange: 365 * 24 * 3600 * 1000,
       pointIntervalUnit: "year",
-      pointStart: new Date("Jan 2 " + 2012).getTime(),
+      pointStart: new Date("Jan 2 " + startYear).getTime(),
       pointPadding: 0.1,
       tooltip: {
         headerFormat: '<span style="font-size: 1.5em; font-weight: bold">{point.key}</span><table>',
@@ -155,27 +156,30 @@
         xDateFormat: "%Y",
       },  
     }},
+    responsive: {
+      rules: [ responsiveRule ]
+    },
     series: [{
       color: smz.gradient[8],
-      data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", 2012)
-              .slice(0, -2) // temporary until definitive cost is available
-              .concat(64 * 500000),
+      data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", startYear)
+              .slice(0, -1) // temporary until definitive cost is available
+              .concat(60 * 500000),
       dataLabels: {
         align: 'left',
         inside: true,
         enabled: true,
         formatter: function(e) {
-          if (new Date(this.x).getFullYear() !== 2022) return
-          return 'Prognose (500.000 x 64 €)'
+          if (new Date(this.x).getFullYear() !== 2023) return hc.numberFormat(this.y / 1000000, 1) + " Mio. €"
+          return 'Prognose: 30 Mio. € <br>(500.000 t * 60 €)'
         },
         rotation: -90,
         verticalAlign: 'bottom',
-        y: -16,
+        y: -8,
       },                      
       name: 'Aufwendungen für Emissionrechte',
       zoneAxis: 'x',
       zones: [{
-        value: new Date("Jan 2 " + 2022).getTime(),
+        value: new Date("Jan 2 " + 2023).getTime(),
       },{
         color: hc.defaultOptions.colors[3],
       }]
@@ -195,23 +199,26 @@
       yAxis: 1
     }],
     xAxis: {
+      labels: { x: 40 },
       type: 'datetime',
-      tickInterval: 'year',
-      tickmarkPlacement: 'on'
+      tickInterval: 365 * 24 * 3600 * 1000,
     },
     yAxis: [{
-      labels: { 
-        format: '<strong>{value:,.0f} €</strong>',
+      labels: {
+        align: 'right',
+        formatter: function () { return '<strong>' + this.value / 1000000 + ' Mio. €</strong>' },
         style: { color: hc.defaultOptions.colors[8] },
+        y: -2,
+        x: 0
       },
-      opposite: true,
-      title: { enabled: false },
+      title: { text: "Ausgaben für CO₂-Emissionsrechte" },
     },{
       max: 100,
       labels: {
         format: '<b>{value} €</b>',
         style: { color: hc.defaultOptions.colors[7] },
       },
+      opposite: true,
       title: {
         text: "Preis in € pro Tonne CO₂-Emissionsrechte",
         style: { color: hc.defaultOptions.colors[7] },

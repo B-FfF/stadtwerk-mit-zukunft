@@ -1,5 +1,16 @@
 # Stadtwerke Flensburg Gewinndaten
 
+## `swfl_business_by_product.csv`
+
+|   |  |  |
+|:--|--|--|
+| electricity | Elektrizitätsversorgung inkl. Stromsteuer | Mio. € |
+| heat        | Fernwärmeversorgung                       | Mio. € |
+| gas         | Gasverteilung inkl. Erdgassteuer          | Mio. € |
+| water       | Wasserversorgung                          | Mio. € |
+| fibre       | Telekommunikation                         | Mio. € |
+| other       | Sonstige Umsatzerlöse                     | Mio. € |
+
 ## `swfl_business.csv`
 |   |  |
 |:--|--|

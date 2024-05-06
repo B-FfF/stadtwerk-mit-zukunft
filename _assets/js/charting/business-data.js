@@ -23,7 +23,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
 (function(hc, smz, swflData) {
 
-  var missingYears = [2017, 2018, 2019, 2020, 2021];
+  var missingYears = [2017, 2018, 2019, 2020, 2021, 2022];
 
   function getMissingAsterisk(missingYears, currentYear) {
     if (!missingYears || missingYears.indexOf(currentYear) === -1) {
@@ -179,11 +179,19 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },
       yAxis: [{
         title: { text: "Gewinn in Mio. €" },
-        min: -12000000,
-        max: 36000000
+        endOnTick: false,
+        startOnTick: false,
+        min: -15000000,
+        max: 75000000,
+        tickInterval: 15000000
       },{
+        endOnTick: false,
         labels: { format: '{value} %' },
+        max: 25,
+        min: -5,
         opposite: true,
+        startOnTick: false,
+        tickInterval: 5,
         title: null
       }]
     });
@@ -231,7 +239,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         missing: missingYears,
       },
       yAxis: [{
-        tickInterval: 100000000,
+        max: 1000000000,
+        tickInterval: 250000000,
         title: { text: "Umsätze in Mio. €" }
       }]
     });
@@ -351,8 +360,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
           }
         },
         max: 200000000,
-        min: -350000000,
-        tickInterval: 50000000,
+        min: -400000000,
+        tickInterval: 100000000,
         endOnTick: false,
         reversedStacks: false,
         plotLines: [{
@@ -371,19 +380,20 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         tickInterval: 50,
         startOnTick: false,
         endOnTick: false,
-        max: 275,
+        max: 300,
         min: 0,
         reversed: true
       }, {
         startOnTick: false,
         endOnTick: false,
         max: 100,
-        min: -125,
+        min: -50,
         labels: {
           format: '{value} %',
           style: { color: smz.color.swfl.darkGreen }
         },
         opposite: true,
+        tickInterval: 25,
         title: { text: "Eigenkapitalquote" },
       }]
     }
@@ -391,7 +401,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     return hc.chart('kapitalstruktur', config);
   }
 
-  dividendChart = {
+  var dividendChart = {
     chart: {
       type: 'column'
     },
@@ -413,7 +423,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       name: 'Ausschüttung'
     }],
     xAxis: {
-      tickPositions: smz.fn.getYearSeries(2001, 2021),
+      tickPositions: smz.fn.getYearSeries(2001, 2022),
     },
     yAxis: {
       title: { text: 'Abführung Mio. €' },
