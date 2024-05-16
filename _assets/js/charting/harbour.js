@@ -2,7 +2,7 @@
 
   var data = {
     ships: smz.fn.extractColumn(harbourData, "ships"),
-    cargo: smz.fn.extractColumn(harbourData, "cargo"),
+    cargo: smz.fn.extractColumn(harbourData, "cargo_total"),
   };
 
   var harbourChartConfig = {
@@ -29,7 +29,7 @@
       yAxis: 1
     }],
     xAxis: {
-      missing: [2002, 2003, 2006, 2017, 2018, 2019]
+      missing: [2002, 2003, 2006, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
     },
     yAxis: [{
       title: { text: "Umschlag in Tonnen" }
