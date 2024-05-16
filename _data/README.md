@@ -78,8 +78,33 @@
 
 |   |  |  |
 |:--|--|--|
-| ships       | Eingelaufene Schiffe            |         |
-| cargo       | Güterumschlag                   | 1.000 t |
+| ships           | Eingelaufene Schiffe (lt. Geschäftsbericht) |         |
+| cargo           | Güterumschlag (lt. Geschäftsbericht)        | 1.000 t |
+| animal_feed_in  | Eingang Futtermittel                        | t       |
+| grit_in         | Eingang Splitt                              | t       |
+| scrap_in        | Eingang Schrott                             | t       |
+| fertiliser_in   | Eingang Düngemittel                         | t       |
+| cellulose_in    | Eingang Zellulose                           | t       |
+| crop_in         | Eingang Getreide                            | t       |
+| logs_in         | Eingang Baumstämme                          | t       |
+| other_in        | Eingang Sonstiges                           | t       |
+| stones_in       | Eingang Steine                              | t       |
+| sea_grit_in     | Eingang Seekies                             | t       |
+| coal_in         | Eingang Kohle (Westseite)                   | t       |
+| chips_in        | Eingang Holzhackschnitzel (Westseite)       | t       |
+| oil_heavy_in    | Eingang Schweröl (Westseite)                | t       |
+| trafo_in        | Eingang Transformatoren (Westseite)         | t       |
+| grit2_in        | Eingang Splitt (Westseite)                  | t       |
+| animal_feed_out | Ausgang Futtermittel                        | t       |
+| grit_out        | Ausgang Splitt                              | t       |
+| scrap_out       | Ausgang Schrott                             | t       |
+| fertiliser_out  | Ausgang Düngemittel                         | t       |
+| cellulose_out   | Ausgang Zellulose                           | t       |
+| crop_out        | Ausgang Getreide                            | t       |
+| logs_out        | Ausgang Baumstämme                          | t       |
+| other_out       | Ausgang Sonstiges                           | t       |
+| stones_out      | Ausgang Steine                              | t       |
+| sea_grit_out    | Ausgang Seekies                             | t       |
 
 ## `swfl_overview_waste.csv`
 
