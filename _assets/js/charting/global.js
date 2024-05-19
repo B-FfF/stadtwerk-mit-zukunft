@@ -170,6 +170,9 @@
       },
       getEmissionsDataSeries: getSeries,
       getGradient: getGradient,
+      mirror: function (series) {
+        return series.map(function(value) {return -value})
+      }
     }
   }
 
