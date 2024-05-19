@@ -87,11 +87,6 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     otherLiabilities: smz.fn.extractColumn(swflData.Results, "other_liabilities")
   };
 
-    
-  function mirror(series) {
-    return series.map(function(value) {return -value})
-  }
-
   function drawEarningsChart() {
 
     hc.chart('gewinn-entwicklung', {
@@ -287,36 +282,36 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       },{
         name: "Andere Verbindlichkeiten",
         color: smz.fn.getGradient("#333"),
-        data: mirror(data.otherLiabilities),
+        data: smz.fn.mirror(data.otherLiabilities),
         stack: "debt",
       },{
         name: "Rückstellungen",
         color: smz.fn.getGradient("#666"),
-        data: mirror(data.provision),
+        data: smz.fn.mirror(data.provision),
         stack: "debt"
       },{ // to fill up missing split data for year 2000
         name: "Kredite gesamt",
         color: smz.gradient[5],
-        data: mirror([data.creditLiabilities[0]]),
+        data: smz.fn.mirror([data.creditLiabilities[0]]),
         showInLegend: false,
         stack: "debt"
       },{
         name: "Kredite < 1 Jahr",
         color: smz.gradient[6],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit < 1 Jahr",
-        data: mirror(data.creditLiabilitiesShort),
+        data: smz.fn.mirror(data.creditLiabilitiesShort),
         stack: "debt"
       },{
         name: "Kredite 1 - 5 Jahre",
         color: smz.gradient[3],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit 1 bis 5 Jahre",
-        data: mirror(data.creditLiabilitiesMedium),
+        data: smz.fn.mirror(data.creditLiabilitiesMedium),
         stack: "debt"
       },{
         name: "Kredite > 5 Jahre",
         color: smz.gradient[5],
         description: "Verbindlichkeiten gegenüber Kreditinstituten, Laufzeit > 5 Jahre",
-        data: mirror(data.creditLiabilitiesLong),
+        data: smz.fn.mirror(data.creditLiabilitiesLong),
         stack: "debt"
       },{
         color: smz.gradient[11],

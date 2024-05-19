@@ -110,7 +110,16 @@ sidebar:
     <p>
       Zu den mit einem Sternchen (<strong style="color: #000">*</strong>) gekennzeichneten Jahren fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben bzgl. der Zahl der eingelaufenen Schiffe bzw. des Güterumschlags.
     </p>
+    <p>
+      Die Umschlagsdaten wurden aus den <a href="https://web.archive.org/web/20240505220208/http://www.flensburgerhafen.de/fileadmin/user_upload/Gueterumschlag_von_2004-2023.pdf">Berichten der Flensburger Hafen GmbH</a> aufgefüllt. Die darin enthaltenen Daten werden in den folgenden beiden Diagrammen
+      aufgeschlüsselt.
+    </p>
   </blockquote>
+</div>
+
+<div class="row">
+  <figure id="hafen-stadtwerke-kai" class="col-6 col-12-wide"></figure>
+  <figure id="hafen-ost" class="col-6 col-12-wide"></figure>
 </div>
 
 ### Abfallwirtschaftszentrum (AWZ)
