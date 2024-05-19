@@ -66,8 +66,14 @@
       missing: [2002, 2003, 2006, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
     },
     yAxis: [{
+      endOnTick: false,
+      max: 700000,
+      tickInterval: 200000,
       title: { text: 'Umschlag in Tonnen' }
     },{
+      endOnTick: false,
+      max: 437,
+      tickInterval: 125,
       title: { text: 'Anzahl Schiffe' },
       opposite: true
     }]
