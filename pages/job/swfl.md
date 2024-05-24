@@ -195,6 +195,18 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 |[2011]&nbsp;|[2012]&nbsp;|[2013]&nbsp;|[2014]&nbsp;|[2015]&nbsp;|[2016]&nbsp;|[2017]&nbsp;|[2018]&nbsp;|[2019]&nbsp;|[2020]
 |[2021]&nbsp;|[2022]
 
+### Beteiligungsberichte {#beteiligungsberichte}
+
+ [2015](https://web.archive.org/web/20240524043813/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZSIoYTDT0Kl4DJoBQlX-iX3R1yA3uIPNAxiWsJK02QQO/Beteiligungsbericht_2015.pdf) 
+ [2016](https://web.archive.org/web/20240524043710/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeKVxInJDugivHLJbEoScpW7Ny-nBb0yp_VXYmOFUHiT/Beteiligungsbericht_2016.pdf) 
+ [2018](https://web.archive.org/web/20240524043235/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZbGvfVbLA7UndCMjuw0AoGHrR99hEdcerLvHO4zOoksr/Beteiligungsbericht_2018.pdf) 
+ [2019](https://web.archive.org/web/20240524042328/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZd2gczc3IDKIhte5DgnpFYUN6WRiJML2inJAXj3SMCrA/Beteiligungsbericht_2019.pdf)  
+ [2020](https://web.archive.org/web/20240524042213/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZdZdz4SmcIC0f7Kq8_dBuanrzAt3G5zYXRzufxjWrtOO/Beteiligungsbericht_2020.pdf) 
+ [2021](https://web.archive.org/web/20240513121605/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeeO4F7DOVyUIqWOOIPtffq1rrRl1k-ORxgYIel0pLR6/Beteiligungsbericht_2021.pdf) 
+ [2022](https://web.archive.org/web/20240524042706/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZRvmOyT1bh8num0qvXgN4JKP3iq15JVSHHH9Ar4WJMhP/Beteiligungsbericht_2022.pdf) 
+ [2023](https://web.archive.org/web/20240524042814/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZS-fizcTvazoz0lP9bfqW6MYukSltJwxLcVLggJJRbcj/Beteiligungsbericht_2023.pdf) 
+ [2024](https://web.archive.org/web/20240524043145/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZXxk5iW9t9hcu5RpXH_VbENdaMQQk4YoFGGlsN_PN3tO/Beteiligungsbericht_2024.pdf)
+
 
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html
