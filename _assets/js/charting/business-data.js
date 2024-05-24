@@ -74,7 +74,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     ebitCorporation: smz.fn.extractColumn(swflData.Results, "EBIT_corp"),
     earnings: smz.fn.extractColumn(swflData.Results, "earnings"),
     earningsCorporation: smz.fn.extractColumn(swflData.Results, "earnings_corp"),
-    dividend: smz.fn.extractColumn(swflData.Results, "dividend"),
+    advance_dividend: smz.fn.extractColumn(swflData.Results, "advance_dividend"),
+    additional_dividend: smz.fn.extractColumn(swflData.Results, "additional_dividend"),
     sales: smz.fn.extractColumn(swflData.Results, "sales"),
     energyTaxes: smz.fn.extractColumn(swflData.Results, "energy_taxes"),
     salesCorporation: smz.fn.extractColumn(swflData.Results, "sales_corp"),
@@ -402,7 +403,10 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     },
     plotOptions: {
       column: {
+        groupPadding: 0.1,
+        pointPadding: 0.1,
         pointStart: 2000,
+        stacking: "normal",
         tooltip: {
           valueDecimals: 0, 
           valueSuffix: ' €'
@@ -411,11 +415,13 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
     },
     title: { text: 'Gewinnabführungen an die Stadt Flensburg' },
     series: [{
-      groupPadding: 0.1,
-      pointPadding: 0.1,
+      color: smz.gradient[11],
+      data: data.additional_dividend,
+      name: 'Zusätzliche Ausschüttung'
+    },{
       color: smz.gradient[10],
-      data: data.dividend,
-      name: 'Ausschüttung'
+      data: data.advance_dividend,
+      name: 'Vorabausschüttung'
     }],
     xAxis: {
       tickPositions: smz.fn.getYearSeries(2001, 2022),
