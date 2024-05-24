@@ -424,6 +424,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       name: 'Vorabausschüttung'
     }],
     xAxis: {
+      categories: smz.fn.getYearSeries(2000, 2022),
       tickPositions: smz.fn.getYearSeries(2001, 2022),
     },
     yAxis: {
