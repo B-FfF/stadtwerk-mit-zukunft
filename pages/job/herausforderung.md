@@ -23,7 +23,7 @@ sidebar:
 <figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
-Stand 2022, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20230601214201/https://www.umweltbundesamt.de/sites/default/files/medien/376/bilder/cover_ee-anteile_deu_03-2023.png)
+Stand 2023, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20240527031322/https://www.umweltbundesamt.de/sites/default/files/medien/372/bilder/cover_ee-anteile_deu_10-2023.png)
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 

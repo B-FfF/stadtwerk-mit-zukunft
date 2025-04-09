@@ -9,11 +9,11 @@ var comparisonConfig = {
   },
   series: [{
     name: "Flensburg",
-    data: [1.9, 45.6],
+    data: [1.908, 50.2],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
-    data: [17.4, 46.2],
+    data: [18.8, 51.8],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     color: smz.gradient[2],
