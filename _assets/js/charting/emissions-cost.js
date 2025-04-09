@@ -161,28 +161,19 @@
     },
     series: [{
       color: smz.gradient[8],
-      data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", startYear)
-              .slice(0, -1) // temporary until definitive cost is available
-              .concat(60 * 500000),
+      data: smz.fn.extractColumn(swflData.Emissions, "total_eua_cost", startYear),
       dataLabels: {
         align: 'left',
         inside: true,
         enabled: true,
         formatter: function(e) {
-          if (new Date(this.x).getFullYear() !== 2023) return hc.numberFormat(this.y / 1000000, 1) + " Mio. €"
-          return 'Prognose: 30 Mio. € <br>(500.000 t * 60 €)'
+          return hc.numberFormat(this.y / 1000000, 1) + " Mio. €"
         },
         rotation: -90,
         verticalAlign: 'bottom',
         y: -8,
       },                      
-      name: 'Aufwendungen für Emissionrechte',
-      zoneAxis: 'x',
-      zones: [{
-        value: new Date("Jan 2 " + 2023).getTime(),
-      },{
-        color: hc.defaultOptions.colors[3],
-      }]
+      name: 'Aufwendungen für Emissionrechte',      
     },{
       gapSize: 40,
       name: "EU ETS",
