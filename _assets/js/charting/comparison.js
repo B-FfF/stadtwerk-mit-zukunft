@@ -1,4 +1,4 @@
-(function(hc, smz, swflData) {
+(function(hc, smz, swflData, $) {
 
 var comparisonConfig = {
   chart: {
@@ -238,21 +238,36 @@ var comparisonConfig = {
     }
   };
 
-  var startYearHeatData = 2016;
-  var selectedGrid = "FL";
-  var heatData = {
-    carbon: smz.fn.extractColumn(swflData.Heat, "carbon_per_kwh", startYearHeatData, "grid", selectedGrid),
-    coal: smz.fn.extractColumn(swflData.Heat, "coal_pc", startYearHeatData, "grid", selectedGrid),
-    gas: smz.fn.extractColumn(swflData.Heat, "gas_pc", startYearHeatData, "grid", selectedGrid),
-    biogas: smz.fn.extractColumn(swflData.Heat, "biogas_pc", startYearHeatData, "grid", selectedGrid),
-    oil_heavy: smz.fn.extractColumn(swflData.Heat, "oil_heavy_pc", startYearHeatData, "grid", selectedGrid),
-    oil_light: smz.fn.extractColumn(swflData.Heat, "oil_light_pc", startYearHeatData, "grid", selectedGrid),
-    chips: smz.fn.extractColumn(swflData.Heat, "chips_pc", startYearHeatData, "grid", selectedGrid),
-    chips_recycled: smz.fn.extractColumn(swflData.Heat, "chips_recycled_pc", startYearHeatData, "grid", selectedGrid),
-    waste: smz.fn.extractColumn(swflData.Heat, "waste_pc", startYearHeatData, "grid", selectedGrid),
-  };
-  
-  var heatmixConfig = {
+  var startYearHeatData = 2016,
+      $gridSelect = $('#energietraegermix-fernwaerme-stadtwerke-flensburg + select'),
+      selectedGrid = $gridSelect.val(),
+      getHeatData = function(startYear, grid) {
+        return {
+          carbon: smz.fn.extractColumn(swflData.Heat, "carbon_per_kwh", startYear, "grid", grid),
+          coal: smz.fn.extractColumn(swflData.Heat, "coal_pc", startYear, "grid", grid),
+          gas: smz.fn.extractColumn(swflData.Heat, "gas_pc", startYear, "grid", grid),
+          biogas: smz.fn.extractColumn(swflData.Heat, "biogas_pc", startYear, "grid", grid),
+          oil_heavy: smz.fn.extractColumn(swflData.Heat, "oil_heavy_pc", startYear, "grid", grid),
+          oil_light: smz.fn.extractColumn(swflData.Heat, "oil_light_pc", startYear, "grid", grid),
+          chips: smz.fn.extractColumn(swflData.Heat, "chips_pc", startYear, "grid", grid),
+          chips_recycled: smz.fn.extractColumn(swflData.Heat, "chips_recycled_pc", startYear, "grid", grid),
+          waste: smz.fn.extractColumn(swflData.Heat, "waste_pc", startYear, "grid", grid),
+        }
+      },
+      heatData = getHeatData(startYearHeatData, selectedGrid),
+      dataLabels = {
+        FL: ['Steinkohle', 'Erdgas'],
+        Langballig: ['Biogas' ,'Holzhackschnitzel'],
+        Tarp: ['Biogas', 'Erdgas', 'Holzhackschnitzel']
+      };
+
+  $gridSelect.on('change', function () {
+      selectedGrid = this.value;
+      heatData = getHeatData(startYearHeatData, selectedGrid);
+      smz.chart.heatMix.update(getHeatmixChartConfig())
+  })
+
+  function getHeatmixChartConfig() { return {
     chart: {
       type: "area"
     },
@@ -270,9 +285,9 @@ var comparisonConfig = {
       area: {
         dataLabels: { 
           enabled: true,
-          formatter: function(e, f) {
+          formatter: function() {
             this.y = this.y-10
-            if (!['Steinkohle', 'Erdgas'].includes(this.series.name)) return   // too narrow to the others
+            if (!dataLabels[selectedGrid].includes(this.series.name)) return   // too narrow to the others
             return hc.numberFormat(this.percentage, 0 ) + ' %'
           },
           verticalAlign: 'top',
@@ -352,11 +367,11 @@ var comparisonConfig = {
       opposite: true,
       min: 0
     }]
-  };
+  }};
 
   smz.chart = smz.chart || {};
   smz.chart.comparison = hc.chart("erneuerbare-energien-in-flensburg-chart", comparisonConfig);
   smz.chart.powerMix = hc.chart("strom-produktion-und-vertrieb-stadtwerke-flensburg", powermixConfig);
-  smz.chart.heatMix = hc.chart("fernwaermemix-stadtwerke-flensburg", heatmixConfig);
+  smz.chart.heatMix = hc.chart("fernwaermemix-stadtwerke-flensburg", getHeatmixChartConfig());
 
-})(window.Highcharts, window.smz, window.SWFL);
+})(window.Highcharts, window.smz, window.SWFL, window.jQuery);
