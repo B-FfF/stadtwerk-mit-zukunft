@@ -49,7 +49,30 @@ Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlic
   </div>
 </div>
 
-### Fernwärmemix {#energietraegermix-fernwaerme-stadtwerke-flensburg}
+<style>
+  .heatgrid-select {
+    margin-top:1em;
+    margin-left:1ch;
+    font-size:1.25em;
+    position: relative;
+    line-height: 1.75em;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: #483949;
+  }
+
+  .heatgrid-select:hover {
+    border-color: #483949;
+    cursor: pointer;
+    background-color: #eee;
+  }
+</style>
+
+<div>
+  <h3 id="energietraegermix-fernwaerme-stadtwerke-flensburg" style="display: inline-block;">Fernwärmemix</h3>
+  <select class="heatgrid-select"><option value="FL">Flensburg</option><option>Langballig</option><option>Tarp</option></select>
+</div>
 
 <div class="row">
   <figure class="col-8 col-12-wide">
