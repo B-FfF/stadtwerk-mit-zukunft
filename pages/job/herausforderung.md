@@ -211,6 +211,8 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
 </script>
 <link rel="stylesheet" href="{{ "/assets/css/html5-controls.css" | relative_url }}" />
 
+{%- include scripts.html -%}
+
 {% javascript_asset_tag smz-charting %}
 - /_assets/js/lib/highcharts-9.3.2/highcharts.js
 - /_assets/js/lib/highcharts-9.3.2/pattern-fill.js
