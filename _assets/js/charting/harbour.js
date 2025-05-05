@@ -63,7 +63,7 @@
     },
     title: { floating: true, text: 'Gesamtumschlag' },
     xAxis: {
-      missing: [2002, 2003, 2006, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+      missing: [2002, 2003, 2006, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
     },
     yAxis: [{
       endOnTick: false,
