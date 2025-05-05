@@ -1,9 +1,9 @@
 (function(hc, smz, fibreData) {
 
   var data = {
-    grid: smz.fn.extractColumn(fibreData, "grid"),
-    households: smz.fn.extractColumn(fibreData, "households"),
-    customers: smz.fn.extractColumn(fibreData, "customers"),
+    grid: smz.fn.extractColumn(fibreData, "grid", 2015),
+    households: smz.fn.extractColumn(fibreData, "households", 2015),
+    customers: smz.fn.extractColumn(fibreData, "customers", 2015),
   };
 
   var missingYears = [2018, 2019, 2020, 2021, 2022];
