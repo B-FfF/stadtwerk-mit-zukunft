@@ -37,6 +37,7 @@ defaults:
 
 sass:
   style: compressed
+  silence_deprecations: [import]
 
 exclude:
   - _config_production.yml
