@@ -42,8 +42,7 @@ sidebar:
   <div class="col-4 col-12-wide">
     <p>
       Obwohl sich Strom-Kundschaft und -Absatz seit 2009 mehr als verdoppelt haben, macht 
-      das Stromgeschäft relativ konstant etwa drei Viertel des Gesamtumsatzes aus. Der am stärksten wachsende Geschäftsbereich 
-      ist der externe Vertrieb von Erdgas.
+      das Stromgeschäft relativ konstant etwa drei Viertel des Gesamtumsatzes aus.
     </p>
   </div>
 </div>
@@ -62,7 +61,10 @@ sidebar:
   </figure>
   <blockquote class="col-6 col-12-wide">
     <p>
-      In den Jahren mit einem Sternchen (<strong style="font-color: #000">*</strong>) fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen. Angaben zur Kund*innenzahl gibt es erst seit 2006 und fehlen für das Geschäftsjahr 2022 („4. Quartal von rückläufigen Produktkundenzahlen geprägt“).
+      In den Jahren mit einem Sternchen (<strong style="font-color: #000">*</strong>) fehlen in den <a href="#geschaeftsberichte">Geschäftsberichten</a> leider die Angaben zu eigener Stromproduktion, Zählern und Hausanschlüssen im Netz, sowie jegliche Angaben zu den Stromnetzen.
+    </p>
+    <p>
+      Angaben zur Kund*innenzahl gab es erst seit 2006, für die Geschäftsjahre 2022 („4. Quartal von rückläufigen Produktkundenzahlen geprägt“) und 2023 („geprägt durch erhebliche Verluste von Produktkunden in den Sparten Erdgas und Strom“) fehlen die Angaben wieder.
     </p>
   </blockquote>
 </div>
@@ -193,7 +195,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 |------|------|------|------|------|------|------|------|------|------|
 |[2001]&nbsp;|[2002]&nbsp;|[2003]&nbsp;|[2004]&nbsp;|[2005]&nbsp;|[2006]&nbsp;|[2007]&nbsp;|[2008]&nbsp;|[2009]&nbsp;|[2010]
 |[2011]&nbsp;|[2012]&nbsp;|[2013]&nbsp;|[2014]&nbsp;|[2015]&nbsp;|[2016]&nbsp;|[2017]&nbsp;|[2018]&nbsp;|[2019]&nbsp;|[2020]
-|[2021]&nbsp;|[2022]
+|[2021]&nbsp;|[2022]&nbsp;|[2023]
 
 ### Beteiligungsberichte {#beteiligungsberichte}
 
@@ -215,6 +217,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
   [introducing-render]: https://web.archive.org/web/20210116150455/https://www.stadtwerke-flensburg.de/unternehmen/news/news/matthias-wolfskeil-stellt-kollegen-beim-4-flensburger-energieforum-vor-maik-render-technischer-ges/?tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Baction%5D=detail&cHash=ea5d1578dbc441a4eebad8b47d3a65cc
   [wolfskeil-nicht-entlastet]: https://www.shz.de/lokales/flensburger-tageblatt/keine-entlastung-fuer-den-ex-chef-id175722.html
 
+  [2023]: https://web.archive.org/web/2/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/Geschaeftsbericht_2023/GB2023.pdf
   [2022]: https://web.archive.org/web/20230612005040/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/geschaeftsberichte/2022/230530_GB22_final.pdf
   [2021]: https://web.archive.org/web/20220718014352/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/geschaeftsberichte/2021/stadtwerke-flensburg-geschaeftsbericht-2021.pdf
   [2020]: https://web.archive.org/web/20210606222751/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/geschaeftsberichte/swfl-geschaeftsbericht-2020.pdf

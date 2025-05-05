@@ -23,7 +23,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
 (function(hc, smz, swflData) {
 
-  var missingYears = [2017, 2018, 2019, 2020, 2021, 2022];
+  var missingYears = [2017, 2018, 2019, 2020, 2021, 2022, 2023];
 
   function getMissingAsterisk(missingYears, currentYear) {
     if (!missingYears || missingYears.indexOf(currentYear) === -1) {
@@ -178,8 +178,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         endOnTick: false,
         startOnTick: false,
         min: -15000000,
-        max: 75000000,
-        tickInterval: 15000000
+        max: 175000000,
+        tickInterval: 30000000
       },{
         endOnTick: false,
         labels: { format: '{value} %' },
@@ -235,7 +235,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         missing: missingYears,
       },
       yAxis: [{
-        max: 1000000000,
+        max: 1210000000,
+        endOnTick: false,
         tickInterval: 250000000,
         title: { text: "Umsätze in Mio. €" }
       }]
@@ -355,9 +356,9 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
             return Math.abs(Math.round(this.value / 1000000)) + 'M';
           }
         },
-        max: 200000000,
-        min: -400000000,
-        tickInterval: 100000000,
+        max: 300000000,
+        min: -450000000,
+        tickInterval: 150000000,
         endOnTick: false,
         reversedStacks: false,
         plotLines: [{
@@ -376,14 +377,14 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
         tickInterval: 50,
         startOnTick: false,
         endOnTick: false,
-        max: 300,
+        max: 250,
         min: 0,
         reversed: true
       }, {
         startOnTick: false,
         endOnTick: false,
         max: 100,
-        min: -50,
+        min: -25,
         labels: {
           format: '{value} %',
           style: { color: smz.color.swfl.darkGreen }

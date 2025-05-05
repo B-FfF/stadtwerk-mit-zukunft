@@ -7,7 +7,7 @@
     },
   });
 
-  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021, 2022];
+  var missingYears = [2003, 2006, 2018, 2019, 2020, 2021, 2022, 2023];
 
   function drawPowerChart() {
 
@@ -302,7 +302,7 @@
       xAxis: {
         categories: data.years,
         tickWidth: 1,
-        missing: [2022]
+        missing: [2022, 2023]
       },
       yAxis: [{
         labels: {
