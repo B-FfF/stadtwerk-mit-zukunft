@@ -279,8 +279,8 @@
   function prepareMotion(chart, data) {
 
     var input = document.getElementById('play-range'),
-      output = document.getElementById('play-output'),
-      $playPauseButton = document.getElementById('play-pause-button')
+        output = document.getElementById('play-output'),
+        $playPauseButton = document.getElementById('play-pause-button')
 
     /**
     * Update the chart. This happens either on updating (moving) the range input,
@@ -308,7 +308,7 @@
       output.innerHTML = startYear + currentIndex // Output value
       
       if (currentIndex >= parseInt(input.max)) { // Auto-pause
-          pause($playPauseButton);
+        pause($playPauseButton);
       }
     }
 
@@ -322,9 +322,7 @@
 
       button.title = 'pause';
       button.className = 'fa fa-pause';
-      chart.sequenceTimer = setInterval(function () {
-          update(1);
-      }, 800);
+      chart.sequenceTimer = setInterval(function () { update(1) }, 800);
     }
 
     /**
@@ -340,23 +338,23 @@
 
     $playPauseButton.addEventListener('click', function () {
       if (chart.sequenceTimer === undefined) {
-          play(this);
+        play(this);
       } else {
-          pause(this);
+        pause(this);
       }
     });
 
     /**
     * Update the chart when the input is changed
     */
-   document.getElementById('play-range').addEventListener('input', function() {update();});
-   update();
+    document.getElementById('play-range').addEventListener('input', function() {update();});
+    update();
   }
 
   function drawMethaneChart() {
     var emissionsSeries = emissionsChartTemplate.series[1].data,
-      methaneSeriesStartYear = 2016,
-      template = emissionsChartTemplate;
+        methaneSeriesStartYear = 2016,
+        template = emissionsChartTemplate;
 
     var carbonByGasPerNormCubic = 2,
         gasKilogramPerNormCubic = 0.671,
