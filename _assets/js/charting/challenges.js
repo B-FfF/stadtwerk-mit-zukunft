@@ -150,6 +150,7 @@
       id: "gc",
       name: 'greenco₂ncept Pfad',
       color: 'green',
+      label: { enabled: false },
       tooltip: {
         pointFormat: "{series.name}: <b>{point.y}</b>"
       },
@@ -294,7 +295,7 @@
         input.value = currentIndex;
       }
 
-      chart.series[1].setData(data[0].slice(0, currentIndex + 1), false, animation); // Increment emissions
+      chart.series[1].setData(data[0].slice(0, currentIndex + 1), true, animation); // Increment emissions
       chart.series[2].setData(data[1].slice(0, currentIndex + 1), false, animation); // Increment overshoot area
 
       var consumedBudgetSeries = getConsumedBudgetSeries(greenconceptPath, data[2][currentIndex]);
@@ -320,6 +321,7 @@
         return;
       }
 
+      chart.series[1].options.label.enabled = false
       button.title = 'pause';
       button.className = 'fa fa-pause';
       chart.sequenceTimer = setInterval(function () { update(1) }, 800);
@@ -334,6 +336,7 @@
       button.className = 'fa fa-play';
       clearTimeout(chart.sequenceTimer);
       chart.sequenceTimer = undefined;
+      chart.series[1].update({label: {enabled: true}})
     }
 
     $playPauseButton.addEventListener('click', function () {
