@@ -208,7 +208,8 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
  [2022](https://web.archive.org/web/20240524042706/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZRvmOyT1bh8num0qvXgN4JKP3iq15JVSHHH9Ar4WJMhP/Beteiligungsbericht_2022.pdf) 
  [2023](https://web.archive.org/web/20240524042814/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZS-fizcTvazoz0lP9bfqW6MYukSltJwxLcVLggJJRbcj/Beteiligungsbericht_2023.pdf) 
  [2024](https://web.archive.org/web/20240524043145/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZXxk5iW9t9hcu5RpXH_VbENdaMQQk4YoFGGlsN_PN3tO/Beteiligungsbericht_2024.pdf)
-
+ [2025](https://web.archive.org/save/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZTg_fWhRbG9Xjp0MTt67KdtuQMKe720PaF6IxhNgiQp8/Beteiligungsbericht_2025.pdf)
+  
 
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html
