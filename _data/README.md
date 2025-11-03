@@ -50,7 +50,7 @@
 | capacity        | Brutto-Kraftwerksleistung bei voller Heizwärmeabgabe | MW    |
 | peak            | Höchstbelastung im Netz                    | MW      |
 
-## `swfl_overview_electricity.csv`
+## `swfl_overview_heat.csv`
 
 |   |  |  |
 |:--|--|--|
