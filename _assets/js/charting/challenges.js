@@ -5,6 +5,10 @@
    * @type {Number} greenco₂ncept end year
    */
   var GC_END_YEAR = 2050;
+  /**
+   * @type {Array} Target path series, starting 2019
+   */
+  var KLIMABEGEHREN_PATH = [567259,	535744.61, 504230.22,	472715.83, 441201.44,	409687.05, 378172.66,	346658.27, 315143.88,	283629.5, 248175.81, 212722.13, 177268.44, 141814.75, 94543.17,	47271.58, 0]
 
   var swflDataStartYear = swflData[0].year;
   var swflDataEndYear = parseInt(swflData[swflData.length - 1].year)
@@ -93,6 +97,17 @@
     };
   }
 
+  function getHcOvershootPointFormatter(shouldIs) {
+    return {
+      pointFormatter: function() {
+        return "<tr>"
+            + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ hc.numberFormat(shouldIs.overshoot[this.index], 0) + " t</strong></td><br>"
+            + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + hc.numberFormat(shouldIs.accumulated[this.index], 0) + " t</strong></td>"
+            + "</tr>";
+      }    
+    }
+  }
+
   function getEndDate(value) {
     var remainder = value % 1;
     var monthSplit = 1 / 12;
@@ -105,6 +120,14 @@
   var emissionSeries = smz.fn.getEmissionsDataSeries(swflData, startYear);
   var shouldIs = getOvershootRangeSeries(startYear, swflDataEndYear, greenconceptPath, emissionSeries);
   var emissionsChartTemplate = {
+    credits: {
+      enabled: true,
+      text: "Quelle: EU ETS",
+      href: "https://ec.europa.eu/clima/policies/ets/registry_en#tab-0-1",
+      position: {
+        y: -24
+      }
+    },
     tooltip: {
       valueSuffix: ' t',
       valueDecimals: 0,
@@ -180,15 +203,7 @@
       marker: {
         enabled: false
       },
-      tooltip: {
-        pointFormatter: function() {
-
-          return "<tr>"
-              + "<td>" + this.series.name + ': </td><td style="text-align: right"><strong>'+ hc.numberFormat(shouldIs.overshoot[this.index], 0) + " t</strong></td><br>"
-              + '<td>Gesamt / Kumuliert: </td><td style="text-align: right"><strong>' + hc.numberFormat(shouldIs.accumulated[this.index], 0) + " t</strong></td>"
-              + "</tr>";
-        }
-      },
+      tooltip: getHcOvershootPointFormatter(shouldIs),
       showInLegend: true
     }]
   };
@@ -196,16 +211,29 @@
   function drawEmissionsChart() {
     var template = Object.assign({}, emissionsChartTemplate);
     template.xAxis.max = swflDataEndYear + .5;
-    template.credits = {
-      enabled: true,
-      text: "Quelle: EU ETS",
-      href: "https://ec.europa.eu/clima/policies/ets/registry_en#tab-0-1",
-      position: {
-        y: -24
-      }
-    }
 
     return hc.chart('co2-emissionen-der-stadtwerke-flensburg', template);
+  }
+
+  function drawEmissionsChart2035Target() {
+    var template = JSON.parse(JSON.stringify(emissionsChartTemplate));
+
+    template.plotOptions.line.pointStart = template.plotOptions.arearange.pointStart = 2019
+
+    template.series[0].data = KLIMABEGEHREN_PATH;
+    template.series[0].name = 'Zielpfad';
+    template.series[0].label.enabled = true;
+
+    var emissionSeries = smz.fn.getEmissionsDataSeries(swflData, 2019);
+    template.series[1].data = emissionSeries
+
+    var shouldIs = getOvershootRangeSeries(2019, swflDataEndYear, KLIMABEGEHREN_PATH, emissionSeries);
+    template.series[2].data = shouldIs.range
+    template.series[2].tooltip = getHcOvershootPointFormatter(shouldIs),
+    
+    template.xAxis.max = 2035 + .5;
+
+    return hc.chart('co2-emissionen-der-stadtwerke-flensburg-2035-ziel', template);
   }
 
   var animation = {
@@ -498,6 +526,7 @@
   smz.chart = smz.chart || {};
   var charts = {
     Emissions: drawEmissionsChart,
+    Emissions2035Target: drawEmissionsChart2035Target,
     Emissions2030: drawEmissionsChart2030,
     Methane: drawMethaneChart
   };

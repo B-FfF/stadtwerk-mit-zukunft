@@ -85,6 +85,12 @@ Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlic
   </div>
 </div>
 
+## Das Klimabegehren-Ziel: CO<sub>2</sub>-frei 2035!
+
+Im Januar 2021 gründete sich ein [Bürger*innenbegehren](https://klimabegehren-flensburg.de/), welches die Unterstützung von 10.046 Flensburger\*innen für die Forderung nach einer CO<sub>2</sub>-freien Wärmeversorgung bis spätestens 2035 erhielt. Diese übernahm daraufhin die Ratsversammlung der Stadt Flensburg in ihrer Sitzung am 1.12.2022 ohne Gegenstimmen. Die Transformation sieht folgenden Zielpfad vor:
+
+<figure class=chart id="co2-emissionen-der-stadtwerke-flensburg-2035-ziel"></figure>
+
 ## Das greenco<sub>2</sub>ncept-Ziel
 
 Die Stadtwerke Flensburg haben sich bereits 2007 das Ziel gesetzt, bis 2050 CO<sub>2</sub>-neutral zu werden. Dabei stellen sie auch ihren eigenen Präsentationen zum Thema immer voran, dass es nicht reiche, irgendwann vor 2050 die Emissionen abrupt auf Null sinken zu lassen (Ziel 1), sondern diese auch bis dahin begrenzt werden müssen (sprich: einem Zielpfad folgen; Ziel 2). Es wird sich also an einem CO<sub>2</sub>-Budget orientiert, wie es die Klimawissenschaft auch tut.
