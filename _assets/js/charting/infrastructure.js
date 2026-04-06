@@ -127,7 +127,7 @@
         name: "Zähler im Netz",
         shadow: smz.chart.getBoldLineShadow(),
         visible: false,
-        zones: smz.chart.getDottedZone(2005, 2007)
+        zones: [].concat(smz.chart.getDottedZone(2005, 2007)).concat(smz.chart.getDottedZone(2019, 2021))
       },{
         color: hc.Color(smz.color.swfl.darkGreen).brighten(-.3).get('rgb'),
         data: data.households,
