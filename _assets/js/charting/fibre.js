@@ -14,10 +14,12 @@
     },
     plotOptions: {
       line: {
+        connectNulls: true,
         pointStart: 2015,
         tooltip: {
           valueDecimals: 0
-        }
+        },
+        zoneAxis: 'x',
       }
     },
     series: [{
@@ -27,7 +29,8 @@
       tooltip: {
         valueSuffix: ' km',
       },
-      zIndex: 1
+      zIndex: 1,
+      zones: smz.chart.getDottedZone(2019, 2021)
     },{
       name: "Hausanschlüsse",
       data: data.households,
@@ -37,7 +40,8 @@
       name: "Kund*innen",
       color: smz.gradient[11],
       data: data.customers,
-      yAxis: 1
+      yAxis: 1,
+      zones: smz.chart.getDottedZone(2019, 2021)
     }],
     xAxis: {
       missing: missingYears

@@ -27,13 +27,9 @@
         connectNulls: true,
         pointStart: 2000,
         zoneAxis: "x",
-        zones: [{
-          dashStyle: "Solid",
-          value: 2005
-        },{
-          dashStyle: "Dot",
-          value: 2007
-        }]
+        zones: []
+          .concat(smz.chart.getDottedZone(2005, 2007))
+          .concat(smz.chart.getDottedZone(2019, 2021))
       }
     },
     tooltip: {
