@@ -34,7 +34,7 @@ sidebar:
   </figure>
 </div>
 
-#### Prozentuale Umsatzverteilung nach Geschäftbereichen
+#### Prozentuale Umsatzverteilung nach Geschäftsbereichen
 
 <div class="row">
   <figure id="umsatz-nach-produkten-verlauf" class="col-8 col-12-wide">
@@ -43,6 +43,31 @@ sidebar:
     <p>
       Obwohl sich Strom-Kundschaft und -Absatz seit 2009 mehr als verdoppelt haben, macht 
       das Stromgeschäft relativ konstant etwa drei Viertel des Gesamtumsatzes aus.
+    </p>
+  </div>
+</div>
+
+#### Ertrag nach Geschäftsbereichen (laut Wirtschaftsplan\*)
+
+<div class="row chart">
+  <div class="col-8 col-12-wide">
+    <figure id="ertrag-nach-produkten-verlauf">
+    </figure>
+    <figcaption>
+        * da es keine öffentlich verfügbaren Daten zum tatsächlichen Ertrag der einzelnen Geschäftsbereiche gibt,
+        werden hier die Zahlen der Wirtschaftpläne dargestellt, die jeweils ca. 1 Monat vor Beginn des Geschäftsjahres 
+        in den <a href="#haushaltssatzungen">Haushaltssatzungen der Stadt</a> erscheinen
+    </figcaption>
+  </div>
+  <div class="col-4 col-12-wide">
+    <p>
+      Das bundesweite <a href="javascript: smz.chart.soloSeries(smz.chart.EarningsByProduct, 0)">Strom</a>geschäft ist der größte
+      Ertragsposten. Während nördlich der Grenze Profite mit <a href="javascript: smz.chart.soloSeries(smz.chart.EarningsByProduct, 1)">
+      Fernwärme</a> gesetzlich verboten sind, wird in Flensburg regulär mit einem Gewinn kalkuliert – außer 2023: Rekordeinnahmen
+      durch frei werdende <a href="javascript: smz.chart.soloSeries(smz.chart.EarningsByProduct, 2)">Gas</a>mengen nach der Kündigung der
+      bundesweiten Gaskundschaft wurden damals genutzt, um den Fernwärmekund*innen eine Gutschrift zu geben. Im Quasi-Monopol
+      <a href="javascript: smz.chart.soloSeries(smz.chart.EarningsByProduct, 3)">Wasser</a> wird im Durchschnitt kostendeckend kalkuliert.
+      Das <a href="javascript: smz.chart.soloSeries(smz.chart.EarningsByProduct, 4)">Glasfaser</a>geschäft ist bislang eher defizitär.
     </p>
   </div>
 </div>
@@ -211,6 +236,22 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
  [2024](https://web.archive.org/web/20240524043145/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZXxk5iW9t9hcu5RpXH_VbENdaMQQk4YoFGGlsN_PN3tO/Beteiligungsbericht_2024.pdf)
  [2025](https://web.archive.org/save/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZTg_fWhRbG9Xjp0MTt67KdtuQMKe720PaF6IxhNgiQp8/Beteiligungsbericht_2025.pdf)
  [2026](https://web.archive.org/web/20260323203333/https://www.flensburg.de/PDF/Beteiligungsbericht_2026.PDF?ObjSvrID=2306&ObjID=18848&ObjLa=1&Ext=PDF&WTR=1&_ts=1770889891)
+
+
+### Haushaltssatzungen Stadt Flensburg (hier: Erfolgspläne SWFL) {#haushaltssatzungen}
+
+ [2016](https://web.archive.org/web/20220308035940/https://www.flensburg.de/PDF/haushalt_2016_band_i_internet_mit_seiten.PDF?ObjSvrID=2306&ObjID=1416&ObjLa=1&Ext=PDF&WTR=1&_ts=1452850541 "Haushalt Band I, siehe Seite 210")
+ [2017](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeRJvhHqDsDZQmgWyPg8KcTbq_Ljwy4gG4x_im5NhMPj/Haushaltsband_I_S.212-311.pdf "Band I, Teil III, siehe Seite 85")
+ [2018](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZUQr8KHi7FS6GC_U57no1iCIBilTmRhlqTNgRMdvG8PM/1._Nachtragshaushalt_2018-_Band_I.pdf "1. Nachtragshaushalt Band I aus RV-15/2018, siehe Seite 135")
+ [2019](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZefFGzbEn3PWIXbl_Hq5pywg_lEJzYEcTFpsqiqvy_XQ/Band_1.pdf "Haushalt Band I aus RV-187/2018, siehe Seite 212")  
+ [2020](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZalxXu_Gdo7O19R8KrwJ_CXueww4lsUpquOB3dPcILTC/Band_I_NT_2020.pdf "Band I aus RV-28/2020, siehe Seite 184")
+ [2021](https://web.archive.org/web/20240616081014/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZUV_bLWKfaU19Qr04IB4e29om4-XyCpnfSHrtGzFi6ZF/Haushalt_2021-2022_Band_I.II.pdf "Haushalt Band I, Teil II aus RV-15/2021, siehe Seite 3")
+ [2022](https://web.archive.org/web/20240616184049/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeq0auEVhzyKx0tLtGWSv0u17-l1VsdRaUBRD8ygGfuX/1._Nachtragshaushaltssatzung_2022_-_Band_I_Teil_II_Beteiligungen_IV_Konzern_SW.pdf "1. Nachtragshaushalt Band I, Teil II, Beteiligungen IV aus RV-173/2021, siehe Seite 3")
+ [2023](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeVTz_MXf7OWt0ESZ96bciwncHd1k0q4jl4KEAeeh8Hi/HH_2023-2024_-_Band_I_-_Teil_2a.pdf "Band I, Teil 2a aus RV-42/2023, siehe Seite 223")
+ [2024](https://web.archive.org/web/20260621115557/https://www.flensburg.de/PDF/1_Nachtragshaushalt_2024_Band_I.PDF?ObjSvrID=2306&ObjID=16222&ObjLa=1&Ext=PDF&WTR=1&_ts=1711370862 "1. Nachtragshaushalt Band 1, siehe Seite 177")
+ [2025](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZcOTfqreflTxZ8Pr3_oyVELEroWy5Pf1Csgm6dckzEMU/Band_II_-_Wirtschaftsplaene.pdf "Band II aus RV-158/2024, siehe S. 80")
+ [2026](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZQzf54Dcukry6UEnnPtR1BDsoTCI0C7xtU2HL2Je69Ff/Band_III_-_Wirtschaftsplaene_der_Sondervermoegen_und_Beteiligungen.pdf "Band III aus RV-150/2025, siehe Seite 72")
+
 
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html

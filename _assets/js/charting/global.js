@@ -67,6 +67,18 @@
         
         return chart;
       },
+      /**
+       * @param {Highcharts.Chart} chart
+       * @param {Number} idx
+       */
+      soloSeries: function(chart, idx) {
+        for (var i in chart.series) {
+          if (idx !== chart.series[i].index) { chart.series[i].hide(); continue }
+
+          chart.series[i].options.dataLabels.enabled = true;
+          chart.series[i].show()
+        }
+      },
       getPointFormatterTableRow: function(decimals, showColorLegend, showValueSuffix) {
         decimals = decimals || 0;
         showColorLegend = showColorLegend || true;

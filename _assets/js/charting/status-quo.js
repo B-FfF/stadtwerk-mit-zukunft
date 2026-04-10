@@ -140,8 +140,106 @@
     }]
   };
 
+  var startYearEarningsSplitData = 2016;
+  var splitEarningsData = {
+    electricity: smz.fn.extractColumn(swflData.ByProduct, "eat_electricity", startYearEarningsSplitData),
+    heat: smz.fn.extractColumn(swflData.ByProduct, "eat_heat", startYearEarningsSplitData),
+    gas: smz.fn.extractColumn(swflData.ByProduct, "eat_gas", startYearEarningsSplitData),
+    water: smz.fn.extractColumn(swflData.ByProduct, "eat_water", startYearEarningsSplitData),
+    fibre: smz.fn.extractColumn(swflData.ByProduct, "eat_fibre", startYearEarningsSplitData),
+    stakes: smz.fn.extractColumn(swflData.ByProduct, "eat_stakes", startYearEarningsSplitData),
+    admin: smz.fn.extractColumn(swflData.ByProduct, "eat_admin", startYearEarningsSplitData),
+    other: smz.fn.extractColumn(swflData.ByProduct, "eat_other", startYearEarningsSplitData),
+  };
+
+  var earningsChart = {
+    chart: { type: "column" },
+    plotOptions: {
+      column: {
+        pointStart: startYearEarningsSplitData,
+        stacking: "normal",
+        dataLabels: { format: "{point.y:.1f}" }
+      }
+    },
+    series: [{
+      color: smz.gradient[1],
+      data: splitEarningsData.electricity,
+      name: "Strom"
+    },{
+      color: smz.gradient[3],
+      data: splitEarningsData.heat,
+      name: "Fernwärme"
+    },{
+      color: smz.gradient[8],
+      data: splitEarningsData.gas,
+      name: "Gasverteilung"
+    },{
+      color: smz.gradient[0],
+      data: splitEarningsData.water,
+      name: "Wasser"
+    },{
+      color: smz.gradient[10],
+      data: splitEarningsData.fibre,
+      name: "Glasfaser"
+    },{
+      // color: smz.gradient[6],
+      data: splitEarningsData.stakes,
+      name: "Beteiligungen"
+    },{
+      // color: smz.gradient[6],
+      data: splitEarningsData.admin,
+      name: "Verwaltung"
+    },{
+      color: smz.gradient[6],
+      data: splitEarningsData.other,
+      name: "Übrige Tätigkeiten"
+    }],
+    tooltip: {
+      formatter: function (e) {
+        var tooltip = Highcharts.defaultOptions.tooltip.formatter.call(this, e);
+        for (var i in e.chart.series) {
+          if (!e.chart.series[i].visible) return tooltip;
+        }
+
+        var positiveTotal, negativeTotal; // workaround for https://www.highcharts.com/forum/viewtopic.php?t=10967
+        for (var i in this.points) {
+          if (positiveTotal !== undefined && negativeTotal !== undefined) break;
+          if (this.points[i].total >= 0) positiveTotal = this.points[i].total; else negativeTotal = this.points[i].total
+        }
+
+        tooltip[tooltip.length-1] = '<tr style="line-height: 2em"><td><strong>Gesamt:</strong></td>'
+          + '<td style="text-align: right"><strong>' + hc.numberFormat(negativeTotal + positiveTotal) + ' Mio.</strong></td>'
+          + '</tr></table>';
+
+        return tooltip
+      },
+      valueDecimals: 2,
+      valueSuffix: " Mio."
+    },
+    xAxis: { lineColor: "transparent", tickColor: "transparent" },
+    yAxis: {
+      endOnTick: false,
+      plotBands: [{
+        from: -Infinity,
+        to: 0,
+        color: smz.fn.getGradient("#fcf6f6"),
+        zIndex: 0
+      }],
+      // Optional: add a crisp line right at 0
+      plotLines: [{
+        value: 0,
+        color: '#cccccc',
+        width: 1,
+        zIndex: 2
+      }],
+      startOnTick: false,
+      title: { text: "Verluste | Gewinne in Mio. €" },
+    }
+  }
+
   window.smz.chart = window.smz.chart || {};
   window.smz.chart.PieByProduct = hc.chart('umsatz-nach-produkten', pieChartConfig);
   window.smz.chart.ByProduct = hc.chart('umsatz-nach-produkten-verlauf', salesChart);
+  window.smz.chart.EarningsByProduct = hc.chart('ertrag-nach-produkten-verlauf', earningsChart);
 
 })(window.Highcharts, window.smz, window.SWFL.Business);
