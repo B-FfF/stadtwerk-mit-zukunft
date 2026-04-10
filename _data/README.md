@@ -2,14 +2,25 @@
 
 ## `swfl_business_by_product.csv`
 
+- Erste Spalten: Umsätze laut Geschäftsbericht
+- `eat_`-Spalten: Jahresergebnisse („Earnings after Taxes”) laut Erfolgs*plan*  
+  (tatsächlich erzielte Spartenergebnisse nicht öffentlich verfügbar)
+
 |   |  |  |
 |:--|--|--|
-| electricity | Elektrizitätsversorgung inkl. Stromsteuer | Mio. € |
-| heat        | Fernwärmeversorgung                       | Mio. € |
-| gas         | Gasverteilung inkl. Erdgassteuer          | Mio. € |
-| water       | Wasserversorgung                          | Mio. € |
-| fibre       | Telekommunikation                         | Mio. € |
-| other       | Sonstige Umsatzerlöse                     | Mio. € |
+| electricity     | Elektrizitätsversorgung inkl. Stromsteuer | Mio. € |
+| heat            | Fernwärmeversorgung                       | Mio. € |
+| gas             | Gasverteilung inkl. Erdgassteuer          | Mio. € |
+| water           | Wasserversorgung                          | Mio. € |
+| fibre           | Telekommunikation                         | Mio. € |
+| other           | Sonstige Umsatzerlöse                     | Mio. € |
+| eat_electricity | Elektrizitätsversorgung                   | Mio. € |
+| eat_heat        | Fernwärmeversorgung                       | Mio. € |
+| eat_gas         | Gasverteilung                             | Mio. € |
+| eat_water       | Wasserversorgung                          | Mio. € |
+| eat_fibre       | Telekommunikation                         | Mio. € |
+| eat_admin       | Verwaltung                                | Mio. € |
+| eat_other       | übrige Tätigkeiten                        | Mio. € |
 
 ## `swfl_business.csv`
 |   |  |

@@ -212,6 +212,15 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
  [2025](https://web.archive.org/save/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZTg_fWhRbG9Xjp0MTt67KdtuQMKe720PaF6IxhNgiQp8/Beteiligungsbericht_2025.pdf)
  [2026](https://web.archive.org/web/20260323203333/https://www.flensburg.de/PDF/Beteiligungsbericht_2026.PDF?ObjSvrID=2306&ObjID=18848&ObjLa=1&Ext=PDF&WTR=1&_ts=1770889891)
 
+ ### Haushaltssatzungen Stadt Flensburg (hier: Erfolgspläne SWFL)
+ [2017](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeRJvhHqDsDZQmgWyPg8KcTbq_Ljwy4gG4x_im5NhMPj/Haushaltsband_I_S.212-311.pdf "Band I, Teil III, siehe Seite 85")
+ [2020](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZalxXu_Gdo7O19R8KrwJ_CXueww4lsUpquOB3dPcILTC/Band_I_NT_2020.pdf "Band I aus RV-28/2020, siehe Seite 184")
+ [2022](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeq0auEVhzyKx0tLtGWSv0u17-l1VsdRaUBRD8ygGfuX/1._Nachtragshaushaltssatzung_2022_-_Band_I_Teil_II_Beteiligungen_IV_Konzern_SW.pdf "Band I, Teil II, Beteiligungen IV aus RV-173/2021, siehe Seite 3")
+ [2023](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeVTz_MXf7OWt0ESZ96bciwncHd1k0q4jl4KEAeeh8Hi/HH_2023-2024_-_Band_I_-_Teil_2a.pdf "Band I, Teil 2a aus RV-42/2023, siehe Seite 223")
+ [2025](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZcOTfqreflTxZ8Pr3_oyVELEroWy5Pf1Csgm6dckzEMU/Band_II_-_Wirtschaftsplaene.pdf "Band II aus RV-158/2024, siehe S. 80") 
+ [2026](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZQzf54Dcukry6UEnnPtR1BDsoTCI0C7xtU2HL2Je69Ff/Band_III_-_Wirtschaftsplaene_der_Sondervermoegen_und_Beteiligungen.pdf "Band III aus RV-150/2025, siehe Seite 72")
+
+
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html
   [umwandlung-gmbh]: https://www.ulrich-jochimsen.de/files/Monopol_1%2013.pdf
