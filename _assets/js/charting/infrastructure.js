@@ -168,6 +168,7 @@
   function drawPowerGridChart() {
 
     var data = {
+      gridTotal: smz.fn.extractColumn(swflData.Electricity, "grid_total", 2004), 
       gridHigh: smz.fn.extractColumn(swflData.Electricity, "grid_high", 2004),
       gridMedium: smz.fn.extractColumn(swflData.Electricity, "grid_medium", 2004),
       gridLow: smz.fn.extractColumn(swflData.Electricity, "grid_low", 2004),
@@ -179,9 +180,7 @@
     return hc.chart('stromnetz', {
       plotOptions: {
         area: {
-          connectNulls: true,
           marker: { enabled: false },
-          pointStart: 2004,
           pointPlacement: .5,
           pointRange: 1,
           tooltip: {
@@ -201,12 +200,15 @@
             valueSuffix: ' km',
             valueDecimals: 0
           },
-          zoneAxis: "x",
-          zones: smz.chart.getDottedZone(2005, 2007)
+          yAxis: 0,
         },
-        line: {
+        series: {
           connectNulls: true,
           pointStart: 2004,
+          tooltip: {
+            valueSuffix: ' MW',
+            valueDecimals: 1
+          },
           yAxis: 1,
           zoneAxis: "x",
           zones: smz.chart.getDottedZone(2005, 2007)
@@ -236,17 +238,25 @@
         type: 'area',
         zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[6], .5)
       },{
-        data: data.peak,
         color: smz.color.swfl.darkGreen,
+        data: data.gridTotal.map(function(value, i) {
+          if (value === null && data.gridLow[i] === null) return null;
+          return value !== null ? value : data.gridLow[i] + data.gridMedium[i] + data.gridHigh[i]
+        }),
+        marker: { enabled: false },
+        name: 'Leitungsnetz gesamt',
+        pointPlacement: .5,
+        tooltip: { valueSuffix: ' km' },
+        yAxis: 0,
+        zones: [].concat(smz.chart.getDottedZone(2005, 2007)).concat(smz.chart.getDottedZone(2019.5, 2021.5))
+      },{
+        color: 'transparent',
+        data: data.peak,
+        marker: { fillColor: hc.defaultOptions.colors[8], lineColor: hc.defaultOptions.colors[8] },
         name: "Höchstleistung im Netz",
-        shadow: smz.chart.getBoldLineShadow(),
-        tooltip: {
-          valueSuffix: ' MW',
-          valueDecimals: 1
-        }
       }, {
         data: data.capacity,
-        color: hc.defaultOptions.colors[8],
+        color: smz.color.swfl.lightGreen,
         name: "Erzeugungskapazität",
         shadow: smz.chart.getBoldLineShadow(),
         visible: false

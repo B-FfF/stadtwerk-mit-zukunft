@@ -39,6 +39,7 @@
 |   |  |
 |:--|--|
 | customers       | Stromkund*innen bundesweit                 |         |
+| grid_total      | Länge Leitungsnetz gesamt                  | km      |
 | grid_high       | Hochspannungsnetz                          | km      |
 | grid_medium     | Mittelspannungsnetz                        | km      | 
 | grid_low        | Niederspannungsnetz                        | km      |
