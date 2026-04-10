@@ -185,6 +185,19 @@
           pointPlacement: .5,
           pointRange: 1,
           tooltip: {
+              /* Hack: as `connectNulls` works differently in stacked charts, stacking is "emulated" by accumulating all
+               * values in the `series.data` functions (see below) and subtracting again when rendering them in the tooltip
+               */ 
+            pointFormatter: function (i) {
+              var i = this.point.index,
+                  value = this.y 
+                        - (this.series.index < 2 ? data.gridLow[i] : 0 )
+                        - (this.series.index === 0 ? data.gridMedium[i] : 0)
+
+              return '<tr><td><span style="color:' + this.color.stops[0][1] + '">●</span>&nbsp;' 
+              + this.series.name + ':&nbsp;</td><td style="text-align: right"><b>' 
+              + hc.numberFormat(value, 0) + ' km</b></td></tr>';
+            },
             valueSuffix: ' km',
             valueDecimals: 0
           },
@@ -201,24 +214,26 @@
       },
       title: { text: 'Stromnetze Flensburg' },
       series: [{
-        type: 'area',
-        name: "Hochspannungsnetz 60/150 kV",
-        data: data.gridHigh,
         color: smz.gradient[5],
+        data: data.gridHigh.map(function(value, i) {
+          return value === null ? null : value + data.gridMedium[i] + data.gridLow[i]
+        }),        
+        name: "Hochspannungsnetz 60/150 kV",
+        type: 'area',
         zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[5])
       },{
-        type: 'area',
-        name: "Mittelspannungsnetz 15 (20) kV",
         color: smz.gradient[3],
-        data: data.gridMedium,
-        zIndex: -1,
+        data: data.gridMedium.map(function(value, i) {
+          return value === null ? null : value + data.gridLow[i]
+        }),        
+        name: "Mittelspannungsnetz 15 (20) kV",
+        type: 'area',
         zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[3])
       },{
-        name: "Niederspannungsnetz 220V",
-        data: data.gridLow,
         color: smz.gradient[6],
+        data: data.gridLow,
+        name: "Niederspannungsnetz 220V",
         type: 'area',
-        zIndex: -2,
         zones: smz.chart.getStripedZone(2005, 2007, hc.defaultOptions.colors[6], .5)
       },{
         data: data.peak,
