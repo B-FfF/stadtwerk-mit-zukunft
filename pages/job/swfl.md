@@ -201,6 +201,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 
  [2015](https://web.archive.org/web/20240524043813/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZSIoYTDT0Kl4DJoBQlX-iX3R1yA3uIPNAxiWsJK02QQO/Beteiligungsbericht_2015.pdf) 
  [2016](https://web.archive.org/web/20240524043710/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeKVxInJDugivHLJbEoScpW7Ny-nBb0yp_VXYmOFUHiT/Beteiligungsbericht_2016.pdf) 
+ [2017](https://web.archive.org/web/20260323203002/https://www.flensburg.de/PDF/Beteiligungsbericht_2017.PDF?ObjSvrID=2306&ObjID=5068&ObjLa=1&Ext=PDF&WTR=1&_ts=1519725298)
  [2018](https://web.archive.org/web/20240524043235/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZbGvfVbLA7UndCMjuw0AoGHrR99hEdcerLvHO4zOoksr/Beteiligungsbericht_2018.pdf) 
  [2019](https://web.archive.org/web/20240524042328/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZd2gczc3IDKIhte5DgnpFYUN6WRiJML2inJAXj3SMCrA/Beteiligungsbericht_2019.pdf)  
  [2020](https://web.archive.org/web/20240524042213/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZdZdz4SmcIC0f7Kq8_dBuanrzAt3G5zYXRzufxjWrtOO/Beteiligungsbericht_2020.pdf) 
@@ -209,7 +210,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
  [2023](https://web.archive.org/web/20240524042814/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZS-fizcTvazoz0lP9bfqW6MYukSltJwxLcVLggJJRbcj/Beteiligungsbericht_2023.pdf) 
  [2024](https://web.archive.org/web/20240524043145/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZXxk5iW9t9hcu5RpXH_VbENdaMQQk4YoFGGlsN_PN3tO/Beteiligungsbericht_2024.pdf)
  [2025](https://web.archive.org/save/https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZTg_fWhRbG9Xjp0MTt67KdtuQMKe720PaF6IxhNgiQp8/Beteiligungsbericht_2025.pdf)
- [2026](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZVpFQigezSxeC0qTU81yTZXB_sybouM4ur9SVpjb33pK/Beteiligungsbericht_2026.pdf)
+ [2026](https://web.archive.org/web/20260323203333/https://www.flensburg.de/PDF/Beteiligungsbericht_2026.PDF?ObjSvrID=2306&ObjID=18848&ObjLa=1&Ext=PDF&WTR=1&_ts=1770889891)
 
   [prinz-interview]: https://www.foerde.news/news/vater-der-flensburger-fernwaerme-verstorben.html
   [prinz-spiegel]: https://www.spiegel.de/spiegel/print/d-14326706.html
