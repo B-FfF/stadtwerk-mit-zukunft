@@ -1,5 +1,11 @@
 (function(hc, smz, swflData, $) {
 
+var powerRenewablesPercentageFlensburg = 42.4
+var heatRenewablesPercentageFlensburg = 2.4 * 0.6 // EBS aus FW-Mix (gelten zu 60 % als klimaneutral)
+                                      * 0.95      // angenommene Anschlussquote („über 90 %“)
+                                      // ↓ Rest, Annahme: Hälfte der Haushalte hat 100 % Ökostrom 
+                                      + 0.05 * (0.5 * powerRenewablesPercentageFlensburg + 0.5 * 1);
+
 var comparisonConfig = {
   chart: {
     type: 'bar'
@@ -9,11 +15,11 @@ var comparisonConfig = {
   },
   series: [{
     name: "Flensburg",
-    data: [1.908, 50.2],
+    data: [heatRenewablesPercentageFlensburg, powerRenewablesPercentageFlensburg],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
-    data: [18.8, 51.8],
+    data: [18.2, 54.4],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     color: smz.gradient[2],
@@ -40,7 +46,7 @@ var comparisonConfig = {
             output = '<span style="font-weight: normal">';
           }
           if (this.key === "Wärme" && this.series.name === "Flensburg") {
-            return output + this.series.name + ": < 3 %";
+            return output + "Flensburg : ~ " + hc.numberFormat(this.y, 1) + " %";
           }
           if (this.key === "Strom" && this.series.name === "Kreis Schleswig-Flensburg") {
             return output + this.series.name + ": > 100 %";
