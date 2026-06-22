@@ -80,7 +80,7 @@ Diese Grafik zeigt den Strommix der Stadtwerke Flensburg auf Basis der gesetzlic
   </figure>
   <div class="col-4 col-12-wide">
     <p>
-      Der Energieträgermix des Flensburger Fernwärmenetzes basiert auf den jährlichen Veröffentlichungen gemäß §8 Abs. 3 EWKG<sup><a href="#fn:3">2</a></sup>. "Ersatzbrennstoffe" ist ein Euphemismus für Müll: es handelt sich dabei vorwiegend um Pappe, Papier und Plastik, welche im Abfallwirtschaftszentrum aufbereitet werden und deren Verbrennung <a href="https://web.archive.org/web/20210301122409/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/greenco2ncept/#c309">bis zu 60 % als klimaneutral</a> gilt.
+      Der Energieträgermix des Flensburger Fernwärmenetzes basiert auf den jährlichen Veröffentlichungen gemäß §&nbsp;12 Abs.&nbsp;2 EWKG (vormals §&nbsp;8 Abs.&nbsp;3) EWKG<sup><a href="#fn:3">2</a></sup>. "Ersatzbrennstoffe" ist ein Euphemismus für Müll: es handelt sich dabei vorwiegend um Pappe, Papier und Plastik, welche im Abfallwirtschaftszentrum aufbereitet werden und deren Verbrennung <a href="https://web.archive.org/web/20210301122409/https://www.stadtwerke-flensburg.de/unternehmen/umwelt/greenco2ncept/#c309">bis zu 60 % als klimaneutral</a> gilt.
     </p>
   </div>
 </div>
@@ -158,8 +158,8 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
 [^3]:
     **Zusammensetzung Fernwärme**  
 
-    Flensburg  | [2016][FW-FL-2016] | [2017][FW-FL-2017] | [2018][FW-FL-2018] | [2019][FW-FL-2019] | [2020][FW-FL-2020] | [2021][FW-FL-2021] | [2022][FW-FL-2022] | [2023][FW-FL-2023] | [2024][FW-FL-2024]
-    Tarp       | [2016][FW-T-2016]  | [2017][FW-T-2017]  | [2018][FW-T-2018]  | [2019][FW-T-2019]  | [2020][FW-T-2020]  | [2021][FW-T-2021] | [2022][FW-T-2022] | [2023][FW-T-2023] | [2024][FW-T-2024]
+    Flensburg  | [2016][FW-FL-2016] | [2017][FW-FL-2017] | [2018][FW-FL-2018] | [2019][FW-FL-2019] | [2020][FW-FL-2020] | [2021][FW-FL-2021] | [2022][FW-FL-2022] | [2023][FW-FL-2023] | [2024][FW-FL-2024] | [2025][FW-FL-2025]
+    Tarp       | [2016][FW-T-2016]  | [2017][FW-T-2017]  | [2018][FW-T-2018]  | [2019][FW-T-2019]  | [2020][FW-T-2020]  | [2021][FW-T-2021] | [2022][FW-T-2022] | [2023][FW-T-2023] | [2024][FW-T-2024] | [2025][FW-T-2025]
     Langballig | [2016][FW-LB-2016] | [2017][FW-LB-2017] | [2018][FW-LB-2018] | [2019][FW-LB-2019] | [2020][FW-LB-2020] | [2021][FW-LB-2021] | [2022][FW-LB-2022] | [2023][FW-LB-2023] | [2024][FW-LB-2024]
 
   [ndr-kessel-13]: https://web.archive.org/web/20190423101117/https://www.ndr.de/nachrichten/schleswig-holstein/Flensburger-Meilenstein-auf-dem-Weg-zum-Kohleausstieg,gaskraftwerk140.html
@@ -184,6 +184,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [FW-FL-2022]: https://web.archive.org/web/20230606210714/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
   [FW-FL-2023]: https://web.archive.org/web/20240426180907/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
   [FW-FL-2024]: https://web.archive.org/web/20250409181923/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
+  [FW-FL-2025]: https://web.archive.org/web/20260623213952/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Flensburg.pdf
   [FW-LB-2016]: https://web.archive.org/web/20210531112345/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/fernwaerme/EWKG-Angaben-Langballig-2016.pdf
   [FW-LB-2017]: https://web.archive.org/web/20210531111820/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2017.pdf
   [FW-LB-2018]: https://web.archive.org/web/20210531111750/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/pdf/fernwaerme/Langballig/EWKG-Angaben-Langballig-2018.pdf
@@ -202,6 +203,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des 
   [FW-T-2022]: https://web.archive.org/web/20230606192422/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
   [FW-T-2023]: https://web.archive.org/web/20240426181500/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
   [FW-T-2024]: https://web.archive.org/web/20250409182126/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
+  [FW-T-2025]: https://web.archive.org/web/20260623213838/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Fernwaerme/EWKG-Angaben-Tarp.pdf
 
   [Mix-2014]: https://web.archive.org/web/20210531120644/https://dokumente.stadtwerk-mit-zukunft.de/stadtwerke-flensburg/strom/Strommix-SWFL-2014.pdf
   [Mix-2015]: https://web.archive.org/web/20210531115037/https://www.swfl.de/fileadmin/user_upload/pdf/strom/Strommix/Strommix-Stadtwerke-Flensburg-2015.pdf
