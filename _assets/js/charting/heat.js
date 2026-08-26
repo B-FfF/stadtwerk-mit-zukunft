@@ -16,7 +16,7 @@
     grid: smz.fn.extractColumn(heatData, "grid"),
   }
 
-  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+  var missingYears = [2000, 2001, 2002, 2003, 2006, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
   var heatChartConfig = {
     chart: {

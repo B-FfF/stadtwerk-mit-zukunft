@@ -23,7 +23,7 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
 
 (function(hc, smz, swflData) {
 
-  var missingYears = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+  var missingYears = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
   function getMissingAsterisk(missingYears, currentYear) {
     if (!missingYears || missingYears.indexOf(currentYear) === -1) {
@@ -425,8 +425,8 @@ Highcharts.wrap(Highcharts.PlotLineOrBand.prototype, 'render', function (proceed
       name: 'Vorabausschüttung'
     }],
     xAxis: {
-      categories: smz.fn.getYearSeries(2000, 2024),
-      tickPositions: smz.fn.getYearSeries(2001, 2024),
+      categories: smz.fn.getYearSeries(2000, 2025),
+      tickPositions: smz.fn.getYearSeries(2001, 2025),
     },
     yAxis: {
       title: { text: 'Abführung Mio. €' },

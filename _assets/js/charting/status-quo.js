@@ -1,5 +1,5 @@
 (function(hc, smz, swflData){
-  var year = 2024
+  var year = 2025
   var pieData = smz.fn.getDatarowByYear(swflData.ByProduct, year);
 
   var pieChartConfig = {

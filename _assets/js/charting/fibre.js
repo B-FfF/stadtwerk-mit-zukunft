@@ -6,7 +6,7 @@
     customers: smz.fn.extractColumn(fibreData, "customers", 2015),
   };
 
-  var missingYears = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
+  var missingYears = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
   var fibreChartConfig = {
     chart: {
