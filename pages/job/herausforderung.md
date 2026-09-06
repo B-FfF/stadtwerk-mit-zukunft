@@ -138,7 +138,7 @@ Dementsprechend sind die Aufwendungen für Emissionsrechte in den letzten Jahren
 
 <figure class=chart id="aufwendungen-fuer-emissionsrechte"></figure>
 
-Trotz gestiegener Brennstoffpreise machen diese Ausgaben den größten Teil des Fernwärmepreises aus. Die jährliche Gewinnabführung an den kommunalen Haushalt musste 2021 ausgesetzt werden, und die Stadtwerke die größte Preiserhöhung der letzten 20 Jahre vornehmen. Es gäbe also kaum etwas wirtschaftlicheres, als die CO<sub>2</sub>-Emissionen zu verringern.
+Trotz gestiegener Brennstoffpreise machen diese Ausgaben zunehmend einen beträchtlichen Teil des Fernwärmepreises aus. So musste die <a href="{% link pages/job/swfl.md %}#gewinnabfuehrung-stadt" style="display:inline">jährliche Gewinnabführung an den kommunalen Haushalt</a> 2021 ausgesetzt werden, und die Stadtwerke die größte Preiserhöhung der letzten 20 Jahre vornehmen. Es gäbe also kaum etwas wirtschaftlicheres, als die CO<sub>2</sub>-Emissionen zu verringern.
 
 [^1]: 
     **Annahmen Methanberechnung**
