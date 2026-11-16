@@ -3,5 +3,5 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 asset_pipeline:
   compress: true
-  display_path: assets
+  display_path: .
   staging_path: .asset_pipeline
