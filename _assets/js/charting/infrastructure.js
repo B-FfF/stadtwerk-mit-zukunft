@@ -264,6 +264,7 @@
       xAxis: {
         min: 2003,
         categories: data.years,
+        max: smz.data.latestInfrastructureDataYear,
         tickWidth: 1,
         missing: missingYears
       },
@@ -326,6 +327,7 @@
       }],
       xAxis: {
         categories: data.years,
+        max: smz.data.latestInfrastructureDataYear,
         tickWidth: 1,
         missing: missingYears
       },

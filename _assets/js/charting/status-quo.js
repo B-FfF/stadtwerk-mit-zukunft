@@ -131,6 +131,7 @@
       }
     },
     xAxis: {
+      max: smz.data.latestBusinessReportYear,
       tickInterval: 1
     },
     yAxis: [{

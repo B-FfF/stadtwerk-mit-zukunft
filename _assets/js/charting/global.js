@@ -41,6 +41,10 @@
   };
 
   var smz = {
+    data: {
+      latestBusinessReportYear: 2025,     // aktuellster Geschäftsbericht
+      latestInfrastructureDataYear: 2024  // aktuellste Kennzahlen (aus Beteiligungsberichten)
+    },
     chart: {
       stripedPattern: {
         pattern: {

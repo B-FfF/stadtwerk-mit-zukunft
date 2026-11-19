@@ -108,6 +108,7 @@
       yAxis: 2
     }],
     xAxis: {
+      max: smz.data.latestInfrastructureDataYear,
       missing: missingYears
     },
     yAxis: [{
