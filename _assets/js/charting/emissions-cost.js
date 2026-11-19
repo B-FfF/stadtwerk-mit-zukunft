@@ -76,6 +76,7 @@
       },
       xAxis: {
         labels: { x: 40 },
+        max: Date.now(),
         type: 'datetime',
         tickInterval: 365 * 24 * 3600 * 1000
       },
@@ -191,6 +192,7 @@
     }],
     xAxis: {
       labels: { x: 40 },
+      max: Date.now(),
       type: 'datetime',
       tickInterval: 365 * 24 * 3600 * 1000,
     },
