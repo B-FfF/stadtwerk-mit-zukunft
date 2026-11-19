@@ -1,9 +1,9 @@
 (function(hc, smz, swflData, $) {
 
-var powerRenewablesPercentageFlensburg = 42.4
-var heatRenewablesPercentageFlensburg = 2.4 * 0.6 // EBS aus FW-Mix (gelten zu 60 % als klimaneutral)
+var powerRenewablesPercentageFlensburg = 40.5
+var heatRenewablesPercentageFlensburg = 2.1 * 0.6 // EBS aus FW-Mix (gelten zu 60 % als klimaneutral)
                                       * 0.95      // angenommene Anschlussquote („über 90 %“)
-                                      // ↓ Rest, Annahme: Hälfte der Haushalte hat 100 % Ökostrom 
+                                      // ↓ Rest, Annahme: Hälfte der Haushalte nutzt Wärmepumpe mit 100 % Ökostrom 
                                       + 0.05 * (0.5 * powerRenewablesPercentageFlensburg + 0.5 * 1);
 
 var comparisonConfig = {
@@ -19,7 +19,7 @@ var comparisonConfig = {
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-.8).get('rgb')),
   },{
     name: "ø Deutschland",
-    data: [18.2, 54.4],
+    data: [19.0, 55.1],
     color: smz.fn.getGradient(hc.Color("#90ed7d").brighten(-0.4).get('rgb')),
   },{
     color: smz.gradient[2],

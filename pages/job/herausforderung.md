@@ -23,7 +23,7 @@ sidebar:
 <figure class="chart" id="erneuerbare-energien-in-flensburg-chart">
 </figure>
 
-Stand 2024, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20260422125901/https://www.umweltbundesamt.de/system/files/image/StatusQuo_03.PNG)
+Stand 2025, Quellen: Stadtwerke Flensburg[^2] [^3], [Umweltbundesamt](https://web.archive.org/web/20260422125901/https://www.umweltbundesamt.de/system/files/image/StatusQuo_03.PNG)
 
 ### Stromerzeugung vs. -Verbrauch in Schleswig-Holstein
 
@@ -216,6 +216,7 @@ Trotz gestiegener Brennstoffpreise machen diese Ausgaben zunehmend einen beträc
   [Mix-2022]: https://web.archive.org/web/20240426181648/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix_01.pdf
   [Mix-2023]: https://web.archive.org/web/20250409181739/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix_01.pdf
   [Mix-2024]: https://web.archive.org/web/20260201165122/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix_01.pdf
+  [Mix-2025]: https://web.archive.org/web/20260201165122/https://www.stadtwerke-flensburg.de/fileadmin/user_upload/PDFs/1.2_Service/1.2.7_Downloads/Strom/Energiemix_01.pdf
 
 <script>
   window.SWFL = {
