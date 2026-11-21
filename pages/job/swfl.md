@@ -240,6 +240,7 @@ An das Fernwärmenetz sind 98 Prozent aller Haushalte in Flensburg angeschlossen
 
 ### Haushaltssatzungen Stadt Flensburg (hier: Erfolgspläne SWFL) {#haushaltssatzungen}
 
+ [2015](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZdOyyh7ZwrlBFh7sQIcOkOe8NL0ugh07rkAgOIeU1onB/Haushalt_Band_I.pdf "Haushalt Band I, siehe Seite 210")
  [2016](https://web.archive.org/web/20220308035940/https://www.flensburg.de/PDF/haushalt_2016_band_i_internet_mit_seiten.PDF?ObjSvrID=2306&ObjID=1416&ObjLa=1&Ext=PDF&WTR=1&_ts=1452850541 "Haushalt Band I, siehe Seite 210")
  [2017](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZeRJvhHqDsDZQmgWyPg8KcTbq_Ljwy4gG4x_im5NhMPj/Haushaltsband_I_S.212-311.pdf "Band I, Teil III, siehe Seite 85")
  [2018](https://ratsinfo.flensburg.de/sdnetrim/UGhVM0hpd2NXNFdFcExjZUQr8KHi7FS6GC_U57no1iCIBilTmRhlqTNgRMdvG8PM/1._Nachtragshaushalt_2018-_Band_I.pdf "1. Nachtragshaushalt Band I aus RV-15/2018, siehe Seite 135")

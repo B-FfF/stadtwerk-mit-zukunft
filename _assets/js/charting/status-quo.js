@@ -140,7 +140,7 @@
     }]
   };
 
-  var startYearEarningsSplitData = 2016;
+  var startYearEarningsSplitData = 2015;
   var splitEarningsData = {
     electricity: smz.fn.extractColumn(swflData.ByProduct, "eat_electricity", startYearEarningsSplitData),
     heat: smz.fn.extractColumn(swflData.ByProduct, "eat_heat", startYearEarningsSplitData),
