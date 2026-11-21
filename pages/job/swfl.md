@@ -34,7 +34,7 @@ sidebar:
   </figure>
 </div>
 
-#### Prozentuale Umsatzverteilung nach Geschäftsbereichen
+#### Prozentuale Umsatzverteilung nach Geschäftsbereichen {#umsatz-nach-geschaeftsbereichen}
 
 <div class="row">
   <figure id="umsatz-nach-produkten-verlauf" class="col-8 col-12-wide">
@@ -47,7 +47,7 @@ sidebar:
   </div>
 </div>
 
-#### Ertrag nach Geschäftsbereichen (laut Wirtschaftsplan\*)
+#### Ertrag nach Geschäftsbereichen (laut Wirtschaftsplan\*) {#ertrag-nach-geschaeftsbereichen}
 
 <div class="row chart">
   <div class="col-8 col-12-wide">
